@@ -2770,3 +2770,344 @@ build/timedata.o: src/timedata.cpp src/timedata.h \
 		src/serialize.h \
 		src/allocators.h \
 		src/version.h \
+		src/clientversion.h \
+		src/compat.h \
+		src/sync.h \
+		src/threadsafety.h \
+		src/ui_interface.h \
+		src/util.h \
+		src/tinyformat.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/timedata.o src/timedata.cpp
+
+build/overviewpage.o: src/qt/overviewpage.cpp src/qt/overviewpage.h \
+		build/ui_overviewpage.h \
+		src/qt/clientmodel.h \
+		src/qt/walletmodel.h \
+		src/allocators.h \
+		src/qt/bitcoinunits.h \
+		src/qt/optionsmodel.h \
+		src/qt/transactiontablemodel.h \
+		src/qt/transactionfilterproxy.h \
+		src/qt/guiutil.h \
+		src/qt/guiconstants.h \
+		build/overviewpage.moc
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/overviewpage.o src/qt/overviewpage.cpp
+
+build/csvmodelwriter.o: src/qt/csvmodelwriter.cpp src/qt/csvmodelwriter.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/csvmodelwriter.o src/qt/csvmodelwriter.cpp
+
+build/crypter.o: src/crypter.cpp src/crypter.h \
+		src/allocators.h \
+		src/key.h \
+		src/serialize.h \
+		src/version.h \
+		src/clientversion.h \
+		src/uint256.h \
+		src/hash.h \
+		src/keystore.h \
+		src/sync.h \
+		src/threadsafety.h \
+		src/script.h \
+		src/bignum.h \
+		src/util.h \
+		src/tinyformat.h \
+		src/scrypt.h \
+		src/net.h \
+		src/mruset.h \
+		src/netbase.h \
+		src/compat.h \
+		src/protocol.h \
+		src/chainparams.h \
+		src/addrman.h \
+		src/timedata.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/crypter.o src/crypter.cpp
+
+build/sendcoinsentry.o: src/qt/sendcoinsentry.cpp src/qt/sendcoinsentry.h \
+		build/ui_sendcoinsentry.h \
+		src/qt/guiutil.h \
+		src/qt/bitcoinunits.h \
+		src/qt/addressbookpage.h \
+		src/qt/walletmodel.h \
+		src/allocators.h \
+		src/qt/optionsmodel.h \
+		src/qt/addresstablemodel.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/sendcoinsentry.o src/qt/sendcoinsentry.cpp
+
+build/qvalidatedlineedit.o: src/qt/qvalidatedlineedit.cpp src/qt/qvalidatedlineedit.h \
+		src/qt/guiconstants.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/qvalidatedlineedit.o src/qt/qvalidatedlineedit.cpp
+
+build/bitcoinunits.o: src/qt/bitcoinunits.cpp src/qt/bitcoinunits.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/bitcoinunits.o src/qt/bitcoinunits.cpp
+
+build/qvaluecombobox.o: src/qt/qvaluecombobox.cpp src/qt/qvaluecombobox.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/qvaluecombobox.o src/qt/qvaluecombobox.cpp
+
+build/askpassphrasedialog.o: src/qt/askpassphrasedialog.cpp src/qt/askpassphrasedialog.h \
+		build/ui_askpassphrasedialog.h \
+		src/qt/guiconstants.h \
+		src/qt/walletmodel.h \
+		src/allocators.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/askpassphrasedialog.o src/qt/askpassphrasedialog.cpp
+
+build/protocol.o: src/protocol.cpp src/protocol.h \
+		src/chainparams.h \
+		src/bignum.h \
+		src/serialize.h \
+		src/allocators.h \
+		src/version.h \
+		src/clientversion.h \
+		src/uint256.h \
+		src/util.h \
+		src/tinyformat.h \
+		src/netbase.h \
+		src/compat.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/protocol.o src/protocol.cpp
+
+build/notificator.o: src/qt/notificator.cpp src/qt/notificator.h \
+		src/qt/macnotificationhandler.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/notificator.o src/qt/notificator.cpp
+
+build/paymentserver.o: src/qt/paymentserver.cpp src/qt/paymentserver.h \
+		src/qt/guiconstants.h \
+		src/ui_interface.h \
+		src/util.h \
+		src/serialize.h \
+		src/allocators.h \
+		src/version.h \
+		src/clientversion.h \
+		src/tinyformat.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/paymentserver.o src/qt/paymentserver.cpp
+
+build/rpcconsole.o: src/qt/rpcconsole.cpp src/qt/rpcconsole.h \
+		build/ui_rpcconsole.h \
+		src/qt/clientmodel.h \
+		src/qt/guiutil.h \
+		src/rpcserver.h \
+		src/uint256.h \
+		src/rpcprotocol.h \
+		src/compat.h \
+		src/json/json_spirit_reader_template.h \
+		src/json/json_spirit_value.h \
+		src/json/json_spirit_error_position.h \
+		src/json/json_spirit_utils.h \
+		src/json/json_spirit_writer_template.h \
+		src/rpcclient.h \
+		build/rpcconsole.moc
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/rpcconsole.o src/qt/rpcconsole.cpp
+
+build/noui.o: src/noui.cpp src/ui_interface.h \
+		src/init.h \
+		src/wallet.h \
+		src/walletdb.h \
+		src/db.h \
+		src/serialize.h \
+		src/allocators.h \
+		src/version.h \
+		src/clientversion.h \
+		src/sync.h \
+		src/threadsafety.h \
+		src/key.h \
+		src/uint256.h \
+		src/hash.h \
+		src/crypter.h \
+		src/keystore.h \
+		src/main.h \
+		src/core.h \
+		src/util.h \
+		src/tinyformat.h \
+		src/script.h \
+		src/bignum.h \
+		src/txmempool.h \
+		src/net.h \
+		src/mruset.h \
+		src/netbase.h \
+		src/compat.h \
+		src/protocol.h \
+		src/chainparams.h \
+		src/addrman.h \
+		src/timedata.h \
+		src/scrypt.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/noui.o src/noui.cpp
+
+build/kernel.o: src/kernel.cpp src/kernel.h \
+		src/main.h \
+		src/core.h \
+		src/uint256.h \
+		src/serialize.h \
+		src/allocators.h \
+		src/version.h \
+		src/clientversion.h \
+		src/util.h \
+		src/tinyformat.h \
+		src/script.h \
+		src/keystore.h \
+		src/key.h \
+		src/hash.h \
+		src/sync.h \
+		src/threadsafety.h \
+		src/bignum.h \
+		src/txmempool.h \
+		src/net.h \
+		src/mruset.h \
+		src/netbase.h \
+		src/compat.h \
+		src/protocol.h \
+		src/chainparams.h \
+		src/addrman.h \
+		src/timedata.h \
+		src/scrypt.h \
+		src/txdb.h \
+		src/txdb-leveldb.h \
+		src/leveldb/include/leveldb/db.h \
+		src/leveldb/include/leveldb/iterator.h \
+		src/leveldb/include/leveldb/slice.h \
+		src/leveldb/include/leveldb/status.h \
+		src/leveldb/include/leveldb/options.h \
+		src/leveldb/include/leveldb/write_batch.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/kernel.o src/kernel.cpp
+
+build/scrypt-arm.o: src/scrypt-arm.S 
+	$(CC) -c $(CFLAGS) $(INCPATH) -o build/scrypt-arm.o src/scrypt-arm.S
+
+build/scrypt-x86.o: src/scrypt-x86.S 
+	$(CC) -c $(CFLAGS) $(INCPATH) -o build/scrypt-x86.o src/scrypt-x86.S
+
+build/scrypt-x86_64.o: src/scrypt-x86_64.S 
+	$(CC) -c $(CFLAGS) $(INCPATH) -o build/scrypt-x86_64.o src/scrypt-x86_64.S
+
+build/scrypt.o: src/scrypt.cpp src/scrypt.h \
+		src/util.h \
+		src/serialize.h \
+		src/allocators.h \
+		src/version.h \
+		src/clientversion.h \
+		src/tinyformat.h \
+		src/net.h \
+		src/mruset.h \
+		src/netbase.h \
+		src/compat.h \
+		src/protocol.h \
+		src/chainparams.h \
+		src/bignum.h \
+		src/uint256.h \
+		src/addrman.h \
+		src/sync.h \
+		src/threadsafety.h \
+		src/timedata.h \
+		src/hash.h \
+		src/pbkdf2.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/scrypt.o src/scrypt.cpp
+
+build/pbkdf2.o: src/pbkdf2.cpp src/pbkdf2.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/pbkdf2.o src/pbkdf2.cpp
+
+build/qrc_bitcoin.o: qrc_bitcoin.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/qrc_bitcoin.o qrc_bitcoin.cpp
+
+build/moc_bitcoingui.o: build/moc_bitcoingui.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/moc_bitcoingui.o build/moc_bitcoingui.cpp
+
+build/moc_transactiontablemodel.o: build/moc_transactiontablemodel.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/moc_transactiontablemodel.o build/moc_transactiontablemodel.cpp
+
+build/moc_addresstablemodel.o: build/moc_addresstablemodel.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/moc_addresstablemodel.o build/moc_addresstablemodel.cpp
+
+build/moc_optionsdialog.o: build/moc_optionsdialog.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/moc_optionsdialog.o build/moc_optionsdialog.cpp
+
+build/moc_coincontroldialog.o: build/moc_coincontroldialog.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/moc_coincontroldialog.o build/moc_coincontroldialog.cpp
+
+build/moc_coincontroltreewidget.o: build/moc_coincontroltreewidget.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/moc_coincontroltreewidget.o build/moc_coincontroltreewidget.cpp
+
+build/moc_sendcoinsdialog.o: build/moc_sendcoinsdialog.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/moc_sendcoinsdialog.o build/moc_sendcoinsdialog.cpp
+
+build/moc_addressbookpage.o: build/moc_addressbookpage.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/moc_addressbookpage.o build/moc_addressbookpage.cpp
+
+build/moc_signverifymessagedialog.o: build/moc_signverifymessagedialog.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/moc_signverifymessagedialog.o build/moc_signverifymessagedialog.cpp
+
+build/moc_aboutdialog.o: build/moc_aboutdialog.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/moc_aboutdialog.o build/moc_aboutdialog.cpp
+
+build/moc_editaddressdialog.o: build/moc_editaddressdialog.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/moc_editaddressdialog.o build/moc_editaddressdialog.cpp
+
+build/moc_bitcoinaddressvalidator.o: build/moc_bitcoinaddressvalidator.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/moc_bitcoinaddressvalidator.o build/moc_bitcoinaddressvalidator.cpp
+
+build/moc_clientmodel.o: build/moc_clientmodel.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/moc_clientmodel.o build/moc_clientmodel.cpp
+
+build/moc_guiutil.o: build/moc_guiutil.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/moc_guiutil.o build/moc_guiutil.cpp
+
+build/moc_optionsmodel.o: build/moc_optionsmodel.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/moc_optionsmodel.o build/moc_optionsmodel.cpp
+
+build/moc_monitoreddatamapper.o: build/moc_monitoreddatamapper.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/moc_monitoreddatamapper.o build/moc_monitoreddatamapper.cpp
+
+build/moc_trafficgraphwidget.o: build/moc_trafficgraphwidget.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/moc_trafficgraphwidget.o build/moc_trafficgraphwidget.cpp
+
+build/moc_transactiondesc.o: build/moc_transactiondesc.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/moc_transactiondesc.o build/moc_transactiondesc.cpp
+
+build/moc_transactiondescdialog.o: build/moc_transactiondescdialog.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/moc_transactiondescdialog.o build/moc_transactiondescdialog.cpp
+
+build/moc_bitcoinamountfield.o: build/moc_bitcoinamountfield.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/moc_bitcoinamountfield.o build/moc_bitcoinamountfield.cpp
+
+build/moc_transactionfilterproxy.o: build/moc_transactionfilterproxy.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/moc_transactionfilterproxy.o build/moc_transactionfilterproxy.cpp
+
+build/moc_transactionview.o: build/moc_transactionview.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/moc_transactionview.o build/moc_transactionview.cpp
+
+build/moc_walletmodel.o: build/moc_walletmodel.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/moc_walletmodel.o build/moc_walletmodel.cpp
+
+build/moc_overviewpage.o: build/moc_overviewpage.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/moc_overviewpage.o build/moc_overviewpage.cpp
+
+build/moc_csvmodelwriter.o: build/moc_csvmodelwriter.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/moc_csvmodelwriter.o build/moc_csvmodelwriter.cpp
+
+build/moc_sendcoinsentry.o: build/moc_sendcoinsentry.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/moc_sendcoinsentry.o build/moc_sendcoinsentry.cpp
+
+build/moc_qvalidatedlineedit.o: build/moc_qvalidatedlineedit.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/moc_qvalidatedlineedit.o build/moc_qvalidatedlineedit.cpp
+
+build/moc_bitcoinunits.o: build/moc_bitcoinunits.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/moc_bitcoinunits.o build/moc_bitcoinunits.cpp
+
+build/moc_qvaluecombobox.o: build/moc_qvaluecombobox.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/moc_qvaluecombobox.o build/moc_qvaluecombobox.cpp
+
+build/moc_askpassphrasedialog.o: build/moc_askpassphrasedialog.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/moc_askpassphrasedialog.o build/moc_askpassphrasedialog.cpp
+
+build/moc_notificator.o: build/moc_notificator.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/moc_notificator.o build/moc_notificator.cpp
+
+build/moc_paymentserver.o: build/moc_paymentserver.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/moc_paymentserver.o build/moc_paymentserver.cpp
+
+build/moc_rpcconsole.o: build/moc_rpcconsole.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/moc_rpcconsole.o build/moc_rpcconsole.cpp
+
+####### Install
+
+install:  FORCE
+
+uninstall:  FORCE
+
+FORCE:
