@@ -212,4 +212,113 @@ elif cmd == "move":
 		to = raw_input("To: ")
 		amt = raw_input("Amount:")
 		mc = raw_input("Minimum confirmations (optional): ")
-		comment = raw_input("Comment (optional): 
+		comment = raw_input("Comment (optional): ")
+		try:
+			print access.move(frm, to, amt, mc, comment)
+		except:
+			print access.move(frm, to, amt)
+	except:
+		print "\n---An error occurred---\n"
+
+elif cmd == "sendfrom":
+	try:
+		frm = raw_input("From: ")
+		to = raw_input("To: ")
+		amt = raw_input("Amount:")
+		mc = raw_input("Minimum confirmations (optional): ")
+		comment = raw_input("Comment (optional): ")
+		commentto = raw_input("Comment-to (optional): ")
+		try:
+			print access.sendfrom(frm, to, amt, mc, comment, commentto)
+		except:
+			print access.sendfrom(frm, to, amt)
+	except:
+		print "\n---An error occurred---\n"
+
+elif cmd == "sendmany":
+	try:
+		frm = raw_input("From: ")
+		to = raw_input("To (in format address1:amount1,address2:amount2,...): ")
+		mc = raw_input("Minimum confirmations (optional): ")
+		comment = raw_input("Comment (optional): ")
+		try:
+			print access.sendmany(frm,to,mc,comment)
+		except:
+			print access.sendmany(frm,to)
+	except:
+		print "\n---An error occurred---\n"
+
+elif cmd == "sendtoaddress":
+	try:
+		to = raw_input("To (in format address1:amount1,address2:amount2,...): ")
+		amt = raw_input("Amount:")
+		comment = raw_input("Comment (optional): ")
+		commentto = raw_input("Comment-to (optional): ")
+		try:
+			print access.sendtoaddress(to,amt,comment,commentto)
+		except:
+			print access.sendtoaddress(to,amt)
+	except:
+		print "\n---An error occurred---\n"
+
+elif cmd == "setaccount":
+	try:
+		addr = raw_input("Address: ")
+		acct = raw_input("Account:")
+		print access.setaccount(addr,acct)
+	except:
+		print "\n---An error occurred---\n"
+
+elif cmd == "setgenerate":
+	try:
+		gen= raw_input("Generate? (true/false): ")
+		cpus = raw_input("Max processors/cores (-1 for unlimited, optional):")
+		try:
+			print access.setgenerate(gen, cpus)
+		except:
+			print access.setgenerate(gen)
+	except:
+		print "\n---An error occurred---\n"
+
+elif cmd == "settxfee":
+	try:
+		amt = raw_input("Amount:")
+		print access.settxfee(amt)
+	except:
+		print "\n---An error occurred---\n"
+
+elif cmd == "stop":
+	try:
+		print access.stop()
+	except:
+		print "\n---An error occurred---\n"
+
+elif cmd == "validateaddress":
+	try:
+		addr = raw_input("Address: ")
+		print access.validateaddress(addr)
+	except:
+		print "\n---An error occurred---\n"
+
+elif cmd == "walletpassphrase":
+	try:
+		pwd = raw_input("Enter wallet passphrase: ")
+		access.walletpassphrase(pwd, 60)
+		print "\n---Wallet unlocked---\n"
+	except:
+		print "\n---An error occurred---\n"
+
+elif cmd == "walletpassphrasechange":
+	try:
+		pwd = raw_input("Enter old wallet passphrase: ")
+		pwd2 = raw_input("Enter new wallet passphrase: ")
+		access.walletpassphrasechange(pwd, pwd2)
+		print
+		print "\n---Passphrase changed---\n"
+	except:
+		print
+		print "\n---An error occurred---\n"
+		print
+
+else:
+	print "Command not found or not supported"
