@@ -1,0 +1,14 @@
+---
+name: +ACI-bws+ACI-
+suites:
+- +ACI-lucid+ACI-
+architectures:
+- +ACI-i386+ACI-
+- +ACI-amd64+ACI-
+packages: 
+- +ACI-libdb4.8dev+ACI-
+- +ACI-qt4-qmake+ACI-
+- +ACI-libqt4-dev+ACI-
+- +ACI-libboost-system-dev+ACI-
+- +ACI-libboost-filesystem-dev+ACI-
+- +ACI-libboost-program-options-d
