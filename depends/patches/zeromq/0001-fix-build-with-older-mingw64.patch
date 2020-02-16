@@ -1,0 +1,13 @@
+From 1a159c128c69a42d90819375c06a39994f3fbfc1 Mon Sep 17 00:00:00 2001
+From: Cory Fields <cory-nospam-@coryfields.com>
+Date: Tue, 28 Nov 2017 20:33:25 -0500
+Subject: [PATCH] fix build with older mingw64
+
+---
+ src/windows.hpp | 7 +++++++
+ 1 file changed, 7 insertions(+)
+
+diff --git a/src/windows.hpp b/src/windows.hpp
+index 99e889d..e69038e 100644
+--- a/src/windows.hpp
++++ b/src
