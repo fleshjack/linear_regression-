@@ -178,4 +178,32 @@ static CTestNetParams testNetParams;
 
 static CChainParams *pCurrentParams = &mainParams;
 
-const CCh
+const CChainParams &Params() {
+    return *pCurrentParams;
+}
+
+void SelectParams(CChainParams::Network network) {
+    switch (network) {
+        case CChainParams::MAIN:
+            pCurrentParams = &mainParams;
+            break;
+        case CChainParams::TESTNET:
+            pCurrentParams = &testNetParams;
+            break;
+        default:
+            assert(false && "Unimplemented network");
+            return;
+    }
+}
+
+bool SelectParamsFromCommandLine() {
+    
+    bool fTestNet = GetBoolArg("-testnet", false);
+    
+    if (fTestNet) {
+        SelectParams(CChainParams::TESTNET);
+    } else {
+        SelectParams(CChainParams::MAIN);
+    }
+    return true;
+}
