@@ -27,4 +27,61 @@ namespace Checkpoints
     //
     static MapCheckpoints mapCheckpoints =
         boost::assign::map_list_of
-        ( 0,   uint256("0x000001987
+        ( 0,   uint256("0x00000198707c071cdb39cc8332eccfe889013ad88b65a63673672b0bda8177e7") )
+    ;
+
+    // TestNet has no checkpoints
+    static MapCheckpoints mapCheckpointsTestnet;
+
+    bool CheckHardened(int nHeight, const uint256& hash)
+    {
+        MapCheckpoints& checkpoints = (TestNet() ? mapCheckpointsTestnet : mapCheckpoints);
+
+        MapCheckpoints::const_iterator i = checkpoints.find(nHeight);
+        if (i == checkpoints.end()) return true;
+        return hash == i->second;
+    }
+
+    int GetTotalBlocksEstimate()
+    {
+        MapCheckpoints& checkpoints = (TestNet() ? mapCheckpointsTestnet : mapCheckpoints);
+
+        if (checkpoints.empty())
+            return 0;
+        return checkpoints.rbegin()->first;
+    }
+
+    CBlockIndex* GetLastCheckpoint(const std::map<uint256, CBlockIndex*>& mapBlockIndex)
+    {
+        MapCheckpoints& checkpoints = (TestNet() ? mapCheckpointsTestnet : mapCheckpoints);
+
+        BOOST_REVERSE_FOREACH(const MapCheckpoints::value_type& i, checkpoints)
+        {
+            const uint256& hash = i.second;
+            std::map<uint256, CBlockIndex*>::const_iterator t = mapBlockIndex.find(hash);
+            if (t != mapBlockIndex.end())
+                return t->second;
+        }
+        return NULL;
+    }
+
+    // Automatically select a suitable sync-checkpoint
+    const CBlockIndex* AutoSelectSyncCheckpoint()
+    {
+        const CBlockIndex *pindex = pindexBest;
+        // Search backward for a block within max span and maturity window
+        while (pindex->pprev && pindex->nHeight + nCheckpointSpan > pindexBest->nHeight)
+            pindex = pindex->pprev;
+        return pindex;
+    }
+
+    // Check against synchronized checkpoint
+    bool CheckSync(int nHeight)
+    {
+        const CBlockIndex* pindexSync = AutoSelectSyncCheckpoint();
+
+        if (nHeight <= pindexSync->nHeight)
+            return false;
+        return true;
+    }
+}
