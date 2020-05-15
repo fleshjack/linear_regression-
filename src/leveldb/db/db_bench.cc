@@ -721,4 +721,200 @@ class Benchmark {
     WriteBatch batch;
     Status s;
     int64_t bytes = 0;
-    for (int i = 0; i < num_; i += en
+    for (int i = 0; i < num_; i += entries_per_batch_) {
+      batch.Clear();
+      for (int j = 0; j < entries_per_batch_; j++) {
+        const int k = seq ? i+j : (thread->rand.Next() % FLAGS_num);
+        char key[100];
+        snprintf(key, sizeof(key), "%016d", k);
+        batch.Put(key, gen.Generate(value_size_));
+        bytes += value_size_ + strlen(key);
+        thread->stats.FinishedSingleOp();
+      }
+      s = db_->Write(write_options_, &batch);
+      if (!s.ok()) {
+        fprintf(stderr, "put error: %s\n", s.ToString().c_str());
+        exit(1);
+      }
+    }
+    thread->stats.AddBytes(bytes);
+  }
+
+  void ReadSequential(ThreadState* thread) {
+    Iterator* iter = db_->NewIterator(ReadOptions());
+    int i = 0;
+    int64_t bytes = 0;
+    for (iter->SeekToFirst(); i < reads_ && iter->Valid(); iter->Next()) {
+      bytes += iter->key().size() + iter->value().size();
+      thread->stats.FinishedSingleOp();
+      ++i;
+    }
+    delete iter;
+    thread->stats.AddBytes(bytes);
+  }
+
+  void ReadReverse(ThreadState* thread) {
+    Iterator* iter = db_->NewIterator(ReadOptions());
+    int i = 0;
+    int64_t bytes = 0;
+    for (iter->SeekToLast(); i < reads_ && iter->Valid(); iter->Prev()) {
+      bytes += iter->key().size() + iter->value().size();
+      thread->stats.FinishedSingleOp();
+      ++i;
+    }
+    delete iter;
+    thread->stats.AddBytes(bytes);
+  }
+
+  void ReadRandom(ThreadState* thread) {
+    ReadOptions options;
+    std::string value;
+    int found = 0;
+    for (int i = 0; i < reads_; i++) {
+      char key[100];
+      const int k = thread->rand.Next() % FLAGS_num;
+      snprintf(key, sizeof(key), "%016d", k);
+      if (db_->Get(options, key, &value).ok()) {
+        found++;
+      }
+      thread->stats.FinishedSingleOp();
+    }
+    char msg[100];
+    snprintf(msg, sizeof(msg), "(%d of %d found)", found, num_);
+    thread->stats.AddMessage(msg);
+  }
+
+  void ReadMissing(ThreadState* thread) {
+    ReadOptions options;
+    std::string value;
+    for (int i = 0; i < reads_; i++) {
+      char key[100];
+      const int k = thread->rand.Next() % FLAGS_num;
+      snprintf(key, sizeof(key), "%016d.", k);
+      db_->Get(options, key, &value);
+      thread->stats.FinishedSingleOp();
+    }
+  }
+
+  void ReadHot(ThreadState* thread) {
+    ReadOptions options;
+    std::string value;
+    const int range = (FLAGS_num + 99) / 100;
+    for (int i = 0; i < reads_; i++) {
+      char key[100];
+      const int k = thread->rand.Next() % range;
+      snprintf(key, sizeof(key), "%016d", k);
+      db_->Get(options, key, &value);
+      thread->stats.FinishedSingleOp();
+    }
+  }
+
+  void SeekRandom(ThreadState* thread) {
+    ReadOptions options;
+    std::string value;
+    int found = 0;
+    for (int i = 0; i < reads_; i++) {
+      Iterator* iter = db_->NewIterator(options);
+      char key[100];
+      const int k = thread->rand.Next() % FLAGS_num;
+      snprintf(key, sizeof(key), "%016d", k);
+      iter->Seek(key);
+      if (iter->Valid() && iter->key() == key) found++;
+      delete iter;
+      thread->stats.FinishedSingleOp();
+    }
+    char msg[100];
+    snprintf(msg, sizeof(msg), "(%d of %d found)", found, num_);
+    thread->stats.AddMessage(msg);
+  }
+
+  void DoDelete(ThreadState* thread, bool seq) {
+    RandomGenerator gen;
+    WriteBatch batch;
+    Status s;
+    for (int i = 0; i < num_; i += entries_per_batch_) {
+      batch.Clear();
+      for (int j = 0; j < entries_per_batch_; j++) {
+        const int k = seq ? i+j : (thread->rand.Next() % FLAGS_num);
+        char key[100];
+        snprintf(key, sizeof(key), "%016d", k);
+        batch.Delete(key);
+        thread->stats.FinishedSingleOp();
+      }
+      s = db_->Write(write_options_, &batch);
+      if (!s.ok()) {
+        fprintf(stderr, "del error: %s\n", s.ToString().c_str());
+        exit(1);
+      }
+    }
+  }
+
+  void DeleteSeq(ThreadState* thread) {
+    DoDelete(thread, true);
+  }
+
+  void DeleteRandom(ThreadState* thread) {
+    DoDelete(thread, false);
+  }
+
+  void ReadWhileWriting(ThreadState* thread) {
+    if (thread->tid > 0) {
+      ReadRandom(thread);
+    } else {
+      // Special thread that keeps writing until other threads are done.
+      RandomGenerator gen;
+      while (true) {
+        {
+          MutexLock l(&thread->shared->mu);
+          if (thread->shared->num_done + 1 >= thread->shared->num_initialized) {
+            // Other threads have finished
+            break;
+          }
+        }
+
+        const int k = thread->rand.Next() % FLAGS_num;
+        char key[100];
+        snprintf(key, sizeof(key), "%016d", k);
+        Status s = db_->Put(write_options_, key, gen.Generate(value_size_));
+        if (!s.ok()) {
+          fprintf(stderr, "put error: %s\n", s.ToString().c_str());
+          exit(1);
+        }
+      }
+
+      // Do not count any of the preceding work/delay in stats.
+      thread->stats.Start();
+    }
+  }
+
+  void Compact(ThreadState* thread) {
+    db_->CompactRange(NULL, NULL);
+  }
+
+  void PrintStats(const char* key) {
+    std::string stats;
+    if (!db_->GetProperty(key, &stats)) {
+      stats = "(failed)";
+    }
+    fprintf(stdout, "\n%s\n", stats.c_str());
+  }
+
+  static void WriteToFile(void* arg, const char* buf, int n) {
+    reinterpret_cast<WritableFile*>(arg)->Append(Slice(buf, n));
+  }
+
+  void HeapProfile() {
+    char fname[100];
+    snprintf(fname, sizeof(fname), "%s/heap-%04d", FLAGS_db, ++heap_counter_);
+    WritableFile* file;
+    Status s = Env::Default()->NewWritableFile(fname, &file);
+    if (!s.ok()) {
+      fprintf(stderr, "%s\n", s.ToString().c_str());
+      return;
+    }
+    bool ok = port::GetHeapProfile(WriteToFile, file);
+    delete file;
+    if (!ok) {
+      fprintf(stderr, "heap profiling not supported\n");
+      Env::Default()->DeleteFile(fname);
+    }
