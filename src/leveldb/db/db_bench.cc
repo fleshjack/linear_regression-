@@ -918,3 +918,62 @@ class Benchmark {
       fprintf(stderr, "heap profiling not supported\n");
       Env::Default()->DeleteFile(fname);
     }
+  }
+};
+
+}  // namespace leveldb
+
+int main(int argc, char** argv) {
+  FLAGS_write_buffer_size = leveldb::Options().write_buffer_size;
+  FLAGS_open_files = leveldb::Options().max_open_files;
+  std::string default_db_path;
+
+  for (int i = 1; i < argc; i++) {
+    double d;
+    int n;
+    char junk;
+    if (leveldb::Slice(argv[i]).starts_with("--benchmarks=")) {
+      FLAGS_benchmarks = argv[i] + strlen("--benchmarks=");
+    } else if (sscanf(argv[i], "--compression_ratio=%lf%c", &d, &junk) == 1) {
+      FLAGS_compression_ratio = d;
+    } else if (sscanf(argv[i], "--histogram=%d%c", &n, &junk) == 1 &&
+               (n == 0 || n == 1)) {
+      FLAGS_histogram = n;
+    } else if (sscanf(argv[i], "--use_existing_db=%d%c", &n, &junk) == 1 &&
+               (n == 0 || n == 1)) {
+      FLAGS_use_existing_db = n;
+    } else if (sscanf(argv[i], "--num=%d%c", &n, &junk) == 1) {
+      FLAGS_num = n;
+    } else if (sscanf(argv[i], "--reads=%d%c", &n, &junk) == 1) {
+      FLAGS_reads = n;
+    } else if (sscanf(argv[i], "--threads=%d%c", &n, &junk) == 1) {
+      FLAGS_threads = n;
+    } else if (sscanf(argv[i], "--value_size=%d%c", &n, &junk) == 1) {
+      FLAGS_value_size = n;
+    } else if (sscanf(argv[i], "--write_buffer_size=%d%c", &n, &junk) == 1) {
+      FLAGS_write_buffer_size = n;
+    } else if (sscanf(argv[i], "--cache_size=%d%c", &n, &junk) == 1) {
+      FLAGS_cache_size = n;
+    } else if (sscanf(argv[i], "--bloom_bits=%d%c", &n, &junk) == 1) {
+      FLAGS_bloom_bits = n;
+    } else if (sscanf(argv[i], "--open_files=%d%c", &n, &junk) == 1) {
+      FLAGS_open_files = n;
+    } else if (strncmp(argv[i], "--db=", 5) == 0) {
+      FLAGS_db = argv[i] + 5;
+    } else {
+      fprintf(stderr, "Invalid flag '%s'\n", argv[i]);
+      exit(1);
+    }
+  }
+
+  // Choose a location for the test database if none given with --db=<path>
+  if (FLAGS_db == NULL) {
+      leveldb::Env::Default()->GetTestDirectory(&default_db_path);
+      default_db_path += "/dbbench";
+      FLAGS_db = default_db_path.c_str();
+  }
+
+  leveldb::Benchmark benchmark;
+  benchmark.Run();
+  return 0;
+}
