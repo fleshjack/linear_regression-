@@ -734,4 +734,213 @@ TEST(DBTest, IterMulti) {
   iter->Prev();
   ASSERT_EQ(IterStatus(iter), "b->vb");
   iter->Prev();
-  ASSERT_EQ(IterS
+  ASSERT_EQ(IterStatus(iter), "a->va");
+  iter->Prev();
+  ASSERT_EQ(IterStatus(iter), "(invalid)");
+  iter->SeekToLast();
+  ASSERT_EQ(IterStatus(iter), "c->vc");
+  iter->Next();
+  ASSERT_EQ(IterStatus(iter), "(invalid)");
+
+  iter->Seek("");
+  ASSERT_EQ(IterStatus(iter), "a->va");
+  iter->Seek("a");
+  ASSERT_EQ(IterStatus(iter), "a->va");
+  iter->Seek("ax");
+  ASSERT_EQ(IterStatus(iter), "b->vb");
+  iter->Seek("b");
+  ASSERT_EQ(IterStatus(iter), "b->vb");
+  iter->Seek("z");
+  ASSERT_EQ(IterStatus(iter), "(invalid)");
+
+  // Switch from reverse to forward
+  iter->SeekToLast();
+  iter->Prev();
+  iter->Prev();
+  iter->Next();
+  ASSERT_EQ(IterStatus(iter), "b->vb");
+
+  // Switch from forward to reverse
+  iter->SeekToFirst();
+  iter->Next();
+  iter->Next();
+  iter->Prev();
+  ASSERT_EQ(IterStatus(iter), "b->vb");
+
+  // Make sure iter stays at snapshot
+  ASSERT_OK(Put("a",  "va2"));
+  ASSERT_OK(Put("a2", "va3"));
+  ASSERT_OK(Put("b",  "vb2"));
+  ASSERT_OK(Put("c",  "vc2"));
+  ASSERT_OK(Delete("b"));
+  iter->SeekToFirst();
+  ASSERT_EQ(IterStatus(iter), "a->va");
+  iter->Next();
+  ASSERT_EQ(IterStatus(iter), "b->vb");
+  iter->Next();
+  ASSERT_EQ(IterStatus(iter), "c->vc");
+  iter->Next();
+  ASSERT_EQ(IterStatus(iter), "(invalid)");
+  iter->SeekToLast();
+  ASSERT_EQ(IterStatus(iter), "c->vc");
+  iter->Prev();
+  ASSERT_EQ(IterStatus(iter), "b->vb");
+  iter->Prev();
+  ASSERT_EQ(IterStatus(iter), "a->va");
+  iter->Prev();
+  ASSERT_EQ(IterStatus(iter), "(invalid)");
+
+  delete iter;
+}
+
+TEST(DBTest, IterSmallAndLargeMix) {
+  ASSERT_OK(Put("a", "va"));
+  ASSERT_OK(Put("b", std::string(100000, 'b')));
+  ASSERT_OK(Put("c", "vc"));
+  ASSERT_OK(Put("d", std::string(100000, 'd')));
+  ASSERT_OK(Put("e", std::string(100000, 'e')));
+
+  Iterator* iter = db_->NewIterator(ReadOptions());
+
+  iter->SeekToFirst();
+  ASSERT_EQ(IterStatus(iter), "a->va");
+  iter->Next();
+  ASSERT_EQ(IterStatus(iter), "b->" + std::string(100000, 'b'));
+  iter->Next();
+  ASSERT_EQ(IterStatus(iter), "c->vc");
+  iter->Next();
+  ASSERT_EQ(IterStatus(iter), "d->" + std::string(100000, 'd'));
+  iter->Next();
+  ASSERT_EQ(IterStatus(iter), "e->" + std::string(100000, 'e'));
+  iter->Next();
+  ASSERT_EQ(IterStatus(iter), "(invalid)");
+
+  iter->SeekToLast();
+  ASSERT_EQ(IterStatus(iter), "e->" + std::string(100000, 'e'));
+  iter->Prev();
+  ASSERT_EQ(IterStatus(iter), "d->" + std::string(100000, 'd'));
+  iter->Prev();
+  ASSERT_EQ(IterStatus(iter), "c->vc");
+  iter->Prev();
+  ASSERT_EQ(IterStatus(iter), "b->" + std::string(100000, 'b'));
+  iter->Prev();
+  ASSERT_EQ(IterStatus(iter), "a->va");
+  iter->Prev();
+  ASSERT_EQ(IterStatus(iter), "(invalid)");
+
+  delete iter;
+}
+
+TEST(DBTest, IterMultiWithDelete) {
+  do {
+    ASSERT_OK(Put("a", "va"));
+    ASSERT_OK(Put("b", "vb"));
+    ASSERT_OK(Put("c", "vc"));
+    ASSERT_OK(Delete("b"));
+    ASSERT_EQ("NOT_FOUND", Get("b"));
+
+    Iterator* iter = db_->NewIterator(ReadOptions());
+    iter->Seek("c");
+    ASSERT_EQ(IterStatus(iter), "c->vc");
+    iter->Prev();
+    ASSERT_EQ(IterStatus(iter), "a->va");
+    delete iter;
+  } while (ChangeOptions());
+}
+
+TEST(DBTest, Recover) {
+  do {
+    ASSERT_OK(Put("foo", "v1"));
+    ASSERT_OK(Put("baz", "v5"));
+
+    Reopen();
+    ASSERT_EQ("v1", Get("foo"));
+
+    ASSERT_EQ("v1", Get("foo"));
+    ASSERT_EQ("v5", Get("baz"));
+    ASSERT_OK(Put("bar", "v2"));
+    ASSERT_OK(Put("foo", "v3"));
+
+    Reopen();
+    ASSERT_EQ("v3", Get("foo"));
+    ASSERT_OK(Put("foo", "v4"));
+    ASSERT_EQ("v4", Get("foo"));
+    ASSERT_EQ("v2", Get("bar"));
+    ASSERT_EQ("v5", Get("baz"));
+  } while (ChangeOptions());
+}
+
+TEST(DBTest, RecoveryWithEmptyLog) {
+  do {
+    ASSERT_OK(Put("foo", "v1"));
+    ASSERT_OK(Put("foo", "v2"));
+    Reopen();
+    Reopen();
+    ASSERT_OK(Put("foo", "v3"));
+    Reopen();
+    ASSERT_EQ("v3", Get("foo"));
+  } while (ChangeOptions());
+}
+
+// Check that writes done during a memtable compaction are recovered
+// if the database is shutdown during the memtable compaction.
+TEST(DBTest, RecoverDuringMemtableCompaction) {
+  do {
+    Options options = CurrentOptions();
+    options.env = env_;
+    options.write_buffer_size = 1000000;
+    Reopen(&options);
+
+    // Trigger a long memtable compaction and reopen the database during it
+    ASSERT_OK(Put("foo", "v1"));                         // Goes to 1st log file
+    ASSERT_OK(Put("big1", std::string(10000000, 'x')));  // Fills memtable
+    ASSERT_OK(Put("big2", std::string(1000, 'y')));      // Triggers compaction
+    ASSERT_OK(Put("bar", "v2"));                         // Goes to new log file
+
+    Reopen(&options);
+    ASSERT_EQ("v1", Get("foo"));
+    ASSERT_EQ("v2", Get("bar"));
+    ASSERT_EQ(std::string(10000000, 'x'), Get("big1"));
+    ASSERT_EQ(std::string(1000, 'y'), Get("big2"));
+  } while (ChangeOptions());
+}
+
+static std::string Key(int i) {
+  char buf[100];
+  snprintf(buf, sizeof(buf), "key%06d", i);
+  return std::string(buf);
+}
+
+TEST(DBTest, MinorCompactionsHappen) {
+  Options options = CurrentOptions();
+  options.write_buffer_size = 10000;
+  Reopen(&options);
+
+  const int N = 500;
+
+  int starting_num_tables = TotalTableFiles();
+  for (int i = 0; i < N; i++) {
+    ASSERT_OK(Put(Key(i), Key(i) + std::string(1000, 'v')));
+  }
+  int ending_num_tables = TotalTableFiles();
+  ASSERT_GT(ending_num_tables, starting_num_tables);
+
+  for (int i = 0; i < N; i++) {
+    ASSERT_EQ(Key(i) + std::string(1000, 'v'), Get(Key(i)));
+  }
+
+  Reopen();
+
+  for (int i = 0; i < N; i++) {
+    ASSERT_EQ(Key(i) + std::string(1000, 'v'), Get(Key(i)));
+  }
+}
+
+TEST(DBTest, RecoverWithLargeLog) {
+  {
+    Options options = CurrentOptions();
+    Reopen(&options);
+    ASSERT_OK(Put("big1", std::string(200000, '1')));
+    ASSERT_OK(Put("big2", std::string(200000, '2')));
+    ASSERT_OK(Put("small3", std::string(10, '3')));
+    ASSERT_OK(Put("small4", std::s
