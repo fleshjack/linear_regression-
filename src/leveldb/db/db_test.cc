@@ -943,4 +943,178 @@ TEST(DBTest, RecoverWithLargeLog) {
     ASSERT_OK(Put("big1", std::string(200000, '1')));
     ASSERT_OK(Put("big2", std::string(200000, '2')));
     ASSERT_OK(Put("small3", std::string(10, '3')));
-    ASSERT_OK(Put("small4", std::s
+    ASSERT_OK(Put("small4", std::string(10, '4')));
+    ASSERT_EQ(NumTableFilesAtLevel(0), 0);
+  }
+
+  // Make sure that if we re-open with a small write buffer size that
+  // we flush table files in the middle of a large log file.
+  Options options = CurrentOptions();
+  options.write_buffer_size = 100000;
+  Reopen(&options);
+  ASSERT_EQ(NumTableFilesAtLevel(0), 3);
+  ASSERT_EQ(std::string(200000, '1'), Get("big1"));
+  ASSERT_EQ(std::string(200000, '2'), Get("big2"));
+  ASSERT_EQ(std::string(10, '3'), Get("small3"));
+  ASSERT_EQ(std::string(10, '4'), Get("small4"));
+  ASSERT_GT(NumTableFilesAtLevel(0), 1);
+}
+
+TEST(DBTest, CompactionsGenerateMultipleFiles) {
+  Options options = CurrentOptions();
+  options.write_buffer_size = 100000000;        // Large write buffer
+  Reopen(&options);
+
+  Random rnd(301);
+
+  // Write 8MB (80 values, each 100K)
+  ASSERT_EQ(NumTableFilesAtLevel(0), 0);
+  std::vector<std::string> values;
+  for (int i = 0; i < 80; i++) {
+    values.push_back(RandomString(&rnd, 100000));
+    ASSERT_OK(Put(Key(i), values[i]));
+  }
+
+  // Reopening moves updates to level-0
+  Reopen(&options);
+  dbfull()->TEST_CompactRange(0, NULL, NULL);
+
+  ASSERT_EQ(NumTableFilesAtLevel(0), 0);
+  ASSERT_GT(NumTableFilesAtLevel(1), 1);
+  for (int i = 0; i < 80; i++) {
+    ASSERT_EQ(Get(Key(i)), values[i]);
+  }
+}
+
+TEST(DBTest, RepeatedWritesToSameKey) {
+  Options options = CurrentOptions();
+  options.env = env_;
+  options.write_buffer_size = 100000;  // Small write buffer
+  Reopen(&options);
+
+  // We must have at most one file per level except for level-0,
+  // which may have up to kL0_StopWritesTrigger files.
+  const int kMaxFiles = config::kNumLevels + config::kL0_StopWritesTrigger;
+
+  Random rnd(301);
+  std::string value = RandomString(&rnd, 2 * options.write_buffer_size);
+  for (int i = 0; i < 5 * kMaxFiles; i++) {
+    Put("key", value);
+    ASSERT_LE(TotalTableFiles(), kMaxFiles);
+    fprintf(stderr, "after %d: %d files\n", int(i+1), TotalTableFiles());
+  }
+}
+
+TEST(DBTest, SparseMerge) {
+  Options options = CurrentOptions();
+  options.compression = kNoCompression;
+  Reopen(&options);
+
+  FillLevels("A", "Z");
+
+  // Suppose there is:
+  //    small amount of data with prefix A
+  //    large amount of data with prefix B
+  //    small amount of data with prefix C
+  // and that recent updates have made small changes to all three prefixes.
+  // Check that we do not do a compaction that merges all of B in one shot.
+  const std::string value(1000, 'x');
+  Put("A", "va");
+  // Write approximately 100MB of "B" values
+  for (int i = 0; i < 100000; i++) {
+    char key[100];
+    snprintf(key, sizeof(key), "B%010d", i);
+    Put(key, value);
+  }
+  Put("C", "vc");
+  dbfull()->TEST_CompactMemTable();
+  dbfull()->TEST_CompactRange(0, NULL, NULL);
+
+  // Make sparse update
+  Put("A",    "va2");
+  Put("B100", "bvalue2");
+  Put("C",    "vc2");
+  dbfull()->TEST_CompactMemTable();
+
+  // Compactions should not cause us to create a situation where
+  // a file overlaps too much data at the next level.
+  ASSERT_LE(dbfull()->TEST_MaxNextLevelOverlappingBytes(), 20*1048576);
+  dbfull()->TEST_CompactRange(0, NULL, NULL);
+  ASSERT_LE(dbfull()->TEST_MaxNextLevelOverlappingBytes(), 20*1048576);
+  dbfull()->TEST_CompactRange(1, NULL, NULL);
+  ASSERT_LE(dbfull()->TEST_MaxNextLevelOverlappingBytes(), 20*1048576);
+}
+
+static bool Between(uint64_t val, uint64_t low, uint64_t high) {
+  bool result = (val >= low) && (val <= high);
+  if (!result) {
+    fprintf(stderr, "Value %llu is not in range [%llu, %llu]\n",
+            (unsigned long long)(val),
+            (unsigned long long)(low),
+            (unsigned long long)(high));
+  }
+  return result;
+}
+
+TEST(DBTest, ApproximateSizes) {
+  do {
+    Options options = CurrentOptions();
+    options.write_buffer_size = 100000000;        // Large write buffer
+    options.compression = kNoCompression;
+    DestroyAndReopen();
+
+    ASSERT_TRUE(Between(Size("", "xyz"), 0, 0));
+    Reopen(&options);
+    ASSERT_TRUE(Between(Size("", "xyz"), 0, 0));
+
+    // Write 8MB (80 values, each 100K)
+    ASSERT_EQ(NumTableFilesAtLevel(0), 0);
+    const int N = 80;
+    static const int S1 = 100000;
+    static const int S2 = 105000;  // Allow some expansion from metadata
+    Random rnd(301);
+    for (int i = 0; i < N; i++) {
+      ASSERT_OK(Put(Key(i), RandomString(&rnd, S1)));
+    }
+
+    // 0 because GetApproximateSizes() does not account for memtable space
+    ASSERT_TRUE(Between(Size("", Key(50)), 0, 0));
+
+    // Check sizes across recovery by reopening a few times
+    for (int run = 0; run < 3; run++) {
+      Reopen(&options);
+
+      for (int compact_start = 0; compact_start < N; compact_start += 10) {
+        for (int i = 0; i < N; i += 10) {
+          ASSERT_TRUE(Between(Size("", Key(i)), S1*i, S2*i));
+          ASSERT_TRUE(Between(Size("", Key(i)+".suffix"), S1*(i+1), S2*(i+1)));
+          ASSERT_TRUE(Between(Size(Key(i), Key(i+10)), S1*10, S2*10));
+        }
+        ASSERT_TRUE(Between(Size("", Key(50)), S1*50, S2*50));
+        ASSERT_TRUE(Between(Size("", Key(50)+".suffix"), S1*50, S2*50));
+
+        std::string cstart_str = Key(compact_start);
+        std::string cend_str = Key(compact_start + 9);
+        Slice cstart = cstart_str;
+        Slice cend = cend_str;
+        dbfull()->TEST_CompactRange(0, &cstart, &cend);
+      }
+
+      ASSERT_EQ(NumTableFilesAtLevel(0), 0);
+      ASSERT_GT(NumTableFilesAtLevel(1), 0);
+    }
+  } while (ChangeOptions());
+}
+
+TEST(DBTest, ApproximateSizes_MixOfSmallAndLarge) {
+  do {
+    Options options = CurrentOptions();
+    options.compression = kNoCompression;
+    Reopen();
+
+    Random rnd(301);
+    std::string big1 = RandomString(&rnd, 100000);
+    ASSERT_OK(Put(Key(0), RandomString(&rnd, 10000)));
+    ASSERT_OK(Put(Key(1), RandomString(&rnd, 10000)));
+    ASSERT_OK(Put(Key(2), big1));
+    ASSERT_OK(Put(Key(3), RandomStri
