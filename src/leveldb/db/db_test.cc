@@ -1117,4 +1117,174 @@ TEST(DBTest, ApproximateSizes_MixOfSmallAndLarge) {
     ASSERT_OK(Put(Key(0), RandomString(&rnd, 10000)));
     ASSERT_OK(Put(Key(1), RandomString(&rnd, 10000)));
     ASSERT_OK(Put(Key(2), big1));
-    ASSERT_OK(Put(Key(3), RandomStri
+    ASSERT_OK(Put(Key(3), RandomString(&rnd, 10000)));
+    ASSERT_OK(Put(Key(4), big1));
+    ASSERT_OK(Put(Key(5), RandomString(&rnd, 10000)));
+    ASSERT_OK(Put(Key(6), RandomString(&rnd, 300000)));
+    ASSERT_OK(Put(Key(7), RandomString(&rnd, 10000)));
+
+    // Check sizes across recovery by reopening a few times
+    for (int run = 0; run < 3; run++) {
+      Reopen(&options);
+
+      ASSERT_TRUE(Between(Size("", Key(0)), 0, 0));
+      ASSERT_TRUE(Between(Size("", Key(1)), 10000, 11000));
+      ASSERT_TRUE(Between(Size("", Key(2)), 20000, 21000));
+      ASSERT_TRUE(Between(Size("", Key(3)), 120000, 121000));
+      ASSERT_TRUE(Between(Size("", Key(4)), 130000, 131000));
+      ASSERT_TRUE(Between(Size("", Key(5)), 230000, 231000));
+      ASSERT_TRUE(Between(Size("", Key(6)), 240000, 241000));
+      ASSERT_TRUE(Between(Size("", Key(7)), 540000, 541000));
+      ASSERT_TRUE(Between(Size("", Key(8)), 550000, 560000));
+
+      ASSERT_TRUE(Between(Size(Key(3), Key(5)), 110000, 111000));
+
+      dbfull()->TEST_CompactRange(0, NULL, NULL);
+    }
+  } while (ChangeOptions());
+}
+
+TEST(DBTest, IteratorPinsRef) {
+  Put("foo", "hello");
+
+  // Get iterator that will yield the current contents of the DB.
+  Iterator* iter = db_->NewIterator(ReadOptions());
+
+  // Write to force compactions
+  Put("foo", "newvalue1");
+  for (int i = 0; i < 100; i++) {
+    ASSERT_OK(Put(Key(i), Key(i) + std::string(100000, 'v'))); // 100K values
+  }
+  Put("foo", "newvalue2");
+
+  iter->SeekToFirst();
+  ASSERT_TRUE(iter->Valid());
+  ASSERT_EQ("foo", iter->key().ToString());
+  ASSERT_EQ("hello", iter->value().ToString());
+  iter->Next();
+  ASSERT_TRUE(!iter->Valid());
+  delete iter;
+}
+
+TEST(DBTest, Snapshot) {
+  do {
+    Put("foo", "v1");
+    const Snapshot* s1 = db_->GetSnapshot();
+    Put("foo", "v2");
+    const Snapshot* s2 = db_->GetSnapshot();
+    Put("foo", "v3");
+    const Snapshot* s3 = db_->GetSnapshot();
+
+    Put("foo", "v4");
+    ASSERT_EQ("v1", Get("foo", s1));
+    ASSERT_EQ("v2", Get("foo", s2));
+    ASSERT_EQ("v3", Get("foo", s3));
+    ASSERT_EQ("v4", Get("foo"));
+
+    db_->ReleaseSnapshot(s3);
+    ASSERT_EQ("v1", Get("foo", s1));
+    ASSERT_EQ("v2", Get("foo", s2));
+    ASSERT_EQ("v4", Get("foo"));
+
+    db_->ReleaseSnapshot(s1);
+    ASSERT_EQ("v2", Get("foo", s2));
+    ASSERT_EQ("v4", Get("foo"));
+
+    db_->ReleaseSnapshot(s2);
+    ASSERT_EQ("v4", Get("foo"));
+  } while (ChangeOptions());
+}
+
+TEST(DBTest, HiddenValuesAreRemoved) {
+  do {
+    Random rnd(301);
+    FillLevels("a", "z");
+
+    std::string big = RandomString(&rnd, 50000);
+    Put("foo", big);
+    Put("pastfoo", "v");
+    const Snapshot* snapshot = db_->GetSnapshot();
+    Put("foo", "tiny");
+    Put("pastfoo2", "v2");        // Advance sequence number one more
+
+    ASSERT_OK(dbfull()->TEST_CompactMemTable());
+    ASSERT_GT(NumTableFilesAtLevel(0), 0);
+
+    ASSERT_EQ(big, Get("foo", snapshot));
+    ASSERT_TRUE(Between(Size("", "pastfoo"), 50000, 60000));
+    db_->ReleaseSnapshot(snapshot);
+    ASSERT_EQ(AllEntriesFor("foo"), "[ tiny, " + big + " ]");
+    Slice x("x");
+    dbfull()->TEST_CompactRange(0, NULL, &x);
+    ASSERT_EQ(AllEntriesFor("foo"), "[ tiny ]");
+    ASSERT_EQ(NumTableFilesAtLevel(0), 0);
+    ASSERT_GE(NumTableFilesAtLevel(1), 1);
+    dbfull()->TEST_CompactRange(1, NULL, &x);
+    ASSERT_EQ(AllEntriesFor("foo"), "[ tiny ]");
+
+    ASSERT_TRUE(Between(Size("", "pastfoo"), 0, 1000));
+  } while (ChangeOptions());
+}
+
+TEST(DBTest, DeletionMarkers1) {
+  Put("foo", "v1");
+  ASSERT_OK(dbfull()->TEST_CompactMemTable());
+  const int last = config::kMaxMemCompactLevel;
+  ASSERT_EQ(NumTableFilesAtLevel(last), 1);   // foo => v1 is now in last level
+
+  // Place a table at level last-1 to prevent merging with preceding mutation
+  Put("a", "begin");
+  Put("z", "end");
+  dbfull()->TEST_CompactMemTable();
+  ASSERT_EQ(NumTableFilesAtLevel(last), 1);
+  ASSERT_EQ(NumTableFilesAtLevel(last-1), 1);
+
+  Delete("foo");
+  Put("foo", "v2");
+  ASSERT_EQ(AllEntriesFor("foo"), "[ v2, DEL, v1 ]");
+  ASSERT_OK(dbfull()->TEST_CompactMemTable());  // Moves to level last-2
+  ASSERT_EQ(AllEntriesFor("foo"), "[ v2, DEL, v1 ]");
+  Slice z("z");
+  dbfull()->TEST_CompactRange(last-2, NULL, &z);
+  // DEL eliminated, but v1 remains because we aren't compacting that level
+  // (DEL can be eliminated because v2 hides v1).
+  ASSERT_EQ(AllEntriesFor("foo"), "[ v2, v1 ]");
+  dbfull()->TEST_CompactRange(last-1, NULL, NULL);
+  // Merging last-1 w/ last, so we are the base level for "foo", so
+  // DEL is removed.  (as is v1).
+  ASSERT_EQ(AllEntriesFor("foo"), "[ v2 ]");
+}
+
+TEST(DBTest, DeletionMarkers2) {
+  Put("foo", "v1");
+  ASSERT_OK(dbfull()->TEST_CompactMemTable());
+  const int last = config::kMaxMemCompactLevel;
+  ASSERT_EQ(NumTableFilesAtLevel(last), 1);   // foo => v1 is now in last level
+
+  // Place a table at level last-1 to prevent merging with preceding mutation
+  Put("a", "begin");
+  Put("z", "end");
+  dbfull()->TEST_CompactMemTable();
+  ASSERT_EQ(NumTableFilesAtLevel(last), 1);
+  ASSERT_EQ(NumTableFilesAtLevel(last-1), 1);
+
+  Delete("foo");
+  ASSERT_EQ(AllEntriesFor("foo"), "[ DEL, v1 ]");
+  ASSERT_OK(dbfull()->TEST_CompactMemTable());  // Moves to level last-2
+  ASSERT_EQ(AllEntriesFor("foo"), "[ DEL, v1 ]");
+  dbfull()->TEST_CompactRange(last-2, NULL, NULL);
+  // DEL kept: "last" file overlaps
+  ASSERT_EQ(AllEntriesFor("foo"), "[ DEL, v1 ]");
+  dbfull()->TEST_CompactRange(last-1, NULL, NULL);
+  // Merging last-1 w/ last, so we are the base level for "foo", so
+  // DEL is removed.  (as is v1).
+  ASSERT_EQ(AllEntriesFor("foo"), "[ ]");
+}
+
+TEST(DBTest, OverlapInLevel0) {
+  do {
+    ASSERT_EQ(config::kMaxMemCompactLevel, 2) << "Fix test to match config";
+
+    // Fill levels 1 and 2 to disable the pushing of new memtables to levels > 0.
+    ASSERT_OK(Put("100", "v100"));
+    ASSE
