@@ -1287,4 +1287,195 @@ TEST(DBTest, OverlapInLevel0) {
 
     // Fill levels 1 and 2 to disable the pushing of new memtables to levels > 0.
     ASSERT_OK(Put("100", "v100"));
-    ASSE
+    ASSERT_OK(Put("999", "v999"));
+    dbfull()->TEST_CompactMemTable();
+    ASSERT_OK(Delete("100"));
+    ASSERT_OK(Delete("999"));
+    dbfull()->TEST_CompactMemTable();
+    ASSERT_EQ("0,1,1", FilesPerLevel());
+
+    // Make files spanning the following ranges in level-0:
+    //  files[0]  200 .. 900
+    //  files[1]  300 .. 500
+    // Note that files are sorted by smallest key.
+    ASSERT_OK(Put("300", "v300"));
+    ASSERT_OK(Put("500", "v500"));
+    dbfull()->TEST_CompactMemTable();
+    ASSERT_OK(Put("200", "v200"));
+    ASSERT_OK(Put("600", "v600"));
+    ASSERT_OK(Put("900", "v900"));
+    dbfull()->TEST_CompactMemTable();
+    ASSERT_EQ("2,1,1", FilesPerLevel());
+
+    // Compact away the placeholder files we created initially
+    dbfull()->TEST_CompactRange(1, NULL, NULL);
+    dbfull()->TEST_CompactRange(2, NULL, NULL);
+    ASSERT_EQ("2", FilesPerLevel());
+
+    // Do a memtable compaction.  Before bug-fix, the compaction would
+    // not detect the overlap with level-0 files and would incorrectly place
+    // the deletion in a deeper level.
+    ASSERT_OK(Delete("600"));
+    dbfull()->TEST_CompactMemTable();
+    ASSERT_EQ("3", FilesPerLevel());
+    ASSERT_EQ("NOT_FOUND", Get("600"));
+  } while (ChangeOptions());
+}
+
+TEST(DBTest, L0_CompactionBug_Issue44_a) {
+  Reopen();
+  ASSERT_OK(Put("b", "v"));
+  Reopen();
+  ASSERT_OK(Delete("b"));
+  ASSERT_OK(Delete("a"));
+  Reopen();
+  ASSERT_OK(Delete("a"));
+  Reopen();
+  ASSERT_OK(Put("a", "v"));
+  Reopen();
+  Reopen();
+  ASSERT_EQ("(a->v)", Contents());
+  DelayMilliseconds(1000);  // Wait for compaction to finish
+  ASSERT_EQ("(a->v)", Contents());
+}
+
+TEST(DBTest, L0_CompactionBug_Issue44_b) {
+  Reopen();
+  Put("","");
+  Reopen();
+  Delete("e");
+  Put("","");
+  Reopen();
+  Put("c", "cv");
+  Reopen();
+  Put("","");
+  Reopen();
+  Put("","");
+  DelayMilliseconds(1000);  // Wait for compaction to finish
+  Reopen();
+  Put("d","dv");
+  Reopen();
+  Put("","");
+  Reopen();
+  Delete("d");
+  Delete("b");
+  Reopen();
+  ASSERT_EQ("(->)(c->cv)", Contents());
+  DelayMilliseconds(1000);  // Wait for compaction to finish
+  ASSERT_EQ("(->)(c->cv)", Contents());
+}
+
+TEST(DBTest, ComparatorCheck) {
+  class NewComparator : public Comparator {
+   public:
+    virtual const char* Name() const { return "leveldb.NewComparator"; }
+    virtual int Compare(const Slice& a, const Slice& b) const {
+      return BytewiseComparator()->Compare(a, b);
+    }
+    virtual void FindShortestSeparator(std::string* s, const Slice& l) const {
+      BytewiseComparator()->FindShortestSeparator(s, l);
+    }
+    virtual void FindShortSuccessor(std::string* key) const {
+      BytewiseComparator()->FindShortSuccessor(key);
+    }
+  };
+  NewComparator cmp;
+  Options new_options = CurrentOptions();
+  new_options.comparator = &cmp;
+  Status s = TryReopen(&new_options);
+  ASSERT_TRUE(!s.ok());
+  ASSERT_TRUE(s.ToString().find("comparator") != std::string::npos)
+      << s.ToString();
+}
+
+TEST(DBTest, CustomComparator) {
+  class NumberComparator : public Comparator {
+   public:
+    virtual const char* Name() const { return "test.NumberComparator"; }
+    virtual int Compare(const Slice& a, const Slice& b) const {
+      return ToNumber(a) - ToNumber(b);
+    }
+    virtual void FindShortestSeparator(std::string* s, const Slice& l) const {
+      ToNumber(*s);     // Check format
+      ToNumber(l);      // Check format
+    }
+    virtual void FindShortSuccessor(std::string* key) const {
+      ToNumber(*key);   // Check format
+    }
+   private:
+    static int ToNumber(const Slice& x) {
+      // Check that there are no extra characters.
+      ASSERT_TRUE(x.size() >= 2 && x[0] == '[' && x[x.size()-1] == ']')
+          << EscapeString(x);
+      int val;
+      char ignored;
+      ASSERT_TRUE(sscanf(x.ToString().c_str(), "[%i]%c", &val, &ignored) == 1)
+          << EscapeString(x);
+      return val;
+    }
+  };
+  NumberComparator cmp;
+  Options new_options = CurrentOptions();
+  new_options.create_if_missing = true;
+  new_options.comparator = &cmp;
+  new_options.filter_policy = NULL;     // Cannot use bloom filters
+  new_options.write_buffer_size = 1000;  // Compact more often
+  DestroyAndReopen(&new_options);
+  ASSERT_OK(Put("[10]", "ten"));
+  ASSERT_OK(Put("[0x14]", "twenty"));
+  for (int i = 0; i < 2; i++) {
+    ASSERT_EQ("ten", Get("[10]"));
+    ASSERT_EQ("ten", Get("[0xa]"));
+    ASSERT_EQ("twenty", Get("[20]"));
+    ASSERT_EQ("twenty", Get("[0x14]"));
+    ASSERT_EQ("NOT_FOUND", Get("[15]"));
+    ASSERT_EQ("NOT_FOUND", Get("[0xf]"));
+    Compact("[0]", "[9999]");
+  }
+
+  for (int run = 0; run < 2; run++) {
+    for (int i = 0; i < 1000; i++) {
+      char buf[100];
+      snprintf(buf, sizeof(buf), "[%d]", i*10);
+      ASSERT_OK(Put(buf, buf));
+    }
+    Compact("[0]", "[1000000]");
+  }
+}
+
+TEST(DBTest, ManualCompaction) {
+  ASSERT_EQ(config::kMaxMemCompactLevel, 2)
+      << "Need to update this test to match kMaxMemCompactLevel";
+
+  MakeTables(3, "p", "q");
+  ASSERT_EQ("1,1,1", FilesPerLevel());
+
+  // Compaction range falls before files
+  Compact("", "c");
+  ASSERT_EQ("1,1,1", FilesPerLevel());
+
+  // Compaction range falls after files
+  Compact("r", "z");
+  ASSERT_EQ("1,1,1", FilesPerLevel());
+
+  // Compaction range overlaps files
+  Compact("p1", "p9");
+  ASSERT_EQ("0,0,1", FilesPerLevel());
+
+  // Populate a different range
+  MakeTables(3, "c", "e");
+  ASSERT_EQ("1,1,2", FilesPerLevel());
+
+  // Compact just the new range
+  Compact("b", "f");
+  ASSERT_EQ("0,0,2", FilesPerLevel());
+
+  // Compact all
+  MakeTables(1, "a", "z");
+  ASSERT_EQ("0,1,2", FilesPerLevel());
+  db_->CompactRange(NULL, NULL);
+  ASSERT_EQ("0,0,1", FilesPerLevel());
+}
+
+TEST(DBTest, DBOpen_Options) {
+  std::string dbn
