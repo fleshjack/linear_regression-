@@ -1873,4 +1873,182 @@ class ModelDB: public DB {
      public:
       KVMap* map_;
       virtual void Put(const Slice& key, const Slice& value) {
- 
+        (*map_)[key.ToString()] = value.ToString();
+      }
+      virtual void Delete(const Slice& key) {
+        map_->erase(key.ToString());
+      }
+    };
+    Handler handler;
+    handler.map_ = &map_;
+    return batch->Iterate(&handler);
+  }
+
+  virtual bool GetProperty(const Slice& property, std::string* value) {
+    return false;
+  }
+  virtual void GetApproximateSizes(const Range* r, int n, uint64_t* sizes) {
+    for (int i = 0; i < n; i++) {
+      sizes[i] = 0;
+    }
+  }
+  virtual void CompactRange(const Slice* start, const Slice* end) {
+  }
+
+ private:
+  class ModelIter: public Iterator {
+   public:
+    ModelIter(const KVMap* map, bool owned)
+        : map_(map), owned_(owned), iter_(map_->end()) {
+    }
+    ~ModelIter() {
+      if (owned_) delete map_;
+    }
+    virtual bool Valid() const { return iter_ != map_->end(); }
+    virtual void SeekToFirst() { iter_ = map_->begin(); }
+    virtual void SeekToLast() {
+      if (map_->empty()) {
+        iter_ = map_->end();
+      } else {
+        iter_ = map_->find(map_->rbegin()->first);
+      }
+    }
+    virtual void Seek(const Slice& k) {
+      iter_ = map_->lower_bound(k.ToString());
+    }
+    virtual void Next() { ++iter_; }
+    virtual void Prev() { --iter_; }
+    virtual Slice key() const { return iter_->first; }
+    virtual Slice value() const { return iter_->second; }
+    virtual Status status() const { return Status::OK(); }
+   private:
+    const KVMap* const map_;
+    const bool owned_;  // Do we own map_
+    KVMap::const_iterator iter_;
+  };
+  const Options options_;
+  KVMap map_;
+};
+
+static std::string RandomKey(Random* rnd) {
+  int len = (rnd->OneIn(3)
+             ? 1                // Short sometimes to encourage collisions
+             : (rnd->OneIn(100) ? rnd->Skewed(10) : rnd->Uniform(10)));
+  return test::RandomKey(rnd, len);
+}
+
+static bool CompareIterators(int step,
+                             DB* model,
+                             DB* db,
+                             const Snapshot* model_snap,
+                             const Snapshot* db_snap) {
+  ReadOptions options;
+  options.snapshot = model_snap;
+  Iterator* miter = model->NewIterator(options);
+  options.snapshot = db_snap;
+  Iterator* dbiter = db->NewIterator(options);
+  bool ok = true;
+  int count = 0;
+  for (miter->SeekToFirst(), dbiter->SeekToFirst();
+       ok && miter->Valid() && dbiter->Valid();
+       miter->Next(), dbiter->Next()) {
+    count++;
+    if (miter->key().compare(dbiter->key()) != 0) {
+      fprintf(stderr, "step %d: Key mismatch: '%s' vs. '%s'\n",
+              step,
+              EscapeString(miter->key()).c_str(),
+              EscapeString(dbiter->key()).c_str());
+      ok = false;
+      break;
+    }
+
+    if (miter->value().compare(dbiter->value()) != 0) {
+      fprintf(stderr, "step %d: Value mismatch for key '%s': '%s' vs. '%s'\n",
+              step,
+              EscapeString(miter->key()).c_str(),
+              EscapeString(miter->value()).c_str(),
+              EscapeString(miter->value()).c_str());
+      ok = false;
+    }
+  }
+
+  if (ok) {
+    if (miter->Valid() != dbiter->Valid()) {
+      fprintf(stderr, "step %d: Mismatch at end of iterators: %d vs. %d\n",
+              step, miter->Valid(), dbiter->Valid());
+      ok = false;
+    }
+  }
+  fprintf(stderr, "%d entries compared: ok=%d\n", count, ok);
+  delete miter;
+  delete dbiter;
+  return ok;
+}
+
+TEST(DBTest, Randomized) {
+  Random rnd(test::RandomSeed());
+  do {
+    ModelDB model(CurrentOptions());
+    const int N = 10000;
+    const Snapshot* model_snap = NULL;
+    const Snapshot* db_snap = NULL;
+    std::string k, v;
+    for (int step = 0; step < N; step++) {
+      if (step % 100 == 0) {
+        fprintf(stderr, "Step %d of %d\n", step, N);
+      }
+      // TODO(sanjay): Test Get() works
+      int p = rnd.Uniform(100);
+      if (p < 45) {                               // Put
+        k = RandomKey(&rnd);
+        v = RandomString(&rnd,
+                         rnd.OneIn(20)
+                         ? 100 + rnd.Uniform(100)
+                         : rnd.Uniform(8));
+        ASSERT_OK(model.Put(WriteOptions(), k, v));
+        ASSERT_OK(db_->Put(WriteOptions(), k, v));
+
+      } else if (p < 90) {                        // Delete
+        k = RandomKey(&rnd);
+        ASSERT_OK(model.Delete(WriteOptions(), k));
+        ASSERT_OK(db_->Delete(WriteOptions(), k));
+
+
+      } else {                                    // Multi-element batch
+        WriteBatch b;
+        const int num = rnd.Uniform(8);
+        for (int i = 0; i < num; i++) {
+          if (i == 0 || !rnd.OneIn(10)) {
+            k = RandomKey(&rnd);
+          } else {
+            // Periodically re-use the same key from the previous iter, so
+            // we have multiple entries in the write batch for the same key
+          }
+          if (rnd.OneIn(2)) {
+            v = RandomString(&rnd, rnd.Uniform(10));
+            b.Put(k, v);
+          } else {
+            b.Delete(k);
+          }
+        }
+        ASSERT_OK(model.Write(WriteOptions(), &b));
+        ASSERT_OK(db_->Write(WriteOptions(), &b));
+      }
+
+      if ((step % 100) == 0) {
+        ASSERT_TRUE(CompareIterators(step, &model, db_, NULL, NULL));
+        ASSERT_TRUE(CompareIterators(step, &model, db_, model_snap, db_snap));
+        // Save a snapshot from each DB this time that we'll use next
+        // time we compare things, to make sure the current state is
+        // preserved with the snapshot
+        if (model_snap != NULL) model.ReleaseSnapshot(model_snap);
+        if (db_snap != NULL) db_->ReleaseSnapshot(db_snap);
+
+        Reopen();
+        ASSERT_TRUE(CompareIterators(step, &model, db_, NULL, NULL));
+
+        model_snap = model.GetSnapshot();
+        db_snap = db_->GetSnapshot();
+      }
+    }
+    if (mo
