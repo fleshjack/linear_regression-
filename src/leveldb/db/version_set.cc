@@ -376,3 +376,182 @@ Status Version::Get(const ReadOptions& options,
         } else {
           files = &tmp2;
           num_files = 1;
+        }
+      }
+    }
+
+    for (uint32_t i = 0; i < num_files; ++i) {
+      if (last_file_read != NULL && stats->seek_file == NULL) {
+        // We have had more than one seek for this read.  Charge the 1st file.
+        stats->seek_file = last_file_read;
+        stats->seek_file_level = last_file_read_level;
+      }
+
+      FileMetaData* f = files[i];
+      last_file_read = f;
+      last_file_read_level = level;
+
+      Saver saver;
+      saver.state = kNotFound;
+      saver.ucmp = ucmp;
+      saver.user_key = user_key;
+      saver.value = value;
+      s = vset_->table_cache_->Get(options, f->number, f->file_size,
+                                   ikey, &saver, SaveValue);
+      if (!s.ok()) {
+        return s;
+      }
+      switch (saver.state) {
+        case kNotFound:
+          break;      // Keep searching in other files
+        case kFound:
+          return s;
+        case kDeleted:
+          s = Status::NotFound(Slice());  // Use empty error message for speed
+          return s;
+        case kCorrupt:
+          s = Status::Corruption("corrupted key for ", user_key);
+          return s;
+      }
+    }
+  }
+
+  return Status::NotFound(Slice());  // Use an empty error message for speed
+}
+
+bool Version::UpdateStats(const GetStats& stats) {
+  FileMetaData* f = stats.seek_file;
+  if (f != NULL) {
+    f->allowed_seeks--;
+    if (f->allowed_seeks <= 0 && file_to_compact_ == NULL) {
+      file_to_compact_ = f;
+      file_to_compact_level_ = stats.seek_file_level;
+      return true;
+    }
+  }
+  return false;
+}
+
+bool Version::RecordReadSample(Slice internal_key) {
+  ParsedInternalKey ikey;
+  if (!ParseInternalKey(internal_key, &ikey)) {
+    return false;
+  }
+
+  struct State {
+    GetStats stats;  // Holds first matching file
+    int matches;
+
+    static bool Match(void* arg, int level, FileMetaData* f) {
+      State* state = reinterpret_cast<State*>(arg);
+      state->matches++;
+      if (state->matches == 1) {
+        // Remember first match.
+        state->stats.seek_file = f;
+        state->stats.seek_file_level = level;
+      }
+      // We can stop iterating once we have a second match.
+      return state->matches < 2;
+    }
+  };
+
+  State state;
+  state.matches = 0;
+  ForEachOverlapping(ikey.user_key, internal_key, &state, &State::Match);
+
+  // Must have at least two matches since we want to merge across
+  // files. But what if we have a single file that contains many
+  // overwrites and deletions?  Should we have another mechanism for
+  // finding such files?
+  if (state.matches >= 2) {
+    // 1MB cost is about 1 seek (see comment in Builder::Apply).
+    return UpdateStats(state.stats);
+  }
+  return false;
+}
+
+void Version::Ref() {
+  ++refs_;
+}
+
+void Version::Unref() {
+  assert(this != &vset_->dummy_versions_);
+  assert(refs_ >= 1);
+  --refs_;
+  if (refs_ == 0) {
+    delete this;
+  }
+}
+
+bool Version::OverlapInLevel(int level,
+                             const Slice* smallest_user_key,
+                             const Slice* largest_user_key) {
+  return SomeFileOverlapsRange(vset_->icmp_, (level > 0), files_[level],
+                               smallest_user_key, largest_user_key);
+}
+
+int Version::PickLevelForMemTableOutput(
+    const Slice& smallest_user_key,
+    const Slice& largest_user_key) {
+  int level = 0;
+  if (!OverlapInLevel(0, &smallest_user_key, &largest_user_key)) {
+    // Push to next level if there is no overlap in next level,
+    // and the #bytes overlapping in the level after that are limited.
+    InternalKey start(smallest_user_key, kMaxSequenceNumber, kValueTypeForSeek);
+    InternalKey limit(largest_user_key, 0, static_cast<ValueType>(0));
+    std::vector<FileMetaData*> overlaps;
+    while (level < config::kMaxMemCompactLevel) {
+      if (OverlapInLevel(level + 1, &smallest_user_key, &largest_user_key)) {
+        break;
+      }
+      if (level + 2 < config::kNumLevels) {
+        // Check that file does not overlap too many grandparent bytes.
+        GetOverlappingInputs(level + 2, &start, &limit, &overlaps);
+        const int64_t sum = TotalFileSize(overlaps);
+        if (sum > kMaxGrandParentOverlapBytes) {
+          break;
+        }
+      }
+      level++;
+    }
+  }
+  return level;
+}
+
+// Store in "*inputs" all files in "level" that overlap [begin,end]
+void Version::GetOverlappingInputs(
+    int level,
+    const InternalKey* begin,
+    const InternalKey* end,
+    std::vector<FileMetaData*>* inputs) {
+  assert(level >= 0);
+  assert(level < config::kNumLevels);
+  inputs->clear();
+  Slice user_begin, user_end;
+  if (begin != NULL) {
+    user_begin = begin->user_key();
+  }
+  if (end != NULL) {
+    user_end = end->user_key();
+  }
+  const Comparator* user_cmp = vset_->icmp_.user_comparator();
+  for (size_t i = 0; i < files_[level].size(); ) {
+    FileMetaData* f = files_[level][i++];
+    const Slice file_start = f->smallest.user_key();
+    const Slice file_limit = f->largest.user_key();
+    if (begin != NULL && user_cmp->Compare(file_limit, user_begin) < 0) {
+      // "f" is completely before specified range; skip it
+    } else if (end != NULL && user_cmp->Compare(file_start, user_end) > 0) {
+      // "f" is completely after specified range; skip it
+    } else {
+      inputs->push_back(f);
+      if (level == 0) {
+        // Level-0 files may overlap each other.  So check if the newly
+        // added file has expanded the range.  If so, restart search.
+        if (begin != NULL && user_cmp->Compare(file_start, user_begin) < 0) {
+          user_begin = file_start;
+          inputs->clear();
+          i = 0;
+        } else if (end != NULL && user_cmp->Compare(file_limit, user_end) > 0) {
+          user_end = file_limit;
+  
