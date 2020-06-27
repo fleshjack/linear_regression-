@@ -554,4 +554,176 @@ void Version::GetOverlappingInputs(
           i = 0;
         } else if (end != NULL && user_cmp->Compare(file_limit, user_end) > 0) {
           user_end = file_limit;
-  
+          inputs->clear();
+          i = 0;
+        }
+      }
+    }
+  }
+}
+
+std::string Version::DebugString() const {
+  std::string r;
+  for (int level = 0; level < config::kNumLevels; level++) {
+    // E.g.,
+    //   --- level 1 ---
+    //   17:123['a' .. 'd']
+    //   20:43['e' .. 'g']
+    r.append("--- level ");
+    AppendNumberTo(&r, level);
+    r.append(" ---\n");
+    const std::vector<FileMetaData*>& files = files_[level];
+    for (size_t i = 0; i < files.size(); i++) {
+      r.push_back(' ');
+      AppendNumberTo(&r, files[i]->number);
+      r.push_back(':');
+      AppendNumberTo(&r, files[i]->file_size);
+      r.append("[");
+      r.append(files[i]->smallest.DebugString());
+      r.append(" .. ");
+      r.append(files[i]->largest.DebugString());
+      r.append("]\n");
+    }
+  }
+  return r;
+}
+
+// A helper class so we can efficiently apply a whole sequence
+// of edits to a particular state without creating intermediate
+// Versions that contain full copies of the intermediate state.
+class VersionSet::Builder {
+ private:
+  // Helper to sort by v->files_[file_number].smallest
+  struct BySmallestKey {
+    const InternalKeyComparator* internal_comparator;
+
+    bool operator()(FileMetaData* f1, FileMetaData* f2) const {
+      int r = internal_comparator->Compare(f1->smallest, f2->smallest);
+      if (r != 0) {
+        return (r < 0);
+      } else {
+        // Break ties by file number
+        return (f1->number < f2->number);
+      }
+    }
+  };
+
+  typedef std::set<FileMetaData*, BySmallestKey> FileSet;
+  struct LevelState {
+    std::set<uint64_t> deleted_files;
+    FileSet* added_files;
+  };
+
+  VersionSet* vset_;
+  Version* base_;
+  LevelState levels_[config::kNumLevels];
+
+ public:
+  // Initialize a builder with the files from *base and other info from *vset
+  Builder(VersionSet* vset, Version* base)
+      : vset_(vset),
+        base_(base) {
+    base_->Ref();
+    BySmallestKey cmp;
+    cmp.internal_comparator = &vset_->icmp_;
+    for (int level = 0; level < config::kNumLevels; level++) {
+      levels_[level].added_files = new FileSet(cmp);
+    }
+  }
+
+  ~Builder() {
+    for (int level = 0; level < config::kNumLevels; level++) {
+      const FileSet* added = levels_[level].added_files;
+      std::vector<FileMetaData*> to_unref;
+      to_unref.reserve(added->size());
+      for (FileSet::const_iterator it = added->begin();
+          it != added->end(); ++it) {
+        to_unref.push_back(*it);
+      }
+      delete added;
+      for (uint32_t i = 0; i < to_unref.size(); i++) {
+        FileMetaData* f = to_unref[i];
+        f->refs--;
+        if (f->refs <= 0) {
+          delete f;
+        }
+      }
+    }
+    base_->Unref();
+  }
+
+  // Apply all of the edits in *edit to the current state.
+  void Apply(VersionEdit* edit) {
+    // Update compaction pointers
+    for (size_t i = 0; i < edit->compact_pointers_.size(); i++) {
+      const int level = edit->compact_pointers_[i].first;
+      vset_->compact_pointer_[level] =
+          edit->compact_pointers_[i].second.Encode().ToString();
+    }
+
+    // Delete files
+    const VersionEdit::DeletedFileSet& del = edit->deleted_files_;
+    for (VersionEdit::DeletedFileSet::const_iterator iter = del.begin();
+         iter != del.end();
+         ++iter) {
+      const int level = iter->first;
+      const uint64_t number = iter->second;
+      levels_[level].deleted_files.insert(number);
+    }
+
+    // Add new files
+    for (size_t i = 0; i < edit->new_files_.size(); i++) {
+      const int level = edit->new_files_[i].first;
+      FileMetaData* f = new FileMetaData(edit->new_files_[i].second);
+      f->refs = 1;
+
+      // We arrange to automatically compact this file after
+      // a certain number of seeks.  Let's assume:
+      //   (1) One seek costs 10ms
+      //   (2) Writing or reading 1MB costs 10ms (100MB/s)
+      //   (3) A compaction of 1MB does 25MB of IO:
+      //         1MB read from this level
+      //         10-12MB read from next level (boundaries may be misaligned)
+      //         10-12MB written to next level
+      // This implies that 25 seeks cost the same as the compaction
+      // of 1MB of data.  I.e., one seek costs approximately the
+      // same as the compaction of 40KB of data.  We are a little
+      // conservative and allow approximately one seek for every 16KB
+      // of data before triggering a compaction.
+      f->allowed_seeks = (f->file_size / 16384);
+      if (f->allowed_seeks < 100) f->allowed_seeks = 100;
+
+      levels_[level].deleted_files.erase(f->number);
+      levels_[level].added_files->insert(f);
+    }
+  }
+
+  // Save the current state in *v.
+  void SaveTo(Version* v) {
+    BySmallestKey cmp;
+    cmp.internal_comparator = &vset_->icmp_;
+    for (int level = 0; level < config::kNumLevels; level++) {
+      // Merge the set of added files with the set of pre-existing files.
+      // Drop any deleted files.  Store the result in *v.
+      const std::vector<FileMetaData*>& base_files = base_->files_[level];
+      std::vector<FileMetaData*>::const_iterator base_iter = base_files.begin();
+      std::vector<FileMetaData*>::const_iterator base_end = base_files.end();
+      const FileSet* added = levels_[level].added_files;
+      v->files_[level].reserve(base_files.size() + added->size());
+      for (FileSet::const_iterator added_iter = added->begin();
+           added_iter != added->end();
+           ++added_iter) {
+        // Add all smaller files listed in base_
+        for (std::vector<FileMetaData*>::const_iterator bpos
+                 = std::upper_bound(base_iter, base_end, *added_iter, cmp);
+             base_iter != bpos;
+             ++base_iter) {
+          MaybeAddFile(v, level, *base_iter);
+        }
+
+        MaybeAddFile(v, level, *added_iter);
+      }
+
+      // Add remaining base files
+      for (; base_iter != base_end; ++base_iter) {
+        M
