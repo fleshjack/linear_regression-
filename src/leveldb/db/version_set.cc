@@ -1453,4 +1453,32 @@ bool Compaction::IsBaseLevelForKey(const Slice& user_key) {
 }
 
 bool Compaction::ShouldStopBefore(const Slice& internal_key) {
-  // Sc
+  // Scan to find earliest grandparent file that contains key.
+  const InternalKeyComparator* icmp = &input_version_->vset_->icmp_;
+  while (grandparent_index_ < grandparents_.size() &&
+      icmp->Compare(internal_key,
+                    grandparents_[grandparent_index_]->largest.Encode()) > 0) {
+    if (seen_key_) {
+      overlapped_bytes_ += grandparents_[grandparent_index_]->file_size;
+    }
+    grandparent_index_++;
+  }
+  seen_key_ = true;
+
+  if (overlapped_bytes_ > kMaxGrandParentOverlapBytes) {
+    // Too much overlap for current output; start new output
+    overlapped_bytes_ = 0;
+    return true;
+  } else {
+    return false;
+  }
+}
+
+void Compaction::ReleaseInputs() {
+  if (input_version_ != NULL) {
+    input_version_->Unref();
+    input_version_ = NULL;
+  }
+}
+
+}  // namespace leveldb
