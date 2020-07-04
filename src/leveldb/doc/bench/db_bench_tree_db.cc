@@ -298,4 +298,197 @@ class Benchmark {
     std::string test_dir;
     Env::Default()->GetTestDirectory(&test_dir);
     Env::Default()->GetChildren(test_dir.c_str(), &files);
-    
+    if (!FLAGS_use_existing_db) {
+      for (int i = 0; i < files.size(); i++) {
+        if (Slice(files[i]).starts_with("dbbench_polyDB")) {
+          std::string file_name(test_dir);
+          file_name += "/";
+          file_name += files[i];
+          Env::Default()->DeleteFile(file_name.c_str());
+        }
+      }
+    }
+  }
+
+  ~Benchmark() {
+    if (!db_->close()) {
+      fprintf(stderr, "close error: %s\n", db_->error().name());
+    }
+  }
+
+  void Run() {
+    PrintHeader();
+    Open(false);
+
+    const char* benchmarks = FLAGS_benchmarks;
+    while (benchmarks != NULL) {
+      const char* sep = strchr(benchmarks, ',');
+      Slice name;
+      if (sep == NULL) {
+        name = benchmarks;
+        benchmarks = NULL;
+      } else {
+        name = Slice(benchmarks, sep - benchmarks);
+        benchmarks = sep + 1;
+      }
+
+      Start();
+
+      bool known = true;
+      bool write_sync = false;
+      if (name == Slice("fillseq")) {
+        Write(write_sync, SEQUENTIAL, FRESH, num_, FLAGS_value_size, 1);
+        
+      } else if (name == Slice("fillrandom")) {
+        Write(write_sync, RANDOM, FRESH, num_, FLAGS_value_size, 1);
+        DBSynchronize(db_);
+      } else if (name == Slice("overwrite")) {
+        Write(write_sync, RANDOM, EXISTING, num_, FLAGS_value_size, 1);
+        DBSynchronize(db_);
+      } else if (name == Slice("fillrandsync")) {
+        write_sync = true;
+        Write(write_sync, RANDOM, FRESH, num_ / 100, FLAGS_value_size, 1);
+        DBSynchronize(db_);
+      } else if (name == Slice("fillseqsync")) {
+        write_sync = true;
+        Write(write_sync, SEQUENTIAL, FRESH, num_ / 100, FLAGS_value_size, 1);
+        DBSynchronize(db_);
+      } else if (name == Slice("fillrand100K")) {
+        Write(write_sync, RANDOM, FRESH, num_ / 1000, 100 * 1000, 1);
+        DBSynchronize(db_);
+      } else if (name == Slice("fillseq100K")) {
+        Write(write_sync, SEQUENTIAL, FRESH, num_ / 1000, 100 * 1000, 1);
+        DBSynchronize(db_);
+      } else if (name == Slice("readseq")) {
+        ReadSequential();
+      } else if (name == Slice("readrandom")) {
+        ReadRandom();
+      } else if (name == Slice("readrand100K")) {
+        int n = reads_;
+        reads_ /= 1000;
+        ReadRandom();
+        reads_ = n;
+      } else if (name == Slice("readseq100K")) {
+        int n = reads_;
+        reads_ /= 1000;
+        ReadSequential();
+        reads_ = n;
+      } else {
+        known = false;
+        if (name != Slice()) {  // No error message for empty name
+          fprintf(stderr, "unknown benchmark '%s'\n", name.ToString().c_str());
+        }
+      }
+      if (known) {
+        Stop(name);
+      }
+    }
+  }
+
+ private:
+    void Open(bool sync) {
+    assert(db_ == NULL);
+
+    // Initialize db_
+    db_ = new kyotocabinet::TreeDB();
+    char file_name[100];
+    db_num_++;
+    std::string test_dir;
+    Env::Default()->GetTestDirectory(&test_dir);
+    snprintf(file_name, sizeof(file_name),
+             "%s/dbbench_polyDB-%d.kct",
+             test_dir.c_str(),
+             db_num_);
+
+    // Create tuning options and open the database
+    int open_options = kyotocabinet::PolyDB::OWRITER |
+                       kyotocabinet::PolyDB::OCREATE;
+    int tune_options = kyotocabinet::TreeDB::TSMALL |
+        kyotocabinet::TreeDB::TLINEAR;
+    if (FLAGS_compression) {
+      tune_options |= kyotocabinet::TreeDB::TCOMPRESS;
+      db_->tune_compressor(&comp_);
+    }
+    db_->tune_options(tune_options);
+    db_->tune_page_cache(FLAGS_cache_size);
+    db_->tune_page(FLAGS_page_size);
+    db_->tune_map(256LL<<20);
+    if (sync) {
+      open_options |= kyotocabinet::PolyDB::OAUTOSYNC;
+    }
+    if (!db_->open(file_name, open_options)) {
+      fprintf(stderr, "open error: %s\n", db_->error().name());
+    }
+  }
+
+  void Write(bool sync, Order order, DBState state,
+             int num_entries, int value_size, int entries_per_batch) {
+    // Create new database if state == FRESH
+    if (state == FRESH) {
+      if (FLAGS_use_existing_db) {
+        message_ = "skipping (--use_existing_db is true)";
+        return;
+      }
+      delete db_;
+      db_ = NULL;
+      Open(sync);
+      Start();  // Do not count time taken to destroy/open
+    }
+
+    if (num_entries != num_) {
+      char msg[100];
+      snprintf(msg, sizeof(msg), "(%d ops)", num_entries);
+      message_ = msg;
+    }
+
+    // Write to database
+    for (int i = 0; i < num_entries; i++)
+    {
+      const int k = (order == SEQUENTIAL) ? i : (rand_.Next() % num_entries);
+      char key[100];
+      snprintf(key, sizeof(key), "%016d", k);
+      bytes_ += value_size + strlen(key);
+      std::string cpp_key = key;
+      if (!db_->set(cpp_key, gen_.Generate(value_size).ToString())) {
+        fprintf(stderr, "set error: %s\n", db_->error().name());
+      }
+      FinishedSingleOp();
+    }
+  }
+
+  void ReadSequential() {
+    kyotocabinet::DB::Cursor* cur = db_->cursor();
+    cur->jump();
+    std::string ckey, cvalue;
+    while (cur->get(&ckey, &cvalue, true)) {
+      bytes_ += ckey.size() + cvalue.size();
+      FinishedSingleOp();
+    }
+    delete cur;
+  }
+
+  void ReadRandom() {
+    std::string value;
+    for (int i = 0; i < reads_; i++) {
+      char key[100];
+      const int k = rand_.Next() % reads_;
+      snprintf(key, sizeof(key), "%016d", k);
+      db_->get(key, &value);
+      FinishedSingleOp();
+    }
+  }
+};
+
+}  // namespace leveldb
+
+int main(int argc, char** argv) {
+  std::string default_db_path;
+  for (int i = 1; i < argc; i++) {
+    double d;
+    int n;
+    char junk;
+    if (leveldb::Slice(argv[i]).starts_with("--benchmarks=")) {
+      FLAGS_benchmarks = argv[i] + strlen("--benchmarks=");
+    } else if (sscanf(argv[i], "--compression_ratio=%lf%c", &d, &junk) == 1) {
+      FLAGS_compression_ratio = d;
+    } else if (sscanf(argv[i], "--histogram=%d%c
