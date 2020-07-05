@@ -297,4 +297,138 @@ Now create a database using this custom comparator:
 The result of the comparator's <code>Name</code> method is attached to the
 database when it is created, and is checked on every subsequent
 database open.  If the name changes, the <code>leveldb::DB::Open</code> call will
-fail.  Therefore, change the name i
+fail.  Therefore, change the name if and only if the new key format
+and comparison function are incompatible with existing databases, and
+it is ok to discard the contents of all existing databases.
+<p>
+You can however still gradually evolve your key format over time with
+a little bit of pre-planning.  For example, you could store a version
+number at the end of each key (one byte should suffice for most uses).
+When you wish to switch to a new key format (e.g., adding an optional
+third part to the keys processed by <code>TwoPartComparator</code>),
+(a) keep the same comparator name (b) increment the version number
+for new keys (c) change the comparator function so it uses the
+version numbers found in the keys to decide how to interpret them.
+<p>
+<h1>Performance</h1>
+<p>
+Performance can be tuned by changing the default values of the
+types defined in <code>include/leveldb/options.h</code>.
+
+<p>
+<h2>Block size</h2>
+<p>
+<code>leveldb</code> groups adjacent keys together into the same block and such a
+block is the unit of transfer to and from persistent storage.  The
+default block size is approximately 4096 uncompressed bytes.
+Applications that mostly do bulk scans over the contents of the
+database may wish to increase this size.  Applications that do a lot
+of point reads of small values may wish to switch to a smaller block
+size if performance measurements indicate an improvement.  There isn't
+much benefit in using blocks smaller than one kilobyte, or larger than
+a few megabytes.  Also note that compression will be more effective
+with larger block sizes.
+<p>
+<h2>Compression</h2>
+<p>
+Each block is individually compressed before being written to
+persistent storage.  Compression is on by default since the default
+compression method is very fast, and is automatically disabled for
+uncompressible data.  In rare cases, applications may want to disable
+compression entirely, but should only do so if benchmarks show a
+performance improvement:
+<p>
+<pre>
+  leveldb::Options options;
+  options.compression = leveldb::kNoCompression;
+  ... leveldb::DB::Open(options, name, ...) ....
+</pre>
+<h2>Cache</h2>
+<p>
+The contents of the database are stored in a set of files in the
+filesystem and each file stores a sequence of compressed blocks.  If
+<code>options.cache</code> is non-NULL, it is used to cache frequently used
+uncompressed block contents.
+<p>
+<pre>
+  #include "leveldb/cache.h"
+
+  leveldb::Options options;
+  options.cache = leveldb::NewLRUCache(100 * 1048576);  // 100MB cache
+  leveldb::DB* db;
+  leveldb::DB::Open(options, name, &db);
+  ... use the db ...
+  delete db
+  delete options.cache;
+</pre>
+Note that the cache holds uncompressed data, and therefore it should
+be sized according to application level data sizes, without any
+reduction from compression.  (Caching of compressed blocks is left to
+the operating system buffer cache, or any custom <code>Env</code>
+implementation provided by the client.)
+<p>
+When performing a bulk read, the application may wish to disable
+caching so that the data processed by the bulk read does not end up
+displacing most of the cached contents.  A per-iterator option can be
+used to achieve this:
+<p>
+<pre>
+  leveldb::ReadOptions options;
+  options.fill_cache = false;
+  leveldb::Iterator* it = db-&gt;NewIterator(options);
+  for (it-&gt;SeekToFirst(); it-&gt;Valid(); it-&gt;Next()) {
+    ...
+  }
+</pre>
+<h2>Key Layout</h2>
+<p>
+Note that the unit of disk transfer and caching is a block.  Adjacent
+keys (according to the database sort order) will usually be placed in
+the same block.  Therefore the application can improve its performance
+by placing keys that are accessed together near each other and placing
+infrequently used keys in a separate region of the key space.
+<p>
+For example, suppose we are implementing a simple file system on top
+of <code>leveldb</code>.  The types of entries we might wish to store are:
+<p>
+<pre>
+   filename -&gt; permission-bits, length, list of file_block_ids
+   file_block_id -&gt; data
+</pre>
+We might want to prefix <code>filename</code> keys with one letter (say '/') and the
+<code>file_block_id</code> keys with a different letter (say '0') so that scans
+over just the metadata do not force us to fetch and cache bulky file
+contents.
+<p>
+<h2>Filters</h2>
+<p>
+Because of the way <code>leveldb</code> data is organized on disk,
+a single <code>Get()</code> call may involve multiple reads from disk.
+The optional <code>FilterPolicy</code> mechanism can be used to reduce
+the number of disk reads substantially.
+<pre>
+   leveldb::Options options;
+   options.filter_policy = NewBloomFilterPolicy(10);
+   leveldb::DB* db;
+   leveldb::DB::Open(options, "/tmp/testdb", &amp;db);
+   ... use the database ...
+   delete db;
+   delete options.filter_policy;
+</pre>
+The preceding code associates a
+<a href="http://en.wikipedia.org/wiki/Bloom_filter">Bloom filter</a>
+based filtering policy with the database.  Bloom filter based
+filtering relies on keeping some number of bits of data in memory per
+key (in this case 10 bits per key since that is the argument we passed
+to NewBloomFilterPolicy).  This filter will reduce the number of unnecessary
+disk reads needed for <code>Get()</code> calls by a factor of
+approximately a 100.  Increasing the bits per key will lead to a
+larger reduction at the cost of more memory usage.  We recommend that
+applications whose working set does not fit in memory and that do a
+lot of random reads set a filter policy.
+<p>
+If you are using a custom comparator, you should ensure that the filter
+policy you are using is compatible with your comparator.  For example,
+consider a comparator that ignores trailing spaces when comparing keys.
+<code>NewBloomFilterPolicy</code> must not be used with such a comparator.
+Instead, the application should provide a custom filter policy
