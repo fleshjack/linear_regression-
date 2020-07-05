@@ -143,4 +143,158 @@ the batch.
 <p>
 A database may only be opened by one process at a time.
 The <code>leveldb</code> implementation acquires a lock from the
-operating system to prevent misuse.  Within a singl
+operating system to prevent misuse.  Within a single process, the
+same <code>leveldb::DB</code> object may be safely shared by multiple
+concurrent threads.  I.e., different threads may write into or fetch
+iterators or call <code>Get</code> on the same database without any
+external synchronization (the leveldb implementation will
+automatically do the required synchronization).  However other objects
+(like Iterator and WriteBatch) may require external synchronization.
+If two threads share such an object, they must protect access to it
+using their own locking protocol.  More details are available in
+the public header files.
+<p>
+<h1>Iteration</h1>
+<p>
+The following example demonstrates how to print all key,value pairs
+in a database.
+<p>
+<pre>
+  leveldb::Iterator* it = db-&gt;NewIterator(leveldb::ReadOptions());
+  for (it-&gt;SeekToFirst(); it-&gt;Valid(); it-&gt;Next()) {
+    cout &lt;&lt; it-&gt;key().ToString() &lt;&lt; ": "  &lt;&lt; it-&gt;value().ToString() &lt;&lt; endl;
+  }
+  assert(it-&gt;status().ok());  // Check for any errors found during the scan
+  delete it;
+</pre>
+The following variation shows how to process just the keys in the
+range <code>[start,limit)</code>:
+<p>
+<pre>
+  for (it-&gt;Seek(start);
+       it-&gt;Valid() &amp;&amp; it-&gt;key().ToString() &lt; limit;
+       it-&gt;Next()) {
+    ...
+  }
+</pre>
+You can also process entries in reverse order.  (Caveat: reverse
+iteration may be somewhat slower than forward iteration.)
+<p>
+<pre>
+  for (it-&gt;SeekToLast(); it-&gt;Valid(); it-&gt;Prev()) {
+    ...
+  }
+</pre>
+<h1>Snapshots</h1>
+<p>
+Snapshots provide consistent read-only views over the entire state of
+the key-value store.  <code>ReadOptions::snapshot</code> may be non-NULL to indicate
+that a read should operate on a particular version of the DB state.
+If <code>ReadOptions::snapshot</code> is NULL, the read will operate on an
+implicit snapshot of the current state.
+<p>
+Snapshots are created by the DB::GetSnapshot() method:
+<p>
+<pre>
+  leveldb::ReadOptions options;
+  options.snapshot = db-&gt;GetSnapshot();
+  ... apply some updates to db ...
+  leveldb::Iterator* iter = db-&gt;NewIterator(options);
+  ... read using iter to view the state when the snapshot was created ...
+  delete iter;
+  db-&gt;ReleaseSnapshot(options.snapshot);
+</pre>
+Note that when a snapshot is no longer needed, it should be released
+using the DB::ReleaseSnapshot interface.  This allows the
+implementation to get rid of state that was being maintained just to
+support reading as of that snapshot.
+<h1>Slice</h1>
+<p>
+The return value of the <code>it->key()</code> and <code>it->value()</code> calls above
+are instances of the <code>leveldb::Slice</code> type.  <code>Slice</code> is a simple
+structure that contains a length and a pointer to an external byte
+array.  Returning a <code>Slice</code> is a cheaper alternative to returning a
+<code>std::string</code> since we do not need to copy potentially large keys and
+values.  In addition, <code>leveldb</code> methods do not return null-terminated
+C-style strings since <code>leveldb</code> keys and values are allowed to
+contain '\0' bytes.
+<p>
+C++ strings and null-terminated C-style strings can be easily converted
+to a Slice:
+<p>
+<pre>
+   leveldb::Slice s1 = "hello";
+
+   std::string str("world");
+   leveldb::Slice s2 = str;
+</pre>
+A Slice can be easily converted back to a C++ string:
+<pre>
+   std::string str = s1.ToString();
+   assert(str == std::string("hello"));
+</pre>
+Be careful when using Slices since it is up to the caller to ensure that
+the external byte array into which the Slice points remains live while
+the Slice is in use.  For example, the following is buggy:
+<p>
+<pre>
+   leveldb::Slice slice;
+   if (...) {
+     std::string str = ...;
+     slice = str;
+   }
+   Use(slice);
+</pre>
+When the <code>if</code> statement goes out of scope, <code>str</code> will be destroyed and the
+backing storage for <code>slice</code> will disappear.
+<p>
+<h1>Comparators</h1>
+<p>
+The preceding examples used the default ordering function for key,
+which orders bytes lexicographically.  You can however supply a custom
+comparator when opening a database.  For example, suppose each
+database key consists of two numbers and we should sort by the first
+number, breaking ties by the second number.  First, define a proper
+subclass of <code>leveldb::Comparator</code> that expresses these rules:
+<p>
+<pre>
+  class TwoPartComparator : public leveldb::Comparator {
+   public:
+    // Three-way comparison function:
+    //   if a &lt; b: negative result
+    //   if a &gt; b: positive result
+    //   else: zero result
+    int Compare(const leveldb::Slice&amp; a, const leveldb::Slice&amp; b) const {
+      int a1, a2, b1, b2;
+      ParseKey(a, &amp;a1, &amp;a2);
+      ParseKey(b, &amp;b1, &amp;b2);
+      if (a1 &lt; b1) return -1;
+      if (a1 &gt; b1) return +1;
+      if (a2 &lt; b2) return -1;
+      if (a2 &gt; b2) return +1;
+      return 0;
+    }
+
+    // Ignore the following methods for now:
+    const char* Name() const { return "TwoPartComparator"; }
+    void FindShortestSeparator(std::string*, const leveldb::Slice&amp;) const { }
+    void FindShortSuccessor(std::string*) const { }
+  };
+</pre>
+Now create a database using this custom comparator:
+<p>
+<pre>
+  TwoPartComparator cmp;
+  leveldb::DB* db;
+  leveldb::Options options;
+  options.create_if_missing = true;
+  options.comparator = &amp;cmp;
+  leveldb::Status status = leveldb::DB::Open(options, "/tmp/testdb", &amp;db);
+  ...
+</pre>
+<h2>Backwards compatibility</h2>
+<p>
+The result of the comparator's <code>Name</code> method is attached to the
+database when it is created, and is checked on every subsequent
+database open.  If the name changes, the <code>leveldb::DB::Open</code> call will
+fail.  Therefore, change the name i
