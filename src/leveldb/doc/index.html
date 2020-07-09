@@ -431,4 +431,119 @@ If you are using a custom comparator, you should ensure that the filter
 policy you are using is compatible with your comparator.  For example,
 consider a comparator that ignores trailing spaces when comparing keys.
 <code>NewBloomFilterPolicy</code> must not be used with such a comparator.
-Instead, the application should provide a custom filter policy
+Instead, the application should provide a custom filter policy that
+also ignores trailing spaces.  For example:
+<pre>
+  class CustomFilterPolicy : public leveldb::FilterPolicy {
+   private:
+    FilterPolicy* builtin_policy_;
+   public:
+    CustomFilterPolicy() : builtin_policy_(NewBloomFilterPolicy(10)) { }
+    ~CustomFilterPolicy() { delete builtin_policy_; }
+
+    const char* Name() const { return "IgnoreTrailingSpacesFilter"; }
+
+    void CreateFilter(const Slice* keys, int n, std::string* dst) const {
+      // Use builtin bloom filter code after removing trailing spaces
+      std::vector&lt;Slice&gt; trimmed(n);
+      for (int i = 0; i &lt; n; i++) {
+        trimmed[i] = RemoveTrailingSpaces(keys[i]);
+      }
+      return builtin_policy_-&gt;CreateFilter(&amp;trimmed[i], n, dst);
+    }
+
+    bool KeyMayMatch(const Slice& key, const Slice& filter) const {
+      // Use builtin bloom filter code after removing trailing spaces
+      return builtin_policy_-&gt;KeyMayMatch(RemoveTrailingSpaces(key), filter);
+    }
+  };
+</pre>
+<p>
+Advanced applications may provide a filter policy that does not use
+a bloom filter but uses some other mechanism for summarizing a set
+of keys.  See <code>leveldb/filter_policy.h</code> for detail.
+<p>
+<h1>Checksums</h1>
+<p>
+<code>leveldb</code> associates checksums with all data it stores in the file system.
+There are two separate controls provided over how aggressively these
+checksums are verified:
+<p>
+<ul>
+<li> <code>ReadOptions::verify_checksums</code> may be set to true to force
+  checksum verification of all data that is read from the file system on
+  behalf of a particular read.  By default, no such verification is
+  done.
+<p>
+<li> <code>Options::paranoid_checks</code> may be set to true before opening a
+  database to make the database implementation raise an error as soon as
+  it detects an internal corruption.  Depending on which portion of the
+  database has been corrupted, the error may be raised when the database
+  is opened, or later by another database operation.  By default,
+  paranoid checking is off so that the database can be used even if
+  parts of its persistent storage have been corrupted.
+<p>
+  If a database is corrupted (perhaps it cannot be opened when
+  paranoid checking is turned on), the <code>leveldb::RepairDB</code> function
+  may be used to recover as much of the data as possible
+<p>
+</ul>
+<h1>Approximate Sizes</h1>
+<p>
+The <code>GetApproximateSizes</code> method can used to get the approximate
+number of bytes of file system space used by one or more key ranges.
+<p>
+<pre>
+   leveldb::Range ranges[2];
+   ranges[0] = leveldb::Range("a", "c");
+   ranges[1] = leveldb::Range("x", "z");
+   uint64_t sizes[2];
+   leveldb::Status s = db-&gt;GetApproximateSizes(ranges, 2, sizes);
+</pre>
+The preceding call will set <code>sizes[0]</code> to the approximate number of
+bytes of file system space used by the key range <code>[a..c)</code> and
+<code>sizes[1]</code> to the approximate number of bytes used by the key range
+<code>[x..z)</code>.
+<p>
+<h1>Environment</h1>
+<p>
+All file operations (and other operating system calls) issued by the
+<code>leveldb</code> implementation are routed through a <code>leveldb::Env</code> object.
+Sophisticated clients may wish to provide their own <code>Env</code>
+implementation to get better control.  For example, an application may
+introduce artificial delays in the file IO paths to limit the impact
+of <code>leveldb</code> on other activities in the system.
+<p>
+<pre>
+  class SlowEnv : public leveldb::Env {
+    .. implementation of the Env interface ...
+  };
+
+  SlowEnv env;
+  leveldb::Options options;
+  options.env = &amp;env;
+  Status s = leveldb::DB::Open(options, ...);
+</pre>
+<h1>Porting</h1>
+<p>
+<code>leveldb</code> may be ported to a new platform by providing platform
+specific implementations of the types/methods/functions exported by
+<code>leveldb/port/port.h</code>.  See <code>leveldb/port/port_example.h</code> for more
+details.
+<p>
+In addition, the new platform may need a new default <code>leveldb::Env</code>
+implementation.  See <code>leveldb/util/env_posix.h</code> for an example.
+
+<h1>Other Information</h1>
+
+<p>
+Details about the <code>leveldb</code> implementation may be found in
+the following documents:
+<ul>
+<li> <a href="impl.html">Implementation notes</a>
+<li> <a href="table_format.txt">Format of an immutable Table file</a>
+<li> <a href="log_format.txt">Format of a log file</a>
+</ul>
+
+</body>
+</html>
