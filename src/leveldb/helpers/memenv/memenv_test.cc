@@ -211,4 +211,22 @@ TEST(MemEnvTest, DBTest) {
     iterator->Next();
   }
   ASSERT_TRUE(!iterator->Valid());
-  delet
+  delete iterator;
+
+  DBImpl* dbi = reinterpret_cast<DBImpl*>(db);
+  ASSERT_OK(dbi->TEST_CompactMemTable());
+
+  for (size_t i = 0; i < 3; ++i) {
+    std::string res;
+    ASSERT_OK(db->Get(ReadOptions(), keys[i], &res));
+    ASSERT_TRUE(res == vals[i]);
+  }
+
+  delete db;
+}
+
+}  // namespace leveldb
+
+int main(int argc, char** argv) {
+  return leveldb::test::RunAllTests();
+}
