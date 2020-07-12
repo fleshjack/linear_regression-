@@ -122,4 +122,40 @@ class DB {
   //
   // Note that the returned sizes measure file system space usage, so
   // if the user data compresses by a factor of ten, the returned
-  // sizes will be one-tenth the size of the corresponding user dat
+  // sizes will be one-tenth the size of the corresponding user data size.
+  //
+  // The results may not include the sizes of recently written data.
+  virtual void GetApproximateSizes(const Range* range, int n,
+                                   uint64_t* sizes) = 0;
+
+  // Compact the underlying storage for the key range [*begin,*end].
+  // In particular, deleted and overwritten versions are discarded,
+  // and the data is rearranged to reduce the cost of operations
+  // needed to access the data.  This operation should typically only
+  // be invoked by users who understand the underlying implementation.
+  //
+  // begin==NULL is treated as a key before all keys in the database.
+  // end==NULL is treated as a key after all keys in the database.
+  // Therefore the following call will compact the entire database:
+  //    db->CompactRange(NULL, NULL);
+  virtual void CompactRange(const Slice* begin, const Slice* end) = 0;
+
+ private:
+  // No copying allowed
+  DB(const DB&);
+  void operator=(const DB&);
+};
+
+// Destroy the contents of the specified database.
+// Be very careful using this method.
+Status DestroyDB(const std::string& name, const Options& options);
+
+// If a DB cannot be opened, you may attempt to call this method to
+// resurrect as much of the contents of the database as possible.
+// Some data may be lost, so be careful when calling this function
+// on a database that contains important information.
+Status RepairDB(const std::string& dbname, const Options& options);
+
+}  // namespace leveldb
+
+#endif  // STORAGE_LEVELDB_INCLUDE_DB_H_
