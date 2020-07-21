@@ -106,4 +106,23 @@ TEST(FilterBlockTest, MultiChunk) {
   ASSERT_TRUE(reader.KeyMayMatch(3100, "box"));
   ASSERT_TRUE(! reader.KeyMayMatch(3100, "foo"));
   ASSERT_TRUE(! reader.KeyMayMatch(3100, "bar"));
-  ASSERT_TRUE(! 
+  ASSERT_TRUE(! reader.KeyMayMatch(3100, "hello"));
+
+  // Check third filter (empty)
+  ASSERT_TRUE(! reader.KeyMayMatch(4100, "foo"));
+  ASSERT_TRUE(! reader.KeyMayMatch(4100, "bar"));
+  ASSERT_TRUE(! reader.KeyMayMatch(4100, "box"));
+  ASSERT_TRUE(! reader.KeyMayMatch(4100, "hello"));
+
+  // Check last filter
+  ASSERT_TRUE(reader.KeyMayMatch(9000, "box"));
+  ASSERT_TRUE(reader.KeyMayMatch(9000, "hello"));
+  ASSERT_TRUE(! reader.KeyMayMatch(9000, "foo"));
+  ASSERT_TRUE(! reader.KeyMayMatch(9000, "bar"));
+}
+
+}  // namespace leveldb
+
+int main(int argc, char** argv) {
+  return leveldb::test::RunAllTests();
+}
