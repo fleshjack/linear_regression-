@@ -1246,3 +1246,70 @@ public:
             if (nDistance > 10)
                 nStep *= 2;
         }
+        return nDistance;
+    }
+
+    CBlockIndex* GetBlockIndex()
+    {
+        // Find the first block the caller has in the main chain
+        BOOST_FOREACH(const uint256& hash, vHave)
+        {
+            std::map<uint256, CBlockIndex*>::iterator mi = mapBlockIndex.find(hash);
+            if (mi != mapBlockIndex.end())
+            {
+                CBlockIndex* pindex = (*mi).second;
+                if (pindex->IsInMainChain())
+                    return pindex;
+            }
+        }
+        return pindexGenesisBlock;
+    }
+
+    uint256 GetBlockHash()
+    {
+        // Find the first block the caller has in the main chain
+        BOOST_FOREACH(const uint256& hash, vHave)
+        {
+            std::map<uint256, CBlockIndex*>::iterator mi = mapBlockIndex.find(hash);
+            if (mi != mapBlockIndex.end())
+            {
+                CBlockIndex* pindex = (*mi).second;
+                if (pindex->IsInMainChain())
+                    return hash;
+            }
+        }
+        return Params().HashGenesisBlock();
+    }
+
+    int GetHeight()
+    {
+        CBlockIndex* pindex = GetBlockIndex();
+        if (!pindex)
+            return 0;
+        return pindex->nHeight;
+    }
+};
+
+
+
+
+
+
+
+
+
+
+class CWalletInterface {
+protected:
+    virtual void SyncTransaction(const CTransaction &tx, const CBlock *pblock, bool fConnect) =0;
+    virtual void EraseFromWallet(const uint256 &hash) =0;
+    virtual void SetBestChain(const CBlockLocator &locator) =0;
+    virtual void UpdatedTransaction(const uint256 &hash) =0;
+    virtual void Inventory(const uint256 &hash) =0;
+    virtual void ResendWalletTransactions(bool fForce) =0;
+    friend void ::RegisterWallet(CWalletInterface*);
+    friend void ::UnregisterWallet(CWalletInterface*);
+    friend void ::UnregisterAllWallets();
+};
+
+#endif
