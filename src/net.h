@@ -353,4 +353,211 @@ public:
 
 
 
-    void Ad
+    void AddAddressKnown(const CAddress& addr)
+    {
+        setAddrKnown.insert(addr);
+    }
+
+    void PushAddress(const CAddress& addr)
+    {
+        // Known checking here is only to save space from duplicates.
+        // SendMessages will filter it again for knowns that were added
+        // after addresses were pushed.
+        if (addr.IsValid() && !setAddrKnown.count(addr))
+            vAddrToSend.push_back(addr);
+    }
+
+
+    void AddInventoryKnown(const CInv& inv)
+    {
+        {
+            LOCK(cs_inventory);
+            setInventoryKnown.insert(inv);
+        }
+    }
+
+    void PushInventory(const CInv& inv)
+    {
+        {
+            LOCK(cs_inventory);
+            if (!setInventoryKnown.count(inv))
+                vInventoryToSend.push_back(inv);
+        }
+    }
+
+    void AskFor(const CInv& inv)
+    {
+        // We're using mapAskFor as a priority queue,
+        // the key is the earliest time the request can be sent
+        int64_t& nRequestTime = mapAlreadyAskedFor[inv];
+        LogPrint("net", "askfor %s   %d (%s)\n", inv.ToString(), nRequestTime, DateTimeStrFormat("%H:%M:%S", nRequestTime/1000000));
+
+        // Make sure not to reuse time indexes to keep things in the same order
+        int64_t nNow = (GetTime() - 1) * 1000000;
+        static int64_t nLastTime;
+        ++nLastTime;
+        nNow = std::max(nNow, nLastTime);
+        nLastTime = nNow;
+
+        // Each retry is 2 minutes after the last
+        nRequestTime = std::max(nRequestTime + 2 * 60 * 1000000, nNow);
+        mapAskFor.insert(std::make_pair(nRequestTime, inv));
+    }
+
+
+
+    // TODO: Document the postcondition of this function.  Is cs_vSend locked?
+    void BeginMessage(const char* pszCommand) EXCLUSIVE_LOCK_FUNCTION(cs_vSend)
+    {
+        ENTER_CRITICAL_SECTION(cs_vSend);
+        assert(ssSend.size() == 0);
+        ssSend << CMessageHeader(pszCommand, 0);
+        LogPrint("net", "sending: %s ", pszCommand);
+    }
+
+    // TODO: Document the precondition of this function.  Is cs_vSend locked?
+    void AbortMessage() UNLOCK_FUNCTION(cs_vSend)
+    {
+        ssSend.clear();
+
+        LEAVE_CRITICAL_SECTION(cs_vSend);
+
+        LogPrint("net", "(aborted)\n");
+    }
+
+    // TODO: Document the precondition of this function.  Is cs_vSend locked?
+    void EndMessage() UNLOCK_FUNCTION(cs_vSend)
+    {
+        if (mapArgs.count("-dropmessagestest") && GetRand(atoi(mapArgs["-dropmessagestest"])) == 0)
+        {
+            LogPrint("net", "dropmessages DROPPING SEND MESSAGE\n");
+            AbortMessage();
+            return;
+        }
+
+        if (ssSend.size() == 0)
+            return;
+
+        // Set the size
+        unsigned int nSize = ssSend.size() - CMessageHeader::HEADER_SIZE;
+        memcpy((char*)&ssSend[CMessageHeader::MESSAGE_SIZE_OFFSET], &nSize, sizeof(nSize));
+
+        // Set the checksum
+        uint256 hash = Hash(ssSend.begin() + CMessageHeader::HEADER_SIZE, ssSend.end());
+        unsigned int nChecksum = 0;
+        memcpy(&nChecksum, &hash, sizeof(nChecksum));
+        assert(ssSend.size () >= CMessageHeader::CHECKSUM_OFFSET + sizeof(nChecksum));
+        memcpy((char*)&ssSend[CMessageHeader::CHECKSUM_OFFSET], &nChecksum, sizeof(nChecksum));
+
+        LogPrint("net", "(%d bytes)\n", nSize);
+
+        std::deque<CSerializeData>::iterator it = vSendMsg.insert(vSendMsg.end(), CSerializeData());
+        ssSend.GetAndClear(*it);
+        nSendSize += (*it).size();
+
+        // If write queue empty, attempt "optimistic write"
+        if (it == vSendMsg.begin())
+            SocketSendData(this);
+
+        LEAVE_CRITICAL_SECTION(cs_vSend);
+    }
+
+    void PushVersion();
+
+
+    void PushMessage(const char* pszCommand)
+    {
+        try
+        {
+            BeginMessage(pszCommand);
+            EndMessage();
+        }
+        catch (...)
+        {
+            AbortMessage();
+            throw;
+        }
+    }
+
+    template<typename T1>
+    void PushMessage(const char* pszCommand, const T1& a1)
+    {
+        try
+        {
+            BeginMessage(pszCommand);
+            ssSend << a1;
+            EndMessage();
+        }
+        catch (...)
+        {
+            AbortMessage();
+            throw;
+        }
+    }
+
+    template<typename T1, typename T2>
+    void PushMessage(const char* pszCommand, const T1& a1, const T2& a2)
+    {
+        try
+        {
+            BeginMessage(pszCommand);
+            ssSend << a1 << a2;
+            EndMessage();
+        }
+        catch (...)
+        {
+            AbortMessage();
+            throw;
+        }
+    }
+
+    template<typename T1, typename T2, typename T3>
+    void PushMessage(const char* pszCommand, const T1& a1, const T2& a2, const T3& a3)
+    {
+        try
+        {
+            BeginMessage(pszCommand);
+            ssSend << a1 << a2 << a3;
+            EndMessage();
+        }
+        catch (...)
+        {
+            AbortMessage();
+            throw;
+        }
+    }
+
+    template<typename T1, typename T2, typename T3, typename T4>
+    void PushMessage(const char* pszCommand, const T1& a1, const T2& a2, const T3& a3, const T4& a4)
+    {
+        try
+        {
+            BeginMessage(pszCommand);
+            ssSend << a1 << a2 << a3 << a4;
+            EndMessage();
+        }
+        catch (...)
+        {
+            AbortMessage();
+            throw;
+        }
+    }
+
+    template<typename T1, typename T2, typename T3, typename T4, typename T5>
+    void PushMessage(const char* pszCommand, const T1& a1, const T2& a2, const T3& a3, const T4& a4, const T5& a5)
+    {
+        try
+        {
+            BeginMessage(pszCommand);
+            ssSend << a1 << a2 << a3 << a4 << a5;
+            EndMessage();
+        }
+        catch (...)
+        {
+            AbortMessage();
+            throw;
+        }
+    }
+
+    template<typename T1, typename T2, typename T3, typename T4, typename T5, typename T6>
+    void PushMessage(con
