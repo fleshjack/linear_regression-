@@ -233,3 +233,196 @@ bool static Socks5(string strDest, int port, SOCKET& hSocket)
     {
         case 0x01: ret = recv(hSocket, pchRet3, 4, 0) != 4; break;
         case 0x04: ret = recv(hSocket, pchRet3, 16, 0) != 16; break;
+        case 0x03:
+        {
+            ret = recv(hSocket, pchRet3, 1, 0) != 1;
+            if (ret) {
+                closesocket(hSocket);
+                return error("Error reading from proxy");
+            }
+            int nRecv = pchRet3[0];
+            ret = recv(hSocket, pchRet3, nRecv, 0) != nRecv;
+            break;
+        }
+        default: closesocket(hSocket); return error("Error: malformed proxy response");
+    }
+    if (ret)
+    {
+        closesocket(hSocket);
+        return error("Error reading from proxy");
+    }
+    if (recv(hSocket, pchRet3, 2, 0) != 2)
+    {
+        closesocket(hSocket);
+        return error("Error reading from proxy");
+    }
+    LogPrintf("SOCKS5 connected %s\n", strDest);
+    return true;
+}
+
+bool static ConnectSocketDirectly(const CService &addrConnect, SOCKET& hSocketRet, int nTimeout)
+{
+    hSocketRet = INVALID_SOCKET;
+
+    struct sockaddr_storage sockaddr;
+    socklen_t len = sizeof(sockaddr);
+    if (!addrConnect.GetSockAddr((struct sockaddr*)&sockaddr, &len)) {
+        LogPrintf("Cannot connect to %s: unsupported network\n", addrConnect.ToString());
+        return false;
+    }
+
+    SOCKET hSocket = socket(((struct sockaddr*)&sockaddr)->sa_family, SOCK_STREAM, IPPROTO_TCP);
+    if (hSocket == INVALID_SOCKET)
+        return false;
+#ifdef SO_NOSIGPIPE
+    int set = 1;
+    setsockopt(hSocket, SOL_SOCKET, SO_NOSIGPIPE, (void*)&set, sizeof(int));
+#endif
+
+#ifdef WIN32
+    u_long fNonblock = 1;
+    if (ioctlsocket(hSocket, FIONBIO, &fNonblock) == SOCKET_ERROR)
+#else
+    int fFlags = fcntl(hSocket, F_GETFL, 0);
+    if (fcntl(hSocket, F_SETFL, fFlags | O_NONBLOCK) == -1)
+#endif
+    {
+        closesocket(hSocket);
+        return false;
+    }
+
+    if (connect(hSocket, (struct sockaddr*)&sockaddr, len) == SOCKET_ERROR)
+    {
+        int nErr = WSAGetLastError();
+        // WSAEINVAL is here because some legacy version of winsock uses it
+        if (nErr == WSAEINPROGRESS || nErr == WSAEWOULDBLOCK || nErr == WSAEINVAL)
+        {
+            struct timeval timeout;
+            timeout.tv_sec  = nTimeout / 1000;
+            timeout.tv_usec = (nTimeout % 1000) * 1000;
+
+            fd_set fdset;
+            FD_ZERO(&fdset);
+            FD_SET(hSocket, &fdset);
+            int nRet = select(hSocket + 1, NULL, &fdset, NULL, &timeout);
+            if (nRet == 0)
+            {
+                LogPrint("net", "connection to %s timeout\n", addrConnect.ToString());
+                closesocket(hSocket);
+                return false;
+            }
+            if (nRet == SOCKET_ERROR)
+            {
+                LogPrintf("select() for %s failed: %i\n", addrConnect.ToString(), WSAGetLastError());
+                closesocket(hSocket);
+                return false;
+            }
+            socklen_t nRetSize = sizeof(nRet);
+#ifdef WIN32
+            if (getsockopt(hSocket, SOL_SOCKET, SO_ERROR, (char*)(&nRet), &nRetSize) == SOCKET_ERROR)
+#else
+            if (getsockopt(hSocket, SOL_SOCKET, SO_ERROR, &nRet, &nRetSize) == SOCKET_ERROR)
+#endif
+            {
+                LogPrintf("getsockopt() for %s failed: %i\n", addrConnect.ToString(), WSAGetLastError());
+                closesocket(hSocket);
+                return false;
+            }
+            if (nRet != 0)
+            {
+                LogPrintf("connect() to %s failed after select(): %s\n", addrConnect.ToString(), strerror(nRet));
+                closesocket(hSocket);
+                return false;
+            }
+        }
+#ifdef WIN32
+        else if (WSAGetLastError() != WSAEISCONN)
+#else
+        else
+#endif
+        {
+            LogPrintf("connect() to %s failed: %i\n", addrConnect.ToString(), WSAGetLastError());
+            closesocket(hSocket);
+            return false;
+        }
+    }
+
+    // this isn't even strictly necessary
+    // CNode::ConnectNode immediately turns the socket back to non-blocking
+    // but we'll turn it back to blocking just in case
+#ifdef WIN32
+    fNonblock = 0;
+    if (ioctlsocket(hSocket, FIONBIO, &fNonblock) == SOCKET_ERROR)
+#else
+    fFlags = fcntl(hSocket, F_GETFL, 0);
+    if (fcntl(hSocket, F_SETFL, fFlags & !O_NONBLOCK) == SOCKET_ERROR)
+#endif
+    {
+        closesocket(hSocket);
+        return false;
+    }
+
+    hSocketRet = hSocket;
+    return true;
+}
+
+bool SetProxy(enum Network net, CService addrProxy) {
+    assert(net >= 0 && net < NET_MAX);
+    if (!addrProxy.IsValid())
+        return false;
+    LOCK(cs_proxyInfos);
+    proxyInfo[net] = addrProxy;
+    return true;
+}
+
+bool GetProxy(enum Network net, proxyType &proxyInfoOut) {
+    assert(net >= 0 && net < NET_MAX);
+    LOCK(cs_proxyInfos);
+    if (!proxyInfo[net].IsValid())
+        return false;
+    proxyInfoOut = proxyInfo[net];
+    return true;
+}
+
+bool SetNameProxy(CService addrProxy) {
+    if (!addrProxy.IsValid())
+        return false;
+    LOCK(cs_proxyInfos);
+    nameProxy = addrProxy;
+    return true;
+}
+
+bool GetNameProxy(CService &nameProxyOut) {
+    LOCK(cs_proxyInfos);
+    if(!nameProxy.IsValid())
+        return false;
+    nameProxyOut = nameProxy;
+    return true;
+}
+
+bool HaveNameProxy() {
+    LOCK(cs_proxyInfos);
+    return nameProxy.IsValid();
+}
+
+bool IsProxy(const CNetAddr &addr) {
+    LOCK(cs_proxyInfos);
+    for (int i = 0; i < NET_MAX; i++) {
+        if (addr == (CNetAddr)proxyInfo[i])
+            return true;
+    }
+    return false;
+}
+
+bool ConnectSocket(const CService &addrDest, SOCKET& hSocketRet, int nTimeout, bool *outProxyConnectionFailed)
+{
+    proxyType proxy;
+    if (outProxyConnectionFailed)
+        *outProxyConnectionFailed = false;
+    // no proxy needed (none set for target network)
+    if (!GetProxy(addrDest.GetNetwork(), proxy))
+        return ConnectSocketDirectly(addrDest, hSocketRet, nTimeout);
+
+    SOCKET hSocket = INVALID_SOCKET;
+
+    // first connect to proxy serve
