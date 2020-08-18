@@ -425,4 +425,228 @@ bool ConnectSocket(const CService &addrDest, SOCKET& hSocketRet, int nTimeout, b
 
     SOCKET hSocket = INVALID_SOCKET;
 
-    // first connect to proxy serve
+    // first connect to proxy server
+    if (!ConnectSocketDirectly(proxy, hSocket, nTimeout)) {
+        if (outProxyConnectionFailed)
+            *outProxyConnectionFailed = true;
+        return false;
+    }
+    // do socks negotiation
+    if (!Socks5(addrDest.ToStringIP(), addrDest.GetPort(), hSocket))
+        return false;
+
+    hSocketRet = hSocket;
+    return true;
+}
+
+bool ConnectSocketByName(CService &addr, SOCKET& hSocketRet, const char *pszDest, int portDefault, int nTimeout, bool *outProxyConnectionFailed)
+{
+    string strDest;
+    int port = portDefault;
+
+    if (outProxyConnectionFailed)
+        *outProxyConnectionFailed = false;
+
+    SplitHostPort(string(pszDest), port, strDest);
+
+    SOCKET hSocket = INVALID_SOCKET;
+
+    CService nameProxy;
+    GetNameProxy(nameProxy);
+
+    CService addrResolved(CNetAddr(strDest, fNameLookup && !HaveNameProxy()), port);
+    if (addrResolved.IsValid()) {
+        addr = addrResolved;
+        return ConnectSocket(addr, hSocketRet, nTimeout);
+    }
+
+    addr = CService("0.0.0.0:0");
+
+    if (!HaveNameProxy())
+        return false;
+    // first connect to name proxy server
+    if (!ConnectSocketDirectly(nameProxy, hSocket, nTimeout)) {
+        if (outProxyConnectionFailed)
+            *outProxyConnectionFailed = true;
+        return false;
+    }
+    // do socks negotiation
+    if (!Socks5(strDest, (unsigned short)port, hSocket))
+        return false;
+
+    hSocketRet = hSocket;
+    return true;
+}
+
+void CNetAddr::Init()
+{
+    memset(ip, 0, sizeof(ip));
+}
+
+void CNetAddr::SetIP(const CNetAddr& ipIn)
+{
+    memcpy(ip, ipIn.ip, sizeof(ip));
+}
+
+static const unsigned char pchOnionCat[] = {0xFD,0x87,0xD8,0x7E,0xEB,0x43};
+static const unsigned char pchGarliCat[] = {0xFD,0x60,0xDB,0x4D,0xDD,0xB5};
+
+bool CNetAddr::SetSpecial(const std::string &strName)
+{
+    if (strName.size()>6 && strName.substr(strName.size() - 6, 6) == ".onion") {
+        std::vector<unsigned char> vchAddr = DecodeBase32(strName.substr(0, strName.size() - 6).c_str());
+        if (vchAddr.size() != 16-sizeof(pchOnionCat))
+            return false;
+        memcpy(ip, pchOnionCat, sizeof(pchOnionCat));
+        for (unsigned int i=0; i<16-sizeof(pchOnionCat); i++)
+            ip[i + sizeof(pchOnionCat)] = vchAddr[i];
+        return true;
+    }
+    if (strName.size()>11 && strName.substr(strName.size() - 11, 11) == ".oc.b32.i2p") {
+        std::vector<unsigned char> vchAddr = DecodeBase32(strName.substr(0, strName.size() - 11).c_str());
+        if (vchAddr.size() != 16-sizeof(pchGarliCat))
+            return false;
+        memcpy(ip, pchOnionCat, sizeof(pchGarliCat));
+        for (unsigned int i=0; i<16-sizeof(pchGarliCat); i++)
+            ip[i + sizeof(pchGarliCat)] = vchAddr[i];
+        return true;
+    }
+    return false;
+}
+
+CNetAddr::CNetAddr()
+{
+    Init();
+}
+
+CNetAddr::CNetAddr(const struct in_addr& ipv4Addr)
+{
+    memcpy(ip,    pchIPv4, 12);
+    memcpy(ip+12, &ipv4Addr, 4);
+}
+
+CNetAddr::CNetAddr(const struct in6_addr& ipv6Addr)
+{
+    memcpy(ip, &ipv6Addr, 16);
+}
+
+CNetAddr::CNetAddr(const char *pszIp, bool fAllowLookup)
+{
+    Init();
+    std::vector<CNetAddr> vIP;
+    if (LookupHost(pszIp, vIP, 1, fAllowLookup))
+        *this = vIP[0];
+}
+
+CNetAddr::CNetAddr(const std::string &strIp, bool fAllowLookup)
+{
+    Init();
+    std::vector<CNetAddr> vIP;
+    if (LookupHost(strIp.c_str(), vIP, 1, fAllowLookup))
+        *this = vIP[0];
+}
+
+unsigned int CNetAddr::GetByte(int n) const
+{
+    return ip[15-n];
+}
+
+bool CNetAddr::IsIPv4() const
+{
+    return (memcmp(ip, pchIPv4, sizeof(pchIPv4)) == 0);
+}
+
+bool CNetAddr::IsIPv6() const
+{
+    return (!IsIPv4() && !IsTor() && !IsI2P());
+}
+
+bool CNetAddr::IsRFC1918() const
+{
+    return IsIPv4() && (
+        GetByte(3) == 10 ||
+        (GetByte(3) == 192 && GetByte(2) == 168) ||
+        (GetByte(3) == 172 && (GetByte(2) >= 16 && GetByte(2) <= 31)));
+}
+
+bool CNetAddr::IsRFC3927() const
+{
+    return IsIPv4() && (GetByte(3) == 169 && GetByte(2) == 254);
+}
+
+bool CNetAddr::IsRFC3849() const
+{
+    return GetByte(15) == 0x20 && GetByte(14) == 0x01 && GetByte(13) == 0x0D && GetByte(12) == 0xB8;
+}
+
+bool CNetAddr::IsRFC3964() const
+{
+    return (GetByte(15) == 0x20 && GetByte(14) == 0x02);
+}
+
+bool CNetAddr::IsRFC6052() const
+{
+    static const unsigned char pchRFC6052[] = {0,0x64,0xFF,0x9B,0,0,0,0,0,0,0,0};
+    return (memcmp(ip, pchRFC6052, sizeof(pchRFC6052)) == 0);
+}
+
+bool CNetAddr::IsRFC4380() const
+{
+    return (GetByte(15) == 0x20 && GetByte(14) == 0x01 && GetByte(13) == 0 && GetByte(12) == 0);
+}
+
+bool CNetAddr::IsRFC4862() const
+{
+    static const unsigned char pchRFC4862[] = {0xFE,0x80,0,0,0,0,0,0};
+    return (memcmp(ip, pchRFC4862, sizeof(pchRFC4862)) == 0);
+}
+
+bool CNetAddr::IsRFC4193() const
+{
+    return ((GetByte(15) & 0xFE) == 0xFC);
+}
+
+bool CNetAddr::IsRFC6145() const
+{
+    static const unsigned char pchRFC6145[] = {0,0,0,0,0,0,0,0,0xFF,0xFF,0,0};
+    return (memcmp(ip, pchRFC6145, sizeof(pchRFC6145)) == 0);
+}
+
+bool CNetAddr::IsRFC4843() const
+{
+    return (GetByte(15) == 0x20 && GetByte(14) == 0x01 && GetByte(13) == 0x00 && (GetByte(12) & 0xF0) == 0x10);
+}
+
+bool CNetAddr::IsTor() const
+{
+    return (memcmp(ip, pchOnionCat, sizeof(pchOnionCat)) == 0);
+}
+
+bool CNetAddr::IsI2P() const
+{
+    return (memcmp(ip, pchGarliCat, sizeof(pchGarliCat)) == 0);
+}
+
+bool CNetAddr::IsLocal() const
+{
+    // IPv4 loopback
+   if (IsIPv4() && (GetByte(3) == 127 || GetByte(3) == 0))
+       return true;
+
+   // IPv6 loopback (::1/128)
+   static const unsigned char pchLocal[16] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1};
+   if (memcmp(ip, pchLocal, 16) == 0)
+       return true;
+
+   return false;
+}
+
+bool CNetAddr::IsMulticast() const
+{
+    return    (IsIPv4() && (GetByte(3) & 0xF0) == 0xE0)
+           || (GetByte(15) == 0xFF);
+}
+
+bool CNetAddr::IsValid() const
+{
+    // Cleanup 3-byte shifted addresses caused by garba
