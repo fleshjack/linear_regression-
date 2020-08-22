@@ -95,4 +95,196 @@ AddressBookPage::AddressBookPage(Mode mode, Tabs tab, QWidget *parent) :
     connect(signMessageAction, SIGNAL(triggered()), this, SLOT(on_signMessage_clicked()));
     connect(verifyMessageAction, SIGNAL(triggered()), this, SLOT(on_verifyMessage_clicked()));
 
-    connect(ui->tab
+    connect(ui->tableView, SIGNAL(customContextMenuRequested(QPoint)), this, SLOT(contextualMenu(QPoint)));
+
+    // Pass through accept action from button box
+    connect(ui->buttonBox, SIGNAL(accepted()), this, SLOT(accept()));
+}
+
+AddressBookPage::~AddressBookPage()
+{
+    delete ui;
+}
+
+void AddressBookPage::setModel(AddressTableModel *model)
+{
+    this->model = model;
+    if(!model)
+        return;
+
+    proxyModel = new QSortFilterProxyModel(this);
+    proxyModel->setSourceModel(model);
+    proxyModel->setDynamicSortFilter(true);
+    proxyModel->setSortCaseSensitivity(Qt::CaseInsensitive);
+    proxyModel->setFilterCaseSensitivity(Qt::CaseInsensitive);
+    switch(tab)
+    {
+    case ReceivingTab:
+        // Receive filter
+        proxyModel->setFilterRole(AddressTableModel::TypeRole);
+        proxyModel->setFilterFixedString(AddressTableModel::Receive);
+        break;
+    case SendingTab:
+        // Send filter
+        proxyModel->setFilterRole(AddressTableModel::TypeRole);
+        proxyModel->setFilterFixedString(AddressTableModel::Send);
+        break;
+    }
+    ui->tableView->setModel(proxyModel);
+    ui->tableView->sortByColumn(0, Qt::AscendingOrder);
+
+    // Set column widths
+    ui->tableView->horizontalHeader()->resizeSection(
+            AddressTableModel::Address, 320);
+    ui->tableView->horizontalHeader()->setResizeMode(
+            AddressTableModel::Label, QHeaderView::Stretch);
+
+    connect(ui->tableView->selectionModel(), SIGNAL(selectionChanged(QItemSelection,QItemSelection)),
+            this, SLOT(selectionChanged()));
+
+    // Select row for newly created address
+    connect(model, SIGNAL(rowsInserted(QModelIndex,int,int)),
+            this, SLOT(selectNewAddress(QModelIndex,int,int)));
+
+    selectionChanged();
+}
+
+void AddressBookPage::setOptionsModel(OptionsModel *optionsModel)
+{
+    this->optionsModel = optionsModel;
+}
+
+void AddressBookPage::on_copyToClipboard_clicked()
+{
+    GUIUtil::copyEntryData(ui->tableView, AddressTableModel::Address);
+}
+
+void AddressBookPage::onCopyLabelAction()
+{
+    GUIUtil::copyEntryData(ui->tableView, AddressTableModel::Label);
+}
+
+void AddressBookPage::onEditAction()
+{
+    if(!ui->tableView->selectionModel())
+        return;
+    QModelIndexList indexes = ui->tableView->selectionModel()->selectedRows();
+    if(indexes.isEmpty())
+        return;
+
+    EditAddressDialog dlg(
+            tab == SendingTab ?
+            EditAddressDialog::EditSendingAddress :
+            EditAddressDialog::EditReceivingAddress);
+    dlg.setModel(model);
+    QModelIndex origIndex = proxyModel->mapToSource(indexes.at(0));
+    dlg.loadRow(origIndex.row());
+    dlg.exec();
+}
+
+void AddressBookPage::on_signMessage_clicked()
+{
+    QTableView *table = ui->tableView;
+    QModelIndexList indexes = table->selectionModel()->selectedRows(AddressTableModel::Address);
+
+    foreach (QModelIndex index, indexes)
+    {
+        QString address = index.data().toString();
+        emit signMessage(address);
+    }
+}
+
+void AddressBookPage::on_verifyMessage_clicked()
+{
+    QTableView *table = ui->tableView;
+    QModelIndexList indexes = table->selectionModel()->selectedRows(AddressTableModel::Address);
+
+    foreach (QModelIndex index, indexes)
+    {
+        QString address = index.data().toString();
+        emit verifyMessage(address);
+    }
+}
+
+void AddressBookPage::on_newAddressButton_clicked()
+{
+    if(!model)
+        return;
+
+    EditAddressDialog dlg(
+            tab == SendingTab ?
+            EditAddressDialog::NewSendingAddress :
+            EditAddressDialog::NewReceivingAddress, this);
+    dlg.setModel(model);
+    if(dlg.exec())
+    {
+        newAddressToSelect = dlg.getAddress();
+    }
+}
+
+void AddressBookPage::on_deleteButton_clicked()
+{
+    QTableView *table = ui->tableView;
+    if(!table->selectionModel())
+        return;
+
+    QModelIndexList indexes = table->selectionModel()->selectedRows();
+    if(!indexes.isEmpty())
+    {
+        table->model()->removeRow(indexes.at(0).row());
+    }
+}
+
+void AddressBookPage::selectionChanged()
+{
+    // Set button states based on selected tab and selection
+    QTableView *table = ui->tableView;
+    if(!table->selectionModel())
+        return;
+
+    if(table->selectionModel()->hasSelection())
+    {
+        switch(tab)
+        {
+        case SendingTab:
+            // In sending tab, allow deletion of selection
+            ui->deleteButton->setEnabled(true);
+            ui->deleteButton->setVisible(true);
+            deleteAction->setEnabled(true);
+            ui->signMessage->setEnabled(false);
+            ui->signMessage->setVisible(false);
+            ui->verifyMessage->setEnabled(true);
+            ui->verifyMessage->setVisible(true);
+            break;
+        case ReceivingTab:
+            // Deleting receiving addresses, however, is not allowed
+            ui->deleteButton->setEnabled(false);
+            ui->deleteButton->setVisible(false);
+            deleteAction->setEnabled(false);
+            ui->signMessage->setEnabled(true);
+            ui->signMessage->setVisible(true);
+            ui->verifyMessage->setEnabled(false);
+            ui->verifyMessage->setVisible(false);
+            break;
+        }
+        ui->copyToClipboard->setEnabled(true);
+        ui->showQRCode->setEnabled(true);
+    }
+    else
+    {
+        ui->deleteButton->setEnabled(false);
+        ui->showQRCode->setEnabled(false);
+        ui->copyToClipboard->setEnabled(false);
+        ui->signMessage->setEnabled(false);
+        ui->verifyMessage->setEnabled(false);
+    }
+}
+
+void AddressBookPage::done(int retval)
+{
+    QTableView *table = ui->tableView;
+    if(!table->selectionModel() || !table->model())
+        return;
+    // When this is a tab/widget and not a model dialog, ignore "done"
+    if(mode == ForEditing)
+        
