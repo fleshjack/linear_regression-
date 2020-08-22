@@ -1075,4 +1075,12 @@ std::string CService::ToStringIPPort() const
     }
 }
 
-std::string CServi
+std::string CService::ToString() const
+{
+    return ToStringIPPort();
+}
+
+void CService::SetPort(unsigned short portIn)
+{
+    port = portIn;
+}
