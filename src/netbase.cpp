@@ -649,4 +649,217 @@ bool CNetAddr::IsMulticast() const
 
 bool CNetAddr::IsValid() const
 {
-    // Cleanup 3-byte shifted addresses caused by garba
+    // Cleanup 3-byte shifted addresses caused by garbage in size field
+    // of addr messages from versions before 0.2.9 checksum.
+    // Two consecutive addr messages look like this:
+    // header20 vectorlen3 addr26 addr26 addr26 header20 vectorlen3 addr26 addr26 addr26...
+    // so if the first length field is garbled, it reads the second batch
+    // of addr misaligned by 3 bytes.
+    if (memcmp(ip, pchIPv4+3, sizeof(pchIPv4)-3) == 0)
+        return false;
+
+    // unspecified IPv6 address (::/128)
+    unsigned char ipNone[16] = {};
+    if (memcmp(ip, ipNone, 16) == 0)
+        return false;
+
+    // documentation IPv6 address
+    if (IsRFC3849())
+        return false;
+
+    if (IsIPv4())
+    {
+        // INADDR_NONE
+        uint32_t ipNone = INADDR_NONE;
+        if (memcmp(ip+12, &ipNone, 4) == 0)
+            return false;
+
+        // 0
+        ipNone = 0;
+        if (memcmp(ip+12, &ipNone, 4) == 0)
+            return false;
+    }
+
+    return true;
+}
+
+bool CNetAddr::IsRoutable() const
+{
+    return IsValid() && !(IsRFC1918() || IsRFC3927() || IsRFC4862() || (IsRFC4193() && !IsTor() && !IsI2P()) || IsRFC4843() || IsLocal());
+}
+
+enum Network CNetAddr::GetNetwork() const
+{
+    if (!IsRoutable())
+        return NET_UNROUTABLE;
+
+    if (IsIPv4())
+        return NET_IPV4;
+
+    if (IsTor())
+        return NET_TOR;
+
+    if (IsI2P())
+        return NET_I2P;
+
+    return NET_IPV6;
+}
+
+std::string CNetAddr::ToStringIP() const
+{
+    if (IsTor())
+        return EncodeBase32(&ip[6], 10) + ".onion";
+    if (IsI2P())
+        return EncodeBase32(&ip[6], 10) + ".oc.b32.i2p";
+    CService serv(*this, 0);
+    struct sockaddr_storage sockaddr;
+    socklen_t socklen = sizeof(sockaddr);
+    if (serv.GetSockAddr((struct sockaddr*)&sockaddr, &socklen)) {
+        char name[1025] = "";
+        if (!getnameinfo((const struct sockaddr*)&sockaddr, socklen, name, sizeof(name), NULL, 0, NI_NUMERICHOST))
+            return std::string(name);
+    }
+    if (IsIPv4())
+        return strprintf("%u.%u.%u.%u", GetByte(3), GetByte(2), GetByte(1), GetByte(0));
+    else
+        return strprintf("%x:%x:%x:%x:%x:%x:%x:%x",
+                         GetByte(15) << 8 | GetByte(14), GetByte(13) << 8 | GetByte(12),
+                         GetByte(11) << 8 | GetByte(10), GetByte(9) << 8 | GetByte(8),
+                         GetByte(7) << 8 | GetByte(6), GetByte(5) << 8 | GetByte(4),
+                         GetByte(3) << 8 | GetByte(2), GetByte(1) << 8 | GetByte(0));
+}
+
+std::string CNetAddr::ToString() const
+{
+    return ToStringIP();
+}
+
+bool operator==(const CNetAddr& a, const CNetAddr& b)
+{
+    return (memcmp(a.ip, b.ip, 16) == 0);
+}
+
+bool operator!=(const CNetAddr& a, const CNetAddr& b)
+{
+    return (memcmp(a.ip, b.ip, 16) != 0);
+}
+
+bool operator<(const CNetAddr& a, const CNetAddr& b)
+{
+    return (memcmp(a.ip, b.ip, 16) < 0);
+}
+
+bool CNetAddr::GetInAddr(struct in_addr* pipv4Addr) const
+{
+    if (!IsIPv4())
+        return false;
+    memcpy(pipv4Addr, ip+12, 4);
+    return true;
+}
+
+bool CNetAddr::GetIn6Addr(struct in6_addr* pipv6Addr) const
+{
+    memcpy(pipv6Addr, ip, 16);
+    return true;
+}
+
+// get canonical identifier of an address' group
+// no two connections will be attempted to addresses with the same group
+std::vector<unsigned char> CNetAddr::GetGroup() const
+{
+    std::vector<unsigned char> vchRet;
+    int nClass = NET_IPV6;
+    int nStartByte = 0;
+    int nBits = 16;
+
+    // all local addresses belong to the same group
+    if (IsLocal())
+    {
+        nClass = 255;
+        nBits = 0;
+    }
+
+    // all unroutable addresses belong to the same group
+    if (!IsRoutable())
+    {
+        nClass = NET_UNROUTABLE;
+        nBits = 0;
+    }
+    // for IPv4 addresses, '1' + the 16 higher-order bits of the IP
+    // includes mapped IPv4, SIIT translated IPv4, and the well-known prefix
+    else if (IsIPv4() || IsRFC6145() || IsRFC6052())
+    {
+        nClass = NET_IPV4;
+        nStartByte = 12;
+    }
+    // for 6to4 tunnelled addresses, use the encapsulated IPv4 address
+    else if (IsRFC3964())
+    {
+        nClass = NET_IPV4;
+        nStartByte = 2;
+    }
+    // for Teredo-tunnelled IPv6 addresses, use the encapsulated IPv4 address
+    else if (IsRFC4380())
+    {
+        vchRet.push_back(NET_IPV4);
+        vchRet.push_back(GetByte(3) ^ 0xFF);
+        vchRet.push_back(GetByte(2) ^ 0xFF);
+        return vchRet;
+    }
+    else if (IsTor())
+    {
+        nClass = NET_TOR;
+        nStartByte = 6;
+        nBits = 4;
+    }
+    else if (IsI2P())
+    {
+        nClass = NET_I2P;
+        nStartByte = 6;
+        nBits = 4;
+    }
+    // for he.net, use /36 groups
+    else if (GetByte(15) == 0x20 && GetByte(14) == 0x11 && GetByte(13) == 0x04 && GetByte(12) == 0x70)
+        nBits = 36;
+    // for the rest of the IPv6 network, use /32 groups
+    else
+        nBits = 32;
+
+    vchRet.push_back(nClass);
+    while (nBits >= 8)
+    {
+        vchRet.push_back(GetByte(15 - nStartByte));
+        nStartByte++;
+        nBits -= 8;
+    }
+    if (nBits > 0)
+        vchRet.push_back(GetByte(15 - nStartByte) | ((1 << nBits) - 1));
+
+    return vchRet;
+}
+
+uint64_t CNetAddr::GetHash() const
+{
+    uint256 hash = Hash(&ip[0], &ip[16]);
+    uint64_t nRet;
+    memcpy(&nRet, &hash, sizeof(nRet));
+    return nRet;
+}
+
+// private extensions to enum Network, only returned by GetExtNetwork,
+// and only used in GetReachabilityFrom
+static const int NET_UNKNOWN = NET_MAX + 0;
+static const int NET_TEREDO  = NET_MAX + 1;
+int static GetExtNetwork(const CNetAddr *addr)
+{
+    if (addr == NULL)
+        return NET_UNKNOWN;
+    if (addr->IsRFC4380())
+        return NET_TEREDO;
+    return addr->GetNetwork();
+}
+
+/** Calculates a metric for how reachable (*this) is from a given partner */
+int CNetAddr::GetReachabilityFrom(const CNetAddr *paddrPartner) const
+{
+  
