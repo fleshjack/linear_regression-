@@ -287,4 +287,86 @@ void AddressBookPage::done(int retval)
         return;
     // When this is a tab/widget and not a model dialog, ignore "done"
     if(mode == ForEditing)
-        
+        return;
+
+    // Figure out which address was selected, and return it
+    QModelIndexList indexes = table->selectionModel()->selectedRows(AddressTableModel::Address);
+
+    foreach (QModelIndex index, indexes)
+    {
+        QVariant address = table->model()->data(index);
+        returnValue = address.toString();
+    }
+
+    if(returnValue.isEmpty())
+    {
+        // If no address entry selected, return rejected
+        retval = Rejected;
+    }
+
+    QDialog::done(retval);
+}
+
+void AddressBookPage::exportClicked()
+{
+    // CSV is currently the only supported format
+    QString filename = GUIUtil::getSaveFileName(
+            this,
+            tr("Export Address Book Data"), QString(),
+            tr("Comma separated file (*.csv)"));
+
+    if (filename.isNull()) return;
+
+    CSVModelWriter writer(filename);
+
+    // name, column, role
+    writer.setModel(proxyModel);
+    writer.addColumn("Label", AddressTableModel::Label, Qt::EditRole);
+    writer.addColumn("Address", AddressTableModel::Address, Qt::EditRole);
+
+    if(!writer.write())
+    {
+        QMessageBox::critical(this, tr("Error exporting"), tr("Could not write to file %1.").arg(filename),
+                              QMessageBox::Abort, QMessageBox::Abort);
+    }
+}
+
+void AddressBookPage::on_showQRCode_clicked()
+{
+#ifdef USE_QRCODE
+    QTableView *table = ui->tableView;
+    QModelIndexList indexes = table->selectionModel()->selectedRows(AddressTableModel::Address);
+
+    foreach (QModelIndex index, indexes)
+    {
+        QString address = index.data().toString();
+        QString label = index.sibling(index.row(), 0).data(Qt::EditRole).toString();
+
+        QRCodeDialog *dialog = new QRCodeDialog(address, label, tab == ReceivingTab, this);
+        dialog->setModel(optionsModel);
+        dialog->setAttribute(Qt::WA_DeleteOnClose);
+        dialog->show();
+    }
+#endif
+}
+
+void AddressBookPage::contextualMenu(const QPoint &point)
+{
+    QModelIndex index = ui->tableView->indexAt(point);
+    if(index.isValid())
+    {
+        contextMenu->exec(QCursor::pos());
+    }
+}
+
+void AddressBookPage::selectNewAddress(const QModelIndex &parent, int begin, int end)
+{
+    QModelIndex idx = proxyModel->mapFromSource(model->index(begin, AddressTableModel::Address, parent));
+    if(idx.isValid() && (idx.data(Qt::EditRole).toString() == newAddressToSelect))
+    {
+        // Select row of newly created address, once
+        ui->tableView->setFocus();
+        ui->tableView->selectRow(idx.row());
+        newAddressToSelect.clear();
+    }
+}
