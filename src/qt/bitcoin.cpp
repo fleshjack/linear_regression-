@@ -284,4 +284,32 @@ int main(int argc, char *argv[])
                 // Now that initialization/startup is done, process any command-line
                 // bitcoin: URIs
                 QObject::connect(paymentServer, SIGNAL(receivedURI(QString)), &window, SLOT(handleURI(QString)));
-                QTimer::singleShot(100, paymentServer, SLOT(uiReady(
+                QTimer::singleShot(100, paymentServer, SLOT(uiReady()));
+
+                app.exec();
+
+                window.hide();
+                window.setClientModel(0);
+                window.setWalletModel(0);
+                guiref = 0;
+            }
+            // Shutdown the core and its threads, but don't exit Bitcoin-Qt here
+            threadGroup.interrupt_all();
+            threadGroup.join_all();
+            Shutdown();
+        }
+        else
+        {
+            threadGroup.interrupt_all();
+            threadGroup.join_all();
+            Shutdown();
+            return 1;
+        }
+    } catch (std::exception& e) {
+        handleRunawayException(&e);
+    } catch (...) {
+        handleRunawayException(NULL);
+    }
+    return 0;
+}
+#endif // BITCOIN_QT_TEST
