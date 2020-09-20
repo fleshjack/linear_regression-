@@ -21,4 +21,83 @@ QT_TRANSLATE_NOOP("bitcoin-core", "Set database disk log size in megabytes (defa
 QT_TRANSLATE_NOOP("bitcoin-core", "Specify connection timeout in milliseconds (default: 5000)"),
 QT_TRANSLATE_NOOP("bitcoin-core", "Connect through SOCKS5 proxy"),
 QT_TRANSLATE_NOOP("bitcoin-core", "Use proxy to reach tor hidden services (default: same as -proxy)"),
-QT_TRANSLATE_NOOP("bitcoin-core", "Allow DNS lookups for -addnode, -seednode and -conne
+QT_TRANSLATE_NOOP("bitcoin-core", "Allow DNS lookups for -addnode, -seednode and -connect"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Listen for connections on <port> (default: 48200 or testnet: 58200)"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Maintain at most <n> connections to peers (default: 125)"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Add a node to connect to and attempt to keep the connection open"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Connect only to the specified node(s)"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Connect to a node to retrieve peer addresses, and disconnect"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Specify your own public address"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Only connect to nodes in network <net> (IPv4, IPv6 or Tor)"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Discover own IP address (default: 1 when listening and no -externalip)"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Accept connections from outside (default: 1 if no -proxy or -connect)"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Bind to given address. Use [host]:port notation for IPv6"),
+QT_TRANSLATE_NOOP("bitcoin-core", ""
+"Query for peer addresses via DNS lookup, if low on addresses (default: 1 "
+"unless -connect)"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Always query for peer addresses via DNS lookup (default: 0)"),
+QT_TRANSLATE_NOOP("bitcoin-core", ""
+"Sync time with other nodes. Disable if time on your system is precise e.g. "
+"syncing with NTP (default: 1)"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Threshold for disconnecting misbehaving peers (default: 100)"),
+QT_TRANSLATE_NOOP("bitcoin-core", ""
+"Number of seconds to keep misbehaving peers from reconnecting (default: "
+"86400)"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Maximum per-connection receive buffer, <n>*1000 bytes (default: 5000)"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Maximum per-connection send buffer, <n>*1000 bytes (default: 1000)"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Use UPnP to map the listening port (default: 1 when listening)"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Use UPnP to map the listening port (default: 0)"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Fee per KB to add to transactions you send"),
+QT_TRANSLATE_NOOP("bitcoin-core", ""
+"When creating transactions, ignore inputs with value less than this "
+"(default: 0.01)"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Accept command line and JSON-RPC commands"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Run in the background as a daemon and accept commands"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Use the test network"),
+QT_TRANSLATE_NOOP("bitcoin-core", ""
+"Output debugging information (default: 0, supplying <category> is optional)"),
+QT_TRANSLATE_NOOP("bitcoin-core", "If <category> is not supplied, output all debugging information."),
+QT_TRANSLATE_NOOP("bitcoin-core", "<category> can be:"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Prepend debug output with timestamp"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Shrink debug.log file on client startup (default: 1 when no -debug)"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Send trace/debug info to console instead of debug.log file"),
+QT_TRANSLATE_NOOP("bitcoin-core", ""
+"Enter regression test mode, which uses a special chain in which blocks can "
+"be solved instantly. This is intended for regression testing tools and app "
+"development."),
+QT_TRANSLATE_NOOP("bitcoin-core", "Username for JSON-RPC connections"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Password for JSON-RPC connections"),
+QT_TRANSLATE_NOOP("bitcoin-core", ""
+"Listen for JSON-RPC connections on <port> (default: 48210 or testnet: 27058)"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Allow JSON-RPC connections from specified IP address"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Send commands to node running on <ip> (default: 127.0.0.1)"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Wait for RPC server to start"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Set the number of threads to service RPC calls (default: 4)"),
+QT_TRANSLATE_NOOP("bitcoin-core", ""
+"Execute command when the best block changes (%s in cmd is replaced by block "
+"hash)"),
+QT_TRANSLATE_NOOP("bitcoin-core", ""
+"Execute command when a wallet transaction changes (%s in cmd is replaced by "
+"TxID)"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Require a confirmations for change (default: 0)"),
+QT_TRANSLATE_NOOP("bitcoin-core", ""
+"Execute command when a relevant alert is received (%s in cmd is replaced by "
+"message)"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Upgrade wallet to latest format"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Set key pool size to <n> (default: 100)"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Rescan the block chain for missing wallet transactions"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Attempt to recover private keys from a corrupt wallet.dat"),
+QT_TRANSLATE_NOOP("bitcoin-core", "How many blocks to check at startup (default: 500, 0 = all)"),
+QT_TRANSLATE_NOOP("bitcoin-core", "How thorough the block verification is (0-6, default: 1)"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Imports blocks from external blk000?.dat file"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Keep at most <n> MiB of unconnectable blocks in memory (default: %u)"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Block creation options:"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Set minimum block size in bytes (default: 0)"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Set maximum block size in bytes (default: 250000)"),
+QT_TRANSLATE_NOOP("bitcoin-core", "SSL options: (see the Bitcoin Wiki for SSL setup instructions)"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Use OpenSSL (https) for JSON-RPC connections"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Server certificate file (default: server.cert)"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Server private key (default: server.pem)"),
+QT_TRANSLATE_NOOP("bitcoin-core", ""
+"Acceptable ciphers (default: TLSv1.2+HIGH:TLSv1+HIGH:!SSLv2:!aNULL:!eNULL:!"
+"3DES:@STRENGTH
