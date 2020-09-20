@@ -100,4 +100,99 @@ QT_TRANSLATE_NOOP("bitcoin-core", "Server certificate file (default: server.cert
 QT_TRANSLATE_NOOP("bitcoin-core", "Server private key (default: server.pem)"),
 QT_TRANSLATE_NOOP("bitcoin-core", ""
 "Acceptable ciphers (default: TLSv1.2+HIGH:TLSv1+HIGH:!SSLv2:!aNULL:!eNULL:!"
-"3DES:@STRENGTH
+"3DES:@STRENGTH)"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Warning: Deprecated argument -debugnet ignored, use -debug=net"),
+QT_TRANSLATE_NOOP("bitcoin-core", ""
+"Error: Unsupported argument -socks found. Setting SOCKS version isn't "
+"possible anymore, only SOCKS5 proxies are supported."),
+QT_TRANSLATE_NOOP("bitcoin-core", "Invalid amount for -paytxfee=<amount>: '%s'"),
+QT_TRANSLATE_NOOP("bitcoin-core", ""
+"Warning: -paytxfee is set very high! This is the transaction fee you will "
+"pay if you send a transaction."),
+QT_TRANSLATE_NOOP("bitcoin-core", "Invalid amount for -mininput=<amount>: '%s'"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Initialization sanity check failed. Bws is shutting down."),
+QT_TRANSLATE_NOOP("bitcoin-core", "Wallet %s resides outside data directory %s."),
+QT_TRANSLATE_NOOP("bitcoin-core", ""
+"Cannot obtain a lock on data directory %s. Bws is probably already "
+"running."),
+QT_TRANSLATE_NOOP("bitcoin-core", "Verifying database integrity..."),
+QT_TRANSLATE_NOOP("bitcoin-core", "Error initializing wallet database environment %s!"),
+QT_TRANSLATE_NOOP("bitcoin-core", ""
+"Warning: wallet.dat corrupt, data salvaged! Original wallet.dat saved as "
+"wallet.{timestamp}.bak in %s; if your balance or transactions are incorrect "
+"you should restore from a backup."),
+QT_TRANSLATE_NOOP("bitcoin-core", "wallet.dat corrupt, salvage failed"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Unknown network specified in -onlynet: '%s'"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Invalid -proxy address: '%s'"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Invalid -tor address: '%s'"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Cannot resolve -bind address: '%s'"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Failed to listen on any port. Use -listen=0 if you want this."),
+QT_TRANSLATE_NOOP("bitcoin-core", "Cannot resolve -externalip address: '%s'"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Invalid amount for -reservebalance=<amount>"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Loading block index..."),
+QT_TRANSLATE_NOOP("bitcoin-core", "Error loading block database"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Loading wallet..."),
+QT_TRANSLATE_NOOP("bitcoin-core", "Error loading wallet.dat: Wallet corrupted"),
+QT_TRANSLATE_NOOP("bitcoin-core", ""
+"Warning: error reading wallet.dat! All keys read correctly, but transaction "
+"data or address book entries might be missing or incorrect."),
+QT_TRANSLATE_NOOP("bitcoin-core", "Error loading wallet.dat: Wallet requires newer version of Bws"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Wallet needed to be rewritten: restart Bws to complete"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Error loading wallet.dat"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Cannot downgrade wallet"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Cannot write default address"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Rescanning..."),
+QT_TRANSLATE_NOOP("bitcoin-core", "Loading addresses..."),
+QT_TRANSLATE_NOOP("bitcoin-core", "Done loading"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Warning: This version is obsolete, upgrade required!"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Error: Disk space is low!"),
+QT_TRANSLATE_NOOP("bitcoin-core", ""
+"This is a pre-release test build - use at your own risk - do not use for "
+"mining or merchant applications"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Error"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Warning"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Information"),
+QT_TRANSLATE_NOOP("bitcoin-core", ""
+"Warning: Please check that your computer's date and time are correct! If "
+"your clock is wrong Bws will not work properly."),
+QT_TRANSLATE_NOOP("bitcoin-core", ""
+"Unable to bind to %s on this computer. Bws is probably already running."),
+QT_TRANSLATE_NOOP("bitcoin-core", "Unable to bind to %s on this computer (bind returned error %d, %s)"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Error: Wallet locked, unable to create transaction!"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Error: Wallet unlocked for staking only, unable to create transaction."),
+QT_TRANSLATE_NOOP("bitcoin-core", ""
+"Error: This transaction requires a transaction fee of at least %s because of "
+"its amount, complexity, or use of recently received funds!"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Error: Transaction creation failed!"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Sending..."),
+QT_TRANSLATE_NOOP("bitcoin-core", ""
+"Error: The transaction was rejected! This might happen if some of the coins "
+"in your wallet were already spent, such as if you used a copy of wallet.dat "
+"and coins were spent in the copy but not marked as spent here."),
+QT_TRANSLATE_NOOP("bitcoin-core", "Invalid amount"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Insufficient funds"),
+QT_TRANSLATE_NOOP("bitcoin-core", ""
+"You must set rpcpassword=<password> in the configuration file:\n"
+"%s\n"
+"If the file does not exist, create it with owner-readable-only file "
+"permissions."),
+QT_TRANSLATE_NOOP("bitcoin-core", "To use the %s option"),
+QT_TRANSLATE_NOOP("bitcoin-core", ""
+"%s, you must set a rpcpassword in the configuration file:\n"
+"%s\n"
+"It is recommended you use the following random password:\n"
+"rpcuser=bwsrpc\n"
+"rpcpassword=%s\n"
+"(you do not need to remember this password)\n"
+"The username and password MUST NOT be the same.\n"
+"If the file does not exist, create it with owner-readable-only file "
+"permissions.\n"
+"It is also recommended to set alertnotify so you are notified of problems;\n"
+"for example: alertnotify=echo %%s | mail -s \"Bws Alert\" admin@foo."
+"com\n"),
+QT_TRANSLATE_NOOP("bitcoin-core", ""
+"An error occurred while setting up the RPC port %u for listening on IPv6, "
+"falling back to IPv4: %s"),
+QT_TRANSLATE_NOOP("bitcoin-core", ""
+"An error occurred while setting up the RPC port %u for listening on IPv4: %s"),
+};
