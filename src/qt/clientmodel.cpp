@@ -162,3 +162,42 @@ bool ClientModel::isReleaseVersion() const
 {
     return CLIENT_VERSION_IS_RELEASE;
 }
+
+QString ClientModel::clientName() const
+{
+    return QString::fromStdString(CLIENT_NAME);
+}
+
+QString ClientModel::formatClientStartupTime() const
+{
+    return QDateTime::fromTime_t(nClientStartupTime).toString();
+}
+
+static void NotifyNumConnectionsChanged(ClientModel *clientmodel, int newNumConnections)
+{
+    // Too noisy: qDebug() << "NotifyNumConnectionsChanged : " + QString::number(newNumConnections);
+    QMetaObject::invokeMethod(clientmodel, "updateNumConnections", Qt::QueuedConnection,
+                              Q_ARG(int, newNumConnections));
+}
+
+static void NotifyAlertChanged(ClientModel *clientmodel, const uint256 &hash, ChangeType status)
+{
+    qDebug() << "NotifyAlertChanged : " + QString::fromStdString(hash.GetHex()) + " status=" + QString::number(status);
+    QMetaObject::invokeMethod(clientmodel, "updateAlert", Qt::QueuedConnection,
+                              Q_ARG(QString, QString::fromStdString(hash.GetHex())),
+                              Q_ARG(int, status));
+}
+
+void ClientModel::subscribeToCoreSignals()
+{
+    // Connect signals to client
+    uiInterface.NotifyNumConnectionsChanged.connect(boost::bind(NotifyNumConnectionsChanged, this, _1));
+    uiInterface.NotifyAlertChanged.connect(boost::bind(NotifyAlertChanged, this, _1, _2));
+}
+
+void ClientModel::unsubscribeFromCoreSignals()
+{
+    // Disconnect signals from client
+    uiInterface.NotifyNumConnectionsChanged.disconnect(boost::bind(NotifyNumConnectionsChanged, this, _1));
+    uiInterface.NotifyAlertChanged.disconnect(boost::bind(NotifyAlertChanged, this, _1, _2));
+}
