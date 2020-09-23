@@ -183,3 +183,27 @@ bool BitcoinUnits::parse(int unit, const QString &value, qint64 *val_out)
 }
 
 int BitcoinUnits::rowCount(const QModelIndex &parent) const
+{
+    Q_UNUSED(parent);
+    return unitlist.size();
+}
+
+QVariant BitcoinUnits::data(const QModelIndex &index, int role) const
+{
+    int row = index.row();
+    if(row >= 0 && row < unitlist.size())
+    {
+        Unit unit = unitlist.at(row);
+        switch(role)
+        {
+        case Qt::EditRole:
+        case Qt::DisplayRole:
+            return QVariant(name(unit));
+        case Qt::ToolTipRole:
+            return QVariant(description(unit));
+        case UnitRole:
+            return QVariant(static_cast<int>(unit));
+        }
+    }
+    return QVariant();
+}
