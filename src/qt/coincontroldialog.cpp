@@ -404,4 +404,177 @@ void CoinControlDialog::clipboardAfterFee()
     QApplication::clipboard()->setText(ui->labelCoinControlAfterFee->text().left(ui->labelCoinControlAfterFee->text().indexOf(" ")));
 }
 
-// copy lab
+// copy label "Bytes" to clipboard
+void CoinControlDialog::clipboardBytes()
+{
+    QApplication::clipboard()->setText(ui->labelCoinControlBytes->text());
+}
+
+// copy label "Low output" to clipboard
+void CoinControlDialog::clipboardLowOutput()
+{
+    QApplication::clipboard()->setText(ui->labelCoinControlLowOutput->text());
+}
+
+// copy label "Change" to clipboard
+void CoinControlDialog::clipboardChange()
+{
+    QApplication::clipboard()->setText(ui->labelCoinControlChange->text().left(ui->labelCoinControlChange->text().indexOf(" ")));
+}
+
+// treeview: sort
+void CoinControlDialog::sortView(int column, Qt::SortOrder order)
+{
+    sortColumn = column;
+    sortOrder = order;
+    ui->treeWidget->sortItems(column, order);
+    ui->treeWidget->header()->setSortIndicator((sortColumn == COLUMN_AMOUNT_INT64 ? COLUMN_AMOUNT : (sortColumn == COLUMN_POTENTIALSTAKE_INT64 ? COLUMN_POTENTIALSTAKE :(sortColumn == COLUMN_AGE_INT64 ? COLUMN_AGE : sortColumn))), sortOrder);
+}
+
+// treeview: clicked on header
+void CoinControlDialog::headerSectionClicked(int logicalIndex)
+{
+    if (logicalIndex == COLUMN_CHECKBOX) // click on most left column -> do nothing
+    {
+        ui->treeWidget->header()->setSortIndicator((sortColumn == COLUMN_AMOUNT_INT64 ? COLUMN_AMOUNT : sortColumn), sortOrder);
+    }
+    else
+    {
+        if (logicalIndex == COLUMN_AMOUNT) // sort by amount
+            logicalIndex = COLUMN_AMOUNT_INT64;
+
+
+	    if (logicalIndex == COLUMN_AGE) // sort by age
+            logicalIndex = COLUMN_AGE_INT64;	
+
+		if (logicalIndex == COLUMN_POTENTIALSTAKE) // sort by potential stake
+            logicalIndex = COLUMN_POTENTIALSTAKE_INT64;
+			
+        if (sortColumn == logicalIndex)
+            sortOrder = ((sortOrder == Qt::AscendingOrder) ? Qt::DescendingOrder : Qt::AscendingOrder);
+        else
+        {
+            sortColumn = logicalIndex;
+            sortOrder = ((sortColumn == COLUMN_AMOUNT_INT64 || sortColumn == COLUMN_DATE || sortColumn == COLUMN_CONFIRMATIONS || sortColumn == COLUMN_AGE_INT64 || sortColumn == COLUMN_POTENTIALSTAKE_INT64) ? Qt::DescendingOrder : Qt::AscendingOrder); // if amount,date,conf then default => desc, else default => asc
+        }
+
+        sortView(sortColumn, sortOrder);
+    }
+}
+
+// toggle tree mode
+void CoinControlDialog::radioTreeMode(bool checked)
+{
+    if (checked && model)
+        updateView();
+}
+
+// toggle list mode
+void CoinControlDialog::radioListMode(bool checked)
+{
+    if (checked && model)
+        updateView();
+}
+
+// checkbox clicked by user
+void CoinControlDialog::viewItemChanged(QTreeWidgetItem* item, int column)
+{
+    if (column == COLUMN_CHECKBOX && item->text(COLUMN_TXHASH).length() == 64) // transaction hash is 64 characters (this means its a child node, so its not a parent node in tree mode)
+    {
+        COutPoint outpt(uint256(item->text(COLUMN_TXHASH).toStdString()), item->text(COLUMN_VOUT_INDEX).toUInt());
+
+        if (item->checkState(COLUMN_CHECKBOX) == Qt::Unchecked)
+            coinControl->UnSelect(outpt);
+        else if (item->isDisabled()) // locked (this happens if "check all" through parent node)
+            item->setCheckState(COLUMN_CHECKBOX, Qt::Unchecked);
+        else
+            coinControl->Select(outpt);
+
+        // selection changed -> update labels
+        if (ui->treeWidget->isEnabled()) // do not update on every click for (un)select all
+            CoinControlDialog::updateLabels(model, this);
+    }
+}
+
+// shows count of locked unspent outputs
+void CoinControlDialog::updateLabelLocked()
+{
+    vector<COutPoint> vOutpts;
+    model->listLockedCoins(vOutpts);
+    if (vOutpts.size() > 0)
+    {
+       ui->labelLocked->setText(tr("(%1 locked)").arg(vOutpts.size()));
+       ui->labelLocked->setVisible(true); 
+    }
+    else ui->labelLocked->setVisible(false);
+}
+
+void CoinControlDialog::updateLabels(WalletModel *model, QDialog* dialog)
+{
+    if (!model) return;
+
+    // nPayAmount
+    qint64 nPayAmount = 0;
+    bool fLowOutput = false;
+    bool fDust = false;
+    CTransaction txDummy;
+    foreach(const qint64 &amount, CoinControlDialog::payAmounts)
+    {
+        nPayAmount += amount;
+
+        if (amount > 0)
+        {
+            if (amount < CENT)
+                fLowOutput = true;
+
+            CTxOut txout(amount, (CScript)vector<unsigned char>(24, 0));
+            txDummy.vout.push_back(txout);
+        }
+    }
+
+    int64_t nAmount             = 0;
+    int64_t nPayFee             = 0;
+    int64_t nAfterFee           = 0;
+    int64_t nChange             = 0;
+    unsigned int nBytes         = 0;
+    unsigned int nBytesInputs   = 0;
+    unsigned int nQuantity      = 0;
+    
+    vector<COutPoint> vCoinControl;
+    vector<COutput>   vOutputs;
+    coinControl->ListSelected(vCoinControl);
+    model->getOutputs(vCoinControl, vOutputs);
+
+    BOOST_FOREACH(const COutput& out, vOutputs)
+    {
+        // Quantity
+        nQuantity++;
+            
+        // Amount
+        nAmount += out.tx->vout[out.i].nValue;
+        
+        // Bytes
+        CTxDestination address;
+        if(ExtractDestination(out.tx->vout[out.i].scriptPubKey, address))
+        {
+            CPubKey pubkey;
+            CKeyID *keyid = boost::get< CKeyID >(&address);
+            if (keyid && model->getPubKey(*keyid, pubkey))
+                nBytesInputs += (pubkey.IsCompressed() ? 148 : 180);
+            else
+                nBytesInputs += 148; // in all error cases, simply assume 148 here
+        }
+        else nBytesInputs += 148;
+    }
+    
+    // calculation
+    if (nQuantity > 0)
+    {
+        // Bytes
+        nBytes = nBytesInputs + ((CoinControlDialog::payAmounts.size() > 0 ? CoinControlDialog::payAmounts.size() + 1 : 2) * 34) + 10; // always assume +1 output for change here
+        
+        // Fee
+        int64_t nFee = nTransactionFee * (1 + (int64_t)nBytes / 1000);
+        
+        // Min Fee
+        int64_t nMinFee = GetMinFee(
