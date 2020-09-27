@@ -236,4 +236,172 @@ void CoinControlDialog::customSelectCoins()
             {
                 if (dCoinAmount < dUserAmount * COIN)
                 {			
-    
+                    coinControl->Select(outpt);
+                    itemOutput->setCheckState(COLUMN_CHECKBOX,Qt::Checked);
+                }	
+            }
+            else if (strComboText == "> Amount")
+            {
+                if (dCoinAmount > dUserAmount * COIN)
+                {			
+                    coinControl->Select(outpt);
+                    itemOutput->setCheckState(COLUMN_CHECKBOX,Qt::Checked);
+                }
+            }
+            else if (strComboText == "< Weight")
+            {
+                if (nTxWeight < dUserAmount)
+                {			
+                    coinControl->Select(outpt);
+                    itemOutput->setCheckState(COLUMN_CHECKBOX,Qt::Checked);
+                }
+            }
+            else if (strComboText == "> Weight")
+            {
+                if (nTxWeight > dUserAmount)
+                {			
+                    coinControl->Select(outpt);
+                    itemOutput->setCheckState(COLUMN_CHECKBOX,Qt::Checked);
+                }
+            }
+            else if (strComboText == "< Age")
+            {
+                if (dAge < dUserAmount)
+                {			
+                    coinControl->Select(outpt);
+                    itemOutput->setCheckState(COLUMN_CHECKBOX,Qt::Checked);
+                }
+            }
+            else if (strComboText == "> Age")
+            {
+                if (dAge > dUserAmount)
+                {			
+                    coinControl->Select(outpt);
+                    itemOutput->setCheckState(COLUMN_CHECKBOX,Qt::Checked);
+                }
+            }
+            else
+            {
+                coinControl->UnSelect(outpt);
+                itemOutput->setCheckState(COLUMN_CHECKBOX,Qt::Unchecked);
+            }
+        }
+    }	
+
+    CoinControlDialog::updateLabels(model, this);
+	updateView();
+}
+
+// context menu
+void CoinControlDialog::showMenu(const QPoint &point)
+{
+    QTreeWidgetItem *item = ui->treeWidget->itemAt(point);
+    if(item)
+    {
+        contextMenuItem = item;
+
+        // disable some items (like Copy Transaction ID, lock, unlock) for tree roots in context menu
+        if (item->text(COLUMN_TXHASH).length() == 64) // transaction hash is 64 characters (this means its a child node, so its not a parent node in tree mode)
+        {
+            copyTransactionHashAction->setEnabled(true);
+            if (model->isLockedCoin(uint256(item->text(COLUMN_TXHASH).toStdString()), item->text(COLUMN_VOUT_INDEX).toUInt()))
+            {
+               lockAction->setEnabled(false);
+               unlockAction->setEnabled(true);
+            }
+            else
+            {
+               lockAction->setEnabled(true);
+               unlockAction->setEnabled(false);
+            }
+        }
+        else // this means click on parent node in tree mode -> disable all
+        {
+            copyTransactionHashAction->setEnabled(false);
+            lockAction->setEnabled(false);
+            unlockAction->setEnabled(false);
+        }
+
+        // show context menu
+        contextMenu->exec(QCursor::pos());
+    }
+}
+
+// context menu action: copy amount
+void CoinControlDialog::copyAmount()
+{
+    QApplication::clipboard()->setText(contextMenuItem->text(COLUMN_AMOUNT));
+}
+
+// context menu action: copy label
+void CoinControlDialog::copyLabel()
+{
+    if (ui->radioTreeMode->isChecked() && contextMenuItem->text(COLUMN_LABEL).length() == 0 && contextMenuItem->parent())
+        QApplication::clipboard()->setText(contextMenuItem->parent()->text(COLUMN_LABEL));
+    else
+        QApplication::clipboard()->setText(contextMenuItem->text(COLUMN_LABEL));
+}
+
+// context menu action: copy address
+void CoinControlDialog::copyAddress()
+{
+    if (ui->radioTreeMode->isChecked() && contextMenuItem->text(COLUMN_ADDRESS).length() == 0 && contextMenuItem->parent())
+        QApplication::clipboard()->setText(contextMenuItem->parent()->text(COLUMN_ADDRESS));
+    else
+        QApplication::clipboard()->setText(contextMenuItem->text(COLUMN_ADDRESS));
+}
+
+// context menu action: copy transaction id
+void CoinControlDialog::copyTransactionHash()
+{
+    QApplication::clipboard()->setText(contextMenuItem->text(COLUMN_TXHASH));
+}
+
+// context menu action: lock coin
+void CoinControlDialog::lockCoin()
+{
+    if (contextMenuItem->checkState(COLUMN_CHECKBOX) == Qt::Checked)
+        contextMenuItem->setCheckState(COLUMN_CHECKBOX, Qt::Unchecked);
+
+    COutPoint outpt(uint256(contextMenuItem->text(COLUMN_TXHASH).toStdString()), contextMenuItem->text(COLUMN_VOUT_INDEX).toUInt());
+    model->lockCoin(outpt);
+    contextMenuItem->setDisabled(true);
+    contextMenuItem->setIcon(COLUMN_CHECKBOX, QIcon(":/icons/lock_closed"));
+    updateLabelLocked();
+}
+
+// context menu action: unlock coin
+void CoinControlDialog::unlockCoin()
+{
+    COutPoint outpt(uint256(contextMenuItem->text(COLUMN_TXHASH).toStdString()), contextMenuItem->text(COLUMN_VOUT_INDEX).toUInt());
+    model->unlockCoin(outpt);
+    contextMenuItem->setDisabled(false);
+    contextMenuItem->setIcon(COLUMN_CHECKBOX, QIcon());
+    updateLabelLocked();
+}
+
+// copy label "Quantity" to clipboard
+void CoinControlDialog::clipboardQuantity()
+{
+    QApplication::clipboard()->setText(ui->labelCoinControlQuantity->text());
+}
+
+// copy label "Amount" to clipboard
+void CoinControlDialog::clipboardAmount()
+{
+    QApplication::clipboard()->setText(ui->labelCoinControlAmount->text().left(ui->labelCoinControlAmount->text().indexOf(" ")));
+}
+
+// copy label "Fee" to clipboard
+void CoinControlDialog::clipboardFee()
+{
+    QApplication::clipboard()->setText(ui->labelCoinControlFee->text().left(ui->labelCoinControlFee->text().indexOf(" ")));
+}
+
+// copy label "After fee" to clipboard
+void CoinControlDialog::clipboardAfterFee()
+{
+    QApplication::clipboard()->setText(ui->labelCoinControlAfterFee->text().left(ui->labelCoinControlAfterFee->text().indexOf(" ")));
+}
+
+// copy lab
