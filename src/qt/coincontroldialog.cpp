@@ -577,4 +577,116 @@ void CoinControlDialog::updateLabels(WalletModel *model, QDialog* dialog)
         int64_t nFee = nTransactionFee * (1 + (int64_t)nBytes / 1000);
         
         // Min Fee
-        int64_t nMinFee = GetMinFee(
+        int64_t nMinFee = GetMinFee(txDummy, 1, GMF_SEND, nBytes);
+        
+        nPayFee = max(nFee, nMinFee);
+        
+        if (pwalletMain->fSplitBlock) {
+            nPayFee = COIN / 1000; // make fee more expensive if using splitblock, this avoids having to calculate fee based on multiple vouts
+        }
+
+        if (nPayAmount > 0)
+        {
+            nChange = nAmount - nPayFee - nPayAmount;
+            
+            // if sub-cent change is required, the fee must be raised to at least CTransaction::nMinTxFee
+            if (nPayFee < CENT && nChange > 0 && nChange < CENT) {
+                if (nChange < CENT) { // change < 0.01 == move all change to fees
+                    nPayFee = nChange;
+                    nChange = 0;
+                } else {
+                    nChange = nChange + nPayFee - CENT;
+                    nPayFee = CENT;
+                }
+            }
+
+            if (nChange == 0)
+                nBytes -= 34;
+        }
+        
+        // after fee
+        nAfterFee = nAmount - nPayFee;
+        if (nAfterFee < 0)
+            nAfterFee = 0;
+    }
+    
+    // actually update labels
+    int nDisplayUnit = BitcoinUnits::BTC;
+    if (model && model->getOptionsModel())
+        nDisplayUnit = model->getOptionsModel()->getDisplayUnit();
+            
+    QLabel *l1 = dialog->findChild<QLabel *>("labelCoinControlQuantity");
+    QLabel *l2 = dialog->findChild<QLabel *>("labelCoinControlAmount");
+    QLabel *l3 = dialog->findChild<QLabel *>("labelCoinControlFee");
+    QLabel *l4 = dialog->findChild<QLabel *>("labelCoinControlAfterFee");
+    QLabel *l5 = dialog->findChild<QLabel *>("labelCoinControlBytes");
+    QLabel *l7 = dialog->findChild<QLabel *>("labelCoinControlLowOutput");
+    QLabel *l8 = dialog->findChild<QLabel *>("labelCoinControlChange");
+    
+    // enable/disable "low output" and "change"
+    dialog->findChild<QLabel *>("labelCoinControlLowOutputText")->setEnabled(nPayAmount > 0);
+    dialog->findChild<QLabel *>("labelCoinControlLowOutput")    ->setEnabled(nPayAmount > 0);
+    dialog->findChild<QLabel *>("labelCoinControlChangeText")   ->setEnabled(nPayAmount > 0);
+    dialog->findChild<QLabel *>("labelCoinControlChange")       ->setEnabled(nPayAmount > 0);
+    
+    // stats
+    l1->setText(QString::number(nQuantity));                                 // Quantity        
+    l2->setText(BitcoinUnits::formatWithUnit(nDisplayUnit, nAmount));        // Amount
+    l3->setText(BitcoinUnits::formatWithUnit(nDisplayUnit, nPayFee));        // Fee
+    l4->setText(BitcoinUnits::formatWithUnit(nDisplayUnit, nAfterFee));      // After Fee
+    l5->setText(((nBytes > 0) ? "~" : "") + QString::number(nBytes));        // Bytes
+    l7->setText((fLowOutput ? (fDust ? tr("DUST") : tr("yes")) : tr("no"))); // Low Output / Dust
+    l8->setText(BitcoinUnits::formatWithUnit(nDisplayUnit, nChange));        // Change
+    
+    // turn labels "red"
+    l5->setStyleSheet((nBytes >= 10000) ? "color:red;" : "");                // Bytes >= 10000
+    l7->setStyleSheet((fLowOutput) ? "color:red;" : "");                     // Low Output = "yes"
+    l8->setStyleSheet((nChange > 0 && nChange < CENT) ? "color:red;" : "");  // Change < 0.01BTC
+        
+    // tool tips
+    l5->setToolTip(tr("This label turns red, if the transaction size is bigger than 10000 bytes.\n\n This means a fee of at least %1 per kb is required.\n\n Can vary +/- 1 Byte per input.").arg(BitcoinUnits::formatWithUnit(nDisplayUnit, CENT)));
+    l7->setToolTip(tr("This label turns red, if any recipient receives an amount smaller than %1.\n\n This means a fee of at least %2 is required. \n\n Amounts below 0.546 times the minimum relay fee are shown as DUST.").arg(BitcoinUnits::formatWithUnit(nDisplayUnit, CENT)).arg(BitcoinUnits::formatWithUnit(nDisplayUnit, CENT)));
+    l8->setToolTip(tr("This label turns red, if the change is smaller than %1.\n\n This means a fee of at least %2 is required.").arg(BitcoinUnits::formatWithUnit(nDisplayUnit, CENT)).arg(BitcoinUnits::formatWithUnit(nDisplayUnit, CENT)));
+    dialog->findChild<QLabel *>("labelCoinControlBytesText")    ->setToolTip(l5->toolTip());
+    dialog->findChild<QLabel *>("labelCoinControlLowOutputText")->setToolTip(l7->toolTip());
+    dialog->findChild<QLabel *>("labelCoinControlChangeText")   ->setToolTip(l8->toolTip());
+   
+    // Insufficient funds
+    QLabel *label = dialog->findChild<QLabel *>("labelCoinControlInsuffFunds");
+    if (label)
+        label->setVisible(nChange < 0);
+}
+
+void CoinControlDialog::updateView()
+{
+    bool treeMode = ui->radioTreeMode->isChecked();
+
+    ui->treeWidget->clear();
+    ui->treeWidget->setEnabled(false); // performance, otherwise updateLabels would be called for every checked checkbox
+    ui->treeWidget->setAlternatingRowColors(!treeMode);
+    QFlags<Qt::ItemFlag> flgCheckbox=Qt::ItemIsSelectable | Qt::ItemIsEnabled | Qt::ItemIsUserCheckable;
+    QFlags<Qt::ItemFlag> flgTristate=Qt::ItemIsSelectable | Qt::ItemIsEnabled | Qt::ItemIsUserCheckable | Qt::ItemIsTristate;
+    
+    int nDisplayUnit = BitcoinUnits::BTC;
+    if (model && model->getOptionsModel())
+        nDisplayUnit = model->getOptionsModel()->getDisplayUnit();
+        
+    map<QString, vector<COutput> > mapCoins;
+    model->listCoins(mapCoins);
+
+    BOOST_FOREACH(PAIRTYPE(QString, vector<COutput>) coins, mapCoins)
+    {
+        QTreeWidgetItem *itemWalletAddress = new QTreeWidgetItem();
+        QString sWalletAddress = coins.first;
+        QString sWalletLabel = "";
+        if (model->getAddressTableModel())
+            sWalletLabel = model->getAddressTableModel()->labelForAddress(sWalletAddress);
+        if (sWalletLabel.length() == 0)
+            sWalletLabel = tr("(no label)");
+        
+        if (treeMode)
+        {
+            // wallet address
+            ui->treeWidget->addTopLevelItem(itemWalletAddress);
+
+            itemWalletAddress->
