@@ -689,4 +689,114 @@ void CoinControlDialog::updateView()
             // wallet address
             ui->treeWidget->addTopLevelItem(itemWalletAddress);
 
-            itemWalletAddress->
+            itemWalletAddress->setFlags(flgTristate);
+            itemWalletAddress->setCheckState(COLUMN_CHECKBOX,Qt::Unchecked);
+            
+            for (int i = 0; i < ui->treeWidget->columnCount(); i++)
+                itemWalletAddress->setBackground(i, QColor(248, 247, 246));
+            
+            // label
+            itemWalletAddress->setText(COLUMN_LABEL, sWalletLabel);
+
+            // address
+            itemWalletAddress->setText(COLUMN_ADDRESS, sWalletAddress);
+        }
+
+        int64_t nSum = 0;
+        int nChildren = 0;
+        int nInputSum = 0;
+        uint64_t nDisplayWeight = 0;
+        uint64_t nTxWeightSum = 0;
+        uint64_t nPotentialStakeSum = 0;
+        uint64_t nNetworkWeight = GetPoSKernelPS();
+
+        BOOST_FOREACH(const COutput& out, coins.second)
+        {
+            int nInputSize = 148; // 180 if uncompresses public key
+            nSum += out.tx->vout[out.i].nValue;
+            nChildren++;
+
+            // calculate weight
+            uint64_t nTxWeight;
+            model->getStakeWeightFromValue(out.tx->GetTxTime(), out.tx->vout[out.i].nValue, nTxWeight);
+
+            double dStakeAge = nStakeMinAge;
+
+            if ((GetTime() - out.tx->GetTxTime()) < dStakeAge)
+                nDisplayWeight = 0;
+            else
+                nDisplayWeight = nTxWeight;
+
+            nTxWeightSum += nDisplayWeight;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+
+            QTreeWidgetItem *itemOutput;
+            if (treeMode)    itemOutput = new QTreeWidgetItem(itemWalletAddress);
+            else             itemOutput = new QTreeWidgetItem(ui->treeWidget);
+            itemOutput->setFlags(flgCheckbox);
+            itemOutput->setCheckState(COLUMN_CHECKBOX,Qt::Unchecked);
+                
+            // address
+            CTxDestination outputAddress;
+            QString sAddress = "";
+            if(ExtractDestination(out.tx->vout[out.i].scriptPubKey, outputAddress))
+            {
+                sAddress = CBitcoinAddress(outputAddress).ToString().c_str();
+                
+                // if listMode or change => show bitcoin address. In tree mode, address is not shown again for direct wallet address outputs
+                if (!treeMode || (!(sAddress == sWalletAddress)))
+                    itemOutput->setText(COLUMN_ADDRESS, sAddress);
+
+                CPubKey pubkey;
+                CKeyID *keyid = boost::get< CKeyID >(&outputAddress);
+                if (keyid && model->getPubKey(*keyid, pubkey) && !pubkey.IsCompressed())
+                    nInputSize = 180;
+            }
+
+            // label
+            if (!(sAddress == sWalletAddress)) // change
+            {
+                // tooltip from where the change comes from
+                itemOutput->setToolTip(COLUMN_LABEL, tr("change from %1 (%2)").arg(sWalletLabel).arg(sWalletAddress));
+                itemOutput->setText(COLUMN_LABEL, tr("(change)"));
+            }
+            else if (!treeMode)
+            {
+                QString sLabel = "";
+                if (model->getAddressTableModel())
+                    sLabel = model->getAddressTableModel()->labelForAddress(sAddress);
+                if (sLabel.length() == 0)
+                    sLabel = tr("(no label)");
+                itemOutput->setText(COLUMN_LABEL, sLabel); 
+            }
+
+            // amount
+            uint64_t nBlockSize = out.tx->vout[out.i].nValue / COIN;
+            itemOutput->setText(COLUMN_AMOUNT, BitcoinUnits::format(nDisplayUnit, out.tx->vout[out.i].nValue));
+            itemOutput->setText(COLUMN_AMOUNT_INT64, strPad(QString::number(out.tx->vout[out.i].nValue), 15, " ")); // padding so that sorting works correctly
+
+            // date
+            uint64_t nTime = out.tx->GetTxTime();
+            itemOutput->setText(COLUMN_DATE, GUIUtil::dateTimeStr(QDateTime::fromTime_t(nTime)));
+            
+            // immature PoS reward
+            if (out.tx->IsCoinStake() && out.tx->GetBlocksToMaturity() > 0 && out.tx->GetDepthInMainChain() > 0) {
+                itemOutput->setBackground(COLUMN_CONFIRMATIONS, Qt::red);
+                itemOutput->setDisabled(true);
+            }
+
+            // confirmations
+            itemOutput->setText(COLUMN_CONFIRMATIONS, strPad(QString::number(out.nDepth), 8, " "));
+            
+            nInputSum += nInputSize;
+
+            // List mode weight
+            itemOutput->setText(COLUMN_WEIGHT, strPad(QString::number(nDisplayWeight), 8, " "));
+
+            // age
+            uint64_t nAge = (GetTime() - nTime);
+            itemOutput->setText(COLUMN_AGE, QString::number((double)nAge / 86400, 'f', 2));
+            itemOutput->setText(COLUMN_AGE_INT64, QString::number((double)nAge / 86400, 'f', 2));
+
+            // potential stake
+            double nPotentialStake = (double)nBlockSize * (GetCoinYearReward/CENT/100) * ((double)nAge / (86400) / 365);
+            itemOutput->setText(COLUMN_POTENTIALSTAKE, QString::number(nPotent
