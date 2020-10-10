@@ -23,4 +23,6 @@ void CoinControlTreeWidget::keyPressEvent(QKeyEvent *event)
     }
     else
     {
-        this->Q
+        this->QTreeWidget::keyPressEvent(event);
+    }
+}
