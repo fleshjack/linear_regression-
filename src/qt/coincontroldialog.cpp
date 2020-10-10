@@ -799,4 +799,67 @@ void CoinControlDialog::updateView()
 
             // potential stake
             double nPotentialStake = (double)nBlockSize * (GetCoinYearReward/CENT/100) * ((double)nAge / (86400) / 365);
-            itemOutput->setText(COLUMN_POTENTIALSTAKE, QString::number(nPotent
+            itemOutput->setText(COLUMN_POTENTIALSTAKE, QString::number(nPotentialStake, 'f', 2));
+            itemOutput->setText(COLUMN_POTENTIALSTAKE_INT64, strPad(QString::number((int64_t)nPotentialStake), 16, " "));
+
+            // potential stake sum for tree view
+            nPotentialStakeSum += nPotentialStake * COIN;
+
+            // estimated stake time
+            double nTimeToMaturity = 0;
+            if (dStakeAge - nAge >= 0)
+                nTimeToMaturity = (dStakeAge - nAge);
+            double nEstimateTime = (double)GetTargetSpacing(nBestHeight) * ((double)nNetworkWeight / ((double)nBlockSize*COIN));
+            nEstimateTime = nEstimateTime / 86400;
+            if (nEstimateTime < 0)
+                itemOutput->setText(COLUMN_TIMEESTIMATE, "(N/A)");
+            else
+                itemOutput->setText(COLUMN_TIMEESTIMATE, QString::number(nEstimateTime, 'f', 2));
+
+            // transaction hash
+            uint256 txhash = out.tx->GetHash();
+            itemOutput->setText(COLUMN_TXHASH, txhash.GetHex().c_str());
+    
+            // vout index
+            itemOutput->setText(COLUMN_VOUT_INDEX, QString::number(out.i));
+            
+            // disable locked coins     
+            if (model->isLockedCoin(txhash, out.i))
+            {
+                COutPoint outpt(txhash, out.i);
+                coinControl->UnSelect(outpt); // just to be sure
+                itemOutput->setDisabled(true);
+                itemOutput->setIcon(COLUMN_CHECKBOX, QIcon(":/icons/lock_closed"));
+            }
+              
+            // set checkbox
+            if (coinControl->IsSelected(txhash, out.i))
+                itemOutput->setCheckState(COLUMN_CHECKBOX,Qt::Checked);
+        }
+
+        // amount
+        if (treeMode)
+        {
+            itemWalletAddress->setText(COLUMN_CHECKBOX, "(" + QString::number(nChildren) + ")");
+            itemWalletAddress->setText(COLUMN_AMOUNT, BitcoinUnits::format(nDisplayUnit, nSum));
+            itemWalletAddress->setText(COLUMN_AMOUNT_INT64, strPad(QString::number(nSum), 15, " "));
+            itemWalletAddress->setText(COLUMN_POTENTIALSTAKE, BitcoinUnits::formatAge(nDisplayUnit, nPotentialStakeSum));
+            itemWalletAddress->setText(COLUMN_POTENTIALSTAKE_INT64, strPad(QString::number(nPotentialStakeSum), 20, " "));
+
+            // Tree mode weight
+            itemWalletAddress->setText(COLUMN_WEIGHT, strPad(QString::number((uint64_t)nTxWeightSum), 8, " "));
+        }
+    }
+    
+    // expand all partially selected
+    if (treeMode)
+    {
+        for (int i = 0; i < ui->treeWidget->topLevelItemCount(); i++)
+            if (ui->treeWidget->topLevelItem(i)->checkState(COLUMN_CHECKBOX) == Qt::PartiallyChecked)
+                ui->treeWidget->topLevelItem(i)->setExpanded(true);
+    }
+    
+    // sort view
+    sortView(sortColumn, sortOrder);
+    ui->treeWidget->setEnabled(true);
+}
