@@ -107,4 +107,17 @@ namespace GUIUtil
         /** Show message box or print help message to standard output, based on operating system. */
         void showOrPrint();
 
-        /** Print
+        /** Print help message to console */
+        void printToConsole();
+
+    private:
+        QString header;
+        QString coreOptions;
+        QString uiOptions;
+    };
+
+    void SetBlackThemeQSS(QApplication& app);
+
+} // namespace GUIUtil
+
+#endif // GUIUTIL_H
