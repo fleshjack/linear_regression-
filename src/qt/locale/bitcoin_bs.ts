@@ -1,5 +1,5 @@
 
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="bg" version="2.1">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="bs" version="2.1">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -16,7 +16,7 @@
         <location line="+41"/>
         <source>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
-Copyright © 2014 The Bws developers</source>
+Copyright © 2018 The Bws developers</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -40,17 +40,17 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+22"/>
         <source>Double-click to edit address or label</source>
-        <translation>Двоен клик за редакция на адрес или име</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+24"/>
         <source>Create a new address</source>
-        <translation>Създаване на нов адрес</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+10"/>
         <source>Copy the currently selected address to the system clipboard</source>
-        <translation>Копирай избрания адрес</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-7"/>
@@ -65,7 +65,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+53"/>
         <source>&amp;Copy Address</source>
-        <translation>&amp;Копирай</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+7"/>
@@ -85,7 +85,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+17"/>
         <source>Delete the currently selected address from the list</source>
-        <translation>Изтрий избрания адрес от списъка</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-10"/>
@@ -100,17 +100,17 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+10"/>
         <source>&amp;Delete</source>
-        <translation>&amp;Изтрий</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="+66"/>
         <source>Copy &amp;Label</source>
-        <translation>Копирай &amp;име</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>&amp;Edit</source>
-        <translation>&amp;Редактирай</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+248"/>
@@ -120,7 +120,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+1"/>
         <source>Comma separated file (*.csv)</source>
-        <translation>CSV файл (*.csv)</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+13"/>
@@ -138,17 +138,17 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location filename="../addresstablemodel.cpp" line="+145"/>
         <source>Label</source>
-        <translation>Име</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+0"/>
         <source>Address</source>
-        <translation>Адрес</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+36"/>
         <source>(no label)</source>
-        <translation>(без име)</translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -161,17 +161,17 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+21"/>
         <source>Enter passphrase</source>
-        <translation>Въведи парола</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+14"/>
         <source>New passphrase</source>
-        <translation>Нова парола</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+14"/>
         <source>Repeat new passphrase</source>
-        <translation>Още веднъж</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+33"/>
@@ -186,42 +186,42 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location filename="../askpassphrasedialog.cpp" line="+38"/>
         <source>Encrypt wallet</source>
-        <translation>Криптиране на портфейла</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+7"/>
         <source>This operation needs your wallet passphrase to unlock the wallet.</source>
-        <translation>Тази операция изисква Вашата парола за отключване на портфейла.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+5"/>
         <source>Unlock wallet</source>
-        <translation>Отключване на портфейла</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
         <source>This operation needs your wallet passphrase to decrypt the wallet.</source>
-        <translation>Тази операция изисква Вашата парола за декриптиране на портфейла.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+5"/>
         <source>Decrypt wallet</source>
-        <translation>Декриптиране на портфейла</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
         <source>Change passphrase</source>
-        <translation>Смяна на паролата</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Enter the old and new passphrase to the wallet.</source>
-        <translation>Въведете текущата и новата парола за портфейла.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+45"/>
         <source>Confirm wallet encryption</source>
-        <translation>Потвърждаване на криптирането</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
@@ -248,7 +248,7 @@ This product includes software developed by the OpenSSL Project for use in the O
         <location line="-133"/>
         <location line="+60"/>
         <source>Wallet encrypted</source>
-        <translation>Портфейлът е криптиран</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-140"/>
@@ -266,40 +266,40 @@ This product includes software developed by the OpenSSL Project for use in the O
         <location line="+44"/>
         <location line="+6"/>
         <source>Wallet encryption failed</source>
-        <translation>Криптирането беше неуспешно</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-56"/>
         <source>Wallet encryption failed due to an internal error. Your wallet was not encrypted.</source>
-        <translation>Криптирането на портфейла беше неуспешно поради неизвестен проблем. Портфейлът не е криптиран.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+7"/>
         <location line="+50"/>
         <source>The supplied passphrases do not match.</source>
-        <translation>Паролите не съвпадат</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-38"/>
         <source>Wallet unlock failed</source>
-        <translation>Отключването беше неуспешно</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <location line="+12"/>
         <location line="+19"/>
         <source>The passphrase entered for the wallet decryption was incorrect.</source>
-        <translation>Паролата въведена за декриптиране на портфейла е грешна.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-20"/>
         <source>Wallet decryption failed</source>
-        <translation>Декриптирането беше неуспешно</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+14"/>
         <source>Wallet passphrase was successfully changed.</source>
-        <translation>Паролата на портфейла беше променена успешно.</translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -307,22 +307,22 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location filename="../bitcoingui.cpp" line="+297"/>
         <source>Sign &amp;message...</source>
-        <translation>Подписване на &amp;съобщение...</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-64"/>
         <source>Show general overview of wallet</source>
-        <translation>Обобщена информация за портфейла</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+17"/>
         <source>&amp;Transactions</source>
-        <translation>&amp;Транзакции</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Browse transaction history</source>
-        <translation>История на транзакциите</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+5"/>
@@ -342,12 +342,12 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+34"/>
         <source>E&amp;xit</source>
-        <translation>Из&amp;ход</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Quit application</source>
-        <translation>Изход от приложението</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+4"/>
@@ -357,32 +357,32 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+2"/>
         <source>About &amp;Qt</source>
-        <translation>За &amp;Qt</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Show information about Qt</source>
-        <translation>Покажи информация за Qt</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
         <source>&amp;Options...</source>
-        <translation>&amp;Опции...</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Encrypt Wallet...</source>
-        <translation>&amp;Криптиране на портфейла...</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
         <source>&amp;Backup Wallet...</source>
-        <translation>&amp;Запазване на портфейла...</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
         <source>&amp;Change Passphrase...</source>
-        <translation>&amp;Смяна на паролата...</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+9"/>
@@ -417,7 +417,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+2"/>
         <source>Change the passphrase used for wallet encryption</source>
-        <translation>Променя паролата за портфейла</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+10"/>
@@ -432,7 +432,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="-5"/>
         <source>&amp;Verify message...</source>
-        <translation>&amp;Проверка на съобщение...</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-214"/>
@@ -443,7 +443,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="-555"/>
         <source>Wallet</source>
-        <translation>Портфейл</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+193"/>
@@ -473,28 +473,28 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+32"/>
         <source>&amp;File</source>
-        <translation>&amp;Файл</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+8"/>
         <source>&amp;Settings</source>
-        <translation>&amp;Настройки</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+8"/>
         <source>&amp;Help</source>
-        <translation>&amp;Помощ</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+17"/>
         <source>Tabs toolbar</source>
-        <translation>Раздели</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+46"/>
         <location line="+9"/>
         <source>[testnet]</source>
-        <translation>[testnet]</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+0"/>
@@ -505,7 +505,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message numerus="yes">
         <location line="+70"/>
         <source>%n active connection(s) to Bws network</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform><numerusform></numerusform></translation>
     </message>
     <message>
         <location line="+6"/>
@@ -550,12 +550,12 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+277"/>
         <source>Up to date</source>
-        <translation>Синхронизиран</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+43"/>
         <source>Catching up...</source>
-        <translation>Зарежда блокове...</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+113"/>
@@ -565,12 +565,12 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+27"/>
         <source>Sent transaction</source>
-        <translation>Изходяща транзакция</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Incoming transaction</source>
-        <translation>Входяща транзакция</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
@@ -601,12 +601,12 @@ Address: %4
     <message>
         <location line="+8"/>
         <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
-        <translation>Портфейлът е &lt;b&gt;криптиран&lt;/b&gt; и &lt;b&gt;отключен&lt;/b&gt;</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+8"/>
         <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;locked&lt;/b&gt;</source>
-        <translation>Портфейлът е &lt;b&gt;криптиран&lt;/b&gt; и &lt;b&gt;заключен&lt;/b&gt;</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+24"/>
@@ -631,18 +631,18 @@ Address: %4
     <message numerus="yes">
         <location line="+91"/>
         <source>%n second(s)</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform><numerusform></numerusform></translation>
     </message>
     <message numerus="yes">
         <location line="+4"/>
         <source>%n minute(s)</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform><numerusform></numerusform></translation>
     </message>
     <message numerus="yes">
         <location line="-429"/>
         <location line="+433"/>
         <source>%n hour(s)</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform><numerusform></numerusform></translation>
     </message>
     <message>
         <location line="-456"/>
@@ -653,13 +653,13 @@ Address: %4
         <location line="+27"/>
         <location line="+433"/>
         <source>%n day(s)</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform><numerusform></numerusform></translation>
     </message>
     <message numerus="yes">
         <location line="-429"/>
         <location line="+6"/>
         <source>%n week(s)</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform><numerusform></numerusform></translation>
     </message>
     <message>
         <location line="+0"/>
@@ -669,7 +669,7 @@ Address: %4
     <message numerus="yes">
         <location line="+0"/>
         <source>%n year(s)</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform><numerusform></numerusform></translation>
     </message>
     <message>
         <location line="+5"/>
@@ -745,7 +745,7 @@ Address: %4
     <message>
         <location line="+48"/>
         <source>Amount:</source>
-        <translation>Сума:</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+48"/>
@@ -790,7 +790,7 @@ Address: %4
     <message>
         <location line="+45"/>
         <source>Amount</source>
-        <translation>Сума</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+5"/>
@@ -800,12 +800,12 @@ Address: %4
     <message>
         <location line="+5"/>
         <source>Address</source>
-        <translation>Адрес</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+5"/>
         <source>Date</source>
-        <translation>Дата</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+5"/>
@@ -815,7 +815,7 @@ Address: %4
     <message>
         <location line="+3"/>
         <source>Confirmed</source>
-        <translation>Потвърдени</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+5"/>
@@ -825,18 +825,18 @@ Address: %4
     <message>
         <location filename="../coincontroldialog.cpp" line="-456"/>
         <source>Copy address</source>
-        <translation>Копирай адрес</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Copy label</source>
-        <translation>Копирай име</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <location line="+26"/>
         <source>Copy amount</source>
-        <translation>Копирай сума</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-25"/>
@@ -912,7 +912,7 @@ Address: %4
         <location line="+35"/>
         <location line="+58"/>
         <source>(no label)</source>
-        <translation>(без име)</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-9"/>
@@ -930,12 +930,12 @@ Address: %4
     <message>
         <location filename="../forms/editaddressdialog.ui" line="+14"/>
         <source>Edit Address</source>
-        <translation>Редактиране на адрес</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+11"/>
         <source>&amp;Label</source>
-        <translation>&amp;Име</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+10"/>
@@ -945,7 +945,7 @@ Address: %4
     <message>
         <location line="+7"/>
         <source>&amp;Address</source>
-        <translation>&amp;Адрес</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+10"/>
@@ -955,27 +955,27 @@ Address: %4
     <message>
         <location filename="../editaddressdialog.cpp" line="+21"/>
         <source>New receiving address</source>
-        <translation>Нов адрес за получаване</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+4"/>
         <source>New sending address</source>
-        <translation>Нов адрес за изпращане</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
         <source>Edit receiving address</source>
-        <translation>Редактиране на входящ адрес</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+4"/>
         <source>Edit sending address</source>
-        <translation>Редактиране на изходящ адрес</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+76"/>
         <source>The entered address &quot;%1&quot; is already in the address book.</source>
-        <translation>Вече има адрес &quot;%1&quot; в списъка с адреси.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-5"/>
@@ -985,12 +985,12 @@ Address: %4
     <message>
         <location line="+10"/>
         <source>Could not unlock wallet.</source>
-        <translation>Отключването на портфейла беше неуспешно.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+5"/>
         <source>New key generation failed.</source>
-        <translation>Създаването на ключ беше неуспешно.</translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -1042,12 +1042,12 @@ Address: %4
     <message>
         <location filename="../forms/optionsdialog.ui" line="+14"/>
         <source>Options</source>
-        <translation>Опции</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+16"/>
         <source>&amp;Main</source>
-        <translation>&amp;Основни</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+6"/>
@@ -1057,7 +1057,7 @@ Address: %4
     <message>
         <location line="+15"/>
         <source>Pay transaction &amp;fee</source>
-        <translation>&amp;Такса за изходяща транзакция</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+31"/>
@@ -1082,7 +1082,7 @@ Address: %4
     <message>
         <location line="+21"/>
         <source>&amp;Network</source>
-        <translation>&amp;Мрежа</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+6"/>
@@ -1092,7 +1092,7 @@ Address: %4
     <message>
         <location line="+3"/>
         <source>Map port using &amp;UPnP</source>
-        <translation>Отваряне на входящия порт чрез &amp;UPnP</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+19"/>
@@ -1127,37 +1127,37 @@ Address: %4
     <message>
         <location line="+90"/>
         <source>&amp;Window</source>
-        <translation>&amp;Прозорец</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+6"/>
         <source>Show only a tray icon after minimizing the window.</source>
-        <translation>След минимизиране ще е видима само иконата в системния трей.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
         <source>&amp;Minimize to the tray instead of the taskbar</source>
-        <translation>&amp;Минимизиране в системния трей</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+7"/>
         <source>Minimize instead of exit the application when the window is closed. When this option is enabled, the application will be closed only after selecting Quit in the menu.</source>
-        <translation>При затваряне на прозореца приложението остава минимизирано. Ако изберете тази опция, приложението може да се затвори само чрез Изход в менюто.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
         <source>M&amp;inimize on close</source>
-        <translation>М&amp;инимизиране при затваряне</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+21"/>
         <source>&amp;Display</source>
-        <translation>&amp;Интерфейс</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+8"/>
         <source>User Interface &amp;language:</source>
-        <translation>Език:</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+13"/>
@@ -1167,12 +1167,12 @@ Address: %4
     <message>
         <location line="+11"/>
         <source>&amp;Unit to show amounts in:</source>
-        <translation>Мерни единици:</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+13"/>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Изберете единиците, показвани по подразбиране в интерфейса.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+9"/>
@@ -1224,7 +1224,7 @@ Address: %4
     <message>
         <location line="+29"/>
         <source>The supplied proxy address is invalid.</source>
-        <translation>Прокси адресът е невалиден.</translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -1232,7 +1232,7 @@ Address: %4
     <message>
         <location filename="../forms/overviewpage.ui" line="+14"/>
         <source>Form</source>
-        <translation>Форма</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+46"/>
@@ -1253,7 +1253,7 @@ Address: %4
     <message>
         <location line="-113"/>
         <source>Wallet</source>
-        <translation>Портфейл</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+49"/>
@@ -1288,7 +1288,7 @@ Address: %4
     <message>
         <location line="+50"/>
         <source>&lt;b&gt;Recent transactions&lt;/b&gt;</source>
-        <translation>&lt;b&gt;Последни транзакции&lt;/b&gt;</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-118"/>
@@ -1304,7 +1304,7 @@ Address: %4
         <location filename="../overviewpage.cpp" line="+116"/>
         <location line="+1"/>
         <source>out of sync</source>
-        <translation>несинхронизиран</translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -1390,7 +1390,7 @@ Address: %4
         <location line="+53"/>
         <location line="+23"/>
         <source>N/A</source>
-        <translation>N/A</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-194"/>
@@ -1415,7 +1415,7 @@ Address: %4
     <message>
         <location line="+29"/>
         <source>Network</source>
-        <translation>Мрежа</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+7"/>
@@ -1522,7 +1522,7 @@ Address: %4
     <message>
         <location line="+102"/>
         <source>Clear console</source>
-        <translation>Изчисти конзолата</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="-28"/>
@@ -1532,7 +1532,7 @@ Address: %4
     <message>
         <location line="+1"/>
         <source>Use up and down arrows to navigate history, and &lt;b&gt;Ctrl-L&lt;/b&gt; to clear screen.</source>
-        <translation>Използвайте стрелки надолу и нагореза разглеждане на историятаот команди и &lt;b&gt;Ctrl-L&lt;/b&gt; за изчистване на конзолата.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
@@ -1587,7 +1587,7 @@ Address: %4
         <location line="+5"/>
         <location line="+5"/>
         <source>Send Coins</source>
-        <translation>Изпращане</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+76"/>
@@ -1628,7 +1628,7 @@ Address: %4
     <message>
         <location line="+51"/>
         <source>Amount:</source>
-        <translation>Сума:</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+54"/>
@@ -1663,12 +1663,12 @@ Address: %4
     <message>
         <location line="+106"/>
         <source>Send to multiple recipients at once</source>
-        <translation>Изпращане към повече от един получател</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
         <source>Add &amp;Recipient</source>
-        <translation>Добави &amp;получател</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+16"/>
@@ -1678,22 +1678,22 @@ Address: %4
     <message>
         <location line="+3"/>
         <source>Clear &amp;All</source>
-        <translation>&amp;Изчисти</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+24"/>
         <source>Balance:</source>
-        <translation>Баланс:</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+47"/>
         <source>Confirm the send action</source>
-        <translation>Потвърдете изпращането</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
         <source>S&amp;end</source>
-        <translation>И&amp;зпрати</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../sendcoinsdialog.cpp" line="-171"/>
@@ -1708,7 +1708,7 @@ Address: %4
     <message>
         <location line="+1"/>
         <source>Copy amount</source>
-        <translation>Копирай сума</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
@@ -1743,7 +1743,7 @@ Address: %4
     <message>
         <location line="+5"/>
         <source>Confirm send coins</source>
-        <translation>Потвърждаване</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
@@ -1758,12 +1758,12 @@ Address: %4
     <message>
         <location line="+29"/>
         <source>The recipient address is not valid, please recheck.</source>
-        <translation>Невалиден адрес на получателя.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+5"/>
         <source>The amount to pay must be larger than 0.</source>
-        <translation>Сумата трябва да е по-голяма от 0.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+5"/>
@@ -1798,7 +1798,7 @@ Address: %4
     <message>
         <location line="+13"/>
         <source>(no label)</source>
-        <translation>(без име)</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+4"/>
@@ -1816,12 +1816,12 @@ Address: %4
     <message>
         <location line="+15"/>
         <source>A&amp;mount:</source>
-        <translation>С&amp;ума:</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+13"/>
         <source>Pay &amp;To:</source>
-        <translation>Плати &amp;На:</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+34"/>
@@ -1832,12 +1832,12 @@ Address: %4
         <location line="+60"/>
         <location filename="../sendcoinsentry.cpp" line="+26"/>
         <source>Enter a label for this address to add it to your address book</source>
-        <translation>Въведете име за този адрес, за да го добавите в списъка с адреси</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-78"/>
         <source>&amp;Label:</source>
-        <translation>&amp;Име:</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+28"/>
@@ -1852,7 +1852,7 @@ Address: %4
     <message>
         <location line="+7"/>
         <source>Paste address from clipboard</source>
-        <translation>Вмъкни от клипборда</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+10"/>
@@ -1875,18 +1875,18 @@ Address: %4
     <message>
         <location filename="../forms/signverifymessagedialog.ui" line="+14"/>
         <source>Signatures - Sign / Verify a Message</source>
-        <translation>Подпиши / Провери съобщение</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+13"/>
         <location line="+124"/>
         <source>&amp;Sign Message</source>
-        <translation>&amp;Подпиши</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-118"/>
         <source>You can sign messages with your addresses to prove you own them. Be careful not to sign anything vague, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation>Можете да подпишете съобщение като доказателство, че притежавате определен адрес. Бъдете внимателни и не подписвайте съобщения, които биха разкрили лична информация без вашето съгласие.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+18"/>
@@ -1908,7 +1908,7 @@ Address: %4
     <message>
         <location line="-193"/>
         <source>Paste address from clipboard</source>
-        <translation>Вмъкни от клипборда</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+10"/>
@@ -1918,12 +1918,12 @@ Address: %4
     <message>
         <location line="+12"/>
         <source>Enter the message you want to sign here</source>
-        <translation>Въведете съобщението тук</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+24"/>
         <source>Copy the current signature to the system clipboard</source>
-        <translation>Копиране на текущия подпис</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+21"/>
@@ -1939,13 +1939,13 @@ Address: %4
         <location line="+3"/>
         <location line="+146"/>
         <source>Clear &amp;All</source>
-        <translation>&amp;Изчисти</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-87"/>
         <location line="+70"/>
         <source>&amp;Verify Message</source>
-        <translation>&amp;Провери</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-64"/>
@@ -1976,7 +1976,7 @@ Address: %4
     <message>
         <location line="-2"/>
         <source>Click &quot;Sign Message&quot; to generate signature</source>
-        <translation>Натиснете &quot;Подписване на съобщение&quot; за да създадете подпис</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
@@ -1987,7 +1987,7 @@ Address: %4
         <location line="+85"/>
         <location line="+81"/>
         <source>The entered address is invalid.</source>
-        <translation>Въведеният адрес е невалиден.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-81"/>
@@ -1995,7 +1995,7 @@ Address: %4
         <location line="+73"/>
         <location line="+8"/>
         <source>Please check the address and try again.</source>
-        <translation>Моля проверете адреса и опитайте отново.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-81"/>
@@ -2011,43 +2011,43 @@ Address: %4
     <message>
         <location line="+8"/>
         <source>Private key for the entered address is not available.</source>
-        <translation>Не е наличен частният ключ за въведеният адрес.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+12"/>
         <source>Message signing failed.</source>
-        <translation>Подписването на съобщение бе неуспешно.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+5"/>
         <source>Message signed.</source>
-        <translation>Съобщението е подписано.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+59"/>
         <source>The signature could not be decoded.</source>
-        <translation>Подписът не може да бъде декодиран.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+0"/>
         <location line="+13"/>
         <source>Please check the signature and try again.</source>
-        <translation>Проверете подписа и опитайте отново.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+0"/>
         <source>The signature did not match the message digest.</source>
-        <translation>Подписът не отговаря на комбинацията от съобщение и адрес.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+7"/>
         <source>Message verification failed.</source>
-        <translation>Проверката на съобщението беше неуспешна.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+5"/>
         <source>Message verified.</source>
-        <translation>Съобщението е потвърдено.</translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -2063,7 +2063,7 @@ Address: %4
     <message>
         <location filename="../transactiondesc.cpp" line="+25"/>
         <source>Open until %1</source>
-        <translation>Подлежи на промяна до %1</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+6"/>
@@ -2073,66 +2073,66 @@ Address: %4
     <message>
         <location line="+2"/>
         <source>%1/offline</source>
-        <translation>%1/офлайн</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
         <source>%1/unconfirmed</source>
-        <translation>%1/непотвърдени</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
         <source>%1 confirmations</source>
-        <translation>включена в %1 блока</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+17"/>
         <source>Status</source>
-        <translation>Статус</translation>
+        <translation type="unfinished"/>
     </message>
     <message numerus="yes">
         <location line="+7"/>
         <source>, broadcast through %n node(s)</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform><numerusform></numerusform></translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Date</source>
-        <translation>Дата</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+7"/>
         <source>Source</source>
-        <translation>Източник</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+0"/>
         <source>Generated</source>
-        <translation>Издадени</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+5"/>
         <location line="+13"/>
         <source>From</source>
-        <translation>От</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <location line="+19"/>
         <location line="+58"/>
         <source>To</source>
-        <translation>За</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-74"/>
         <location line="+2"/>
         <source>own address</source>
-        <translation>собствен адрес</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-2"/>
         <source>label</source>
-        <translation>име</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+34"/>
@@ -2141,12 +2141,12 @@ Address: %4
         <location line="+17"/>
         <location line="+30"/>
         <source>Credit</source>
-        <translation>Кредит</translation>
+        <translation type="unfinished"/>
     </message>
     <message numerus="yes">
         <location line="-102"/>
         <source>matures in %n more block(s)</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform><numerusform></numerusform></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2159,32 +2159,32 @@ Address: %4
         <location line="+15"/>
         <location line="+30"/>
         <source>Debit</source>
-        <translation>Дебит</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-39"/>
         <source>Transaction fee</source>
-        <translation>Такса</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+16"/>
         <source>Net amount</source>
-        <translation>Сума нето</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+6"/>
         <source>Message</source>
-        <translation>Съобщение</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
         <source>Comment</source>
-        <translation>Коментар</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
         <source>Transaction ID</source>
-        <translation>ID</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
@@ -2199,7 +2199,7 @@ Address: %4
     <message>
         <location line="+8"/>
         <source>Transaction</source>
-        <translation>Транзакция</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+5"/>
@@ -2209,32 +2209,32 @@ Address: %4
     <message>
         <location line="+21"/>
         <source>Amount</source>
-        <translation>Сума</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>true</source>
-        <translation>true</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+0"/>
         <source>false</source>
-        <translation>false</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-202"/>
         <source>, has not been successfully broadcast yet</source>
-        <translation>, все още не е изпратено</translation>
+        <translation type="unfinished"/>
     </message>
     <message numerus="yes">
         <location line="-36"/>
         <source>Open for %n more block(s)</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform><numerusform></numerusform></translation>
     </message>
     <message>
         <location line="+67"/>
         <source>unknown</source>
-        <translation>неизвестен</translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -2242,12 +2242,12 @@ Address: %4
     <message>
         <location filename="../forms/transactiondescdialog.ui" line="+14"/>
         <source>Transaction details</source>
-        <translation>Транзакция</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+6"/>
         <source>This pane shows a detailed description of the transaction</source>
-        <translation>Описание на транзакцията</translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -2255,37 +2255,37 @@ Address: %4
     <message>
         <location filename="../transactiontablemodel.cpp" line="+231"/>
         <source>Date</source>
-        <translation>Дата</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+0"/>
         <source>Type</source>
-        <translation>Тип</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+0"/>
         <source>Address</source>
-        <translation>Адрес</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+0"/>
         <source>Amount</source>
-        <translation>Сума</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+52"/>
         <source>Open until %1</source>
-        <translation>Подлежи на промяна до %1</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+12"/>
         <source>Confirmed (%1 confirmations)</source>
-        <translation>Потвърдени (%1 потвърждения)</translation>
+        <translation type="unfinished"/>
     </message>
     <message numerus="yes">
         <location line="-15"/>
         <source>Open for %n more block(s)</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform><numerusform></numerusform></translation>
     </message>
     <message>
         <location line="+6"/>
@@ -2315,27 +2315,27 @@ Address: %4
     <message>
         <location line="+3"/>
         <source>This block was not received by any other nodes and will probably not be accepted!</source>
-        <translation>Блокът не е получен от останалите участници и най-вероятно няма да бъде одобрен.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
         <source>Generated but not accepted</source>
-        <translation>Генерирана, но отхвърлена от мрежата</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+42"/>
         <source>Received with</source>
-        <translation>Получени с</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
         <source>Received from</source>
-        <translation>Получен от</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
         <source>Sent to</source>
-        <translation>Изпратени на</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
@@ -2345,37 +2345,37 @@ Address: %4
     <message>
         <location line="+2"/>
         <source>Mined</source>
-        <translation>Емитирани</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+38"/>
         <source>(n/a)</source>
-        <translation>(n/a)</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+194"/>
         <source>Transaction status. Hover over this field to show number of confirmations.</source>
-        <translation>Състояние на транзакцията. Задръжте върху това поле за брой потвърждения.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
         <source>Date and time that the transaction was received.</source>
-        <translation>Дата и час на получаване.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
         <source>Type of transaction.</source>
-        <translation>Тип на транзакцията.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
         <source>Destination address of transaction.</source>
-        <translation>Получател на транзакцията.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
         <source>Amount removed from or added to balance.</source>
-        <translation>Сума извадена или добавена към баланса.</translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -2384,87 +2384,87 @@ Address: %4
         <location filename="../transactionview.cpp" line="+54"/>
         <location line="+17"/>
         <source>All</source>
-        <translation>Всички</translation>
+        <translation>Sve</translation>
     </message>
     <message>
         <location line="-16"/>
         <source>Today</source>
-        <translation>Днес</translation>
+        <translation>Danas</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>This week</source>
-        <translation>Тази седмица</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>This month</source>
-        <translation>Този месец</translation>
+        <translation>Ovaj mjesec</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Last month</source>
-        <translation>Предния месец</translation>
+        <translation>Prošli mjesec</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>This year</source>
-        <translation>Тази година</translation>
+        <translation>Ove godine</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Range...</source>
-        <translation>От - до...</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+12"/>
         <source>Received with</source>
-        <translation>Получени</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
         <source>Sent to</source>
-        <translation>Изпратени на</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
         <source>To yourself</source>
-        <translation>Собствени</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Mined</source>
-        <translation>Емитирани</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Other</source>
-        <translation>Други</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+7"/>
         <source>Enter address or label to search</source>
-        <translation>Търсене по адрес или име</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+7"/>
         <source>Min amount</source>
-        <translation>Минимална сума</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+34"/>
         <source>Copy address</source>
-        <translation>Копирай адрес</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Copy label</source>
-        <translation>Копирай име</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Copy amount</source>
-        <translation>Копирай сума</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
@@ -2474,7 +2474,7 @@ Address: %4
     <message>
         <location line="+1"/>
         <source>Edit label</source>
-        <translation>Редактирай име</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
@@ -2489,42 +2489,42 @@ Address: %4
     <message>
         <location line="+1"/>
         <source>Comma separated file (*.csv)</source>
-        <translation>CSV файл (*.csv)</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+8"/>
         <source>Confirmed</source>
-        <translation>Потвърдени</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Date</source>
-        <translation>Дата</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Type</source>
-        <translation>Тип</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Label</source>
-        <translation>Име</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Address</source>
-        <translation>Адрес</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Amount</source>
-        <translation>Сума</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>ID</source>
-        <translation>ИД</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+4"/>
@@ -2539,12 +2539,12 @@ Address: %4
     <message>
         <location line="+100"/>
         <source>Range:</source>
-        <translation>От:</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+8"/>
         <source>to</source>
-        <translation>до</translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -2565,7 +2565,7 @@ Address: %4
     <message>
         <location line="+1"/>
         <source>Usage:</source>
-        <translation>Използване:</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
@@ -2575,17 +2575,17 @@ Address: %4
     <message>
         <location line="+1"/>
         <source>List commands</source>
-        <translation>Вписване на команди</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Get help for a command</source>
-        <translation>Получете помощ за команда</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Options:</source>
-        <translation>Опции:</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
@@ -2605,7 +2605,7 @@ Address: %4
     <message>
         <location line="-1"/>
         <source>Specify data directory</source>
-        <translation>Определете директория за данните</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+163"/>
@@ -2670,12 +2670,12 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="+4"/>
         <source>Threshold for disconnecting misbehaving peers (default: 100)</source>
-        <translation>Праг на прекъсване на връзката при непорядъчно държащи се пиъри (по подразбиране:100)</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Number of seconds to keep misbehaving peers from reconnecting (default: 86400)</source>
-        <translation>Брой секунди до възтановяване на връзката за зле държащите се пиъри (по подразбиране:86400)</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+153"/>
@@ -2700,7 +2700,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="+1"/>
         <source>Use the test network</source>
-        <translation>Използвайте тестовата мрежа</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-23"/>
@@ -2741,478 +2741,3 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
         <location line="+5"/>
         <source>Block creation options:</source>
         <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="-66"/>
-        <source>Connect only to the specified node(s)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Discover own IP address (default: 1 when listening and no -externalip)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+97"/>
-        <source>Failed to listen on any port. Use -listen=0 if you want this.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="-2"/>
-        <source>Invalid -tor address: &apos;%s&apos;</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Invalid amount for -reservebalance=&lt;amount&gt;</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="-85"/>
-        <source>Maximum per-connection receive buffer, &lt;n&gt;*1000 bytes (default: 5000)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Maximum per-connection send buffer, &lt;n&gt;*1000 bytes (default: 1000)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="-16"/>
-        <source>Only connect to nodes in network &lt;net&gt; (IPv4, IPv6 or Tor)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+30"/>
-        <source>Prepend debug output with timestamp</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+36"/>
-        <source>SSL options: (see the Bitcoin Wiki for SSL setup instructions)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="-34"/>
-        <source>Send trace/debug info to console instead of debug.log file</source>
-        <translation>Изпрати локализиращата или дебъг информацията към конзолата, вместо файлът debug.log</translation>
-    </message>
-    <message>
-        <location line="+33"/>
-        <source>Set maximum block size in bytes (default: 250000)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="-1"/>
-        <source>Set minimum block size in bytes (default: 0)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="-33"/>
-        <source>Shrink debug.log file on client startup (default: 1 when no -debug)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="-41"/>
-        <source>Specify connection timeout in milliseconds (default: 5000)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+28"/>
-        <source>Use UPnP to map the listening port (default: 0)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="-1"/>
-        <source>Use UPnP to map the listening port (default: 1 when listening)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="-25"/>
-        <source>Use proxy to reach tor hidden services (default: same as -proxy)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+45"/>
-        <source>Username for JSON-RPC connections</source>
-        <translation>Потребителско име за JSON-RPC връзките</translation>
-    </message>
-    <message>
-        <location line="+50"/>
-        <source>Verifying database integrity...</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+43"/>
-        <source>Error: Wallet locked, unable to create transaction!</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Error: This transaction requires a transaction fee of at least %s because of its amount, complexity, or use of recently received funds!</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Error: Transaction creation failed!</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Error: The transaction was rejected! This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="-15"/>
-        <source>Warning</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Information</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="-7"/>
-        <source>Warning: This version is obsolete, upgrade required!</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="-23"/>
-        <source>wallet.dat corrupt, salvage failed</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="-55"/>
-        <source>Password for JSON-RPC connections</source>
-        <translation>Парола за  JSON-RPC връзките</translation>
-    </message>
-    <message>
-        <location line="-47"/>
-        <source>Connect through SOCKS5 proxy</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+17"/>
-        <source>Sync time with other nodes. Disable if time on your system is precise e.g. syncing with NTP (default: 1)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+12"/>
-        <source>When creating transactions, ignore inputs with value less than this (default: 0.01)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>Output debugging information (default: 0, supplying &lt;category&gt; is optional)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>If &lt;category&gt; is not supplied, output all debugging information.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>&lt;category&gt; can be:</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Enter regression test mode, which uses a special chain in which blocks can be solved instantly. This is intended for regression testing tools and app development.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+8"/>
-        <source>Allow JSON-RPC connections from specified IP address</source>
-        <translation>Разреши  JSON-RPC връзките от отучнен IP адрес</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Send commands to node running on &lt;ip&gt; (default: 127.0.0.1)</source>
-        <translation>Изпрати команди до възел функциониращ на &lt;ip&gt; (По подразбиране: 127.0.0.1)</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Wait for RPC server to start</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Set the number of threads to service RPC calls (default: 4)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Execute command when the best block changes (%s in cmd is replaced by block hash)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Execute command when a wallet transaction changes (%s in cmd is replaced by TxID)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Require a confirmations for change (default: 0)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Execute command when a relevant alert is received (%s in cmd is replaced by message)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Upgrade wallet to latest format</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Set key pool size to &lt;n&gt; (default: 100)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Rescan the block chain for missing wallet transactions</source>
-        <translation>Повторно сканиране на блок-връзка за липсващи портефейлни транзакции</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>How thorough the block verification is (0-6, default: 1)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Imports blocks from external blk000?.dat file</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Keep at most &lt;n&gt; MiB of unconnectable blocks in memory (default: %u)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+5"/>
-        <source>Use OpenSSL (https) for JSON-RPC connections</source>
-        <translation>Използвайте OpenSSL (https) за JSON-RPC връзките</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Server certificate file (default: server.cert)</source>
-        <translation>Сертификатен файл на сървъра (По подразбиране:server.cert)</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Server private key (default: server.pem)</source>
-        <translation>Поверителен ключ за сървъра (default: server.pem)</translation>
-    </message>
-    <message>
-        <location line="+5"/>
-        <source>Error: Unsupported argument -socks found. Setting SOCKS version isn&apos;t possible anymore, only SOCKS5 proxies are supported.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+8"/>
-        <source>Initialization sanity check failed. Bws is shutting down.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+20"/>
-        <source>Error loading block database</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+29"/>
-        <source>Error: Wallet unlocked for staking only, unable to create transaction.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="-14"/>
-        <source>Error: Disk space is low!</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>This is a pre-release test build - use at your own risk - do not use for mining or merchant applications</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="-135"/>
-        <source>This help message</source>
-        <translation>Това помощно съобщение</translation>
-    </message>
-    <message>
-        <location line="+100"/>
-        <source>Wallet %s resides outside data directory %s.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+46"/>
-        <source>Unable to bind to %s on this computer (bind returned error %d, %s)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="-136"/>
-        <source>Allow DNS lookups for -addnode, -seednode and -connect</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+121"/>
-        <source>Loading addresses...</source>
-        <translation>Зареждане на адресите...</translation>
-    </message>
-    <message>
-        <location line="-10"/>
-        <source>Error loading wallet.dat: Wallet corrupted</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of Bws</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Wallet needed to be rewritten: restart Bws to complete</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Error loading wallet.dat</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="-15"/>
-        <source>Invalid -proxy address: &apos;%s&apos;</source>
-        <translation>Невалиден -proxy address: &apos;%s&apos;</translation>
-    </message>
-    <message>
-        <location line="-1"/>
-        <source>Unknown network specified in -onlynet: &apos;%s&apos;</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Cannot resolve -bind address: &apos;%s&apos;</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Cannot resolve -externalip address: &apos;%s&apos;</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="-22"/>
-        <source>Invalid amount for -paytxfee=&lt;amount&gt;: &apos;%s&apos;</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+59"/>
-        <source>Sending...</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+5"/>
-        <source>Invalid amount</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Insufficient funds</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="-41"/>
-        <source>Loading block index...</source>
-        <translation>Зареждане на блок индекса...</translation>
-    </message>
-    <message>
-        <location line="-105"/>
-        <source>Add a node to connect to and attempt to keep the connection open</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+131"/>
-        <source>Unable to bind to %s on this computer. Bws is probably already running.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="-108"/>
-        <source>Fee per KB to add to transactions you send</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+40"/>
-        <source>How many blocks to check at startup (default: 500, 0 = all)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+11"/>
-        <source>Acceptable ciphers (default: TLSv1.2+HIGH:TLSv1+HIGH:!SSLv2:!aNULL:!eNULL:!3DES:@STRENGTH)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Warning: Deprecated argument -debugnet ignored, use -debug=net</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+8"/>
-        <source>Invalid amount for -mininput=&lt;amount&gt;: &apos;%s&apos;</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Cannot obtain a lock on data directory %s. Bws is probably already running.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Error initializing wallet database environment %s!</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+15"/>
-        <source>Loading wallet...</source>
-        <translation>Зареждане на портфейла...</translation>
-    </message>
-    <message>
-        <location line="+8"/>
-        <source>Cannot downgrade wallet</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Cannot write default address</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Rescanning...</source>
-        <translation>Преразглеждане на последовтелността от блокове...</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Done loading</source>
-        <translation>Зареждането е завършено</translation>
-    </message>
-    <message>
-        <location line="+33"/>
-        <source>To use the %s option</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="-27"/>
-        <source>Error</source>
-        <translation>Грешка</translation>
-    </message>
-    <message>
-        <location line="+22"/>
-        <source>You must set rpcpassword=&lt;password&gt; in the configuration file:
-%s
-If the file does not exist, create it with owner-readable-only file permissions.</source>
-        <translation type="unfinished"/>
-    </message>
-</context>
-</TS>
