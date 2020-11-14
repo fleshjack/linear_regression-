@@ -2647,4 +2647,150 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
         <translation type="unfinished"/>
     </message>
     <message>
-   
+        <location line="+1"/>
+        <source>Specify your own public address</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Bind to given address. Use [host]:port notation for IPv6</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Query for peer addresses via DNS lookup, if low on addresses (default: 1 unless -connect)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Always query for peer addresses via DNS lookup (default: 0)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Threshold for disconnecting misbehaving peers (default: 100)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Number of seconds to keep misbehaving peers from reconnecting (default: 86400)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+153"/>
+        <source>An error occurred while setting up the RPC port %u for listening on IPv4: %s</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-126"/>
+        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 48210 or testnet: 27058)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-16"/>
+        <source>Accept command line and JSON-RPC commands</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Run in the background as a daemon and accept commands</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Use the test network</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-23"/>
+        <source>Accept connections from outside (default: 1 if no -proxy or -connect)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+160"/>
+        <source>An error occurred while setting up the RPC port %u for listening on IPv6, falling back to IPv4: %s</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-84"/>
+        <source>Warning: -paytxfee is set very high! This is the transaction fee you will pay if you send a transaction.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+46"/>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Bws will not work properly.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-19"/>
+        <source>Warning: error reading wallet.dat! All keys read correctly, but transaction data or address book entries might be missing or incorrect.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-16"/>
+        <source>Warning: wallet.dat corrupt, data salvaged! Original wallet.dat saved as wallet.{timestamp}.bak in %s; if your balance or transactions are incorrect you should restore from a backup.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-31"/>
+        <source>Attempt to recover private keys from a corrupt wallet.dat</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Block creation options:</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-66"/>
+        <source>Connect only to the specified node(s)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Discover own IP address (default: 1 when listening and no -externalip)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+97"/>
+        <source>Failed to listen on any port. Use -listen=0 if you want this.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-2"/>
+        <source>Invalid -tor address: &apos;%s&apos;</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Invalid amount for -reservebalance=&lt;amount&gt;</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-85"/>
+        <source>Maximum per-connection receive buffer, &lt;n&gt;*1000 bytes (default: 5000)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Maximum per-connection send buffer, &lt;n&gt;*1000 bytes (default: 1000)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-16"/>
+        <source>Only connect to nodes in network &lt;net&gt; (IPv4, IPv6 or Tor)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+30"/>
+        <source>Prepend debug output with timestamp</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>SSL options: (see the Bitcoin Wiki for SSL setup instructions)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-34"/>
+        <s
