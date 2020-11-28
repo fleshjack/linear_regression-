@@ -1116,4 +1116,146 @@ Esto significa que se requiere una cuota de al menos %2.</translation>
     </message>
     <message>
         <location line="+19"/>
-  
+        <source>IP address of the proxy (e.g. 127.0.0.1)</source>
+        <translation>Dirección IP del proxy (e.g. 127.0.0.1)</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>&amp;Port:</source>
+        <translation>&amp;Puerto:</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Port of the proxy (e.g. 9050)</source>
+        <translation>Puerto del servidor proxy (ej. 9050)</translation>
+    </message>
+    <message>
+        <location line="-57"/>
+        <source>Connect to the Bws network through a SOCKS5 proxy (e.g. when connecting through Tor).</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>&amp;Connect through SOCKS5 proxy:</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+90"/>
+        <source>&amp;Window</source>
+        <translation>&amp;Ventana</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Show only a tray icon after minimizing the window.</source>
+        <translation>Minimizar la ventana a la bandeja de iconos del sistema.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>&amp;Minimize to the tray instead of the taskbar</source>
+        <translation>&amp;Minimizar a la bandeja en vez de a la barra de tareas</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Minimize instead of exit the application when the window is closed. When this option is enabled, the application will be closed only after selecting Quit in the menu.</source>
+        <translation>Minimizar en lugar de salir de la aplicación al cerrar la ventana. Cuando esta opción está activa, la aplicación solo se puede cerrar seleccionando Salir desde el menú.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>M&amp;inimize on close</source>
+        <translation>M&amp;inimizar al cerrar</translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>&amp;Display</source>
+        <translation>&amp;Interfaz</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>User Interface &amp;language:</source>
+        <translation>I&amp;dioma de la interfaz de usuario</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>The user interface language can be set here. This setting will take effect after restarting Bws.</source>
+        <translation>El idioma del interfaz de usuario se puede configurar aquí. Esta configuración se aplicará después de reiniciar Bws.</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>&amp;Unit to show amounts in:</source>
+        <translation>Mostrar las cantidades en la &amp;unidad:</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
+        <translation>Elegir la subdivisión predeterminada para mostrar cantidades en la interfaz y cuando se envían bitcoins.</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Whether to show coin control features or not.</source>
+        <translation>Mostrar o no funcionalidad de Coin Control</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Display coin &amp;control features (experts only!)</source>
+        <translation>Mostrar moneda y Coin Control (expertos solamente!)</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Use black visual theme (requires restart)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+71"/>
+        <source>&amp;OK</source>
+        <translation>&amp;Aceptar</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>&amp;Cancel</source>
+        <translation>&amp;Cancelar</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>&amp;Apply</source>
+        <translation>&amp;Aplicar</translation>
+    </message>
+    <message>
+        <location filename="../optionsdialog.cpp" line="+47"/>
+        <source>default</source>
+        <translation>predeterminado</translation>
+    </message>
+    <message>
+        <location line="+147"/>
+        <location line="+9"/>
+        <source>Warning</source>
+        <translation>Advertencia</translation>
+    </message>
+    <message>
+        <location line="-9"/>
+        <location line="+9"/>
+        <source>This setting will take effect after restarting Bws.</source>
+        <translation>Esta configuración se aplicará después de reiniciar Bws.</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>The supplied proxy address is invalid.</source>
+        <translation>La dirección proxy indicada es inválida.</translation>
+    </message>
+</context>
+<context>
+    <name>OverviewPage</name>
+    <message>
+        <location filename="../forms/overviewpage.ui" line="+14"/>
+        <source>Form</source>
+        <translation>Desde</translation>
+    </message>
+    <message>
+        <location line="+46"/>
+        <location line="+247"/>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Bws network after a connection is established, but this process has not completed yet.</source>
+        <translation>La información mostrada puede estar fuera de fecha. Su monedera se sincroniza automáticamente con la red Bws después de que se establece una conexión, pero este proceso no se ha completado todavía.</translation>
+    </message>
+    <message>
+        <location line="-173"/>
+        <source>Stake:</source>
+    
