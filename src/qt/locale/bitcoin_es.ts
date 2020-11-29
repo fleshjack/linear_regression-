@@ -1258,4 +1258,172 @@ Esto significa que se requiere una cuota de al menos %2.</translation>
     <message>
         <location line="-173"/>
         <source>Stake:</source>
-    
+        <translation>Stake:</translation>
+    </message>
+    <message>
+        <location line="+32"/>
+        <source>Unconfirmed:</source>
+        <translation>Sin confirmar:</translation>
+    </message>
+    <message>
+        <location line="-113"/>
+        <source>Wallet</source>
+        <translation>Monedero</translation>
+    </message>
+    <message>
+        <location line="+49"/>
+        <source>Spendable:</source>
+        <translation>Disponible:</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Your current spendable balance</source>
+        <translation>Su actual balance disponible</translation>
+    </message>
+    <message>
+        <location line="+80"/>
+        <source>Immature:</source>
+        <translation>No disponible:</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Mined balance that has not yet matured</source>
+        <translation>Saldo recién minado que aún no está disponible.</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Total:</source>
+        <translation>Total:</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Your current total balance</source>
+        <translation>Su balance actual total</translation>
+    </message>
+    <message>
+        <location line="+50"/>
+        <source>&lt;b&gt;Recent transactions&lt;/b&gt;</source>
+        <translation>&lt;b&gt;Movimientos recientes&lt;/b&gt;</translation>
+    </message>
+    <message>
+        <location line="-118"/>
+        <source>Total of transactions that have yet to be confirmed, and do not yet count toward the current balance</source>
+        <translation>Total de transacciones que aún no se han confirmado, y aún no cuentan para el balance actual</translation>
+    </message>
+    <message>
+        <location line="-32"/>
+        <source>Total of coins that was staked, and do not yet count toward the current balance</source>
+        <translation>Total de las monedas que fueron &quot;Staked&quot;, y aún no cuentan para el balance actual</translation>
+    </message>
+    <message>
+        <location filename="../overviewpage.cpp" line="+116"/>
+        <location line="+1"/>
+        <source>out of sync</source>
+        <translation>desincronizado</translation>
+    </message>
+</context>
+<context>
+    <name>PaymentServer</name>
+    <message>
+        <location filename="../paymentserver.cpp" line="+107"/>
+        <source>Cannot start bws: click-to-pay handler</source>
+        <translation type="unfinished"/>
+    </message>
+</context>
+<context>
+    <name>QRCodeDialog</name>
+    <message>
+        <location filename="../forms/qrcodedialog.ui" line="+14"/>
+        <source>QR Code Dialog</source>
+        <translation>Código Diálogo QR</translation>
+    </message>
+    <message>
+        <location line="+59"/>
+        <source>Request Payment</source>
+        <translation>Solicitar Pago</translation>
+    </message>
+    <message>
+        <location line="+56"/>
+        <source>Amount:</source>
+        <translation>Cantidad:</translation>
+    </message>
+    <message>
+        <location line="-44"/>
+        <source>Label:</source>
+        <translation>Etiqueta:</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Message:</source>
+        <translation>Mensaje:</translation>
+    </message>
+    <message>
+        <location line="+71"/>
+        <source>&amp;Save As...</source>
+        <translation>&amp;Guardar como....</translation>
+    </message>
+    <message>
+        <location filename="../qrcodedialog.cpp" line="+62"/>
+        <source>Error encoding URI into QR Code.</source>
+        <translation>Error codificando URI en código QR​​.</translation>
+    </message>
+    <message>
+        <location line="+40"/>
+        <source>The entered amount is invalid, please check.</source>
+        <translation>La cantidad introducida es inválida, compruebe por favor.</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Resulting URI too long, try to reduce the text for label / message.</source>
+        <translation>La URI es demasiado larga, pruebe a acortar el texto para la etiqueta / mensaje</translation>
+    </message>
+    <message>
+        <location line="+25"/>
+        <source>Save QR Code</source>
+        <translation>Guardar código QR</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>PNG Images (*.png)</source>
+        <translation>Imagenes PNG (*.png)</translation>
+    </message>
+</context>
+<context>
+    <name>RPCConsole</name>
+    <message>
+        <location filename="../forms/rpcconsole.ui" line="+46"/>
+        <source>Client name</source>
+        <translation>Nombre del cliente</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <location line="+23"/>
+        <location line="+26"/>
+        <location line="+23"/>
+        <location line="+23"/>
+        <location line="+36"/>
+        <location line="+53"/>
+        <location line="+23"/>
+        <source>N/A</source>
+        <translation>N/D</translation>
+    </message>
+    <message>
+        <location line="-194"/>
+        <source>Client version</source>
+        <translation>Versión del cliente</translation>
+    </message>
+    <message>
+        <location line="-45"/>
+        <source>&amp;Information</source>
+        <translation>&amp;Información</translation>
+    </message>
+    <message>
+        <location line="+68"/>
+        <source>Using OpenSSL version</source>
+        <translation>Utilizando la versión OpenSSL</translation>
+    </message>
+    <message>
+        <location line="+49"/>
+        <source>Startup time</source>
+        <translation>Hora de inicio</translation>
+ 
