@@ -3213,4 +3213,38 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
         <translation>No se puede rebajar el monedero</translation>
     </message>
     <message>
-        <
+        <location line="+1"/>
+        <source>Cannot write default address</source>
+        <translation>No se puede escribir la dirección predeterminada</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Rescanning...</source>
+        <translation>Reexplorando...</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Done loading</source>
+        <translation>Generado pero no aceptado</translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>To use the %s option</source>
+        <translation>Para utilizar la opción %s</translation>
+    </message>
+    <message>
+        <location line="-27"/>
+        <source>Error</source>
+        <translation>Error</translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <source>You must set rpcpassword=&lt;password&gt; in the configuration file:
+%s
+If the file does not exist, create it with owner-readable-only file permissions.</source>
+        <translation>Tiene que establecer rpcpassword=&lt;contraseña&gt; en el fichero de configuración: ⏎
+%s ⏎
+Si el archivo no existe, créelo con permiso de lectura solamente del propietario.</translation>
+    </message>
+</context>
+</TS>
