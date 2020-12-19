@@ -365,3 +365,175 @@ Este producto incluye software desarrolado por el OpenSSL Project para el uso en
         <source>About &amp;Qt</source>
         <translation>Sobre &amp;Qt</translation>
     </message>
+    <message>
+        <location line="+1"/>
+        <source>Show information about Qt</source>
+        <translation>Mostrar información sobre Qt</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>&amp;Options...</source>
+        <translation>&amp;Opciones...</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>&amp;Encrypt Wallet...</source>
+        <translation>&amp;Cifrar billetera...</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>&amp;Backup Wallet...</source>
+        <translation>&amp;Respaldar Billetera...</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>&amp;Change Passphrase...</source>
+        <translation>&amp;Cambiar Frase de Contraseña...</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>&amp;Export...</source>
+        <translation>&amp;Exportar...</translation>
+    </message>
+    <message>
+        <location line="-55"/>
+        <source>Send coins to a Bws address</source>
+        <translation>Enviar monedas a una dirección Bws</translation>
+    </message>
+    <message>
+        <location line="+39"/>
+        <source>Modify configuration options for Bws</source>
+        <translation>Modificar opciones de configuración para Bws</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Export the data in the current tab to a file</source>
+        <translation>Exportar la información de la pestaña actual a un archivo</translation>
+    </message>
+    <message>
+        <location line="-13"/>
+        <source>Encrypt or decrypt wallet</source>
+        <translation>Cifrar o Descifrar billetera</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Backup wallet to another location</source>
+        <translation>Respaldar billetera a otra ubicación</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Change the passphrase used for wallet encryption</source>
+        <translation>Cambiar frase de contraseña usada para cifrado de billetera</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>&amp;Debug window</source>
+        <translation>&amp;Ventana de depuración</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Open debugging and diagnostic console</source>
+        <translation>Abrir depuración y consola de diagnostico</translation>
+    </message>
+    <message>
+        <location line="-5"/>
+        <source>&amp;Verify message...</source>
+        <translation>&amp;Verificar mensaje...</translation>
+    </message>
+    <message>
+        <location line="-214"/>
+        <location line="+555"/>
+        <source>Bws</source>
+        <translation>Bws</translation>
+    </message>
+    <message>
+        <location line="-555"/>
+        <source>Wallet</source>
+        <translation>Billetera</translation>
+    </message>
+    <message>
+        <location line="+193"/>
+        <source>&amp;About Bws</source>
+        <translation>&amp;Sobre Bws</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>&amp;Show / Hide</source>
+        <translation>&amp;Mostrar / Ocultar</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Unlock wallet</source>
+        <translation>Desbloquear billetera</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>&amp;Lock Wallet</source>
+        <translation>&amp;Bloquear Billetera</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Lock wallet</source>
+        <translation>Bloquear billetera</translation>
+    </message>
+    <message>
+        <location line="+32"/>
+        <source>&amp;File</source>
+        <translation>&amp;Archivo</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>&amp;Settings</source>
+        <translation>&amp;Configuración</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>&amp;Help</source>
+        <translation>&amp;Ayuda</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Tabs toolbar</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+46"/>
+        <location line="+9"/>
+        <source>[testnet]</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location line="+58"/>
+        <source>Bws client</source>
+        <translation>Cliente Bws</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+70"/>
+        <source>%n active connection(s) to Bws network</source>
+        <translation><numerusform>%n conexión activa a la red Bws</numerusform><numerusform>%n conexiónes activas a la red Bws</numerusform></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Not staking because wallet is locked</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Not staking because wallet is offline</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Not staking because wallet is syncing</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Not staking because you don&apos;t have mature coins</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-812"/>
+        <source>&amp;Dashboard</source>
+   
