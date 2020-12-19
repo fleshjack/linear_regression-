@@ -238,4 +238,130 @@ Este producto incluye software desarrolado por el OpenSSL Project para el uso en
         <location line="+0"/>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Esta seguro que desea cifrar su billetera?</translation>
-    <
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
+        <translation>IMPORTANTE: Cualquier respaldo anterior que se haya hecho de su billetera deberá ser reemplazado con un archivo de billetera cifrado mas actual. Por razones de seguridad, previos respaldos de billetera sin cifrar, serán inservibles en el momento que una nueva billetera cifrada sea creada. </translation>
+    </message>
+    <message>
+        <location line="+103"/>
+        <location line="+24"/>
+        <source>Warning: The Caps Lock key is on!</source>
+        <translation>Precaución: La tecla Bloq. Mayús esta encendida!</translation>
+    </message>
+    <message>
+        <location line="-133"/>
+        <location line="+60"/>
+        <source>Wallet encrypted</source>
+        <translation>Billetera encriptada</translation>
+    </message>
+    <message>
+        <location line="-140"/>
+        <source>Enter the new passphrase to the wallet.&lt;br/&gt;Please use a passphrase of &lt;b&gt;ten or more random characters&lt;/b&gt;, or &lt;b&gt;eight or more words&lt;/b&gt;.</source>
+        <translation>Introducir una nueva frase de contraseña para la billetera.&lt;br/&gt;Por favor use una frase de contraseña de  &lt;b&gt;diez o mas caracteres aleatorios&lt;/b&gt;, o &lt;b&gt;ocho o mas palabras&lt;/b&gt;.</translation>
+    </message>
+    <message>
+        <location line="+82"/>
+        <source>Bws will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
+        <translation>Bws se cerrará ahora para finalizar el proceso de encriptado. Recuerde que encriptar su billetera no puede completamente protegerlo de que sus monedas sean robadas por posible malware infectando su computadora.</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <location line="+7"/>
+        <location line="+44"/>
+        <location line="+6"/>
+        <source>Wallet encryption failed</source>
+        <translation>Encriptación de billetera falló</translation>
+    </message>
+    <message>
+        <location line="-56"/>
+        <source>Wallet encryption failed due to an internal error. Your wallet was not encrypted.</source>
+        <translation>Encriptación de billetera falló por un error interno. Su billetera no fue encriptada.</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <location line="+50"/>
+        <source>The supplied passphrases do not match.</source>
+        <translation>Las frases de contraseña no coinciden.</translation>
+    </message>
+    <message>
+        <location line="-38"/>
+        <source>Wallet unlock failed</source>
+        <translation>Desbloqueo de billetera falló</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+12"/>
+        <location line="+19"/>
+        <source>The passphrase entered for the wallet decryption was incorrect.</source>
+        <translation>La frase de contraseña introducida para el descifrado de la billetera es incorrecta.</translation>
+    </message>
+    <message>
+        <location line="-20"/>
+        <source>Wallet decryption failed</source>
+        <translation>Des-encriptación de billetera falló</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Wallet passphrase was successfully changed.</source>
+        <translation>Frase de contraseña de billetera ha sido cambiada correctamente.</translation>
+    </message>
+</context>
+<context>
+    <name>BitcoinGUI</name>
+    <message>
+        <location filename="../bitcoingui.cpp" line="+297"/>
+        <source>Sign &amp;message...</source>
+        <translation>Firmar &amp;mensaje...</translation>
+    </message>
+    <message>
+        <location line="-64"/>
+        <source>Show general overview of wallet</source>
+        <translation>Mostrar información general de billetera</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>&amp;Transactions</source>
+        <translation>&amp;Transacciones</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Browse transaction history</source>
+        <translation>Buscar historial de transacciones</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>&amp;Address Book</source>
+        <translation>&amp;Libreta de direcciones</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Edit the list of stored addresses and labels</source>
+        <translation>Editar la lista de direcciones guardadas y etiquetas</translation>
+    </message>
+    <message>
+        <location line="-18"/>
+        <source>Show the list of addresses for receiving payments</source>
+        <translation>Mostrar la lista de direcciones para recibir pagos</translation>
+    </message>
+    <message>
+        <location line="+34"/>
+        <source>E&amp;xit</source>
+        <translation>S&amp;alir</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Quit application</source>
+        <translation>Cerrar aplicación</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Show information about Bws</source>
+        <translation>Mostrar información sobre Bws</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>About &amp;Qt</source>
+        <translation>Sobre &amp;Qt</translation>
+    </message>
