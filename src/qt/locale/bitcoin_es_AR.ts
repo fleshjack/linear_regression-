@@ -536,4 +536,168 @@ Este producto incluye software desarrolado por el OpenSSL Project para el uso en
     <message>
         <location line="-812"/>
         <source>&amp;Dashboard</source>
-   
+        <translation>&amp;Consola Principal</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>&amp;Receive</source>
+        <translation>&amp;Recibir</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>&amp;Send</source>
+        <translation>&amp;Enviar</translation>
+    </message>
+    <message>
+        <location line="+49"/>
+        <source>&amp;Unlock Wallet...</source>
+        <translation>&amp;Desbloquear Billetera...</translation>
+    </message>
+    <message>
+        <location line="+277"/>
+        <source>Up to date</source>
+        <translation>Actualizado</translation>
+    </message>
+    <message>
+        <location line="+43"/>
+        <source>Catching up...</source>
+        <translation>Poniéndose al día...</translation>
+    </message>
+    <message>
+        <location line="+113"/>
+        <source>Confirm transaction fee</source>
+        <translation>Confirmar honorario de transacción</translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <source>Sent transaction</source>
+        <translation>Enviar transacción</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Incoming transaction</source>
+        <translation>Transacción entrante</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Date: %1
+Amount: %2
+Type: %3
+Address: %4
+</source>
+        <translation>Fecha: %1
+Monto: %2
+Tipo: %3
+Dirección: %4
+</translation>
+    </message>
+    <message>
+        <location line="+100"/>
+        <location line="+15"/>
+        <source>URI handling</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-15"/>
+        <location line="+15"/>
+        <source>URI can not be parsed! This can be caused by an invalid Bws address or malformed URI parameters.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Wallet is &lt;b&gt;not encrypted&lt;/b&gt;</source>
+        <translation>Billetera está &lt;b&gt;no cifrada&lt;/b&gt;</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
+        <translation>Billetera está &lt;b&gt;cifrada&lt;/b&gt; y actualmente &lt;b&gt;desbloqueada&lt;/b&gt;</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;locked&lt;/b&gt;</source>
+        <translation>Billetera está &lt;b&gt;cifrada&lt;/b&gt; y actualmente &lt;b&gt;bloqueada&lt;/b&gt;</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Backup Wallet</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Wallet Data (*.dat)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Backup Failed</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>There was an error trying to save the wallet data to the new location.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message numerus="yes">
+        <location line="+91"/>
+        <source>%n second(s)</source>
+        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+    </message>
+    <message numerus="yes">
+        <location line="+4"/>
+        <source>%n minute(s)</source>
+        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+    </message>
+    <message numerus="yes">
+        <location line="-429"/>
+        <location line="+433"/>
+        <source>%n hour(s)</source>
+        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+    </message>
+    <message>
+        <location line="-456"/>
+        <source>Processed %1 blocks of transaction history.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message numerus="yes">
+        <location line="+27"/>
+        <location line="+433"/>
+        <source>%n day(s)</source>
+        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+    </message>
+    <message numerus="yes">
+        <location line="-429"/>
+        <location line="+6"/>
+        <source>%n week(s)</source>
+        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>%1 and %2</source>
+        <translation type="unfinished"/>
+    </message>
+    <message numerus="yes">
+        <location line="+0"/>
+        <source>%n year(s)</source>
+        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>%1 behind</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>Last received block was generated %1 ago.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Transactions after this will not yet be visible.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Error</source>
+        <translation type="unfinished"/>
+    </mes
