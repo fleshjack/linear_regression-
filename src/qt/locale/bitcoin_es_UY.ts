@@ -1,4 +1,5 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="es_MX" version="2.1">
+
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="es_UY" version="2.1">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -39,17 +40,17 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+22"/>
         <source>Double-click to edit address or label</source>
-        <translation>Haga doble clic para editar el domicilio o la etiqueta</translation>
+        <translation>Doble clic para editar etiqueta o dirección </translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Create a new address</source>
-        <translation>Crear una dirección nueva</translation>
+        <translation>Crear una nueva dirección </translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Copy the currently selected address to the system clipboard</source>
-        <translation>Copiar el domicilio seleccionado al portapapeles del sistema</translation>
+        <translation>Copia la dirección seleccionada al portapapeles del sistema</translation>
     </message>
     <message>
         <location line="-7"/>
@@ -119,7 +120,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+1"/>
         <source>Comma separated file (*.csv)</source>
-        <translation>Archivo separado por comas (*.CSV)</translation>
+        <translation>Archivos separados por coma (*.csv)</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -142,12 +143,12 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+0"/>
         <source>Address</source>
-        <translation>Domicilio</translation>
+        <translation>Direccion </translation>
     </message>
     <message>
         <location line="+36"/>
         <source>(no label)</source>
-        <translation>(sin etiqueta)</translation>
+        <translation>(Sin etiqueta)</translation>
     </message>
 </context>
 <context>
@@ -160,7 +161,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+21"/>
         <source>Enter passphrase</source>
-        <translation>Ingrese la contraseña</translation>
+        <translation>Escriba la contraseña</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -170,7 +171,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+14"/>
         <source>Repeat new passphrase</source>
-        <translation>Repita la nueva contraseña</translation>
+        <translation>Repetir nueva contraseña</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -185,27 +186,27 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location filename="../askpassphrasedialog.cpp" line="+38"/>
         <source>Encrypt wallet</source>
-        <translation>Cartera encriptada.</translation>
+        <translation>Monedero cifrado</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>This operation needs your wallet passphrase to unlock the wallet.</source>
-        <translation>Esta operación necesita la contraseña de su cartera para desbloquear su cartera.</translation>
+        <translation>Esta operacion necesita la contraseña del monedero para desbloquear el mismo</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Unlock wallet</source>
-        <translation>Desbloquear cartera.</translation>
+        <translation>Monedero destrabado</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>This operation needs your wallet passphrase to decrypt the wallet.</source>
-        <translation>Esta operación necesita la contraseña de su cartera para desencriptar su cartera.</translation>
+        <translation>Esta operacion necesita la contraseña del monedero para descifrar el mismo</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Decrypt wallet</source>
-        <translation>Desencriptar la cartera</translation>
+        <translation>Monedero descifrado</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -215,12 +216,12 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+1"/>
         <source>Enter the old and new passphrase to the wallet.</source>
-        <translation>Ingrese la antugüa y nueva contraseña de la cartera</translation>
+        <translation>Ingrese la contraseña anterior y la nueva de acceso a el monedero</translation>
     </message>
     <message>
         <location line="+45"/>
         <source>Confirm wallet encryption</source>
-        <translation>Confirmar la encriptación de cartera</translation>
+        <translation>Confirme el cifrado del monedero</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -247,7 +248,7 @@ This product includes software developed by the OpenSSL Project for use in the O
         <location line="-133"/>
         <location line="+60"/>
         <source>Wallet encrypted</source>
-        <translation>Cartera encriptada</translation>
+        <translation>Monedero cifrado</translation>
     </message>
     <message>
         <location line="-140"/>
@@ -265,35 +266,35 @@ This product includes software developed by the OpenSSL Project for use in the O
         <location line="+44"/>
         <location line="+6"/>
         <source>Wallet encryption failed</source>
-        <translation>La encriptación de la cartera falló</translation>
+        <translation>Fallo en el cifrado del monedero</translation>
     </message>
     <message>
         <location line="-56"/>
         <source>Wallet encryption failed due to an internal error. Your wallet was not encrypted.</source>
-        <translation>La encriptación de la cartera falló debido a un error interno. Su cartera no fue encriptada.</translation>
+        <translation>Fallo en el cifrado del monedero a causa de un error interno. Su monedero no esta cifrado</translation>
     </message>
     <message>
         <location line="+7"/>
         <location line="+50"/>
         <source>The supplied passphrases do not match.</source>
-        <translation>Las contraseñas dadas no coinciden</translation>
+        <translation>Las contraseñas suministradas no coinciden.</translation>
     </message>
     <message>
         <location line="-38"/>
         <source>Wallet unlock failed</source>
-        <translation>El desbloqueo de la cartera Fallo</translation>
+        <translation>Fallo en el desbloqueo del mondero</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+12"/>
         <location line="+19"/>
         <source>The passphrase entered for the wallet decryption was incorrect.</source>
-        <translation>La contraseña ingresada para la des encriptación de la cartera es incorrecto</translation>
+        <translation>La contraseña introducida para el descifrado del monedero es incorrecta.</translation>
     </message>
     <message>
         <location line="-20"/>
         <source>Wallet decryption failed</source>
-        <translation>La desencriptación de la cartera fallo</translation>
+        <translation>Fallo en el descifrado del monedero</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -311,17 +312,17 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="-64"/>
         <source>Show general overview of wallet</source>
-        <translation>Mostrar la vista previa general de la cartera</translation>
+        <translation>Mostrar descripción general del monedero</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>&amp;Transactions</source>
-        <translation>&amp;Transacciones</translation>
+        <translation>&amp;transaciones </translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Browse transaction history</source>
-        <translation>Explorar el historial de transacciones</translation>
+        <translation>Buscar en el historial de transacciones</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -341,12 +342,12 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+34"/>
         <source>E&amp;xit</source>
-        <translation>S&amp;alir</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Quit application</source>
-        <translation>Salir de la aplicación</translation>
+        <translation>Salir de la aplicacion </translation>
     </message>
     <message>
         <location line="+4"/>
@@ -366,7 +367,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+2"/>
         <source>&amp;Options...</source>
-        <translation>&amp;Opciones</translation>
+        <translation>&amp;Opciones...</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -416,7 +417,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+2"/>
         <source>Change the passphrase used for wallet encryption</source>
-        <translation>Cambiar la contraseña usada para la encriptación de la cartera</translation>
+        <translation>Cambie la clave utilizada para el cifrado del monedero</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -477,7 +478,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+8"/>
         <source>&amp;Settings</source>
-        <translation>&amp;Configuraciones</translation>
+        <translation>&amp;Configuracion </translation>
     </message>
     <message>
         <location line="+8"/>
@@ -487,13 +488,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+17"/>
         <source>Tabs toolbar</source>
-        <translation>Pestañas</translation>
+        <translation>Barra de herramientas</translation>
     </message>
     <message>
         <location line="+46"/>
         <location line="+9"/>
         <source>[testnet]</source>
-        <translation type="unfinished"/>
+        <translation>[prueba_de_red]</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -549,12 +550,12 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+277"/>
         <source>Up to date</source>
-        <translation>Actualizado al dia </translation>
+        <translation>A la fecha</translation>
     </message>
     <message>
         <location line="+43"/>
         <source>Catching up...</source>
-        <translation>Resiviendo...</translation>
+        <translation>Ponerse al dia...</translation>
     </message>
     <message>
         <location line="+113"/>
@@ -564,7 +565,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+27"/>
         <source>Sent transaction</source>
-        <translation>Enviar Transacción</translation>
+        <translation>Transaccion enviada</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -600,12 +601,12 @@ Address: %4
     <message>
         <location line="+8"/>
         <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
-        <translation>La cartera esta &lt;b&gt;encriptada&lt;/b&gt; y &lt;b&gt;desbloqueada&lt;/b&gt; actualmente </translation>
+        <translation>El Monedero esta &lt;b&gt;cifrado&lt;/b&gt; y actualmente &lt;b&gt;desbloqueado&lt;/b&gt;</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;locked&lt;/b&gt;</source>
-        <translation>La cartera esta &lt;b&gt;encriptada&lt;/b&gt; y &lt;b&gt;bloqueada&lt;/b&gt; actualmente </translation>
+        <translation>El Monedero esta &lt;b&gt;cifrado&lt;/b&gt; y actualmente &lt;b&gt;bloqueado&lt;/b&gt;</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -739,17 +740,17 @@ Address: %4
     <message>
         <location line="+32"/>
         <source>Bytes:</source>
-        <translation>Bytes:</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+48"/>
         <source>Amount:</source>
-        <translation>Monto:</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+48"/>
         <source>Fee:</source>
-        <translation>Cuota:</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+35"/>
@@ -789,7 +790,7 @@ Address: %4
     <message>
         <location line="+45"/>
         <source>Amount</source>
-        <translation>Monto</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+5"/>
@@ -799,7 +800,7 @@ Address: %4
     <message>
         <location line="+5"/>
         <source>Address</source>
-        <translation>Domicilio</translation>
+        <translation>Direccion </translation>
     </message>
     <message>
         <location line="+5"/>
@@ -814,7 +815,7 @@ Address: %4
     <message>
         <location line="+3"/>
         <source>Confirmed</source>
-        <translation>Confirmado </translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+5"/>
@@ -824,18 +825,18 @@ Address: %4
     <message>
         <location filename="../coincontroldialog.cpp" line="-456"/>
         <source>Copy address</source>
-        <translation>Copiar dirección </translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Copy label</source>
-        <translation>Copiar capa </translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <location line="+26"/>
         <source>Copy amount</source>
-        <translation>copiar monto</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-25"/>
@@ -845,22 +846,22 @@ Address: %4
     <message>
         <location line="+24"/>
         <source>Copy quantity</source>
-        <translation>copiar cantidad</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
         <source>Copy fee</source>
-        <translation>copiar cuota</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Copy after fee</source>
-        <translation>copiar despues de cuota</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Copy bytes</source>
-        <translation>copiar bytes</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
@@ -870,7 +871,7 @@ Address: %4
     <message>
         <location line="+1"/>
         <source>Copy change</source>
-        <translation>copiar cambio</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+423"/>
@@ -911,7 +912,7 @@ Address: %4
         <location line="+35"/>
         <location line="+58"/>
         <source>(no label)</source>
-        <translation>(sin etiqueta)</translation>
+        <translation>(Sin etiqueta)</translation>
     </message>
     <message>
         <location line="-9"/>
@@ -944,7 +945,7 @@ Address: %4
     <message>
         <location line="+7"/>
         <source>&amp;Address</source>
-        <translation>&amp;Dirección</translation>
+        <translation>&amp;Direccion </translation>
     </message>
     <message>
         <location line="+10"/>
@@ -954,27 +955,27 @@ Address: %4
     <message>
         <location filename="../editaddressdialog.cpp" line="+21"/>
         <source>New receiving address</source>
-        <translation>Nueva dirección de entregas</translation>
+        <translation>Nueva dirección de recepción </translation>
     </message>
     <message>
         <location line="+4"/>
         <source>New sending address</source>
-        <translation>Nueva dirección de entregas</translation>
+        <translation>Nueva dirección de envío </translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Edit receiving address</source>
-        <translation>Editar dirección de entregas</translation>
+        <translation>Editar dirección de recepcion </translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Edit sending address</source>
-        <translation>Editar dirección de envios</translation>
+        <translation>Editar dirección de envío </translation>
     </message>
     <message>
         <location line="+76"/>
         <source>The entered address &quot;%1&quot; is already in the address book.</source>
-        <translation>El domicilio ingresado &quot;%1&quot; ya existe en la libreta de direcciones</translation>
+        <translation>La dirección introducida &quot;% 1&quot; ya está en la libreta de direcciones.</translation>
     </message>
     <message>
         <location line="-5"/>
@@ -984,12 +985,12 @@ Address: %4
     <message>
         <location line="+10"/>
         <source>Could not unlock wallet.</source>
-        <translation>No se puede desbloquear la cartera</translation>
+        <translation>No se puede abrir el monedero.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>New key generation failed.</source>
-        <translation>La generación de la nueva clave fallo</translation>
+        <translation>Fallo en la nueva clave generada.</translation>
     </message>
 </context>
 <context>
@@ -1586,7 +1587,7 @@ Address: %4
         <location line="+5"/>
         <location line="+5"/>
         <source>Send Coins</source>
-        <translation>Mandar monedas</translation>
+        <translation>Enviar monedas</translation>
     </message>
     <message>
         <location line="+76"/>
@@ -1622,17 +1623,17 @@ Address: %4
     <message>
         <location line="-19"/>
         <source>Bytes:</source>
-        <translation>Bytes:</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+51"/>
         <source>Amount:</source>
-        <translation>Monto:</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+54"/>
         <source>Fee:</source>
-        <translation>Cuota:</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+35"/>
@@ -1662,7 +1663,7 @@ Address: %4
     <message>
         <location line="+106"/>
         <source>Send to multiple recipients at once</source>
-        <translation>Enviar a múltiples receptores a la vez</translation>
+        <translation>Enviar a varios destinatarios a la vez</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1682,12 +1683,12 @@ Address: %4
     <message>
         <location line="+24"/>
         <source>Balance:</source>
-        <translation>Saldo:</translation>
+        <translation>Balance:</translation>
     </message>
     <message>
         <location line="+47"/>
         <source>Confirm the send action</source>
-        <translation>Confirme la acción de enviar</translation>
+        <translation>Confirmar el envío</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1702,27 +1703,27 @@ Address: %4
     <message>
         <location line="+15"/>
         <source>Copy quantity</source>
-        <translation>copiar cantidad</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Copy amount</source>
-        <translation>copiar monto</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Copy fee</source>
-        <translation>copiar cuota</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Copy after fee</source>
-        <translation>copiar despues de cuota</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Copy bytes</source>
-        <translation>copiar bytes</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
@@ -1732,7 +1733,7 @@ Address: %4
     <message>
         <location line="+1"/>
         <source>Copy change</source>
-        <translation>copiar cambio</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+85"/>
@@ -1742,7 +1743,7 @@ Address: %4
     <message>
         <location line="+5"/>
         <source>Confirm send coins</source>
-        <translation>Confirme para mandar monedas</translation>
+        <translation>Confirmar el envio de monedas</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1762,7 +1763,7 @@ Address: %4
     <message>
         <location line="+5"/>
         <source>The amount to pay must be larger than 0.</source>
-        <translation>El monto a pagar debe ser mayor a 0</translation>
+        <translation>La cantidad a pagar debe ser mayor que 0.</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -1797,7 +1798,7 @@ Address: %4
     <message>
         <location line="+13"/>
         <source>(no label)</source>
-        <translation>(sin etiqueta)</translation>
+        <translation>(Sin etiqueta)</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -1815,12 +1816,12 @@ Address: %4
     <message>
         <location line="+15"/>
         <source>A&amp;mount:</source>
-        <translation>M&amp;onto</translation>
+        <translation>A&amp;Monto:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Pay &amp;To:</source>
-        <translation>Pagar &amp;a:</translation>
+        <translation>Pagar &amp;A:</translation>
     </message>
     <message>
         <location line="+34"/>
@@ -1831,12 +1832,12 @@ Address: %4
         <location line="+60"/>
         <location filename="../sendcoinsentry.cpp" line="+26"/>
         <source>Enter a label for this address to add it to your address book</source>
-        <translation>Ingrese una etiqueta para esta dirección para agregarlo en su libreta de direcciones.</translation>
+        <translation>Introduzca una etiqueta para esta dirección para añadirla a su libreta de direcciones</translation>
     </message>
     <message>
         <location line="-78"/>
         <source>&amp;Label:</source>
-        <translation>&amp;Etiqueta</translation>
+        <translation>&amp;Etiqueta:</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -1851,7 +1852,7 @@ Address: %4
     <message>
         <location line="+7"/>
         <source>Paste address from clipboard</source>
-        <translation>Pegar dirección  del portapapeles</translation>
+        <translation>Pegar la dirección desde el portapapeles</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1907,7 +1908,7 @@ Address: %4
     <message>
         <location line="-193"/>
         <source>Paste address from clipboard</source>
-        <translation>Pegar dirección  del portapapeles</translation>
+        <translation>Pegar la dirección desde el portapapeles</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -2077,12 +2078,12 @@ Address: %4
     <message>
         <location line="+2"/>
         <source>%1/unconfirmed</source>
-        <translation>%1/No confirmado</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
         <source>%1 confirmations</source>
-        <translation>%1 confirmaciones</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+17"/>
@@ -2208,7 +2209,7 @@ Address: %4
     <message>
         <location line="+21"/>
         <source>Amount</source>
-        <translation>Monto</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
@@ -2223,7 +2224,7 @@ Address: %4
     <message>
         <location line="-202"/>
         <source>, has not been successfully broadcast yet</source>
-        <translation>, no ha sido transmitido aun</translation>
+        <translation type="unfinished"/>
     </message>
     <message numerus="yes">
         <location line="-36"/>
@@ -2241,12 +2242,12 @@ Address: %4
     <message>
         <location filename="../forms/transactiondescdialog.ui" line="+14"/>
         <source>Transaction details</source>
-        <translation>Detalles de la transacción</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+6"/>
         <source>This pane shows a detailed description of the transaction</source>
-        <translation>Este panel muestras una descripción detallada de la transacción</translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -2259,17 +2260,17 @@ Address: %4
     <message>
         <location line="+0"/>
         <source>Type</source>
-        <translation>Tipo</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+0"/>
         <source>Address</source>
-        <translation>Domicilio</translation>
+        <translation>Direccion </translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Amount</source>
-        <translation>Monto</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+52"/>
@@ -2279,7 +2280,7 @@ Address: %4
     <message>
         <location line="+12"/>
         <source>Confirmed (%1 confirmations)</source>
-        <translation>Confimado (%1 confirmaciones)</translation>
+        <translation type="unfinished"/>
     </message>
     <message numerus="yes">
         <location line="-15"/>
@@ -2314,17 +2315,17 @@ Address: %4
     <message>
         <location line="+3"/>
         <source>This block was not received by any other nodes and will probably not be accepted!</source>
-        <translation>Este bloque no fue recibido por ningun nodo y probablemente no fue aceptado !</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
         <source>Generated but not accepted</source>
-        <translation>Generado pero no aprovado</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+42"/>
         <source>Received with</source>
-        <translation>Recivido con</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
@@ -2334,22 +2335,22 @@ Address: %4
     <message>
         <location line="+3"/>
         <source>Sent to</source>
-        <translation>Enviar a</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
         <source>Payment to yourself</source>
-        <translation>Pagar a si mismo</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
         <source>Mined</source>
-        <translation>Minado</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+38"/>
         <source>(n/a)</source>
-        <translation>(n/a)</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+194"/>
@@ -2359,22 +2360,22 @@ Address: %4
     <message>
         <location line="+2"/>
         <source>Date and time that the transaction was received.</source>
-        <translation>Fecha y hora en que la transacción fue recibida </translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
         <source>Type of transaction.</source>
-        <translation>Escriba una transacción</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
         <source>Destination address of transaction.</source>
-        <translation>Direccion del destinatario de la transacción</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
         <source>Amount removed from or added to balance.</source>
-        <translation>Cantidad removida del saldo o agregada </translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -2383,32 +2384,32 @@ Address: %4
         <location filename="../transactionview.cpp" line="+54"/>
         <location line="+17"/>
         <source>All</source>
-        <translation>Todo</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-16"/>
         <source>Today</source>
-        <translation>Hoy</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>This week</source>
-        <translation>Esta semana </translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>This month</source>
-        <translation>Este mes </translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Last month</source>
-        <translation>El mes pasado </translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>This year</source>
-        <translation>Este año</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
@@ -2418,52 +2419,52 @@ Address: %4
     <message>
         <location line="+12"/>
         <source>Received with</source>
-        <translation>Recivido con</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
         <source>Sent to</source>
-        <translation>Enviar a</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
         <source>To yourself</source>
-        <translation>Para ti mismo</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Mined</source>
-        <translation>Minado </translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Other</source>
-        <translation>Otro</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+7"/>
         <source>Enter address or label to search</source>
-        <translation>Ingrese dirección o capa a buscar </translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+7"/>
         <source>Min amount</source>
-        <translation>Monto minimo </translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+34"/>
         <source>Copy address</source>
-        <translation>Copiar dirección </translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Copy label</source>
-        <translation>Copiar capa </translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Copy amount</source>
-        <translation>copiar monto</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
@@ -2473,7 +2474,7 @@ Address: %4
     <message>
         <location line="+1"/>
         <source>Edit label</source>
-        <translation>Editar capa </translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
@@ -2488,12 +2489,12 @@ Address: %4
     <message>
         <location line="+1"/>
         <source>Comma separated file (*.csv)</source>
-        <translation>Arhchivo separado por comas (*.CSV)</translation>
+        <translation>Archivos separados por coma (*.csv)</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Confirmed</source>
-        <translation>Confirmado </translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
@@ -2503,7 +2504,7 @@ Address: %4
     <message>
         <location line="+1"/>
         <source>Type</source>
-        <translation>Tipo</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
@@ -2513,17 +2514,17 @@ Address: %4
     <message>
         <location line="+1"/>
         <source>Address</source>
-        <translation>Domicilio</translation>
+        <translation>Direccion </translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Amount</source>
-        <translation>Monto</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>ID</source>
-        <translation>ID</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+4"/>
@@ -2543,7 +2544,7 @@ Address: %4
     <message>
         <location line="+8"/>
         <source>to</source>
-        <translation>Para</translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -2564,7 +2565,7 @@ Address: %4
     <message>
         <location line="+1"/>
         <source>Usage:</source>
-        <translation>Uso:</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
@@ -2574,7 +2575,7 @@ Address: %4
     <message>
         <location line="+1"/>
         <source>List commands</source>
-        <translation>Lista de comandos</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
@@ -3059,7 +3060,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="+121"/>
         <source>Loading addresses...</source>
-        <translation>Cargando direcciones...</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-10"/>
@@ -3124,7 +3125,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="-41"/>
         <source>Loading block index...</source>
-        <translation>Cargando indice de bloques... </translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-105"/>
@@ -3174,7 +3175,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="+15"/>
         <source>Loading wallet...</source>
-        <translation>Cargando billetera...</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+8"/>
@@ -3194,7 +3195,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="+2"/>
         <source>Done loading</source>
-        <translation>Carga completa</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+33"/>
