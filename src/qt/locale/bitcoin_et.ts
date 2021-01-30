@@ -3011,4 +3011,153 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+5"/>
-        <source>Error: Unsupported argument -socks found. Setting SOCKS version isn&apos;t pos
+        <source>Error: Unsupported argument -socks found. Setting SOCKS version isn&apos;t possible anymore, only SOCKS5 proxies are supported.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Initialization sanity check failed. Bws is shutting down.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Error loading block database</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>Error: Wallet unlocked for staking only, unable to create transaction.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-14"/>
+        <source>Error: Disk space is low!</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>This is a pre-release test build - use at your own risk - do not use for mining or merchant applications</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-135"/>
+        <source>This help message</source>
+        <translation>Käesolev abitekst</translation>
+    </message>
+    <message>
+        <location line="+100"/>
+        <source>Wallet %s resides outside data directory %s.</source>
+        <translation>Rahakott %s paikenb väljaspool kataloogi %s.</translation>
+    </message>
+    <message>
+        <location line="+46"/>
+        <source>Unable to bind to %s on this computer (bind returned error %d, %s)</source>
+        <translation>Selle arvutiga ei ole võimalik siduda %s külge (katse nurjus %d, %s tõttu)</translation>
+    </message>
+    <message>
+        <location line="-136"/>
+        <source>Allow DNS lookups for -addnode, -seednode and -connect</source>
+        <translation>-addnode, -seednode ja -connect tohivad kasutada DNS lookup&apos;i</translation>
+    </message>
+    <message>
+        <location line="+121"/>
+        <source>Loading addresses...</source>
+        <translation>Aadresside laadimine...</translation>
+    </message>
+    <message>
+        <location line="-10"/>
+        <source>Error loading wallet.dat: Wallet corrupted</source>
+        <translation>Viga wallet.dat käivitamisel. Vigane rahakkott</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Error loading wallet.dat: Wallet requires newer version of Bws</source>
+        <translation>Viga faili wallet.dat laadimisel: rahakott vajab Bws&apos;i uuemat versiooni.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Wallet needed to be rewritten: restart Bws to complete</source>
+        <translation>Rahakott on vaja üle kirjutada: käivita Bws uuesti toimingu lõpetamiseks</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Error loading wallet.dat</source>
+        <translation>Viga wallet.dat käivitamisel</translation>
+    </message>
+    <message>
+        <location line="-15"/>
+        <source>Invalid -proxy address: &apos;%s&apos;</source>
+        <translation>Vigane -proxi aadress: &apos;%s&apos;</translation>
+    </message>
+    <message>
+        <location line="-1"/>
+        <source>Unknown network specified in -onlynet: &apos;%s&apos;</source>
+        <translation>Kirjeldatud tundmatu võrgustik -onlynet&apos;is: &apos;%s&apos;</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Cannot resolve -bind address: &apos;%s&apos;</source>
+        <translation>Tundmatu -bind aadress: &apos;%s&apos;</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Cannot resolve -externalip address: &apos;%s&apos;</source>
+        <translation>Tundmatu -externalip aadress: &apos;%s&apos;</translation>
+    </message>
+    <message>
+        <location line="-22"/>
+        <source>Invalid amount for -paytxfee=&lt;amount&gt;: &apos;%s&apos;</source>
+        <translation>-paytxfee=&lt;amount&gt; jaoks vigane kogus: &apos;%s&apos;</translation>
+    </message>
+    <message>
+        <location line="+59"/>
+        <source>Sending...</source>
+        <translation>Saatmine...</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Invalid amount</source>
+        <translation>Kehtetu summa</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Insufficient funds</source>
+        <translation>Liiga suur summa</translation>
+    </message>
+    <message>
+        <location line="-41"/>
+        <source>Loading block index...</source>
+        <translation>Klotside indeksi laadimine...</translation>
+    </message>
+    <message>
+        <location line="-105"/>
+        <source>Add a node to connect to and attempt to keep the connection open</source>
+        <translation>Lisa node ning hoia ühendus avatud</translation>
+    </message>
+    <message>
+        <location line="+131"/>
+        <source>Unable to bind to %s on this computer. Bws is probably already running.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-108"/>
+        <source>Fee per KB to add to transactions you send</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+40"/>
+        <source>How many blocks to check at startup (default: 500, 0 = all)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Acceptable ciphers (default: TLSv1.2+HIGH:TLSv1+HIGH:!SSLv2:!aNULL:!eNULL:!3DES:@STRENGTH)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Warning: Deprecated argument -debugnet ignored, use -debug=net</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location 
