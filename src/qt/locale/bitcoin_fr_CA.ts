@@ -1,5 +1,5 @@
 
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="fr" version="2.1">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="fr_CA" version="2.1">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -188,7 +188,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location filename="../askpassphrasedialog.cpp" line="+38"/>
         <source>Encrypt wallet</source>
-        <translation>Chiffrer le portefeuille</translation>
+        <translation>Crypter le portefeuille</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -218,27 +218,27 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+1"/>
         <source>Enter the old and new passphrase to the wallet.</source>
-        <translation>Saisir l’ancienne phrase de passe pour le portefeuille ainsi que la nouvelle.</translation>
+        <translation>Saisir l’ancienne et la nouvelle phrase de passe du portefeuille</translation>
     </message>
     <message>
         <location line="+45"/>
         <source>Confirm wallet encryption</source>
-        <translation>Confirmer le chiffrement du portefeuille</translation>
+        <translation>Confirmer le cryptage du portefeuille</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR COINS&lt;/b&gt;!</source>
-        <translation>Avertissement : Si vous chiffrez votre portefeuille et perdez votre passphrase, vous ne pourrez &lt;b&gt;plus accéder à vos Bwss&lt;/b&gt;!</translation>
+        <translation>ATTENTION : Si vous cryptez votre portefeuille et perdez votre passphrase, vous ne pourrez plus accéder à vos Bwss</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Are you sure you wish to encrypt your wallet?</source>
-        <translation>Êtes-vous sûr de vouloir chiffrer votre portefeuille ?</translation>
+        <translation>Êtes-vous sûr de vouloir crypter votre portefeuille ?</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
-        <translation>IMPORTANT : Toute sauvegarde précédente de votre fichier de portefeuille devrait être remplacée par le nouveau fichier de portefeuille chiffré. Pour des raisons de sécurité, les sauvegardes précédentes de votre fichier de portefeuille non chiffré deviendront inutilisables dès lors que vous commencerez à utiliser le nouveau portefeuille chiffré.</translation>
+        <translation>IMPORTANT : Toute sauvegarde précédente de votre fichier de portefeuille devrait être remplacée par le nouveau fichier de portefeuille crypté. Pour des raisons de sécurité, les sauvegardes précédentes de votre fichier de portefeuille non crypté deviendront inutilisables dès lors que vous commencerez à utiliser le nouveau portefeuille crypté.</translation>
     </message>
     <message>
         <location line="+103"/>
@@ -250,7 +250,7 @@ This product includes software developed by the OpenSSL Project for use in the O
         <location line="-133"/>
         <location line="+60"/>
         <source>Wallet encrypted</source>
-        <translation>Portefeuille chiffré</translation>
+        <translation>Portefeuille crypté</translation>
     </message>
     <message>
         <location line="-140"/>
@@ -260,7 +260,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+82"/>
         <source>Bws will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
-        <translation>L&apos;application Bws va désormais se terminer afin de finaliser le processus de chiffrage. Merci de noter que le chiffrage du portefeuille ne garantit pas de se prémunir du vol via utilisation de malware, qui auraient pu infecter votre ordinateur. </translation>
+        <translation>L&apos;application Bws va désormais se terminer afin de finaliser le processus de cryptage. Merci de noter que le cryptage du portefeuille ne garantit pas de se prémunir du vol via l&apos;utilisation de malware, qui auraient pu infecter votre ordinateur. </translation>
     </message>
     <message>
         <location line="+13"/>
@@ -268,12 +268,12 @@ This product includes software developed by the OpenSSL Project for use in the O
         <location line="+44"/>
         <location line="+6"/>
         <source>Wallet encryption failed</source>
-        <translation>Le chiffrement du portefeuille a échoué</translation>
+        <translation>Le cryptage du portefeuille a échoué</translation>
     </message>
     <message>
         <location line="-56"/>
         <source>Wallet encryption failed due to an internal error. Your wallet was not encrypted.</source>
-        <translation>Le chiffrement du portefeuille a échoué en raison d&apos;une erreur interne. Votre portefeuille n&apos;a pas été chiffré.</translation>
+        <translation>Le cryptage du portefeuille a échoué en raison d&apos;une erreur interne. Votre portefeuille n&apos;a pas été crypté.</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -291,12 +291,12 @@ This product includes software developed by the OpenSSL Project for use in the O
         <location line="+12"/>
         <location line="+19"/>
         <source>The passphrase entered for the wallet decryption was incorrect.</source>
-        <translation>La phrase de passe saisie pour déchiffrer le portefeuille est incorrecte.</translation>
+        <translation>La phrase de passe saisie pour décrypter le portefeuille était incorrecte.</translation>
     </message>
     <message>
         <location line="-20"/>
         <source>Wallet decryption failed</source>
-        <translation>Le déchiffrage du portefeuille a échoué</translation>
+        <translation>Le décryptage du portefeuille a échoué</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -334,12 +334,12 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+1"/>
         <source>Edit the list of stored addresses and labels</source>
-        <translation>Éditer la liste d&apos;adresses et étiquettes</translation>
+        <translation>Éditer la liste d&apos;adresses et libellés</translation>
     </message>
     <message>
         <location line="-18"/>
         <source>Show the list of addresses for receiving payments</source>
-        <translation>Montrer la liste d&apos;adresses de réception de paiements</translation>
+        <translation>Montrer la liste d&apos;adresses de réception des paiements</translation>
     </message>
     <message>
         <location line="+34"/>
@@ -354,7 +354,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+4"/>
         <source>Show information about Bws</source>
-        <translation>Afficher des informations au sujet de Bws</translation>
+        <translation>Afficher des informations au sujet du Bws</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -364,7 +364,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+1"/>
         <source>Show information about Qt</source>
-        <translation>Afficher les informations au sujet de Qt</translation>
+        <translation>Afficher des informations sur Qt</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -374,7 +374,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+4"/>
         <source>&amp;Encrypt Wallet...</source>
-        <translation>&amp;Chiffrer le portefeuille...</translation>
+        <translation>&amp;Crypter le portefeuille...</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -389,7 +389,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+9"/>
         <source>&amp;Export...</source>
-        <translation>&amp;Exporter...</translation>
+        <translation>&amp;Export...</translation>
     </message>
     <message>
         <location line="-55"/>
@@ -409,7 +409,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="-13"/>
         <source>Encrypt or decrypt wallet</source>
-        <translation>Chiffrer ou déchiffrer le portefeuille</translation>
+        <translation>Crypter ou décrypter le portefeuille</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -419,7 +419,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+2"/>
         <source>Change the passphrase used for wallet encryption</source>
-        <translation>Modifier la phrase de passe utilisée pour le chiffrement du portefeuille</translation>
+        <translation>Modifier la phrase de passe utilisée pour le cryptage du portefeuille</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -429,7 +429,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+1"/>
         <source>Open debugging and diagnostic console</source>
-        <translation>Ouvrir la console de débogage et de diagnostic</translation>
+        <translation>Ouvrir une console de débogage et de diagnostic</translation>
     </message>
     <message>
         <location line="-5"/>
@@ -450,12 +450,12 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+193"/>
         <source>&amp;About Bws</source>
-        <translation>&amp;Au sujet de Bws</translation>
+        <translation>A propos de Bws</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>&amp;Show / Hide</source>
-        <translation>&amp;Montrer / Masquer</translation>
+        <translation>&amp;Afficher / Cacher</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -480,7 +480,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+8"/>
         <source>&amp;Settings</source>
-        <translation>&amp;Paramètres</translation>
+        <translation>&amp;Réglages</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -490,7 +490,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+17"/>
         <source>Tabs toolbar</source>
-        <translation>Barre d&apos;onglets</translation>
+        <translation>Barre d&apos;outils des onglets</translation>
     </message>
     <message>
         <location line="+46"/>
@@ -512,22 +512,22 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+6"/>
         <source>Not staking because wallet is locked</source>
-        <translation>Pas de staking car votre portefeuille est verouillé</translation>
+        <translation>Ne stack pas, votre portefeuilles est verouillé</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Not staking because wallet is offline</source>
-        <translation> Pas de staking car votre portefeuille est hors ligne</translation>
+        <translation>Ne stack pas, votre portefeuilles est hors ligne</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Not staking because wallet is syncing</source>
-        <translation>Pas de staking car votre portefeuille est en cours de synchronisation</translation>
+        <translation>Ne stack pas, votre portefeuille est en cours de synchronisation</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Not staking because you don&apos;t have mature coins</source>
-        <translation>Pas de staking car vos monnaies ne sont pas encore matures</translation>
+        <translation>Ne stack pas, vos monnaies ne sont pas encore matures</translation>
     </message>
     <message>
         <location line="-812"/>
@@ -547,7 +547,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+49"/>
         <source>&amp;Unlock Wallet...</source>
-        <translation>&amp;Déverrouiller le portefeuille...</translation>
+        <translation>&amp;Déverrouiller le portefeuille</translation>
     </message>
     <message>
         <location line="+277"/>
@@ -562,7 +562,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+113"/>
         <source>Confirm transaction fee</source>
-        <translation>Confirmer le paiement des frais de transaction</translation>
+        <translation>Confirmer le Paiement des frais de transaction</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -607,12 +607,12 @@ Adresse : %4
     <message>
         <location line="+8"/>
         <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
-        <translation>Le portefeuille est &lt;b&gt;chiffré&lt;/b&gt; et est actuellement &lt;b&gt;déverrouillé&lt;/b&gt;</translation>
+        <translation>Le portefeuille est &lt;b&gt;crypté&lt;/b&gt; et est actuellement &lt;b&gt;déverrouillé&lt;/b&gt;</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;locked&lt;/b&gt;</source>
-        <translation>Le portefeuille est &lt;b&gt;chiffré&lt;/b&gt; et actuellement &lt;b&gt;verrouillé&lt;/b&gt;</translation>
+        <translation>Le portefeuille est &lt;b&gt;crypté&lt;/b&gt; et actuellement &lt;b&gt;verrouillé&lt;/b&gt;</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -632,7 +632,7 @@ Adresse : %4
     <message>
         <location line="+0"/>
         <source>There was an error trying to save the wallet data to the new location.</source>
-        <translation>Une erreur a été rencontrée lors de la  sauvegarde du portefeuille vers la nouvelle destination.</translation>
+        <translation>Une erreur a été rencontrée lors de la tentative de sauvegarde du portefeuille vers la nouvelle destination.</translation>
     </message>
     <message numerus="yes">
         <location line="+91"/>
@@ -715,12 +715,12 @@ Adresse : %4
     <message>
         <location line="+324"/>
         <source>Not staking</source>
-        <translation>Pas de staking</translation>
+        <translation>Pas de stacking</translation>
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+104"/>
         <source>A fatal error occurred. Bws can no longer continue safely and will quit.</source>
-        <translation>Une erreur fatale a été rencontrée. L&apos;application Bws ne peut plus être s&apos;exécuter de façon correcte et va se terminer.</translation>
+        <translation>Une erreur fatale a été rencontrée. L&apos;application Bws ne peut plus être s&apos;exécuter de façon correcte et doit se terminer.</translation>
     </message>
 </context>
 <context>
@@ -761,7 +761,7 @@ Adresse : %4
     <message>
         <location line="+35"/>
         <source>Low Output:</source>
-        <translation>Sortie faible:</translation>
+        <translation>Sortie faible :</translation>
     </message>
     <message>
         <location filename="../coincontroldialog.cpp" line="+493"/>
@@ -801,7 +801,7 @@ Adresse : %4
     <message>
         <location line="+5"/>
         <source>Label</source>
-        <translation>Étiquette</translation>
+        <translation>Intitulé</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -896,7 +896,7 @@ Adresse : %4
  This means a fee of at least %1 per kb is required.
 
  Can vary +/- 1 Byte per input.</source>
-        <translation>Cette étiquette passe au rouge, si la taille de la transaction est supérieure à 10000 bytes.
+        <translation>Cet intitulé passe au rouge, si la taille de la transaction est supérieure à 10000 bytes.
 
 Cela implique que des frais à hauteur d&apos;au moins %1 par kb seront nécessaires.
 
@@ -909,9 +909,9 @@ Ceux-ci Peuvent varier de +/- 1 Byte par entrée.</translation>
  This means a fee of at least %2 is required.
 
  Amounts below 0.546 times the minimum relay fee are shown as DUST.</source>
-        <translation>Cette étiquette passe au rouge, Lorsqu&apos;un destinataire reçoit un montant inférieur à %1.
+        <translation>Ce label passe au rouge, Lorsqu&apos;un destinataire reçoit un montant inférieur à %1.
 
-Cela implique que des frais à hauteur de %2 seront nécessaire
+ Cela implique que des frais à hauteur de %2 seront nécessaire
 
 Les montants inférieurs à  0.546 fois les frais minimum de relais apparaissent en tant que DUST.</translation>
     </message>
@@ -920,9 +920,9 @@ Les montants inférieurs à  0.546 fois les frais minimum de relais apparaissent
         <source>This label turns red, if the change is smaller than %1.
 
  This means a fee of at least %2 is required.</source>
-        <translation>Cette étiquette passe au rouge, lorsque la différence est inférieure à %1.
+        <translation>Ce label passe au rouge, lorsque la différence est inférieure à %1.
 
-Cela implique que des frais à hauteur d&apos;au moins %2 seront nécessaires.</translation>
+ Cela implique que des frais à hauteur d&apos;au moins %2 seront nécessaires.</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -956,7 +956,7 @@ Cela implique que des frais à hauteur d&apos;au moins %2 seront nécessaires.</
     <message>
         <location line="+10"/>
         <source>The label associated with this address book entry</source>
-        <translation>L&apos;étiquette associée à cette entrée du carnet d&apos;adresse</translation>
+        <translation>L&apos;intitulé associé à cette entrée du carnet d&apos;adresse</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -966,7 +966,7 @@ Cela implique que des frais à hauteur d&apos;au moins %2 seront nécessaires.</
     <message>
         <location line="+10"/>
         <source>The address associated with this address book entry. This can only be modified for sending addresses.</source>
-        <translation>L&apos;adresse associée à cette entrée du carnet d&apos;adresse. Seules les adresses d&apos;envoi peuvent être modifiées.</translation>
+        <translation>L&apos;intitulé associé à cette entrée du carnet d&apos;adresse. Seules les adresses d&apos;envoi peuvent être modifiées.</translation>
     </message>
     <message>
         <location filename="../editaddressdialog.cpp" line="+21"/>
@@ -1040,7 +1040,7 @@ Cela implique que des frais à hauteur d&apos;au moins %2 seront nécessaires.</
     <message>
         <location line="+1"/>
         <source>Set language, for example &quot;de_DE&quot; (default: system locale)</source>
-        <translation>Définir la langue, par exemple « fr_FR » (par défaut: la langue du système)</translation>
+        <translation>Définir la langue, par exemple « fr_FR » (par défaut : la langue du système)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1050,7 +1050,7 @@ Cela implique que des frais à hauteur d&apos;au moins %2 seront nécessaires.</
     <message>
         <location line="+1"/>
         <source>Show splash screen on startup (default: 1)</source>
-        <translation>Affichage de l&apos;écran de démarrage (par défaut: 1)</translation>
+        <translation>Affichage de l&apos;écran de démarrage (défaut: 1)</translation>
     </message>
 </context>
 <context>
@@ -1068,7 +1068,7 @@ Cela implique que des frais à hauteur d&apos;au moins %2 seront nécessaires.</
     <message>
         <location line="+6"/>
         <source>Optional transaction fee per kB that helps make sure your transactions are processed quickly. Most transactions are 1 kB. Fee 0.01 recommended.</source>
-        <translation>Frais de transaction optionnels par kB permettant d&apos;assurer la rapidité de traitement de votre transaction. La plupart des transactions sont de 1 kB. Frais de  0.01 recommandés.</translation>
+        <translation>Frais de transaction optionnels par kB afin d&apos;assurer la rapidité de traitement de votre transaction. La plupart des transactions sont de 1 kB. Frais de  0.01 recommandés.</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -1078,7 +1078,7 @@ Cela implique que des frais à hauteur d&apos;au moins %2 seront nécessaires.</
     <message>
         <location line="+31"/>
         <source>Reserved amount does not participate in staking and is therefore spendable at any time.</source>
-        <translation>Montants réservés ne participant pas au &quot;staking&quot; pouvant être utilisés pour dépensés à tout moment.</translation>
+        <translation>Montant réservé qui ne &quot;stake&quot; pas est reste utilisable pour réalisés des envois à tout moment.</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -1103,7 +1103,7 @@ Cela implique que des frais à hauteur d&apos;au moins %2 seront nécessaires.</
     <message>
         <location line="+6"/>
         <source>Automatically open the Bws client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Ouvrir automatiquemwnr le port client de Bws sur le routeur. Ceci ne fonctionne que dans le cas où le support UPnP sur votre routeur existe et est actif.</translation>
+        <translation>Ouverture automatique du port client de Bws sur le routeur. Ceci ne fonctionne que dans le cas où le support UPnP sur votre routeur existe et est actif.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1113,7 +1113,7 @@ Cela implique que des frais à hauteur d&apos;au moins %2 seront nécessaires.</
     <message>
         <location line="+19"/>
         <source>Proxy &amp;IP:</source>
-        <translation>&amp;IP du serveur Proxy mandataire :</translation>
+        <translation>&amp;IP du serveur mandataire :</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -1123,12 +1123,12 @@ Cela implique que des frais à hauteur d&apos;au moins %2 seront nécessaires.</
     <message>
         <location line="+7"/>
         <source>&amp;Port:</source>
-        <translation>&amp;Port:</translation>
+        <translation>&amp;Port :</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Port of the proxy (e.g. 9050)</source>
-        <translation>Port du serveur Proxy mandataire (par ex. 9050)</translation>
+        <translation>Port du serveur mandataire (par ex. 9050)</translation>
     </message>
     <message>
         <location line="-57"/>
@@ -1178,12 +1178,12 @@ Cela implique que des frais à hauteur d&apos;au moins %2 seront nécessaires.</
     <message>
         <location line="+13"/>
         <source>The user interface language can be set here. This setting will take effect after restarting Bws.</source>
-        <translation>La langue d&apos;interface de l&apos;utilisateur peut être définie ici. Les modification seront prises en compte après redémarrage de l&apos;application Bws</translation>
+        <translation>La langue d&apos;interface de de l&apos;utilisateur peut être définie ici. Ces modification seront effectives après redémarrage de l&apos;application Bws</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>&amp;Unit to show amounts in:</source>
-        <translation>&amp;Unité d&apos;affichage des montants:</translation>
+        <translation>&amp;Unité d&apos;affichage des montants :</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -1218,7 +1218,7 @@ Cela implique que des frais à hauteur d&apos;au moins %2 seront nécessaires.</
     <message>
         <location line="+10"/>
         <source>&amp;Apply</source>
-        <translation>&amp;Appliquer</translation>
+        <translation>&amp;Exécuter</translation>
     </message>
     <message>
         <location filename="../optionsdialog.cpp" line="+47"/>
@@ -1284,7 +1284,7 @@ Cela implique que des frais à hauteur d&apos;au moins %2 seront nécessaires.</
     <message>
         <location line="+80"/>
         <source>Immature:</source>
-        <translation>Immature:</translation>
+        <translation>Immature :</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -1294,7 +1294,7 @@ Cela implique que des frais à hauteur d&apos;au moins %2 seront nécessaires.</
     <message>
         <location line="+23"/>
         <source>Total:</source>
-        <translation>Total:</translation>
+        <translation>Total :</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -1309,12 +1309,12 @@ Cela implique que des frais à hauteur d&apos;au moins %2 seront nécessaires.</
     <message>
         <location line="-118"/>
         <source>Total of transactions that have yet to be confirmed, and do not yet count toward the current balance</source>
-        <translation>Montant total des transactions nécessitant confirmation, et ne figurant pas encore dans le solde actuel</translation>
+        <translation>Montant total des transactions nécessitant confirmation, et ne figurant pas encore dans la balance actuelle</translation>
     </message>
     <message>
         <location line="-32"/>
         <source>Total of coins that was staked, and do not yet count toward the current balance</source>
-        <translation>Montant total des transactions en &quot;staking&quot; et ne figurant pas encore dans le solde actuel</translation>
+        <translation>Montant total des transactions en &quot;staking&quot; et ne figurant pas encore dans la balance actuelle</translation>
     </message>
     <message>
         <location filename="../overviewpage.cpp" line="+116"/>
@@ -1346,12 +1346,12 @@ Cela implique que des frais à hauteur d&apos;au moins %2 seront nécessaires.</
     <message>
         <location line="+56"/>
         <source>Amount:</source>
-        <translation>Montant:</translation>
+        <translation>Montant :</translation>
     </message>
     <message>
         <location line="-44"/>
         <source>Label:</source>
-        <translation>Étiquette:</translation>
+        <translation>Intitulé:</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -1446,12 +1446,12 @@ Cela implique que des frais à hauteur d&apos;au moins %2 seront nécessaires.</
     <message>
         <location line="+23"/>
         <source>Block chain</source>
-        <translation>Chaîne de blocs</translation>
+        <translation>Chaîne de blocks</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Current number of blocks</source>
-        <translation>Nombre actuel de blocs</translation>
+        <translation>Nombre actuel de blocks</translation>
     </message>
     <message>
         <location line="+197"/>
@@ -1483,7 +1483,7 @@ Cela implique que des frais à hauteur d&apos;au moins %2 seront nécessaires.</
     <message>
         <location line="-383"/>
         <source>Last block time</source>
-        <translation>Horodatage du dernier bloc</translation>
+        <translation>Horodatage du dernier block</translation>
     </message>
     <message>
         <location line="+52"/>
@@ -1543,7 +1543,7 @@ Cela implique que des frais à hauteur d&apos;au moins %2 seront nécessaires.</
     <message>
         <location filename="../rpcconsole.cpp" line="-28"/>
         <source>Welcome to the Bws RPC console.</source>
-        <translation>Bienvenue sur la console RPC de Bws.</translation>
+        <translation>Bienvenue sur la console Bws RPC.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1623,12 +1623,12 @@ Cela implique que des frais à hauteur d&apos;au moins %2 seront nécessaires.</
     <message>
         <location line="+19"/>
         <source>Insufficient funds!</source>
-        <translation>Fonds insuffisants!</translation>
+        <translation>Fonds insuffisants !</translation>
     </message>
     <message>
         <location line="+77"/>
         <source>Quantity:</source>
-        <translation>Quantité:</translation>
+        <translation>Quantité :</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -1639,17 +1639,17 @@ Cela implique que des frais à hauteur d&apos;au moins %2 seront nécessaires.</
     <message>
         <location line="-19"/>
         <source>Bytes:</source>
-        <translation>Octets:</translation>
+        <translation>Octets :</translation>
     </message>
     <message>
         <location line="+51"/>
         <source>Amount:</source>
-        <translation>Montant:</translation>
+        <translation>Montant :</translation>
     </message>
     <message>
         <location line="+54"/>
         <source>Fee:</source>
-        <translation>Frais:</translation>
+        <translation>Frais :</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -1664,7 +1664,7 @@ Cela implique que des frais à hauteur d&apos;au moins %2 seront nécessaires.</
     <message>
         <location line="+32"/>
         <source>After Fee:</source>
-        <translation>Après frais:</translation>
+        <translation>Après les frais :</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -1684,7 +1684,7 @@ Cela implique que des frais à hauteur d&apos;au moins %2 seront nécessaires.</
     <message>
         <location line="+3"/>
         <source>Add &amp;Recipient</source>
-        <translation>Ajouter un &amp;Destinataire</translation>
+        <translation>Ajouter un &amp;destinataire</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -1699,7 +1699,7 @@ Cela implique que des frais à hauteur d&apos;au moins %2 seront nécessaires.</
     <message>
         <location line="+24"/>
         <source>Balance:</source>
-        <translation>Solde:</translation>
+        <translation>Solde :</translation>
     </message>
     <message>
         <location line="+47"/>
@@ -1714,7 +1714,7 @@ Cela implique que des frais à hauteur d&apos;au moins %2 seront nécessaires.</
     <message>
         <location filename="../sendcoinsdialog.cpp" line="-171"/>
         <source>Enter a Bws address (e.g. DPpauUHW4ksipzUQhKKVAxscM6UonAAjhX)</source>
-        <translation>Entrer une adresse Bws (par ex: DPpauUHW4ksipzUQhKKVAxscM6UonAAjhX)</translation>
+        <translation>Entrer une adresse Bws (e.g. DPpauUHW4ksipzUQhKKVAxscM6UonAAjhX)</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -1754,7 +1754,7 @@ Cela implique que des frais à hauteur d&apos;au moins %2 seront nécessaires.</
     <message>
         <location line="+85"/>
         <source>&lt;b&gt;%1&lt;/b&gt; to %2 (%3)</source>
-        <translation>&lt;b&gt;%1&lt;/b&gt; à %2 (%3)</translation>
+        <translation>&lt;b&gt;%1&lt;/b&gt; to %2 (%3)</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -1819,7 +1819,7 @@ Cela implique que des frais à hauteur d&apos;au moins %2 seront nécessaires.</
     <message>
         <location line="+4"/>
         <source>WARNING: unknown change address</source>
-        <translation>AVERTISSEMENT: Adresse Bws Invalide</translation>
+        <translation>AVERTISSEMET: Adresse Bws Invalide</translation>
     </message>
 </context>
 <context>
@@ -1832,12 +1832,12 @@ Cela implique que des frais à hauteur d&apos;au moins %2 seront nécessaires.</
     <message>
         <location line="+15"/>
         <source>A&amp;mount:</source>
-        <translation>&amp;Montant:</translation>
+        <translation>&amp;Montant :</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Pay &amp;To:</source>
-        <translation>&amp;Payer à:</translation>
+        <translation>&amp;Payer à :</translation>
     </message>
     <message>
         <location line="+34"/>
@@ -1883,7 +1883,7 @@ Cela implique que des frais à hauteur d&apos;au moins %2 seront nécessaires.</
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
         <source>Enter a Bws address (e.g. DPpauUHW4ksipzUQhKKVAxscM6UonAAjhX)</source>
-        <translation>Entrer une adresse Bws (par ex: DPpauUHW4ksipzUQhKKVAxscM6UonAAjhX)</translation>
+        <translation>Entrer une adresse Bws (e.g. DPpauUHW4ksipzUQhKKVAxscM6UonAAjhX)</translation>
     </message>
 </context>
 <context>
@@ -1907,7 +1907,7 @@ Cela implique que des frais à hauteur d&apos;au moins %2 seront nécessaires.</
     <message>
         <location line="+18"/>
         <source>The address to sign the message with (e.g. DPpauUHW4ksipzUQhKKVAxscM6UonAAjhX)</source>
-        <translation>Entrer une adresse Bws (par ex: DPpauUHW4ksipzUQhKKVAxscM6UonAAjhX)</translation>
+        <translation>Entrer une adresse Bws (e.g. DPpauUHW4ksipzUQhKKVAxscM6UonAAjhX)</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1976,7 +1976,7 @@ Cela implique que des frais à hauteur d&apos;au moins %2 seront nécessaires.</
     <message>
         <location line="+40"/>
         <source>Verify the message to ensure it was signed with the specified Bws address</source>
-        <translation>Vérifiez le message afin de vous assurer qu&apos;il provient de l&apos;adresse Bws spécifiée.</translation>
+        <translation>Vérifier un message pour s&apos;assurer qu&apos;il vient d&apos;un adresse Bws spécifique.</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -1987,7 +1987,7 @@ Cela implique que des frais à hauteur d&apos;au moins %2 seront nécessaires.</
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
         <source>Enter a Bws address (e.g. DPpauUHW4ksipzUQhKKVAxscM6UonAAjhX)</source>
-        <translation>Entrer une adresse Bws (par ex: DPpauUHW4ksipzUQhKKVAxscM6UonAAjhX)</translation>
+        <translation>Entrer une adresse Bws (e.g. DPpauUHW4ksipzUQhKKVAxscM6UonAAjhX)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -2316,7 +2316,7 @@ Cela implique que des frais à hauteur d&apos;au moins %2 seront nécessaires.</
     <message>
         <location line="+3"/>
         <source>Confirming (%1 of %2 recommended confirmations)</source>
-        <translation>En cours de confirmation (%1 sur %2 confirmations recommandées)</translation>
+        <translation>Confirmation (%1 sur %2 confirmations recommandées)</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -2331,7 +2331,7 @@ Cela implique que des frais à hauteur d&apos;au moins %2 seront nécessaires.</
     <message>
         <location line="+3"/>
         <source>This block was not received by any other nodes and will probably not be accepted!</source>
-        <translation>Ce bloc n’a été reçu par aucun autre nœud et ne sera probablement pas accepté!</translation>
+        <translation>Ce bloc n’a été reçu par aucun autre nœud et ne sera probablement pas accepté !</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2505,7 +2505,7 @@ Cela implique que des frais à hauteur d&apos;au moins %2 seront nécessaires.</
     <message>
         <location line="+1"/>
         <source>Comma separated file (*.csv)</source>
-        <translation>Fichier de valeurs séparées par des virgules (*.csv)</translation>
+        <translation>Valeurs séparées par des virgules (*.csv)</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -2555,7 +2555,7 @@ Cela implique que des frais à hauteur d&apos;au moins %2 seront nécessaires.</
     <message>
         <location line="+100"/>
         <source>Range:</source>
-        <translation>Intervalle:</translation>
+        <translation>Intervalle :</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -2581,7 +2581,7 @@ Cela implique que des frais à hauteur d&apos;au moins %2 seront nécessaires.</
     <message>
         <location line="+1"/>
         <source>Usage:</source>
-        <translation>Utilisation:</translation>
+        <translation>Utilisation :</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2601,22 +2601,23 @@ Cela implique que des frais à hauteur d&apos;au moins %2 seront nécessaires.</
     <message>
         <location line="+1"/>
         <source>Options:</source>
-        <translation>Options:</translation>
+        <translation>Options :</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Specify configuration file (default: bws.conf)</source>
-        <translation>Spécifier le fichier de configuration (par défaut: bws.conf)</translation>
+        <translation>Spécifier le fichier de configuration (defaut: bws.conf)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Specify pid file (default: bwsd.pid)</source>
-        <translation>Spécifier le fichier pid (par défaut: bwsd.pid)</translation>
+        <translation>Spécifier le fichier pid (defaut: bwsd.pid)
+</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Specify wallet file (within data directory)</source>
-        <translation>Spécifier le fichier de portefeuille (dans le répertoire de données)</translation>
+        <translation>Spécifiez le fichier de portefeuille (dans le répertoire de données)</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -2641,17 +2642,17 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="-161"/>
         <source>Set database cache size in megabytes (default: 25)</source>
-        <translation>Définir la taille du tampon de base de données en mégaoctets (par défaut : 25)</translation>
+        <translation>Définir la taille du tampon en mégaoctets (par défaut : 25)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Set database disk log size in megabytes (default: 100)</source>
-        <translation>Définir la taille du journal de base de données en mégaoctets (par défaut : 100)</translation>
+        <translation>Définir la taille du tampon en mégaoctets (par défaut : 100)</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Listen for connections on &lt;port&gt; (default: 48200 or testnet: 58200)</source>
-        <translation>Écouter les connexions sur le &lt;port&gt; (par défault: 48200 ou testnet: 58200)</translation>
+        <translation>Écouter les connexions sur le &lt;port&gt; (default: 48200 or testnet: 58200)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2696,7 +2697,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="+153"/>
         <source>An error occurred while setting up the RPC port %u for listening on IPv4: %s</source>
-        <translation>Une erreur est survenue lors du positionnement du port RPC %u pour écouter sur une adresse IPv4 : %s</translation>
+        <translation>Une erreur est survenue lors du réglage du port RPC %u pour écouter sur IPv4 : %s</translation>
     </message>
     <message>
         <location line="-126"/>
@@ -2756,7 +2757,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="+5"/>
         <source>Block creation options:</source>
-        <translation>Options de création de bloc:</translation>
+        <translation>Options de création de bloc :</translation>
     </message>
     <message>
         <location line="-66"/>
@@ -2766,7 +2767,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="+4"/>
         <source>Discover own IP address (default: 1 when listening and no -externalip)</source>
-        <translation>Découvrir sa propre adresse IP (par défaut: 1 lors de l&apos;écoute et si aucun -externalip)</translation>
+        <translation>Découvrir sa propre adresse IP (par défaut : 1 lors de l&apos;écoute et si aucun -externalip)</translation>
     </message>
     <message>
         <location line="+97"/>
@@ -2826,27 +2827,27 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="-33"/>
         <source>Shrink debug.log file on client startup (default: 1 when no -debug)</source>
-        <translation>Réduire le fichier debug.log lors du démarrage du client (par défaut : 1 lorsque -debug n&apos;est pas présente)</translation>
+        <translation>Réduire le fichier debug.log lors du démarrage du client (par défaut : 1 lorsque -debug n&apos;est pas présent)</translation>
     </message>
     <message>
         <location line="-41"/>
         <source>Specify connection timeout in milliseconds (default: 5000)</source>
-        <translation>Spécifier le délai d&apos;expiration de la connexion en millisecondes (par défaut: 5000)</translation>
+        <translation>Spécifier le délai d&apos;expiration de la connexion en millisecondes (par défaut : 5 000)</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Use UPnP to map the listening port (default: 0)</source>
-        <translation>Utiliser l&apos;UPnP pour rediriger le port d&apos;écoute (par défaut: 0)</translation>
+        <translation>Utiliser l&apos;UPnP pour rediriger le port d&apos;écoute (par défaut : 0)</translation>
     </message>
     <message>
         <location line="-1"/>
         <source>Use UPnP to map the listening port (default: 1 when listening)</source>
-        <translation>Utiliser l&apos;UPnP pour rediriger le port d&apos;écoute (par défaut: 1 lors de l&apos;écoute)</translation>
+        <translation>Utiliser l&apos;UPnP pour rediriger le port d&apos;écoute (par défaut : 1 lors de l&apos;écoute)</translation>
     </message>
     <message>
         <location line="-25"/>
         <source>Use proxy to reach tor hidden services (default: same as -proxy)</source>
-        <translation>Utiliser un proxy pour atteindre les services cachés (par défaut: équivalent à -proxy)</translation>
+        <translation>Utiliser un proxy pour atteindre les services cachés (défaut: équivalent à -proxy)</translation>
     </message>
     <message>
         <location line="+45"/>
@@ -2916,7 +2917,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="+12"/>
         <source>When creating transactions, ignore inputs with value less than this (default: 0.01)</source>
-        <translation>Lors de la création de transactions, ignorer les entrées dont la valeur sont inférieures (défaut: 0.01)</translation>
+        <translation>Lors de la création de transactions, ignore les entrées dont la valeur sont inférieures (défaut: 0.01)</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -2966,12 +2967,12 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="+3"/>
         <source>Execute command when a wallet transaction changes (%s in cmd is replaced by TxID)</source>
-        <translation>Exécuter la commande lorsqu&apos;une transaction du portefeuille change (%s dans la commande est remplacée par TxID)</translation>
+        <translation>Exécuter la commande lorsqu&apos;une transaction de portefeuille change (%s dans la commande est remplacée par TxID)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Require a confirmations for change (default: 0)</source>
-        <translation>Nécessite a confirmations pour modification (par défaut: 0)</translation>
+        <translation>Nécessite a confirmations pour modification (défaut: 0)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3041,7 +3042,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="+29"/>
         <source>Error: Wallet unlocked for staking only, unable to create transaction.</source>
-        <translation>Erreur: Portefeuille déverrouillé uniquement pour &quot;staking&quot; , impossible d&apos;effectuer cette transaction</translation>
+        <translation>Erreur: Portefeuille déverrouillé uniquement pour &quot;stacking&quot; , impossible d&apos;effectuer cette transaction</translation>
     </message>
     <message>
         <location line="-14"/>
@@ -3061,7 +3062,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="+100"/>
         <source>Wallet %s resides outside data directory %s.</source>
-        <translation>Le portefeuille %s est situé en dehors du répertoire de données %s</translation>
+        <translation>Le portefeuille %s réside en dehors répertoire de données %s</translation>
     </message>
     <message>
         <location line="+46"/>
@@ -3081,7 +3082,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="-10"/>
         <source>Error loading wallet.dat: Wallet corrupted</source>
-        <translation>Erreur lors du chargement de wallet.dat: portefeuille corrompu</translation>
+        <translation>Erreur lors du chargement de wallet.dat : portefeuille corrompu</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -3091,12 +3092,12 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="+1"/>
         <source>Wallet needed to be rewritten: restart Bws to complete</source>
-        <translation>Le portefeuille nécessite d&apos;être réédité : Merci de relancer l&apos;application Bws</translation>
+        <translation>le portefeuille nécessite d&apos;être réédité : Merci de relancer l&apos;application Bws</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Error loading wallet.dat</source>
-        <translation>Erreur lors du chargement du fichier wallet.dat</translation>
+        <translation>Erreur lors du chargement de wallet.dat</translation>
     </message>
     <message>
         <location line="-15"/>
