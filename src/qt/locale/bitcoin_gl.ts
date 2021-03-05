@@ -178,4 +178,122 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation type="unfinished"/>
     </message>
     <message>
-        <locatio
+        <location line="+3"/>
+        <source>For staking only</source>
+        <translation>Para &quot;staking&quot; só</translation>
+    </message>
+    <message>
+        <location filename="../askpassphrasedialog.cpp" line="+38"/>
+        <source>Encrypt wallet</source>
+        <translation>Encriptar moedeiro</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>This operation needs your wallet passphrase to unlock the wallet.</source>
+        <translation>Esta operación precisa o contrasinal do teu moedeiro para desbloquear o moedeiro.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Unlock wallet</source>
+        <translation>Desbloquear moedeiro</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>This operation needs your wallet passphrase to decrypt the wallet.</source>
+        <translation>Esta operación precisa o contrasinal do teu moedeiro para desencriptar o moedeiro.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Decrypt wallet</source>
+        <translation>Desencriptar moedeiro</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Change passphrase</source>
+        <translation>Cambiar contrasinal</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Enter the old and new passphrase to the wallet.</source>
+        <translation>Introduce o vello e novo contrasinais no moedeiro.</translation>
+    </message>
+    <message>
+        <location line="+45"/>
+        <source>Confirm wallet encryption</source>
+        <translation>Confirmar encriptación de moedeiro</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR COINS&lt;/b&gt;!</source>
+        <translation>Coidado: Se enctriptas a tua carteira e perdes o contrasinal, &lt;b&gt;PERDERÁS TODAS AS TÚAS MOEDAS&lt;/b&gt;!</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Are you sure you wish to encrypt your wallet?</source>
+        <translation>Estás seguro de que desexas encriptar o teu moedeiro?</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
+        <translation>IMPORTANTE: Calquera copia de seguridade previa que fixeses do teu arquivo de moedeiro debería ser substituída polo recén xerado arquivo encriptado de moedeiro. Por razóns de seguridade, as copias de seguridade previas de un arquivo de moedeiro desencriptado tornaránse inútiles no momento no que comeces a emprega-lo novo, encriptado, moedeiro.</translation>
+    </message>
+    <message>
+        <location line="+103"/>
+        <location line="+24"/>
+        <source>Warning: The Caps Lock key is on!</source>
+        <translation>Precaución: A tecla de Bloqueo de Maiúsculas está activada!</translation>
+    </message>
+    <message>
+        <location line="-133"/>
+        <location line="+60"/>
+        <source>Wallet encrypted</source>
+        <translation>Moedeiro encriptado</translation>
+    </message>
+    <message>
+        <location line="-140"/>
+        <source>Enter the new passphrase to the wallet.&lt;br/&gt;Please use a passphrase of &lt;b&gt;ten or more random characters&lt;/b&gt;, or &lt;b&gt;eight or more words&lt;/b&gt;.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+82"/>
+        <source>Bws will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
+        <translation>Bws pecharase agora para rematar o proceso de encriptación. Recorda que encriptar a túa carteira non te protexe na totalidade do roubo das tuas moedas por infeccións de malware no teu ordenador.</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <location line="+7"/>
+        <location line="+44"/>
+        <location line="+6"/>
+        <source>Wallet encryption failed</source>
+        <translation>Encriptación de moedeiro fallida</translation>
+    </message>
+    <message>
+        <location line="-56"/>
+        <source>Wallet encryption failed due to an internal error. Your wallet was not encrypted.</source>
+        <translation>A encriptación do moedeiro fallou por mor dun erro interno. O teu moedeiro non foi encriptado.</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <location line="+50"/>
+        <source>The supplied passphrases do not match.</source>
+        <translation>Os contrasinais suministrados non coinciden.</translation>
+    </message>
+    <message>
+        <location line="-38"/>
+        <source>Wallet unlock failed</source>
+        <translation>Desbloqueo de moedeiro fallido</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+12"/>
+        <location line="+19"/>
+        <source>The passphrase entered for the wallet decryption was incorrect.</source>
+        <translation>O contrasinal introducido para a desencriptación do moedeiro foi incorrecto.</translation>
+    </message>
+    <message>
+        <location line="-20"/>
+        <source>Wallet decryption failed</source>
+        <translation>Desencriptación de moedeiro fallida</translation>
+    </message>
+    <message>
+        <location 
