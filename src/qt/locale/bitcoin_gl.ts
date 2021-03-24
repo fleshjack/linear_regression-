@@ -3212,4 +3212,12 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+22"/>
-        <source>You must 
+        <source>You must set rpcpassword=&lt;password&gt; in the configuration file:
+%s
+If the file does not exist, create it with owner-readable-only file permissions.</source>
+        <translation>Debes fixar rpcpassword=&lt;contrasinal&gt; no arquivo de configuración:
+%s
+Se o arquivo non existe, debes crealo con permisos de so lectura para o propietario.</translation>
+    </message>
+</context>
+</TS>
