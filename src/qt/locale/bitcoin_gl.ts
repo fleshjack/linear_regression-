@@ -3057,4 +3057,159 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="-136"/>
-        <source>Allow DNS lookups for -addnode, -seednode
+        <source>Allow DNS lookups for -addnode, -seednode and -connect</source>
+        <translation>Permitir lookup de DNS para -addnote, -seednote e -connect</translation>
+    </message>
+    <message>
+        <location line="+121"/>
+        <source>Loading addresses...</source>
+        <translation>Cargando direccións...</translation>
+    </message>
+    <message>
+        <location line="-10"/>
+        <source>Error loading wallet.dat: Wallet corrupted</source>
+        <translation>Erro cargando wallet.dat: Moedeiro corrupto</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Error loading wallet.dat: Wallet requires newer version of Bws</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Wallet needed to be rewritten: restart Bws to complete</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Error loading wallet.dat</source>
+        <translation>Erro cargando wallet.dat</translation>
+    </message>
+    <message>
+        <location line="-15"/>
+        <source>Invalid -proxy address: &apos;%s&apos;</source>
+        <translation>Dirección -proxy inválida: &apos;%s&apos;</translation>
+    </message>
+    <message>
+        <location line="-1"/>
+        <source>Unknown network specified in -onlynet: &apos;%s&apos;</source>
+        <translation>Rede descoñecida especificada en -onlynet: &apos;%s&apos;</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Cannot resolve -bind address: &apos;%s&apos;</source>
+        <translation>Non se pode resolver a dirección -bind: &apos;%s&apos;</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Cannot resolve -externalip address: &apos;%s&apos;</source>
+        <translation>Non se pode resolver dirección -externalip: &apos;%s&apos;</translation>
+    </message>
+    <message>
+        <location line="-22"/>
+        <source>Invalid amount for -paytxfee=&lt;amount&gt;: &apos;%s&apos;</source>
+        <translation>Cantidade inválida para -paytxfee=&lt;cantidade&gt;: &apos;%s&apos;</translation>
+    </message>
+    <message>
+        <location line="+59"/>
+        <source>Sending...</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Invalid amount</source>
+        <translation>Cantidade inválida</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Insufficient funds</source>
+        <translation>Fondos insuficientes</translation>
+    </message>
+    <message>
+        <location line="-41"/>
+        <source>Loading block index...</source>
+        <translation>Cargando índice de bloques...</translation>
+    </message>
+    <message>
+        <location line="-105"/>
+        <source>Add a node to connect to and attempt to keep the connection open</source>
+        <translation>Engadir un nodo ao que conectarse e tentar manter a conexión aberta</translation>
+    </message>
+    <message>
+        <location line="+131"/>
+        <source>Unable to bind to %s on this computer. Bws is probably already running.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-108"/>
+        <source>Fee per KB to add to transactions you send</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+40"/>
+        <source>How many blocks to check at startup (default: 500, 0 = all)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Acceptable ciphers (default: TLSv1.2+HIGH:TLSv1+HIGH:!SSLv2:!aNULL:!eNULL:!3DES:@STRENGTH)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Warning: Deprecated argument -debugnet ignored, use -debug=net</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Invalid amount for -mininput=&lt;amount&gt;: &apos;%s&apos;</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Cannot obtain a lock on data directory %s. Bws is probably already running.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Error initializing wallet database environment %s!</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>Loading wallet...</source>
+        <translation>Cargando moedeiro...</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Cannot downgrade wallet</source>
+        <translation>Non se pode desactualizar o moedeiro</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Cannot write default address</source>
+        <translation>Non se pode escribir a dirección por defecto</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Rescanning...</source>
+        <translation>Rescaneando...</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Done loading</source>
+        <translation>Carga completa</translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>To use the %s option</source>
+        <translation>Empregar a opción %s</translation>
+    </message>
+    <message>
+        <location line="-27"/>
+        <source>Error</source>
+        <translation>Erro</translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <source>You must 
