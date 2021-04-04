@@ -2217,4 +2217,177 @@ Address: %4
         <location line="+1"/>
         <source>true</source>
         <translation>אמת</translation>
-    <
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>false</source>
+        <translation>שקר</translation>
+    </message>
+    <message>
+        <location line="-202"/>
+        <source>, has not been successfully broadcast yet</source>
+        <translation>, טרם שודר בהצלחה</translation>
+    </message>
+    <message numerus="yes">
+        <location line="-36"/>
+        <source>Open for %n more block(s)</source>
+        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+    </message>
+    <message>
+        <location line="+67"/>
+        <source>unknown</source>
+        <translation>לא ידוע</translation>
+    </message>
+</context>
+<context>
+    <name>TransactionDescDialog</name>
+    <message>
+        <location filename="../forms/transactiondescdialog.ui" line="+14"/>
+        <source>Transaction details</source>
+        <translation>פרטי הפעולה</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>This pane shows a detailed description of the transaction</source>
+        <translation>חלונית זו מציגה תיאור מפורט של הפעולה</translation>
+    </message>
+</context>
+<context>
+    <name>TransactionTableModel</name>
+    <message>
+        <location filename="../transactiontablemodel.cpp" line="+231"/>
+        <source>Date</source>
+        <translation>תאריך</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Type</source>
+        <translation>סוג</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Address</source>
+        <translation>כתובת</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Amount</source>
+        <translation>כמות</translation>
+    </message>
+    <message>
+        <location line="+52"/>
+        <source>Open until %1</source>
+        <translation>פתוח עד %1</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Confirmed (%1 confirmations)</source>
+        <translation>מאושר (%1 אישורים)</translation>
+    </message>
+    <message numerus="yes">
+        <location line="-15"/>
+        <source>Open for %n more block(s)</source>
+        <translation><numerusform>פתח למשך בלוק %n יותר</numerusform><numerusform>פתח למשך %n בלוקים נוספים</numerusform></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Offline</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Unconfirmed</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Confirming (%1 of %2 recommended confirmations)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Conflicted</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Immature (%1 confirmations, will be available after %2)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>This block was not received by any other nodes and will probably not be accepted!</source>
+        <translation>הבלוק הזה לא נקלט על ידי אף צומת אחר, וכנראה לא יתקבל!</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Generated but not accepted</source>
+        <translation>נוצר אך לא התקבל</translation>
+    </message>
+    <message>
+        <location line="+42"/>
+        <source>Received with</source>
+        <translation>התקבל עם</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Received from</source>
+        <translation>התקבל מאת</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Sent to</source>
+        <translation>נשלח ל</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Payment to yourself</source>
+        <translation>תשלום לעצמך</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Mined</source>
+        <translation>נכרה</translation>
+    </message>
+    <message>
+        <location line="+38"/>
+        <source>(n/a)</source>
+        <translation>(n/a)</translation>
+    </message>
+    <message>
+        <location line="+194"/>
+        <source>Transaction status. Hover over this field to show number of confirmations.</source>
+        <translation>מצב הפעולה. השהה את הסמן מעל שדה זה כדי לראות את מספר האישורים.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Date and time that the transaction was received.</source>
+        <translation>התאריך והשעה בה הפעולה הזאת התקבלה.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Type of transaction.</source>
+        <translation>סוג הפעולה.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Destination address of transaction.</source>
+        <translation>כתובת היעד של הפעולה.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Amount removed from or added to balance.</source>
+        <translation>הכמות שהתווספה או הוסרה מהיתרה.</translation>
+    </message>
+</context>
+<context>
+    <name>TransactionView</name>
+    <message>
+        <location filename="../transactionview.cpp" line="+54"/>
+        <location line="+17"/>
+        <source>All</source>
+        <translation>הכל</translation>
+    </message>
+    <message>
+        <location line="-16"/>
+   
