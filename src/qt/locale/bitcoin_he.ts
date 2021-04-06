@@ -2390,4 +2390,205 @@ Address: %4
     </message>
     <message>
         <location line="-16"/>
-   
+        <source>Today</source>
+        <translation>היום</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>This week</source>
+        <translation>השבוע</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>This month</source>
+        <translation>החודש</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Last month</source>
+        <translation>החודש שעבר</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>This year</source>
+        <translation>השנה</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Range...</source>
+        <translation>טווח...</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Received with</source>
+        <translation>התקבל עם</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Sent to</source>
+        <translation>נשלח ל</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>To yourself</source>
+        <translation>לעצמך</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Mined</source>
+        <translation>נכרה</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Other</source>
+        <translation>אחר</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Enter address or label to search</source>
+        <translation>הכנס כתובת או תוית לחפש</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Min amount</source>
+        <translation>כמות מזערית</translation>
+    </message>
+    <message>
+        <location line="+34"/>
+        <source>Copy address</source>
+        <translation>העתק כתובת</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copy label</source>
+        <translation>העתק תוית</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copy amount</source>
+        <translation>העתק כמות</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copy transaction ID</source>
+        <translation>העתק מזהה פעולה</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Edit label</source>
+        <translation>ערוך תוית</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Show transaction details</source>
+        <translation>הצג פרטי פעולה</translation>
+    </message>
+    <message>
+        <location line="+138"/>
+        <source>Export Transaction Data</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Comma separated file (*.csv)</source>
+        <translation>קובץ מופרד בפסיקים (*.csv)</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Confirmed</source>
+        <translation>מאושר</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Date</source>
+        <translation>תאריך</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Type</source>
+        <translation>סוג</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Label</source>
+        <translation>תוית</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Address</source>
+        <translation>כתובת</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Amount</source>
+        <translation>כמות</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>ID</source>
+        <translation>מזהה</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Error exporting</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Could not write to file %1.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+100"/>
+        <source>Range:</source>
+        <translation>טווח:</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>to</source>
+        <translation>אל</translation>
+    </message>
+</context>
+<context>
+    <name>WalletModel</name>
+    <message>
+        <location filename="../walletmodel.cpp" line="+212"/>
+        <source>Sending...</source>
+        <translation type="unfinished"/>
+    </message>
+</context>
+<context>
+    <name>bitcoin-core</name>
+    <message>
+        <location filename="../bitcoinstrings.cpp" line="+8"/>
+        <source>Bws version</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Usage:</source>
+        <translation>שימוש:</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Send command to -server or bwsd</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>List commands</source>
+        <translation>רשימת פקודות</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Get help for a command</source>
+        <translation>קבל עזרה עבור פקודה</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Options:</source>
+        <translation>אפשרויות:</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Specify configurati
