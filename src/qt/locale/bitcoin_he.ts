@@ -3140,4 +3140,83 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
         <translation type="unfinished"/>
     </message>
     <message>
-        <lo
+        <location line="-108"/>
+        <source>Fee per KB to add to transactions you send</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+40"/>
+        <source>How many blocks to check at startup (default: 500, 0 = all)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Acceptable ciphers (default: TLSv1.2+HIGH:TLSv1+HIGH:!SSLv2:!aNULL:!eNULL:!3DES:@STRENGTH)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Warning: Deprecated argument -debugnet ignored, use -debug=net</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Invalid amount for -mininput=&lt;amount&gt;: &apos;%s&apos;</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Cannot obtain a lock on data directory %s. Bws is probably already running.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Error initializing wallet database environment %s!</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>Loading wallet...</source>
+        <translation>טוען ארנק...</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Cannot downgrade wallet</source>
+        <translation>לא יכול להוריד דרגת הארנק</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Cannot write default address</source>
+        <translation>לא יכול לכתוב את כתובת ברירת המחדל</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Rescanning...</source>
+        <translation>סורק מחדש...</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Done loading</source>
+        <translation>טעינה הושלמה</translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>To use the %s option</source>
+        <translation>להשתמש באפשרות %s</translation>
+    </message>
+    <message>
+        <location line="-27"/>
+        <source>Error</source>
+        <translation>שגיאה</translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <source>You must set rpcpassword=&lt;password&gt; in the configuration file:
+%s
+If the file does not exist, create it with owner-readable-only file permissions.</source>
+        <translation>עליך לקבוע rpcpassword=yourpassword בקובץ ההגדרות:
+%s
+אם הקובץ אינו קיים, צור אותו עם הרשאות קריאה לבעלים בלבד.</translation>
+    </message>
+</context>
+</TS>
