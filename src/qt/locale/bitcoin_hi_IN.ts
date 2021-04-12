@@ -396,4 +396,197 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+39"/>
- 
+        <source>Modify configuration options for Bws</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Export the data in the current tab to a file</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-13"/>
+        <source>Encrypt or decrypt wallet</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Backup wallet to another location</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Change the passphrase used for wallet encryption</source>
+        <translation>पहचान शब्द/अक्षर जो वॉलेट एनक्रिपशन के लिए इस्तेमाल किया है उसे बदलिए!</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>&amp;Debug window</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Open debugging and diagnostic console</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-5"/>
+        <source>&amp;Verify message...</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-214"/>
+        <location line="+555"/>
+        <source>Bws</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-555"/>
+        <source>Wallet</source>
+        <translation>वॉलेट</translation>
+    </message>
+    <message>
+        <location line="+193"/>
+        <source>&amp;About Bws</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>&amp;Show / Hide</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Unlock wallet</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>&amp;Lock Wallet</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Lock wallet</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+32"/>
+        <source>&amp;File</source>
+        <translation>&amp;फाइल</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>&amp;Settings</source>
+        <translation>&amp;सेट्टिंग्स</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>&amp;Help</source>
+        <translation>&amp;मदद</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Tabs toolbar</source>
+        <translation>टैबस टूलबार</translation>
+    </message>
+    <message>
+        <location line="+46"/>
+        <location line="+9"/>
+        <source>[testnet]</source>
+        <translation>[टेस्टनेट]</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location line="+58"/>
+        <source>Bws client</source>
+        <translation type="unfinished"/>
+    </message>
+    <message numerus="yes">
+        <location line="+70"/>
+        <source>%n active connection(s) to Bws network</source>
+        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Not staking because wallet is locked</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Not staking because wallet is offline</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Not staking because wallet is syncing</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Not staking because you don&apos;t have mature coins</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-812"/>
+        <source>&amp;Dashboard</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>&amp;Receive</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>&amp;Send</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+49"/>
+        <source>&amp;Unlock Wallet...</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+277"/>
+        <source>Up to date</source>
+        <translation>नवीनतम</translation>
+    </message>
+    <message>
+        <location line="+43"/>
+        <source>Catching up...</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+113"/>
+        <source>Confirm transaction fee</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+27"/>
+        <source>Sent transaction</source>
+        <translation>भेजी ट्रांजक्शन</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Incoming transaction</source>
+        <translation>प्राप्त हुई ट्रांजक्शन</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Date: %1
+Amount: %2
+Type: %3
+Address: %4
+</source>
+        <translation>तारीख: %1\n
+राशि: %2\n
+टाइप: %3\n
+पता:%4\n</translation>
+    </message>
+    <message>
+        <location line="+100"/>
+        <location line="+15"/>
+        <source>URI handling</source>
+        <translation type="unfinished"/>
+    </me
