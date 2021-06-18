@@ -1,5 +1,5 @@
 
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="it" version="2.1">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="ja" version="2.1">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -16,7 +16,7 @@
         <location line="+41"/>
         <source>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
-Copyright © 2014 The Bws developers</source>
+Copyright © 2018 The Bws developers</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -40,17 +40,17 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+22"/>
         <source>Double-click to edit address or label</source>
-        <translation>Fai doppio click per modificare o cancellare l&apos;etichetta</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+24"/>
         <source>Create a new address</source>
-        <translation>Crea un nuovo indirizzo</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+10"/>
         <source>Copy the currently selected address to the system clipboard</source>
-        <translation>Copia l&apos;indirizzo attualmente selezionato nella clipboard</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-7"/>
@@ -65,7 +65,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+53"/>
         <source>&amp;Copy Address</source>
-        <translation>&amp;Copia l&apos;indirizzo</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+7"/>
@@ -85,7 +85,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+17"/>
         <source>Delete the currently selected address from the list</source>
-        <translation>Cancella l&apos;indirizzo attualmente selezionato dalla lista</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-10"/>
@@ -100,17 +100,17 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+10"/>
         <source>&amp;Delete</source>
-        <translation>&amp;Cancella</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="+66"/>
         <source>Copy &amp;Label</source>
-        <translation>Copia &amp;l&apos;etichetta</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>&amp;Edit</source>
-        <translation>&amp;Modifica</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+248"/>
@@ -120,7 +120,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+1"/>
         <source>Comma separated file (*.csv)</source>
-        <translation>Testo CSV (*.csv)</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+13"/>
@@ -138,17 +138,17 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location filename="../addresstablemodel.cpp" line="+145"/>
         <source>Label</source>
-        <translation>Etichetta</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+0"/>
         <source>Address</source>
-        <translation>Indirizzo</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+36"/>
         <source>(no label)</source>
-        <translation>(nessuna etichetta)</translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -156,22 +156,22 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location filename="../forms/askpassphrasedialog.ui" line="+26"/>
         <source>Passphrase Dialog</source>
-        <translation>Finestra passphrase</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+21"/>
         <source>Enter passphrase</source>
-        <translation>Inserisci la passphrase</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+14"/>
         <source>New passphrase</source>
-        <translation>Nuova passphrase</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+14"/>
         <source>Repeat new passphrase</source>
-        <translation>Ripeti la passphrase</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+33"/>
@@ -186,42 +186,42 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location filename="../askpassphrasedialog.cpp" line="+38"/>
         <source>Encrypt wallet</source>
-        <translation>Cifra il portamonete</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+7"/>
         <source>This operation needs your wallet passphrase to unlock the wallet.</source>
-        <translation>Quest&apos;operazione necessita della passphrase per sbloccare il portamonete.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+5"/>
         <source>Unlock wallet</source>
-        <translation>Sblocca il portamonete</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
         <source>This operation needs your wallet passphrase to decrypt the wallet.</source>
-        <translation>Quest&apos;operazione necessita della passphrase per decifrare il portamonete,</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+5"/>
         <source>Decrypt wallet</source>
-        <translation>Decifra il portamonete</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
         <source>Change passphrase</source>
-        <translation>Cambia la passphrase</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Enter the old and new passphrase to the wallet.</source>
-        <translation>Inserisci la vecchia e la nuova passphrase per il portamonete.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+45"/>
         <source>Confirm wallet encryption</source>
-        <translation>Conferma la cifratura del portamonete</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
@@ -231,24 +231,24 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+0"/>
         <source>Are you sure you wish to encrypt your wallet?</source>
-        <translation>Si è sicuri di voler cifrare il portamonete?</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+15"/>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
-        <translation>IMPORTANTE: qualsiasi backup del portafoglio effettuato precedentemente dovrebbe essere sostituito con il file del portafoglio criptato appena generato. Per ragioni di sicurezza, i backup precedenti del file del portafoglio non criptato diventeranno inservibili non appena si inizi ad usare il nuovo portafoglio criptato.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+103"/>
         <location line="+24"/>
         <source>Warning: The Caps Lock key is on!</source>
-        <translation>Attenzione: tasto Blocco maiuscole attivo.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-133"/>
         <location line="+60"/>
         <source>Wallet encrypted</source>
-        <translation>Portamonete cifrato</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-140"/>
@@ -266,40 +266,40 @@ This product includes software developed by the OpenSSL Project for use in the O
         <location line="+44"/>
         <location line="+6"/>
         <source>Wallet encryption failed</source>
-        <translation>Cifratura del portamonete fallita</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-56"/>
         <source>Wallet encryption failed due to an internal error. Your wallet was not encrypted.</source>
-        <translation>Cifratura del portamonete fallita a causa di un errore interno. Il portamonete non è stato cifrato.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+7"/>
         <location line="+50"/>
         <source>The supplied passphrases do not match.</source>
-        <translation>Le passphrase inserite non corrispondono.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-38"/>
         <source>Wallet unlock failed</source>
-        <translation>Sblocco del portamonete fallito</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <location line="+12"/>
         <location line="+19"/>
         <source>The passphrase entered for the wallet decryption was incorrect.</source>
-        <translation>La passphrase inserita per la decifrazione del portamonete è errata.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-20"/>
         <source>Wallet decryption failed</source>
-        <translation>Decifrazione del portamonete fallita</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+14"/>
         <source>Wallet passphrase was successfully changed.</source>
-        <translation>Passphrase del portamonete modificata con successo.</translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -307,22 +307,22 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location filename="../bitcoingui.cpp" line="+297"/>
         <source>Sign &amp;message...</source>
-        <translation>Firma il &amp;messaggio...</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-64"/>
         <source>Show general overview of wallet</source>
-        <translation>Mostra lo stato generale del portamonete</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+17"/>
         <source>&amp;Transactions</source>
-        <translation>&amp;Transazioni</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Browse transaction history</source>
-        <translation>Cerca nelle transazioni</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+5"/>
@@ -342,12 +342,12 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+34"/>
         <source>E&amp;xit</source>
-        <translation>&amp;Esci</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Quit application</source>
-        <translation>Chiudi applicazione</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+4"/>
@@ -357,32 +357,32 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+2"/>
         <source>About &amp;Qt</source>
-        <translation>Informazioni su &amp;Qt</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Show information about Qt</source>
-        <translation>Mostra informazioni su Qt</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
         <source>&amp;Options...</source>
-        <translation>&amp;Opzioni...</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Encrypt Wallet...</source>
-        <translation>&amp;Cifra il portamonete...</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
         <source>&amp;Backup Wallet...</source>
-        <translation>&amp;Backup Portamonete...</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
         <source>&amp;Change Passphrase...</source>
-        <translation>&amp;Cambia la passphrase...</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+9"/>
@@ -412,27 +412,27 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+2"/>
         <source>Backup wallet to another location</source>
-        <translation>Backup portamonete in un&apos;altra locazione</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
         <source>Change the passphrase used for wallet encryption</source>
-        <translation>Cambia la passphrase per la cifratura del portamonete</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Debug window</source>
-        <translation>Finestra &amp;Debug</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Open debugging and diagnostic console</source>
-        <translation>Apri la console di degugging e diagnostica</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-5"/>
         <source>&amp;Verify message...</source>
-        <translation>&amp;Verifica messaggio...</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-214"/>
@@ -443,7 +443,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="-555"/>
         <source>Wallet</source>
-        <translation>Portamonete</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+193"/>
@@ -453,7 +453,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+9"/>
         <source>&amp;Show / Hide</source>
-        <translation>&amp;Mostra/Nascondi</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+8"/>
@@ -473,28 +473,28 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+32"/>
         <source>&amp;File</source>
-        <translation>&amp;File</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+8"/>
         <source>&amp;Settings</source>
-        <translation>&amp;Impostazioni</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+8"/>
         <source>&amp;Help</source>
-        <translation>&amp;Aiuto</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+17"/>
         <source>Tabs toolbar</source>
-        <translation>Barra degli strumenti &quot;Tabs&quot;</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+46"/>
         <location line="+9"/>
         <source>[testnet]</source>
-        <translation>[testnet]</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+0"/>
@@ -505,7 +505,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message numerus="yes">
         <location line="+70"/>
         <source>%n active connection(s) to Bws network</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+6"/>
@@ -550,12 +550,12 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+277"/>
         <source>Up to date</source>
-        <translation>Aggiornato</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+43"/>
         <source>Catching up...</source>
-        <translation>In aggiornamento...</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+113"/>
@@ -565,12 +565,12 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+27"/>
         <source>Sent transaction</source>
-        <translation>Transazione inviata</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Incoming transaction</source>
-        <translation>Transazione ricevuta</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
@@ -579,12 +579,7 @@ Amount: %2
 Type: %3
 Address: %4
 </source>
-        <translation>Data: %1
-Quantità: %2
-Tipo: %3
-Indirizzo: %4
-
-</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+100"/>
@@ -606,12 +601,12 @@ Indirizzo: %4
     <message>
         <location line="+8"/>
         <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
-        <translation>Il portamonete è &lt;b&gt;cifrato&lt;/b&gt; e attualmente &lt;b&gt;sbloccato&lt;/b&gt;</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+8"/>
         <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;locked&lt;/b&gt;</source>
-        <translation>Il portamonete è &lt;b&gt;cifrato&lt;/b&gt; e attualmente &lt;b&gt;bloccato&lt;/b&gt;</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+24"/>
@@ -636,18 +631,18 @@ Indirizzo: %4
     <message numerus="yes">
         <location line="+91"/>
         <source>%n second(s)</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation type="unfinished"/>
     </message>
     <message numerus="yes">
         <location line="+4"/>
         <source>%n minute(s)</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation type="unfinished"/>
     </message>
     <message numerus="yes">
         <location line="-429"/>
         <location line="+433"/>
         <source>%n hour(s)</source>
-        <translation><numerusform>%n ora</numerusform><numerusform>%n ore</numerusform></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-456"/>
@@ -658,13 +653,13 @@ Indirizzo: %4
         <location line="+27"/>
         <location line="+433"/>
         <source>%n day(s)</source>
-        <translation><numerusform>%n giorno</numerusform><numerusform>%n giorni</numerusform></translation>
+        <translation type="unfinished"/>
     </message>
     <message numerus="yes">
         <location line="-429"/>
         <location line="+6"/>
         <source>%n week(s)</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation type="unfinished"><numerusform></numerusform></translation>
     </message>
     <message>
         <location line="+0"/>
@@ -674,7 +669,7 @@ Indirizzo: %4
     <message numerus="yes">
         <location line="+0"/>
         <source>%n year(s)</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation type="unfinished"><numerusform></numerusform></translation>
     </message>
     <message>
         <location line="+5"/>
@@ -727,7 +722,7 @@ Indirizzo: %4
     <message>
         <location filename="../clientmodel.cpp" line="+119"/>
         <source>Network Alert</source>
-        <translation>Avviso di rete</translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -740,62 +735,62 @@ Indirizzo: %4
     <message>
         <location line="+31"/>
         <source>Quantity:</source>
-        <translation>Quantità:</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+32"/>
         <source>Bytes:</source>
-        <translation>Byte:</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+48"/>
         <source>Amount:</source>
-        <translation>Importo:</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+48"/>
         <source>Fee:</source>
-        <translation>Commissione:</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+35"/>
         <source>Low Output:</source>
-        <translation>Low Output:</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../coincontroldialog.cpp" line="+493"/>
         <source>no</source>
-        <translation>no</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../forms/coincontroldialog.ui" line="+51"/>
         <source>After Fee:</source>
-        <translation>Dopo Commissione:</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+35"/>
         <source>Change:</source>
-        <translation>Resto:</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+69"/>
         <source>(un)select all</source>
-        <translation>(de)seleziona tutto</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+13"/>
         <source>Tree mode</source>
-        <translation>Modalità Albero</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+16"/>
         <source>List mode</source>
-        <translation>Modalità Lista</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+45"/>
         <source>Amount</source>
-        <translation>Importo</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+5"/>
@@ -805,78 +800,78 @@ Indirizzo: %4
     <message>
         <location line="+5"/>
         <source>Address</source>
-        <translation>Indirizzo</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+5"/>
         <source>Date</source>
-        <translation>Data</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+5"/>
         <source>Confirmations</source>
-        <translation>Conferme:</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
         <source>Confirmed</source>
-        <translation>Confermato</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+5"/>
         <source>Priority</source>
-        <translation>Priorità</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../coincontroldialog.cpp" line="-456"/>
         <source>Copy address</source>
-        <translation>Copia l&apos;indirizzo</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Copy label</source>
-        <translation>Copia l&apos;etichetta</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <location line="+26"/>
         <source>Copy amount</source>
-        <translation>Copia l&apos;importo</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-25"/>
         <source>Copy transaction ID</source>
-        <translation>Copia l&apos;ID transazione</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+24"/>
         <source>Copy quantity</source>
-        <translation>Copia quantità</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
         <source>Copy fee</source>
-        <translation>Copia commissione</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Copy after fee</source>
-        <translation>Copia dopo commissione</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Copy bytes</source>
-        <translation>Copia byte</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Copy low output</source>
-        <translation>Copia low output</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Copy change</source>
-        <translation>Copia resto</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+423"/>
@@ -886,7 +881,7 @@ Indirizzo: %4
     <message>
         <location line="+0"/>
         <source>yes</source>
-        <translation>si</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+9"/>
@@ -917,17 +912,17 @@ Indirizzo: %4
         <location line="+35"/>
         <location line="+58"/>
         <source>(no label)</source>
-        <translation>(nessuna etichetta)</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-9"/>
         <source>change from %1 (%2)</source>
-        <translation>resto da %1 (%2)</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>(change)</source>
-        <translation>(resto)</translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -935,12 +930,12 @@ Indirizzo: %4
     <message>
         <location filename="../forms/editaddressdialog.ui" line="+14"/>
         <source>Edit Address</source>
-        <translation>Modifica l&apos;indirizzo</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+11"/>
         <source>&amp;Label</source>
-        <translation>&amp;Etichetta</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+10"/>
@@ -950,7 +945,7 @@ Indirizzo: %4
     <message>
         <location line="+7"/>
         <source>&amp;Address</source>
-        <translation>&amp;Indirizzo</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+10"/>
@@ -960,27 +955,27 @@ Indirizzo: %4
     <message>
         <location filename="../editaddressdialog.cpp" line="+21"/>
         <source>New receiving address</source>
-        <translation>Nuovo indirizzo di ricezione</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+4"/>
         <source>New sending address</source>
-        <translation>Nuovo indirizzo d&apos;invio</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
         <source>Edit receiving address</source>
-        <translation>Modifica indirizzo di ricezione</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+4"/>
         <source>Edit sending address</source>
-        <translation>Modifica indirizzo d&apos;invio</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+76"/>
         <source>The entered address &quot;%1&quot; is already in the address book.</source>
-        <translation>L&apos;indirizzo inserito &quot;%1&quot; è già in rubrica.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-5"/>
@@ -990,12 +985,12 @@ Indirizzo: %4
     <message>
         <location line="+10"/>
         <source>Could not unlock wallet.</source>
-        <translation>Impossibile sbloccare il portamonete.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+5"/>
         <source>New key generation failed.</source>
-        <translation>Generazione della nuova chiave non riuscita.</translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -1047,12 +1042,12 @@ Indirizzo: %4
     <message>
         <location filename="../forms/optionsdialog.ui" line="+14"/>
         <source>Options</source>
-        <translation>Opzioni</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+16"/>
         <source>&amp;Main</source>
-        <translation>&amp;Principale</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+6"/>
@@ -1062,7 +1057,7 @@ Indirizzo: %4
     <message>
         <location line="+15"/>
         <source>Pay transaction &amp;fee</source>
-        <translation>Paga la &amp;commissione</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+31"/>
@@ -1087,7 +1082,7 @@ Indirizzo: %4
     <message>
         <location line="+21"/>
         <source>&amp;Network</source>
-        <translation>Rete</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+6"/>
@@ -1097,12 +1092,12 @@ Indirizzo: %4
     <message>
         <location line="+3"/>
         <source>Map port using &amp;UPnP</source>
-        <translation>Mappa le porte tramite l&apos;&amp;UPnP</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+19"/>
         <source>Proxy &amp;IP:</source>
-        <translation>&amp;IP del proxy:</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+19"/>
@@ -1112,12 +1107,12 @@ Indirizzo: %4
     <message>
         <location line="+7"/>
         <source>&amp;Port:</source>
-        <translation>&amp;Porta:</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+19"/>
         <source>Port of the proxy (e.g. 9050)</source>
-        <translation>Porta del proxy (es. 9050)</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-57"/>
@@ -1132,37 +1127,37 @@ Indirizzo: %4
     <message>
         <location line="+90"/>
         <source>&amp;Window</source>
-        <translation>&amp;Finestra</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+6"/>
         <source>Show only a tray icon after minimizing the window.</source>
-        <translation>Mostra solo un&apos;icona nel tray quando si minimizza la finestra</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
         <source>&amp;Minimize to the tray instead of the taskbar</source>
-        <translation>&amp;Minimizza sul tray invece che sulla barra delle applicazioni</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+7"/>
         <source>Minimize instead of exit the application when the window is closed. When this option is enabled, the application will be closed only after selecting Quit in the menu.</source>
-        <translation>Riduci ad icona, invece di uscire dall&apos;applicazione quando la finestra viene chiusa. Quando questa opzione è attivata, l&apos;applicazione verrà chiusa solo dopo aver selezionato Esci nel menu.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
         <source>M&amp;inimize on close</source>
-        <translation>M&amp;inimizza alla chiusura</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+21"/>
         <source>&amp;Display</source>
-        <translation>&amp;Mostra</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+8"/>
         <source>User Interface &amp;language:</source>
-        <translation>&amp;Lingua Interfaccia Utente:</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+13"/>
@@ -1172,17 +1167,17 @@ Indirizzo: %4
     <message>
         <location line="+11"/>
         <source>&amp;Unit to show amounts in:</source>
-        <translation>&amp;Unità di misura degli importi in:</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+13"/>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Scegli l&apos;unità di suddivisione predefinita per l&apos;interfaccia e per l&apos;invio di monete</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+9"/>
         <source>Whether to show coin control features or not.</source>
-        <translation>Mostrare/non mostrare le funzionalita&apos; di controllo della moneta.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
@@ -1197,12 +1192,12 @@ Indirizzo: %4
     <message>
         <location line="+71"/>
         <source>&amp;OK</source>
-        <translation>&amp;OK</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+7"/>
         <source>&amp;Cancel</source>
-        <translation>&amp;Cancella</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+10"/>
@@ -1212,7 +1207,7 @@ Indirizzo: %4
     <message>
         <location filename="../optionsdialog.cpp" line="+47"/>
         <source>default</source>
-        <translation>predefinito</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+147"/>
@@ -1229,7 +1224,7 @@ Indirizzo: %4
     <message>
         <location line="+29"/>
         <source>The supplied proxy address is invalid.</source>
-        <translation>L&apos;indirizzo proxy che hai fornito è invalido.</translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -1237,7 +1232,7 @@ Indirizzo: %4
     <message>
         <location filename="../forms/overviewpage.ui" line="+14"/>
         <source>Form</source>
-        <translation>Modulo</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+46"/>
@@ -1258,7 +1253,7 @@ Indirizzo: %4
     <message>
         <location line="-113"/>
         <source>Wallet</source>
-        <translation>Portamonete</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+49"/>
@@ -1268,32 +1263,32 @@ Indirizzo: %4
     <message>
         <location line="+16"/>
         <source>Your current spendable balance</source>
-        <translation>Saldo spendibile attuale</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+80"/>
         <source>Immature:</source>
-        <translation>Immaturo:</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+13"/>
         <source>Mined balance that has not yet matured</source>
-        <translation>Importo scavato che non è ancora maturato</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+23"/>
         <source>Total:</source>
-        <translation>Totale:</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+16"/>
         <source>Your current total balance</source>
-        <translation>Saldo totale attuale</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+50"/>
         <source>&lt;b&gt;Recent transactions&lt;/b&gt;</source>
-        <translation>&lt;b&gt;Transazioni recenti&lt;/b&gt;</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-118"/>
@@ -1309,7 +1304,7 @@ Indirizzo: %4
         <location filename="../overviewpage.cpp" line="+116"/>
         <location line="+1"/>
         <source>out of sync</source>
-        <translation>fuori sincrono</translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -1383,7 +1378,7 @@ Indirizzo: %4
     <message>
         <location filename="../forms/rpcconsole.ui" line="+46"/>
         <source>Client name</source>
-        <translation>Nome del client</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+10"/>
@@ -1395,37 +1390,37 @@ Indirizzo: %4
         <location line="+53"/>
         <location line="+23"/>
         <source>N/A</source>
-        <translation>N/D</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-194"/>
         <source>Client version</source>
-        <translation>Versione client</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-45"/>
         <source>&amp;Information</source>
-        <translation>&amp;Informazione</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+68"/>
         <source>Using OpenSSL version</source>
-        <translation>Versione OpenSSL in uso</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+49"/>
         <source>Startup time</source>
-        <translation>Tempo di avvio</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+29"/>
         <source>Network</source>
-        <translation>Rete</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+7"/>
         <source>Number of connections</source>
-        <translation>Numero connessioni</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+23"/>
@@ -1435,12 +1430,12 @@ Indirizzo: %4
     <message>
         <location line="+23"/>
         <source>Block chain</source>
-        <translation>Block chain</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+7"/>
         <source>Current number of blocks</source>
-        <translation>Numero attuale di blocchi</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+197"/>
@@ -1472,12 +1467,12 @@ Indirizzo: %4
     <message>
         <location line="-383"/>
         <source>Last block time</source>
-        <translation>Ora dell blocco piu recente</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+52"/>
         <source>&amp;Open</source>
-        <translation>&amp;Apri</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+16"/>
@@ -1497,12 +1492,12 @@ Indirizzo: %4
     <message>
         <location line="+24"/>
         <source>&amp;Console</source>
-        <translation>&amp;Console</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-237"/>
         <source>Build date</source>
-        <translation>Data di creazione</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-104"/>
@@ -1517,7 +1512,7 @@ Indirizzo: %4
     <message>
         <location line="+256"/>
         <source>Debug log file</source>
-        <translation>File log del Debug</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+7"/>
@@ -1527,7 +1522,7 @@ Indirizzo: %4
     <message>
         <location line="+102"/>
         <source>Clear console</source>
-        <translation>Svuota console</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="-28"/>
@@ -1537,12 +1532,12 @@ Indirizzo: %4
     <message>
         <location line="+1"/>
         <source>Use up and down arrows to navigate history, and &lt;b&gt;Ctrl-L&lt;/b&gt; to clear screen.</source>
-        <translation>Usa le frecce direzionali per navigare la cronologia, and &lt;b&gt;Ctrl-L&lt;/b&gt; per cancellarla.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Type &lt;b&gt;help&lt;/b&gt; for an overview of available commands.</source>
-        <translation>Scrivi &lt;b&gt;help&lt;/b&gt; per un riassunto dei comandi disponibili</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+134"/>
@@ -1592,32 +1587,32 @@ Indirizzo: %4
         <location line="+5"/>
         <location line="+5"/>
         <source>Send Coins</source>
-        <translation>Spedisci Bitcoin</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+76"/>
         <source>Coin Control Features</source>
-        <translation>Funzionalità di Coin Control</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+20"/>
         <source>Inputs...</source>
-        <translation>Input...</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+7"/>
         <source>automatically selected</source>
-        <translation>selezionato automaticamente</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+19"/>
         <source>Insufficient funds!</source>
-        <translation>Fondi insufficienti!</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+77"/>
         <source>Quantity:</source>
-        <translation>Quantità:</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+22"/>
@@ -1628,22 +1623,22 @@ Indirizzo: %4
     <message>
         <location line="-19"/>
         <source>Bytes:</source>
-        <translation>Byte:</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+51"/>
         <source>Amount:</source>
-        <translation>Importo:</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+54"/>
         <source>Fee:</source>
-        <translation>Commissione:</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+35"/>
         <source>Low Output:</source>
-        <translation>Low Output:</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+19"/>
@@ -1653,7 +1648,7 @@ Indirizzo: %4
     <message>
         <location line="+32"/>
         <source>After Fee:</source>
-        <translation>Dopo Commissione:</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+35"/>
@@ -1668,12 +1663,12 @@ Indirizzo: %4
     <message>
         <location line="+106"/>
         <source>Send to multiple recipients at once</source>
-        <translation>Spedisci a diversi beneficiari in una volta sola</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
         <source>Add &amp;Recipient</source>
-        <translation>&amp;Aggiungi beneficiario</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+16"/>
@@ -1683,22 +1678,22 @@ Indirizzo: %4
     <message>
         <location line="+3"/>
         <source>Clear &amp;All</source>
-        <translation>Cancella &amp;tutto</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+24"/>
         <source>Balance:</source>
-        <translation>Saldo:</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+47"/>
         <source>Confirm the send action</source>
-        <translation>Conferma la spedizione</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
         <source>S&amp;end</source>
-        <translation>&amp;Spedisci</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../sendcoinsdialog.cpp" line="-171"/>
@@ -1708,37 +1703,37 @@ Indirizzo: %4
     <message>
         <location line="+15"/>
         <source>Copy quantity</source>
-        <translation>Copia quantità</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Copy amount</source>
-        <translation>Copia l&apos;importo</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Copy fee</source>
-        <translation>Copia commissione</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Copy after fee</source>
-        <translation>Copia dopo commissione</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Copy bytes</source>
-        <translation>Copia byte</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Copy low output</source>
-        <translation>Copia low output</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Copy change</source>
-        <translation>Copia resto</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+85"/>
@@ -1748,7 +1743,7 @@ Indirizzo: %4
     <message>
         <location line="+5"/>
         <source>Confirm send coins</source>
-        <translation>Conferma la spedizione di bitcoin</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
@@ -1763,27 +1758,27 @@ Indirizzo: %4
     <message>
         <location line="+29"/>
         <source>The recipient address is not valid, please recheck.</source>
-        <translation>L&apos;indirizzo del beneficiario non è valido, per cortesia controlla.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+5"/>
         <source>The amount to pay must be larger than 0.</source>
-        <translation>L&apos;importo da pagare dev&apos;essere maggiore di 0.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+5"/>
         <source>The amount exceeds your balance.</source>
-        <translation>L&apos;importo è superiore al saldo attuale</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+5"/>
         <source>The total exceeds your balance when the %1 transaction fee is included.</source>
-        <translation>Il totale è superiore al saldo attuale includendo la commissione %1.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+6"/>
         <source>Duplicate address found, can only send to each address once per send operation.</source>
-        <translation>Trovato un indirizzo doppio, si può spedire solo una volta a ciascun indirizzo in una singola operazione.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+5"/>
@@ -1803,7 +1798,7 @@ Indirizzo: %4
     <message>
         <location line="+13"/>
         <source>(no label)</source>
-        <translation>(nessuna etichetta)</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+4"/>
@@ -1821,12 +1816,12 @@ Indirizzo: %4
     <message>
         <location line="+15"/>
         <source>A&amp;mount:</source>
-        <translation>&amp;Importo:</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+13"/>
         <source>Pay &amp;To:</source>
-        <translation>Paga &amp;a:</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+34"/>
@@ -1837,12 +1832,12 @@ Indirizzo: %4
         <location line="+60"/>
         <location filename="../sendcoinsentry.cpp" line="+26"/>
         <source>Enter a label for this address to add it to your address book</source>
-        <translation>Inserisci un&apos;etichetta per questo indirizzo, per aggiungerlo nella rubrica</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-78"/>
         <source>&amp;Label:</source>
-        <translation>&amp;Etichetta</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+28"/>
@@ -1852,17 +1847,17 @@ Indirizzo: %4
     <message>
         <location line="+10"/>
         <source>Alt+A</source>
-        <translation>Alt+A</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+7"/>
         <source>Paste address from clipboard</source>
-        <translation>Incollare l&apos;indirizzo dagli appunti</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+10"/>
         <source>Alt+P</source>
-        <translation>Alt+P</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+7"/>
@@ -1880,18 +1875,18 @@ Indirizzo: %4
     <message>
         <location filename="../forms/signverifymessagedialog.ui" line="+14"/>
         <source>Signatures - Sign / Verify a Message</source>
-        <translation>Firme - Firma / Verifica un messaggio</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+13"/>
         <location line="+124"/>
         <source>&amp;Sign Message</source>
-        <translation>&amp;Firma il messaggio</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-118"/>
         <source>You can sign messages with your addresses to prove you own them. Be careful not to sign anything vague, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation>Puoi firmare messeggi con i tuoi indirizzi per dimostrare che sono tuoi. Fai attenzione a non firmare niente di vago, visto che gli attacchi di phishing potrebbero cercare di spingerti a mettere la tua firma su di loro. Firma solo dichiarazioni completamente dettagliate con cui sei d&apos;accordo.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+18"/>
@@ -1908,27 +1903,27 @@ Indirizzo: %4
         <location line="-193"/>
         <location line="+203"/>
         <source>Alt+A</source>
-        <translation>Alt+A</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-193"/>
         <source>Paste address from clipboard</source>
-        <translation>Incollare l&apos;indirizzo dagli appunti</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+10"/>
         <source>Alt+P</source>
-        <translation>Alt+P</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+12"/>
         <source>Enter the message you want to sign here</source>
-        <translation>Inserisci qui il messaggio che vuoi firmare</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+24"/>
         <source>Copy the current signature to the system clipboard</source>
-        <translation>Copia la firma corrente nella clipboard</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+21"/>
@@ -1938,24 +1933,24 @@ Indirizzo: %4
     <message>
         <location line="+17"/>
         <source>Reset all sign message fields</source>
-        <translation>Reimposta tutti i campi della firma</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
         <location line="+146"/>
         <source>Clear &amp;All</source>
-        <translation>Cancella &amp;tutto</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-87"/>
         <location line="+70"/>
         <source>&amp;Verify Message</source>
-        <translation>&amp;Verifica Messaggio</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-64"/>
         <source>Enter the signing address, message (ensure you copy line breaks, spaces, tabs, etc. exactly) and signature below to verify the message. Be careful not to read more into the signature than what is in the signed message itself, to avoid being tricked by a man-in-the-middle attack.</source>
-        <translation>Inserisci l&apos;indirizzo per la firma, il messaggio (verifica di copiare esattamente anche i ritorni a capo, gli spazi, le tabulazioni, etc) e la firma qui sotto, per verificare il messaggio. Verifica che il contenuto della firma non sia più grande di quello del messaggio per evitare attacchi di tipo man-in-the-middle.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+21"/>
@@ -1970,7 +1965,7 @@ Indirizzo: %4
     <message>
         <location line="+17"/>
         <source>Reset all verify message fields</source>
-        <translation>Reimposta tutti i campi della verifica messaggio</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
@@ -1981,7 +1976,7 @@ Indirizzo: %4
     <message>
         <location line="-2"/>
         <source>Click &quot;Sign Message&quot; to generate signature</source>
-        <translation>Clicca &quot;Firma il messaggio&quot; per ottenere la firma</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
@@ -1992,7 +1987,7 @@ Indirizzo: %4
         <location line="+85"/>
         <location line="+81"/>
         <source>The entered address is invalid.</source>
-        <translation>L&apos;indirizzo inserito non è valido.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-81"/>
@@ -2000,59 +1995,59 @@ Indirizzo: %4
         <location line="+73"/>
         <location line="+8"/>
         <source>Please check the address and try again.</source>
-        <translation>Per favore controlla l&apos;indirizzo e prova ancora</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-81"/>
         <location line="+81"/>
         <source>The entered address does not refer to a key.</source>
-        <translation>L&apos;indirizzo bitcoin inserito non è associato a nessuna chiave.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-73"/>
         <source>Wallet unlock was cancelled.</source>
-        <translation>Sblocco del portafoglio annullato.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+8"/>
         <source>Private key for the entered address is not available.</source>
-        <translation>La chiave privata per l&apos;indirizzo inserito non è disponibile.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+12"/>
         <source>Message signing failed.</source>
-        <translation>Firma messaggio fallita.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+5"/>
         <source>Message signed.</source>
-        <translation>Messaggio firmato.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+59"/>
         <source>The signature could not be decoded.</source>
-        <translation>Non è stato possibile decodificare la firma.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+0"/>
         <location line="+13"/>
         <source>Please check the signature and try again.</source>
-        <translation>Per favore controlla la firma e prova ancora.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+0"/>
         <source>The signature did not match the message digest.</source>
-        <translation>La firma non corrisponde al sunto del messaggio.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+7"/>
         <source>Message verification failed.</source>
-        <translation>Verifica messaggio fallita.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+5"/>
         <source>Message verified.</source>
-        <translation>Messaggio verificato.</translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -2068,76 +2063,76 @@ Indirizzo: %4
     <message>
         <location filename="../transactiondesc.cpp" line="+25"/>
         <source>Open until %1</source>
-        <translation>Aperto fino a %1</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+6"/>
         <source>conflicted</source>
-        <translation>in conflitto</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
         <source>%1/offline</source>
-        <translation>%1/offline</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
         <source>%1/unconfirmed</source>
-        <translation>%1/non confermato</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
         <source>%1 confirmations</source>
-        <translation>%1 conferme</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+17"/>
         <source>Status</source>
-        <translation>Stato</translation>
+        <translation type="unfinished"/>
     </message>
     <message numerus="yes">
         <location line="+7"/>
         <source>, broadcast through %n node(s)</source>
-        <translation><numerusform>, trasmesso attraverso %n nodo</numerusform><numerusform>, trasmesso attraverso %n nodi</numerusform></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+4"/>
         <source>Date</source>
-        <translation>Data</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+7"/>
         <source>Source</source>
-        <translation>Sorgente</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+0"/>
         <source>Generated</source>
-        <translation>Generato</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+5"/>
         <location line="+13"/>
         <source>From</source>
-        <translation>Da</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <location line="+19"/>
         <location line="+58"/>
         <source>To</source>
-        <translation>A</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-74"/>
         <location line="+2"/>
         <source>own address</source>
-        <translation>proprio indirizzo</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-2"/>
         <source>label</source>
-        <translation>etichetta</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+34"/>
@@ -2146,17 +2141,17 @@ Indirizzo: %4
         <location line="+17"/>
         <location line="+30"/>
         <source>Credit</source>
-        <translation>Credito</translation>
+        <translation type="unfinished"/>
     </message>
     <message numerus="yes">
         <location line="-102"/>
         <source>matures in %n more block(s)</source>
-        <translation><numerusform>matura in %n ulteriore blocco</numerusform><numerusform>matura in altri %n blocchi</numerusform></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
         <source>not accepted</source>
-        <translation>non accettate</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+44"/>
@@ -2164,32 +2159,32 @@ Indirizzo: %4
         <location line="+15"/>
         <location line="+30"/>
         <source>Debit</source>
-        <translation>Debito</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-39"/>
         <source>Transaction fee</source>
-        <translation>Commissione transazione</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+16"/>
         <source>Net amount</source>
-        <translation>Importo netto</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+6"/>
         <source>Message</source>
-        <translation>Messaggio</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
         <source>Comment</source>
-        <translation>Commento</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
         <source>Transaction ID</source>
-        <translation>ID della transazione</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
@@ -2199,47 +2194,47 @@ Indirizzo: %4
     <message>
         <location line="+7"/>
         <source>Debug information</source>
-        <translation>Informazione di debug</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+8"/>
         <source>Transaction</source>
-        <translation>Transazione</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+5"/>
         <source>Inputs</source>
-        <translation>Input</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+21"/>
         <source>Amount</source>
-        <translation>Importo</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>true</source>
-        <translation>vero</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+0"/>
         <source>false</source>
-        <translation>falso</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-202"/>
         <source>, has not been successfully broadcast yet</source>
-        <translation>, non è stato ancora trasmesso con successo</translation>
+        <translation type="unfinished"/>
     </message>
     <message numerus="yes">
         <location line="-36"/>
         <source>Open for %n more block(s)</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation type="unfinished"><numerusform></numerusform></translation>
     </message>
     <message>
         <location line="+67"/>
         <source>unknown</source>
-        <translation>sconosciuto</translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -2247,12 +2242,12 @@ Indirizzo: %4
     <message>
         <location filename="../forms/transactiondescdialog.ui" line="+14"/>
         <source>Transaction details</source>
-        <translation>Dettagli sulla transazione</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+6"/>
         <source>This pane shows a detailed description of the transaction</source>
-        <translation>Questo pannello mostra una descrizione dettagliata della transazione</translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -2260,127 +2255,127 @@ Indirizzo: %4
     <message>
         <location filename="../transactiontablemodel.cpp" line="+231"/>
         <source>Date</source>
-        <translation>Data</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+0"/>
         <source>Type</source>
-        <translation>Tipo</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+0"/>
         <source>Address</source>
-        <translation>Indirizzo</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+0"/>
         <source>Amount</source>
-        <translation>Importo</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+52"/>
         <source>Open until %1</source>
-        <translation>Aperto fino a %1</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+12"/>
         <source>Confirmed (%1 confirmations)</source>
-        <translation>Confermato (%1 conferme)</translation>
+        <translation type="unfinished"/>
     </message>
     <message numerus="yes">
         <location line="-15"/>
         <source>Open for %n more block(s)</source>
-        <translation><numerusform>Aperto per %n altro blocco</numerusform><numerusform>Aperto per altri %n blocchi</numerusform></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+6"/>
         <source>Offline</source>
-        <translation>Offline</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
         <source>Unconfirmed</source>
-        <translation>Non confermato:</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
         <source>Confirming (%1 of %2 recommended confirmations)</source>
-        <translation>In conferma (%1 di %2 conferme raccomandate)</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+6"/>
         <source>Conflicted</source>
-        <translation>In conflitto</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
         <source>Immature (%1 confirmations, will be available after %2)</source>
-        <translation>Immaturo (%1 conferme, sarà disponibile fra %2)</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
         <source>This block was not received by any other nodes and will probably not be accepted!</source>
-        <translation>Questo blocco non è stato ricevuto da altri nodi e probabilmente non sarà accettato!</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
         <source>Generated but not accepted</source>
-        <translation>Generati, ma non accettati</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+42"/>
         <source>Received with</source>
-        <translation>Ricevuto tramite</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
         <source>Received from</source>
-        <translation>Ricevuto da</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
         <source>Sent to</source>
-        <translation>Spedito a</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
         <source>Payment to yourself</source>
-        <translation>Pagamento a te stesso</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
         <source>Mined</source>
-        <translation>Ottenuto dal mining</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+38"/>
         <source>(n/a)</source>
-        <translation>(N / a)</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+194"/>
         <source>Transaction status. Hover over this field to show number of confirmations.</source>
-        <translation>Stato della transazione. Passare con il mouse su questo campo per vedere il numero di conferme.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
         <source>Date and time that the transaction was received.</source>
-        <translation>Data e ora in cui la transazione è stata ricevuta.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
         <source>Type of transaction.</source>
-        <translation>Tipo di transazione.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
         <source>Destination address of transaction.</source>
-        <translation>Indirizzo di destinazione della transazione.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
         <source>Amount removed from or added to balance.</source>
-        <translation>Importo rimosso o aggiunto al saldo.</translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -2389,102 +2384,102 @@ Indirizzo: %4
         <location filename="../transactionview.cpp" line="+54"/>
         <location line="+17"/>
         <source>All</source>
-        <translation>Tutti</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-16"/>
         <source>Today</source>
-        <translation>Oggi</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>This week</source>
-        <translation>Questa settimana</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>This month</source>
-        <translation>Questo mese</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Last month</source>
-        <translation>Il mese scorso</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>This year</source>
-        <translation>Quest&apos;anno</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Range...</source>
-        <translation>Intervallo...</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+12"/>
         <source>Received with</source>
-        <translation>Ricevuto tramite</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
         <source>Sent to</source>
-        <translation>Spedito a</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
         <source>To yourself</source>
-        <translation>A te</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Mined</source>
-        <translation>Ottenuto dal mining</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Other</source>
-        <translation>Altro</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+7"/>
         <source>Enter address or label to search</source>
-        <translation>Inserisci un indirizzo o un&apos;etichetta da cercare</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+7"/>
         <source>Min amount</source>
-        <translation>Importo minimo</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+34"/>
         <source>Copy address</source>
-        <translation>Copia l&apos;indirizzo</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Copy label</source>
-        <translation>Copia l&apos;etichetta</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Copy amount</source>
-        <translation>Copia l&apos;importo</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Copy transaction ID</source>
-        <translation>Copia l&apos;ID transazione</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Edit label</source>
-        <translation>Modifica l&apos;etichetta</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Show transaction details</source>
-        <translation>Mostra i dettagli della transazione</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+138"/>
@@ -2494,42 +2489,42 @@ Indirizzo: %4
     <message>
         <location line="+1"/>
         <source>Comma separated file (*.csv)</source>
-        <translation>Testo CSV (*.csv)</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+8"/>
         <source>Confirmed</source>
-        <translation>Confermato</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Date</source>
-        <translation>Data</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Type</source>
-        <translation>Tipo</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Label</source>
-        <translation>Etichetta</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Address</source>
-        <translation>Indirizzo</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Amount</source>
-        <translation>Importo</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>ID</source>
-        <translation>ID</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+4"/>
@@ -2544,12 +2539,12 @@ Indirizzo: %4
     <message>
         <location line="+100"/>
         <source>Range:</source>
-        <translation>Intervallo:</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+8"/>
         <source>to</source>
-        <translation>a</translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -2570,7 +2565,7 @@ Indirizzo: %4
     <message>
         <location line="+1"/>
         <source>Usage:</source>
-        <translation>Utilizzo:</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
@@ -2580,20 +2575,17 @@ Indirizzo: %4
     <message>
         <location line="+1"/>
         <source>List commands</source>
-        <translation>Lista comandi
-</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Get help for a command</source>
-        <translation>Aiuto su un comando
-</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Options:</source>
-        <translation>Opzioni:
-</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
@@ -2608,13 +2600,12 @@ Indirizzo: %4
     <message>
         <location line="+2"/>
         <source>Specify wallet file (within data directory)</source>
-        <translation>Specifica il file portafoglio  (nella cartella dati)</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-1"/>
         <source>Specify data directory</source>
-        <translation>Specifica la cartella dati
-</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+163"/>
@@ -2634,7 +2625,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="-161"/>
         <source>Set database cache size in megabytes (default: 25)</source>
-        <translation>Imposta la dimensione cache del database in megabyte (predefinita: 25)</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
@@ -2649,17 +2640,17 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="+1"/>
         <source>Maintain at most &lt;n&gt; connections to peers (default: 125)</source>
-        <translation>Mantieni al massimo &lt;n&gt; connessioni ai peer (predefinite: 125)</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
         <source>Connect to a node to retrieve peer addresses, and disconnect</source>
-        <translation>Connessione ad un nodo per ricevere l&apos;indirizzo del peer, e disconnessione</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Specify your own public address</source>
-        <translation>Specifica il tuo indirizzo pubblico</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+4"/>
@@ -2679,17 +2670,17 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="+4"/>
         <source>Threshold for disconnecting misbehaving peers (default: 100)</source>
-        <translation>Soglia di disconnessione dei peer di cattiva qualità (predefinita: 100)</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Number of seconds to keep misbehaving peers from reconnecting (default: 86400)</source>
-        <translation>Numero di secondi di sospensione che i peer di cattiva qualità devono trascorrere prima di riconnettersi (predefiniti: 86400)</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+153"/>
         <source>An error occurred while setting up the RPC port %u for listening on IPv4: %s</source>
-        <translation>Errore riscontrato durante l&apos;impostazione della porta RPC %u per l&apos;ascolto su IPv4: %s</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-126"/>
@@ -2699,35 +2690,32 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="-16"/>
         <source>Accept command line and JSON-RPC commands</source>
-        <translation>Accetta da linea di comando e da comandi JSON-RPC
-</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Run in the background as a daemon and accept commands</source>
-        <translation>Esegui in background come demone e accetta i comandi
-</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Use the test network</source>
-        <translation>Utilizza la rete di prova
-</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-23"/>
         <source>Accept connections from outside (default: 1 if no -proxy or -connect)</source>
-        <translation>Accetta connessioni dall&apos;esterno (predefinito: 1 se no -proxy o -connect)</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+160"/>
         <source>An error occurred while setting up the RPC port %u for listening on IPv6, falling back to IPv4: %s</source>
-        <translation>Errore riscontrato durante l&apos;impostazione della porta RPC %u per l&apos;ascolto su IPv6, tornando su IPv4: %s</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-84"/>
         <source>Warning: -paytxfee is set very high! This is the transaction fee you will pay if you send a transaction.</source>
-        <translation>Attenzione: -paytxfee è molto alta. Questa è la commissione che si paga quando si invia una transazione.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+46"/>
@@ -2737,37 +2725,37 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="-19"/>
         <source>Warning: error reading wallet.dat! All keys read correctly, but transaction data or address book entries might be missing or incorrect.</source>
-        <translation>Attenzione: errore di lettura di wallet.dat!  Tutte le chiave lette correttamente, ma i dati delle transazioni o le voci in rubrica potrebbero mancare o non essere corretti.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-16"/>
         <source>Warning: wallet.dat corrupt, data salvaged! Original wallet.dat saved as wallet.{timestamp}.bak in %s; if your balance or transactions are incorrect you should restore from a backup.</source>
-        <translation>Attenzione: wallet.dat corrotto, dati salvati! Il wallet.dat originale salvato come wallet.{timestamp}.bak in %s; se il tuo bilancio o le transazioni non sono corrette dovresti ripristinare da un backup.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-31"/>
         <source>Attempt to recover private keys from a corrupt wallet.dat</source>
-        <translation>Tenta di recuperare le chiavi private da un wallet.dat corrotto</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+5"/>
         <source>Block creation options:</source>
-        <translation>Opzioni creazione blocco:</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-66"/>
         <source>Connect only to the specified node(s)</source>
-        <translation>Connetti solo al nodo specificato</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+4"/>
         <source>Discover own IP address (default: 1 when listening and no -externalip)</source>
-        <translation>Scopri proprio indirizzo IP (predefinito: 1 se in ascolto e no -externalip)</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+97"/>
         <source>Failed to listen on any port. Use -listen=0 if you want this.</source>
-        <translation>Impossibile mettersi in ascolto su una porta. Usa -listen=0 se vuoi usare questa opzione.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-2"/>
@@ -2782,17 +2770,17 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="-85"/>
         <source>Maximum per-connection receive buffer, &lt;n&gt;*1000 bytes (default: 5000)</source>
-        <translation>Buffer di ricezione massimo per connessione, &lt;n&gt;*1000 byte (predefinito: 5000)</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Maximum per-connection send buffer, &lt;n&gt;*1000 bytes (default: 1000)</source>
-        <translation>Buffer di invio massimo per connessione, &lt;n&gt;*1000 byte (predefinito: 1000)</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-16"/>
         <source>Only connect to nodes in network &lt;net&gt; (IPv4, IPv6 or Tor)</source>
-        <translation>Connetti solo a nodi nella rete &lt;net&gt; (IPv4, IPv6 o Tor)</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+30"/>
@@ -2802,12 +2790,12 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="+36"/>
         <source>SSL options: (see the Bitcoin Wiki for SSL setup instructions)</source>
-        <translation>Opzioni SSL: (vedi il wiki di Bitcoin per le istruzioni di configurazione SSL)</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-34"/>
         <source>Send trace/debug info to console instead of debug.log file</source>
-        <translation>Invia le informazioni di trace/debug alla console invece che al file debug.log</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+33"/>
@@ -2817,27 +2805,27 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="-1"/>
         <source>Set minimum block size in bytes (default: 0)</source>
-        <translation>Imposta dimensione minima del blocco in bytes (predefinita: 0)</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-33"/>
         <source>Shrink debug.log file on client startup (default: 1 when no -debug)</source>
-        <translation>Riduci il file debug.log all&apos;avvio del client (predefinito: 1 se non impostato -debug)</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-41"/>
         <source>Specify connection timeout in milliseconds (default: 5000)</source>
-        <translation>Specifica il timeout di connessione in millisecondi (predefinito: 5000)</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+28"/>
         <source>Use UPnP to map the listening port (default: 0)</source>
-        <translation>Usa UPnP per mappare la porta in ascolto (predefinito: 0)</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-1"/>
         <source>Use UPnP to map the listening port (default: 1 when listening)</source>
-        <translation>Usa UPnP per mappare la porta in ascolto (predefinito: 1 when listening)</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-25"/>
@@ -2847,8 +2835,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="+45"/>
         <source>Username for JSON-RPC connections</source>
-        <translation>Nome utente per connessioni JSON-RPC
-</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+50"/>
@@ -2888,18 +2875,17 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="-7"/>
         <source>Warning: This version is obsolete, upgrade required!</source>
-        <translation>Attenzione: questa versione è obsoleta, aggiornamento necessario!</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-23"/>
         <source>wallet.dat corrupt, salvage failed</source>
-        <translation>wallet.dat corrotto, salvataggio fallito</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-55"/>
         <source>Password for JSON-RPC connections</source>
-        <translation>Password per connessioni JSON-RPC
-</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-47"/>
@@ -2939,13 +2925,12 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="+8"/>
         <source>Allow JSON-RPC connections from specified IP address</source>
-        <translation>Consenti connessioni JSON-RPC dall&apos;indirizzo IP specificato
-</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Send commands to node running on &lt;ip&gt; (default: 127.0.0.1)</source>
-        <translation>Inviare comandi al nodo in esecuzione su &lt;ip&gt; (predefinito: 127.0.0.1)</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
@@ -2960,12 +2945,12 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="+1"/>
         <source>Execute command when the best block changes (%s in cmd is replaced by block hash)</source>
-        <translation>Esegui il comando quando il miglior block cambia(%s nel cmd è sostituito dall&apos;hash del blocco)</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
         <source>Execute command when a wallet transaction changes (%s in cmd is replaced by TxID)</source>
-        <translation>Esegui comando quando una transazione del portafoglio cambia (%s in cmd è sostituito da TxID)</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
@@ -2980,18 +2965,17 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="+3"/>
         <source>Upgrade wallet to latest format</source>
-        <translation>Aggiorna il wallet all&apos;ultimo formato</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Set key pool size to &lt;n&gt; (default: 100)</source>
-        <translation>Impostare la quantità di chiavi di riserva a &lt;n&gt; (predefinita: 100)</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Rescan the block chain for missing wallet transactions</source>
-        <translation>Ripeti analisi della catena dei blocchi per cercare le transazioni  mancanti dal portamonete
-</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
@@ -3011,18 +2995,17 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="+5"/>
         <source>Use OpenSSL (https) for JSON-RPC connections</source>
-        <translation>Utilizzare OpenSSL (https) per le connessioni  JSON-RPC
-</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Server certificate file (default: server.cert)</source>
-        <translation>File certificato del server (predefinito: server.cert)</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Server private key (default: server.pem)</source>
-        <translation>Chiave privata del server (predefinito: server.pem)</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+5"/>
@@ -3057,8 +3040,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="-135"/>
         <source>This help message</source>
-        <translation>Questo messaggio di aiuto
-</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+100"/>
@@ -3068,23 +3050,22 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="+46"/>
         <source>Unable to bind to %s on this computer (bind returned error %d, %s)</source>
-        <translation>Impossibile collegarsi alla %s su questo computer (bind returned error %d, %s)</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-136"/>
         <source>Allow DNS lookups for -addnode, -seednode and -connect</source>
-        <translation>Consenti ricerche DNS per aggiungere nodi e collegare
-</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+121"/>
         <source>Loading addresses...</source>
-        <translation>Caricamento indirizzi...</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-10"/>
         <source>Error loading wallet.dat: Wallet corrupted</source>
-        <translation>Errore caricamento wallet.dat: Wallet corrotto</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+4"/>
@@ -3099,32 +3080,32 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="+1"/>
         <source>Error loading wallet.dat</source>
-        <translation>Errore caricamento wallet.dat</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-15"/>
         <source>Invalid -proxy address: &apos;%s&apos;</source>
-        <translation>Indirizzo -proxy non valido: &apos;%s&apos;</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-1"/>
         <source>Unknown network specified in -onlynet: &apos;%s&apos;</source>
-        <translation>Rete sconosciuta specificata in -onlynet: &apos;%s&apos;</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
         <source>Cannot resolve -bind address: &apos;%s&apos;</source>
-        <translation>Impossibile risolvere -bind address: &apos;%s&apos;</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
         <source>Cannot resolve -externalip address: &apos;%s&apos;</source>
-        <translation>Impossibile risolvere indirizzo -externalip: &apos;%s&apos;</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-22"/>
         <source>Invalid amount for -paytxfee=&lt;amount&gt;: &apos;%s&apos;</source>
-        <translation>Importo non valido per -paytxfee=&lt;amount&gt;: &apos;%s&apos;</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+59"/>
@@ -3134,22 +3115,22 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="+5"/>
         <source>Invalid amount</source>
-        <translation>Importo non valido</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Insufficient funds</source>
-        <translation>Fondi insufficienti</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-41"/>
         <source>Loading block index...</source>
-        <translation>Caricamento dell&apos;indice del blocco...</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-105"/>
         <source>Add a node to connect to and attempt to keep the connection open</source>
-        <translation>Elérendő csomópont megadása and attempt to keep the connection open</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+131"/>
@@ -3194,44 +3175,44 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="+15"/>
         <source>Loading wallet...</source>
-        <translation>Caricamento portamonete...</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+8"/>
         <source>Cannot downgrade wallet</source>
-        <translation>Non è possibile retrocedere il wallet</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Cannot write default address</source>
-        <translation>Non è possibile scrivere l&apos;indirizzo predefinito</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Rescanning...</source>
-        <translation>Ripetere la scansione...</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
         <source>Done loading</source>
-        <translation>Caricamento completato</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+33"/>
         <source>To use the %s option</source>
-        <translation>Per usare la opzione %s</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-27"/>
         <source>Error</source>
-        <translation>Errore</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+22"/>
         <source>You must set rpcpassword=&lt;password&gt; in the configuration file:
 %s
 If the file does not exist, create it with owner-readable-only file permissions.</source>
-        <translation>Devi settare rpcpassword=&lt;password&gt; nel file di configurazione: %s Se il file non esiste, crealo con i permessi di amministratore</translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 </TS>
