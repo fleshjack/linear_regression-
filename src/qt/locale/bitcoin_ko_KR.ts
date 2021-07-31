@@ -1819,4 +1819,159 @@ Address: %4
     <message>
         <location line="+15"/>
         <source>A&amp;mount:</source>
-        <translation
+        <translation>금액:</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Pay &amp;To:</source>
+        <translation>지급&amp;수신:</translation>
+    </message>
+    <message>
+        <location line="+34"/>
+        <source>The address to send the payment to (e.g. DPpauUHW4ksipzUQhKKVAxscM6UonAAjhX)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+60"/>
+        <location filename="../sendcoinsentry.cpp" line="+26"/>
+        <source>Enter a label for this address to add it to your address book</source>
+        <translation>당신의 주소록에 이 주소를 추가하기 위하여 표를 입역하세요 </translation>
+    </message>
+    <message>
+        <location line="-78"/>
+        <source>&amp;Label:</source>
+        <translation>표:</translation>
+    </message>
+    <message>
+        <location line="+28"/>
+        <source>Choose address from address book</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Alt+A</source>
+        <translation>Alt+A</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Paste address from clipboard</source>
+        <translation>클립보드로 부터 주소를 붙이세요</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Alt+P</source>
+        <translation>Alt+P</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Remove this recipient</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../sendcoinsentry.cpp" line="+1"/>
+        <source>Enter a Bws address (e.g. DPpauUHW4ksipzUQhKKVAxscM6UonAAjhX)</source>
+        <translation type="unfinished"/>
+    </message>
+</context>
+<context>
+    <name>SignVerifyMessageDialog</name>
+    <message>
+        <location filename="../forms/signverifymessagedialog.ui" line="+14"/>
+        <source>Signatures - Sign / Verify a Message</source>
+        <translation>서명 - 싸인 / 메시지 확인</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <location line="+124"/>
+        <source>&amp;Sign Message</source>
+        <translation>메시지 서명(&amp;S)</translation>
+    </message>
+    <message>
+        <location line="-118"/>
+        <source>You can sign messages with your addresses to prove you own them. Be careful not to sign anything vague, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <translation>여러분 자신을 증명하기 위해 주소를 첨가하고 섬여할 수 있습니다. 피싱 공격으로 말미암아 여러분의 서명을 통해 속아 넘어가게 할 수 있으므로, 서명하지 않은 어떤 모호한 요소든 주의하십시오. 동의하는 완전 무결한 조항에만 서명하십시오.</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>The address to sign the message with (e.g. DPpauUHW4ksipzUQhKKVAxscM6UonAAjhX)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+10"/>
+        <location line="+203"/>
+        <source>Choose an address from the address book</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-193"/>
+        <location line="+203"/>
+        <source>Alt+A</source>
+        <translation>Alt+A</translation>
+    </message>
+    <message>
+        <location line="-193"/>
+        <source>Paste address from clipboard</source>
+        <translation>클립보드로 부터 주소를 붙이세요</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Alt+P</source>
+        <translation>Alt+P</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Enter the message you want to sign here</source>
+        <translation>여기에 서명하려는 메시지를 입력하십시오</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Copy the current signature to the system clipboard</source>
+        <translation>현재 서명을 시스템 클립보드에 복사</translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>Sign the message to prove you own this Bws address</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Reset all sign message fields</source>
+        <translation>메시지 필드의 모든 서명 재설정</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <location line="+146"/>
+        <source>Clear &amp;All</source>
+        <translation>모두 지우기(&amp;A)</translation>
+    </message>
+    <message>
+        <location line="-87"/>
+        <location line="+70"/>
+        <source>&amp;Verify Message</source>
+        <translation>메시지 검증(&amp;V)</translation>
+    </message>
+    <message>
+        <location line="-64"/>
+        <source>Enter the signing address, message (ensure you copy line breaks, spaces, tabs, etc. exactly) and signature below to verify the message. Be careful not to read more into the signature than what is in the signed message itself, to avoid being tricked by a man-in-the-middle attack.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>The address the message was signed with (e.g. DPpauUHW4ksipzUQhKKVAxscM6UonAAjhX)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+40"/>
+        <source>Verify the message to ensure it was signed with the specified Bws address</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Reset all verify message fields</source>
+        <translation>모든 검증 메시지 필드 재설정</translation>
+    </message>
+    <message>
+        <location filename="../signverifymessagedialog.cpp" line="+27"/>
+        <location line="+3"/>
+        <source>Enter a Bws address (e.g. DPpauUHW4ksipzUQhKKVAxscM6UonAAjhX)</source>
+        
