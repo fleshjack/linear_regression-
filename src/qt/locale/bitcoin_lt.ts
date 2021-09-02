@@ -2290,4 +2290,185 @@ Adresas: %4</translation>
         <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform><numerusform></numerusform></translation>
     </message>
     <message>
-        <location li
+        <location line="+6"/>
+        <source>Offline</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Unconfirmed</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Confirming (%1 of %2 recommended confirmations)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Conflicted</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Immature (%1 confirmations, will be available after %2)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>This block was not received by any other nodes and will probably not be accepted!</source>
+        <translation>Šis blokas negautas nė vienu iš mazgų ir matomai nepriimtas</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Generated but not accepted</source>
+        <translation>Išgauta bet nepriimta</translation>
+    </message>
+    <message>
+        <location line="+42"/>
+        <source>Received with</source>
+        <translation>Gauta su</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Received from</source>
+        <translation>Gauta iš</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Sent to</source>
+        <translation>Siųsta </translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Payment to yourself</source>
+        <translation>Mokėjimas sau</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Mined</source>
+        <translation>Išgauta</translation>
+    </message>
+    <message>
+        <location line="+38"/>
+        <source>(n/a)</source>
+        <translation>nepasiekiama</translation>
+    </message>
+    <message>
+        <location line="+194"/>
+        <source>Transaction status. Hover over this field to show number of confirmations.</source>
+        <translation>Sandorio būklė. Užvedus pelės žymeklį ant šios srities matysite patvirtinimų skaičių.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Date and time that the transaction was received.</source>
+        <translation>Sandorio gavimo data ir laikas</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Type of transaction.</source>
+        <translation>Sandorio tipas.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Destination address of transaction.</source>
+        <translation>Sandorio paskirties adresas</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Amount removed from or added to balance.</source>
+        <translation>Suma pridėta ar išskaičiuota iš balanso</translation>
+    </message>
+</context>
+<context>
+    <name>TransactionView</name>
+    <message>
+        <location filename="../transactionview.cpp" line="+54"/>
+        <location line="+17"/>
+        <source>All</source>
+        <translation>Visi</translation>
+    </message>
+    <message>
+        <location line="-16"/>
+        <source>Today</source>
+        <translation>Šiandien</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>This week</source>
+        <translation>Šią savaitę</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>This month</source>
+        <translation>Šį mėnesį</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Last month</source>
+        <translation>Paskutinį mėnesį</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>This year</source>
+        <translation>Šiais metais</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Range...</source>
+        <translation>Intervalas...</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Received with</source>
+        <translation>Gauta su</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Sent to</source>
+        <translation>Išsiųsta</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>To yourself</source>
+        <translation>Skirta sau</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Mined</source>
+        <translation>Išgauta</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Other</source>
+        <translation>Kita</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Enter address or label to search</source>
+        <translation>Įveskite adresą ar žymę į paiešką</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Min amount</source>
+        <translation>Minimali suma</translation>
+    </message>
+    <message>
+        <location line="+34"/>
+        <source>Copy address</source>
+        <translation>Kopijuoti adresą</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copy label</source>
+        <translation>Kopijuoti žymę</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copy amount</source>
+        <translation>Kopijuoti sumą</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copy transaction ID</source>
+        <translation type="unfin
