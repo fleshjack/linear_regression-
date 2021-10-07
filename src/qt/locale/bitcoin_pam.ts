@@ -2928,4 +2928,143 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="+8"/>
         <source>Allow JSON-RPC connections from specified IP address</source>
-        <translation>Payagan ya i JSON-RPC koneksion para king metung a 
+        <translation>Payagan ya i JSON-RPC koneksion para king metung a IP address</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Send commands to node running on &lt;ip&gt; (default: 127.0.0.1)</source>
+        <translation>Magpadalang command king node a gagana king &lt;ip&gt;(default: 127.0.0.1)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Wait for RPC server to start</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Set the number of threads to service RPC calls (default: 4)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Execute command when the best block changes (%s in cmd is replaced by block hash)</source>
+        <translation>I-execute ing command istung mialilan ya ing best block (%s in cmd is replaced by block hash)</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Execute command when a wallet transaction changes (%s in cmd is replaced by TxID)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Require a confirmations for change (default: 0)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Execute command when a relevant alert is received (%s in cmd is replaced by message)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Upgrade wallet to latest format</source>
+        <translation>I-upgrade ing wallet king pekabayung porma</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Set key pool size to &lt;n&gt; (default: 100)</source>
+        <translation>I-set ing key pool size king &lt;n&gt;(default: 100)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Rescan the block chain for missing wallet transactions</source>
+        <translation>I-scan pasibayu ing block chain para kareng mauaualang transaksion</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>How thorough the block verification is (0-6, default: 1)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Imports blocks from external blk000?.dat file</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Keep at most &lt;n&gt; MiB of unconnectable blocks in memory (default: %u)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Use OpenSSL (https) for JSON-RPC connections</source>
+        <translation>Gumamit OpenSSL(https) para king JSON-RPC koneksion</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Server certificate file (default: server.cert)</source>
+        <translation>Server certificate file (default: server.cert)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Server private key (default: server.pem)</source>
+        <translation>Server private key (default: server.pem)</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Error: Unsupported argument -socks found. Setting SOCKS version isn&apos;t possible anymore, only SOCKS5 proxies are supported.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Initialization sanity check failed. Bws is shutting down.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Error loading block database</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>Error: Wallet unlocked for staking only, unable to create transaction.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-14"/>
+        <source>Error: Disk space is low!</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>This is a pre-release test build - use at your own risk - do not use for mining or merchant applications</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-135"/>
+        <source>This help message</source>
+        <translation>Ining saup a mensayi</translation>
+    </message>
+    <message>
+        <location line="+100"/>
+        <source>Wallet %s resides outside data directory %s.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+46"/>
+        <source>Unable to bind to %s on this computer (bind returned error %d, %s)</source>
+        <translation>Ali ya magsilbing mag-bind keng %s kening kompyuter a ini (bind returned error %d, %s)</translation>
+    </message>
+    <message>
+        <location line="-136"/>
+        <source>Allow DNS lookups for -addnode, -seednode and -connect</source>
+        <translation>Payagan ing pamaglawe DNS para king -addnode, -seednode and -connect</translation>
+    </message>
+    <message>
+        <location line="+121"/>
+        <source>Loading addresses...</source>
+        <translation>Lo-load da ne ing address...</translation>
+    </message>
+    <message>
+        <location line="-10"/>
+        <source>Error loadi
