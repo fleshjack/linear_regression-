@@ -3215,4 +3215,9 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
         <source>You must set rpcpassword=&lt;password&gt; in the configuration file:
 %s
 If the file does not exist, create it with owner-readable-only file permissions.</source>
-        <translation>Dapat meng ilage ing rpcpassword=&lt;password&gt; 
+        <translation>Dapat meng ilage ing rpcpassword=&lt;password&gt; king configuration file:
+%s
+Nung ing file ala ya, gawa ka gamit ing owner-readable-only file permissions.</translation>
+    </message>
+</context>
+</TS>
