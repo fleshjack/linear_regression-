@@ -138,4 +138,137 @@ Możesz dodać kolejny adres dla każdego wysyłającego aby określić od kogo 
     <message>
         <location filename="../addresstablemodel.cpp" line="+145"/>
         <source>Label</source>
-        <translation>Etykieta</tr
+        <translation>Etykieta</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Address</source>
+        <translation>Adres</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>(no label)</source>
+        <translation>(bez etykiety)</translation>
+    </message>
+</context>
+<context>
+    <name>AskPassphraseDialog</name>
+    <message>
+        <location filename="../forms/askpassphrasedialog.ui" line="+26"/>
+        <source>Passphrase Dialog</source>
+        <translation>Okienko Hasła</translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>Enter passphrase</source>
+        <translation>Wpisz hasło</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>New passphrase</source>
+        <translation>Nowe hasło</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Repeat new passphrase</source>
+        <translation>Powtórz nowe hasło</translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Serves to disable the trivial sendmoney when OS account compromised. Provides no real security.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>For staking only</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../askpassphrasedialog.cpp" line="+38"/>
+        <source>Encrypt wallet</source>
+        <translation>Zaszyfruj portfel</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>This operation needs your wallet passphrase to unlock the wallet.</source>
+        <translation>Ta operacja wymaga hasła do portfela ażeby odblokować portfel.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Unlock wallet</source>
+        <translation>Odblokuj portfel</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>This operation needs your wallet passphrase to decrypt the wallet.</source>
+        <translation>Ta operacja wymaga hasła do portfela ażeby odszyfrować portfel.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Decrypt wallet</source>
+        <translation>Odszyfruj portfel</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Change passphrase</source>
+        <translation>Zmień hasło</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Enter the old and new passphrase to the wallet.</source>
+        <translation>Podaj stare i nowe hasło do portfela.</translation>
+    </message>
+    <message>
+        <location line="+45"/>
+        <source>Confirm wallet encryption</source>
+        <translation>Potwierdź szyfrowanie portfela</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR COINS&lt;/b&gt;!</source>
+        <translation>Uwaga: Jeśli zaszyfrujesz swój portfel i zgubisz hasło, wtedy&lt;b&gt;UTRACISZ SWOJE MONETY!&lt;/b&gt;!</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Are you sure you wish to encrypt your wallet?</source>
+        <translation>Jesteś pewien, że chcesz zaszyfrować swój portfel?</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
+        <translation>WAŻNE: Wszystkie wykonane wcześniej kopie pliku portfela powinny być zamienione na nowe, szyfrowane pliki. Z powodów bezpieczeństwa, poprzednie kopie nieszyfrowanych plików portfela staną się bezużyteczne jak tylko zaczniesz korzystać z nowego, szyfrowanego portfela.</translation>
+    </message>
+    <message>
+        <location line="+103"/>
+        <location line="+24"/>
+        <source>Warning: The Caps Lock key is on!</source>
+        <translation>Uwaga: Klawisz Caps Lock jest włączony</translation>
+    </message>
+    <message>
+        <location line="-133"/>
+        <location line="+60"/>
+        <source>Wallet encrypted</source>
+        <translation>Portfel zaszyfrowany</translation>
+    </message>
+    <message>
+        <location line="-140"/>
+        <source>Enter the new passphrase to the wallet.&lt;br/&gt;Please use a passphrase of &lt;b&gt;ten or more random characters&lt;/b&gt;, or &lt;b&gt;eight or more words&lt;/b&gt;.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+82"/>
+        <source>Bws will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+13"/>
+        <location line="+7"/>
+        <location line="+44"/>
+        <location line="+6"/>
+        <source>Wallet encryption failed</source>
+        <translation>Szyfrowanie portfela nie powiodło się</translation>
+    </message>
+    <message>
+        <location line="-56"/>
+        <source>Wallet encryption failed due to an internal error. Your wallet was not encrypted.</source>
+        <translation>Szyfrowanie portfela nie powiodło się z powodu wewnętrznego błędu. Twój portfel nie został zaszyfrowany.</transl
