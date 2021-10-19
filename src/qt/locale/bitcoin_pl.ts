@@ -1131,4 +1131,164 @@ Adres: %4
     <message>
         <location line="+90"/>
         <source>&amp;Window</source>
-        <translation>&amp;
+        <translation>&amp;Okno</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Show only a tray icon after minimizing the window.</source>
+        <translation>Pokazuj tylko ikonę przy zegarku po zminimalizowaniu okna.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>&amp;Minimize to the tray instead of the taskbar</source>
+        <translation>&amp;Minimalizuj do paska przy zegarku zamiast do paska zadań</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Minimize instead of exit the application when the window is closed. When this option is enabled, the application will be closed only after selecting Quit in the menu.</source>
+        <translation>Minimalizuje zamiast zakończyć działanie programu przy zamykaniu okna. Kiedy ta opcja jest włączona, program zakończy działanie po wybieraniu Zamknij w menu.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>M&amp;inimize on close</source>
+        <translation>M&amp;inimalizuj przy zamknięciu</translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>&amp;Display</source>
+        <translation>&amp;Wyświetlanie</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>User Interface &amp;language:</source>
+        <translation>Język &amp;Użytkownika:</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>The user interface language can be set here. This setting will take effect after restarting Bws.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>&amp;Unit to show amounts in:</source>
+        <translation>&amp;Jednostka pokazywana przy kwocie:</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
+        <translation>Wybierz podział jednostki pokazywany w interfejsie  oraz podczas wysyłania monet</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Whether to show coin control features or not.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Display coin &amp;control features (experts only!)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Use black visual theme (requires restart)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+71"/>
+        <source>&amp;OK</source>
+        <translation>&amp;OK</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>&amp;Cancel</source>
+        <translation>&amp;Anuluj</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>&amp;Apply</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../optionsdialog.cpp" line="+47"/>
+        <source>default</source>
+        <translation>domyślny</translation>
+    </message>
+    <message>
+        <location line="+147"/>
+        <location line="+9"/>
+        <source>Warning</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-9"/>
+        <location line="+9"/>
+        <source>This setting will take effect after restarting Bws.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>The supplied proxy address is invalid.</source>
+        <translation>Adres podanego proxy jest nieprawidłowy</translation>
+    </message>
+</context>
+<context>
+    <name>OverviewPage</name>
+    <message>
+        <location filename="../forms/overviewpage.ui" line="+14"/>
+        <source>Form</source>
+        <translation>Formularz</translation>
+    </message>
+    <message>
+        <location line="+46"/>
+        <location line="+247"/>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Bws network after a connection is established, but this process has not completed yet.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-173"/>
+        <source>Stake:</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+32"/>
+        <source>Unconfirmed:</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-113"/>
+        <source>Wallet</source>
+        <translation>Portfel</translation>
+    </message>
+    <message>
+        <location line="+49"/>
+        <source>Spendable:</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Your current spendable balance</source>
+        <translation>Twoje obecne saldo</translation>
+    </message>
+    <message>
+        <location line="+80"/>
+        <source>Immature:</source>
+        <translation>Niedojrzały: </translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Mined balance that has not yet matured</source>
+        <translation>Balans wydobycia, który jeszcze nie dojrzał</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Total:</source>
+        <translation>Wynosi ogółem:</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Your current total balance</source>
+        <translation>Twoje obecne saldo</translation>
+    </message>
+    <message>
+        <location line="+50"/>
+        <source>&lt;b&gt;Recent transactions&lt;
