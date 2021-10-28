@@ -2648,4 +2648,114 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+3"/>
-      
+        <source>Connect to a node to retrieve peer addresses, and disconnect</source>
+        <translation>Podłącz się do węzła aby otrzymać adresy peerów i rozłącz</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Specify your own public address</source>
+        <translation>Podaj swój publiczny adres</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Bind to given address. Use [host]:port notation for IPv6</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Query for peer addresses via DNS lookup, if low on addresses (default: 1 unless -connect)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Always query for peer addresses via DNS lookup (default: 0)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Threshold for disconnecting misbehaving peers (default: 100)</source>
+        <translation>Próg po którym nastąpi rozłączenie nietrzymających się zasad peerów (domyślnie: 100)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Number of seconds to keep misbehaving peers from reconnecting (default: 86400)</source>
+        <translation>Czas w sekundach, przez jaki nietrzymający się zasad peerzy nie będą mogli ponownie się podłączyć (domyślnie: 86400)</translation>
+    </message>
+    <message>
+        <location line="+153"/>
+        <source>An error occurred while setting up the RPC port %u for listening on IPv4: %s</source>
+        <translation>Wystąpił błąd podczas ustawiania portu RPC %u w tryb nasłuchu: %s</translation>
+    </message>
+    <message>
+        <location line="-126"/>
+        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 48210 or testnet: 27058)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-16"/>
+        <source>Accept command line and JSON-RPC commands</source>
+        <translation>Akceptuj linię poleceń oraz polecenia JSON-RPC</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Run in the background as a daemon and accept commands</source>
+        <translation>Uruchom w tle jako daemon i przyjmuj polecenia</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Use the test network</source>
+        <translation>Użyj sieci testowej</translation>
+    </message>
+    <message>
+        <location line="-23"/>
+        <source>Accept connections from outside (default: 1 if no -proxy or -connect)</source>
+        <translation>Akceptuj połączenia z zewnątrz (domyślnie: 1 jeśli nie ustawiono -proxy lub -connect)</translation>
+    </message>
+    <message>
+        <location line="+160"/>
+        <source>An error occurred while setting up the RPC port %u for listening on IPv6, falling back to IPv4: %s</source>
+        <translation>Wystąpił błąd podczas ustawiania portu RPC %u w tryb nasłuchu dla IPv6, korzystam z IPv4: %s</translation>
+    </message>
+    <message>
+        <location line="-84"/>
+        <source>Warning: -paytxfee is set very high! This is the transaction fee you will pay if you send a transaction.</source>
+        <translation>Ostrzeżenie: -paytxfee jest bardzo duży. To jest prowizja za transakcje, którą płacisz, gdy wysyłasz monety.</translation>
+    </message>
+    <message>
+        <location line="+46"/>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Bws will not work properly.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-19"/>
+        <source>Warning: error reading wallet.dat! All keys read correctly, but transaction data or address book entries might be missing or incorrect.</source>
+        <translation>Ostrzeżenie: błąd odczytu wallet.dat! Wszystkie klucze zostały odczytane, ale może brakować pewnych danych transakcji lub wpisów w książce adresowej lub mogą one być nieprawidłowe.</translation>
+    </message>
+    <message>
+        <location line="-16"/>
+        <source>Warning: wallet.dat corrupt, data salvaged! Original wallet.dat saved as wallet.{timestamp}.bak in %s; if your balance or transactions are incorrect you should restore from a backup.</source>
+        <translation>Ostrzeżenie: Odtworzono dane z uszkodzonego pliku wallet.dat! Oryginalny wallet.dat został zapisany jako wallet.{timestamp}.bak w %s; jeśli twoje saldo lub transakcje są niepoprawne powinieneś odtworzyć kopię zapasową.</translation>
+    </message>
+    <message>
+        <location line="-31"/>
+        <source>Attempt to recover private keys from a corrupt wallet.dat</source>
+        <translation>Próbuj odzyskać klucze prywatne z uszkodzonego wallet.dat</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Block creation options:</source>
+        <translation>Opcje tworzenia bloku:</translation>
+    </message>
+    <message>
+        <location line="-66"/>
+        <source>Connect only to the specified node(s)</source>
+        <translation>Łącz tylko do wskazanego węzła</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Discover own IP address (default: 1 when listening and no -externalip)</source>
+        <translation>Odkryj własny adres IP (domyślnie: 1 kiedy w trybie nasłuchu i brak -externalip )</translation>
+    </message>
+    <message>
+        <location line="+97"/>
+        <source>Failed to listen on any port. Use -listen=0 if you want this.</sou
