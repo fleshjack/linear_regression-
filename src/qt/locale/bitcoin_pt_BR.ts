@@ -1,15 +1,16 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="pl" version="2.1">
+
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="pt_BR" version="2.1">
 <context>
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
         <source>About Bws</source>
-        <translation>O Bws</translation>
+        <translation>Sobre o Bws</translation>
     </message>
     <message>
         <location line="+39"/>
         <source>&lt;b&gt;Bws&lt;/b&gt; version</source>
-        <translation>&lt;b&gt;Bws&lt;/b&gt; wersja</translation>
+        <translation>&lt;b&gt;Bws&lt;/b&gt; versao</translation>
     </message>
     <message>
         <location line="+41"/>
@@ -34,103 +35,102 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location filename="../forms/addressbookpage.ui" line="+14"/>
         <source>Address Book</source>
-        <translation>Książka Adresowa</translation>
+        <translation>Livro de Endereços</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Double-click to edit address or label</source>
-        <translation>Kliknij dwukrotnie, aby edytować adres lub etykietę</translation>
+        <translation>Clique duas vezes para editar o endereço ou a etiqueta</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Create a new address</source>
-        <translation>Utwórz nowy adres</translation>
+        <translation>Criar um novo endereço</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Copy the currently selected address to the system clipboard</source>
-        <translation>Skopiuj aktualnie wybrany adres do schowka</translation>
+        <translation>Copie o endereço selecionado para a área de transferência do sistema</translation>
     </message>
     <message>
         <location line="-7"/>
         <source>&amp;New Address</source>
-        <translation>Nowy Adres</translation>
+        <translation>&amp;Novo Endereço</translation>
     </message>
     <message>
         <location line="-43"/>
         <source>These are your Bws addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>Tutaj znajdują się twoje adresy do odbierania wpłat.
-Możesz dodać kolejny adres dla każdego wysyłającego aby określić od kogo pochodzi wpłata.</translation>
+        <translation>Estes são os seus endereços Bws para receber pagamentos. Você pode dar um diferente a cada remetente para que você possa acompanhar quem está pagando.</translation>
     </message>
     <message>
         <location line="+53"/>
         <source>&amp;Copy Address</source>
-        <translation>&amp;Kopiuj adres</translation>
+        <translation>&amp;Copiar Endereço</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Show &amp;QR Code</source>
-        <translation>Pokaż &amp;Kod QR</translation>
+        <translation>Mostrar &amp;QR Code</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Sign a message to prove you own a Bws address</source>
-        <translation>Podpisz wiadomość by udowodnić, że jesteś właścicielem adresu Bws</translation>
+        <translation>Assine a mensagem para provar que você possui um endereço Bws</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Sign &amp;Message</source>
-        <translation>Podpisz &amp;Wiadomość</translation>
+        <translation>Assinar &amp;Mensagem</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Delete the currently selected address from the list</source>
-        <translation>Usuń zaznaczony adres z listy</translation>
+        <translation>Excluir os endereços selecionados da lista</translation>
     </message>
     <message>
         <location line="-10"/>
         <source>Verify a message to ensure it was signed with a specified Bws address</source>
-        <translation>Zweryfikuj wiadomość, w celu zapewnienia, że została podpisana z określonego adresu Bws</translation>
+        <translation>Verifique a mensagem para garantir que ela foi assinada com um endereço Bws específico</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>&amp;Verify Message</source>
-        <translation>&amp;Zweryfikuj wiadomość</translation>
+        <translation>&amp;Verificar Mensagem</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Delete</source>
-        <translation>&amp;Usuń</translation>
+        <translation>&amp;Excluir</translation>
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="+66"/>
         <source>Copy &amp;Label</source>
-        <translation>Kopiuj &amp;Etykietę</translation>
+        <translation>Copiar &amp;Etiqueta</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>&amp;Edit</source>
-        <translation>&amp;Edytuj</translation>
+        <translation>&amp;Editar</translation>
     </message>
     <message>
         <location line="+248"/>
         <source>Export Address Book Data</source>
-        <translation>Exportuj Książkę Adresową</translation>
+        <translation>Exportar Dados do Livro de Endereços</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Comma separated file (*.csv)</source>
-        <translation>Plik *.CSV (rozdzielany przecinkami)</translation>
+        <translation>Arquivo separado por vírgulas (*. csv)</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Error exporting</source>
-        <translation>Błąd exportowania</translation>
+        <translation>Erro ao exportar</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Could not write to file %1.</source>
-        <translation>Nie mogę zapisać do pliku %1</translation>
+        <translation>Não foi possível escrever no arquivo %1.</translation>
     </message>
 </context>
 <context>
@@ -138,17 +138,17 @@ Możesz dodać kolejny adres dla każdego wysyłającego aby określić od kogo 
     <message>
         <location filename="../addresstablemodel.cpp" line="+145"/>
         <source>Label</source>
-        <translation>Etykieta</translation>
+        <translation>Rótulo</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Address</source>
-        <translation>Adres</translation>
+        <translation>Endereço</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>(no label)</source>
-        <translation>(bez etykiety)</translation>
+        <translation>(Sem rótulo)</translation>
     </message>
 </context>
 <context>
@@ -156,99 +156,99 @@ Możesz dodać kolejny adres dla każdego wysyłającego aby określić od kogo 
     <message>
         <location filename="../forms/askpassphrasedialog.ui" line="+26"/>
         <source>Passphrase Dialog</source>
-        <translation>Okienko Hasła</translation>
+        <translation>Janela da Frase de Segurança</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Enter passphrase</source>
-        <translation>Wpisz hasło</translation>
+        <translation>Digite a frase de segurança</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>New passphrase</source>
-        <translation>Nowe hasło</translation>
+        <translation>Nova frase de segurança</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Repeat new passphrase</source>
-        <translation>Powtórz nowe hasło</translation>
+        <translation>Repita a nova frase de segurança</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Serves to disable the trivial sendmoney when OS account compromised. Provides no real security.</source>
-        <translation type="unfinished"/>
+        <translation>Serve para desativar o envio de dinheiro trivial quando conta do SO for comprometida. Não oferece segurança real.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>For staking only</source>
-        <translation type="unfinished"/>
+        <translation>Apenas para participação</translation>
     </message>
     <message>
         <location filename="../askpassphrasedialog.cpp" line="+38"/>
         <source>Encrypt wallet</source>
-        <translation>Zaszyfruj portfel</translation>
+        <translation>Criptografar carteira</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>This operation needs your wallet passphrase to unlock the wallet.</source>
-        <translation>Ta operacja wymaga hasła do portfela ażeby odblokować portfel.</translation>
+        <translation>Esta operação precisa de sua frase de segurança para desbloquear a carteira.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Unlock wallet</source>
-        <translation>Odblokuj portfel</translation>
+        <translation>Desbloquear carteira</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>This operation needs your wallet passphrase to decrypt the wallet.</source>
-        <translation>Ta operacja wymaga hasła do portfela ażeby odszyfrować portfel.</translation>
+        <translation>Esta operação precisa de sua frase de segurança para descriptografar a carteira.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Decrypt wallet</source>
-        <translation>Odszyfruj portfel</translation>
+        <translation>Descriptografar carteira</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Change passphrase</source>
-        <translation>Zmień hasło</translation>
+        <translation>Alterar frase de segurança</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Enter the old and new passphrase to the wallet.</source>
-        <translation>Podaj stare i nowe hasło do portfela.</translation>
+        <translation>Digite a frase de segurança antiga e nova para a carteira.</translation>
     </message>
     <message>
         <location line="+45"/>
         <source>Confirm wallet encryption</source>
-        <translation>Potwierdź szyfrowanie portfela</translation>
+        <translation>Confirmar criptografia da carteira</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR COINS&lt;/b&gt;!</source>
-        <translation>Uwaga: Jeśli zaszyfrujesz swój portfel i zgubisz hasło, wtedy&lt;b&gt;UTRACISZ SWOJE MONETY!&lt;/b&gt;!</translation>
+        <translation>Aviso: Se você criptografar sua carteira e perder sua senha, você vai &lt;b&gt;PERDER TODAS AS SUAS MOEDAS&lt;/ b&gt;!</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Are you sure you wish to encrypt your wallet?</source>
-        <translation>Jesteś pewien, że chcesz zaszyfrować swój portfel?</translation>
+        <translation>Tem certeza de que deseja criptografar sua carteira?</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
-        <translation>WAŻNE: Wszystkie wykonane wcześniej kopie pliku portfela powinny być zamienione na nowe, szyfrowane pliki. Z powodów bezpieczeństwa, poprzednie kopie nieszyfrowanych plików portfela staną się bezużyteczne jak tylko zaczniesz korzystać z nowego, szyfrowanego portfela.</translation>
+        <translation>IMPORTANTE: Qualquer backup prévio que você tenha feito do seu arquivo wallet deve ser substituído pelo novo e encriptado arquivo wallet gerado. Por razões de segurança, qualquer backup do arquivo wallet não criptografado se tornará inútil assim que você começar  a usar uma nova carteira criptografada.</translation>
     </message>
     <message>
         <location line="+103"/>
         <location line="+24"/>
         <source>Warning: The Caps Lock key is on!</source>
-        <translation>Uwaga: Klawisz Caps Lock jest włączony</translation>
+        <translation>Cuidado: A tecla Caps Lock está ligada!</translation>
     </message>
     <message>
         <location line="-133"/>
         <location line="+60"/>
         <source>Wallet encrypted</source>
-        <translation>Portfel zaszyfrowany</translation>
+        <translation>Carteira criptografada</translation>
     </message>
     <message>
         <location line="-140"/>
@@ -258,7 +258,7 @@ Możesz dodać kolejny adres dla każdego wysyłającego aby określić od kogo 
     <message>
         <location line="+82"/>
         <source>Bws will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
-        <translation type="unfinished"/>
+        <translation>Bws vai fechar agora para concluir o processo de criptografia. Lembre-se que a criptografia de sua carteira não pode proteger totalmente suas moedas de serem roubados por malwares infectem seu computador.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -266,40 +266,40 @@ Możesz dodać kolejny adres dla każdego wysyłającego aby określić od kogo 
         <location line="+44"/>
         <location line="+6"/>
         <source>Wallet encryption failed</source>
-        <translation>Szyfrowanie portfela nie powiodło się</translation>
+        <translation>A criptografia da carteira falhou</translation>
     </message>
     <message>
         <location line="-56"/>
         <source>Wallet encryption failed due to an internal error. Your wallet was not encrypted.</source>
-        <translation>Szyfrowanie portfela nie powiodło się z powodu wewnętrznego błędu. Twój portfel nie został zaszyfrowany.</translation>
+        <translation>A criptografia da carteira falhou devido a um erro interno. Sua carteira não estava criptografada.</translation>
     </message>
     <message>
         <location line="+7"/>
         <location line="+50"/>
         <source>The supplied passphrases do not match.</source>
-        <translation>Podane hasła nie są takie same.</translation>
+        <translation>A frase de segurança fornecida não confere.</translation>
     </message>
     <message>
         <location line="-38"/>
         <source>Wallet unlock failed</source>
-        <translation>Odblokowanie portfela nie powiodło się</translation>
+        <translation>A abertura da carteira falhou</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+12"/>
         <location line="+19"/>
         <source>The passphrase entered for the wallet decryption was incorrect.</source>
-        <translation>Wprowadzone hasło do odszyfrowania portfela jest niepoprawne.</translation>
+        <translation>A frase de segurança digitada para a descriptografia da carteira estava incorreta.</translation>
     </message>
     <message>
         <location line="-20"/>
         <source>Wallet decryption failed</source>
-        <translation>Odszyfrowanie portfela nie powiodło się</translation>
+        <translation>A descriptografia da carteira falhou</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Wallet passphrase was successfully changed.</source>
-        <translation>Hasło portfela zostało pomyślnie zmienione.</translation>
+        <translation>A frase de segurança da carteira foi alterada com êxito.</translation>
     </message>
 </context>
 <context>
@@ -307,132 +307,132 @@ Możesz dodać kolejny adres dla każdego wysyłającego aby określić od kogo 
     <message>
         <location filename="../bitcoingui.cpp" line="+297"/>
         <source>Sign &amp;message...</source>
-        <translation>Podpisz wiado&amp;mość...</translation>
+        <translation>&amp;Assinar Mensagem...</translation>
     </message>
     <message>
         <location line="-64"/>
         <source>Show general overview of wallet</source>
-        <translation>Pokazuje ogólny zarys portfela</translation>
+        <translation>Mostrar visão geral da carteira</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>&amp;Transactions</source>
-        <translation>&amp;Transakcje</translation>
+        <translation>&amp;Transações</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Browse transaction history</source>
-        <translation>Przeglądaj historię transakcji</translation>
+        <translation>Navegar pelo histórico de transações</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>&amp;Address Book</source>
-        <translation>&amp;Książka Adresowa</translation>
+        <translation>&amp;Livro de Endereços</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Edit the list of stored addresses and labels</source>
-        <translation>Edytuj listę przechowywanych adresów i etykiet</translation>
+        <translation>Edite a lista de endereços armazenados e rótulos</translation>
     </message>
     <message>
         <location line="-18"/>
         <source>Show the list of addresses for receiving payments</source>
-        <translation>Pokaż listę adresów do odbierania wpłat</translation>
+        <translation>Mostrar a lista de endereços para o recebimento de pagamentos</translation>
     </message>
     <message>
         <location line="+34"/>
         <source>E&amp;xit</source>
-        <translation>&amp;Zakończ</translation>
+        <translation>S&amp;air</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Quit application</source>
-        <translation>Zamknij program</translation>
+        <translation>Sair da aplicação</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Show information about Bws</source>
-        <translation>Pokaż informacje dotyczące Bws</translation>
+        <translation>Mostrar informações sobre o Bws</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>About &amp;Qt</source>
-        <translation>O &amp;Qt</translation>
+        <translation>Sobre &amp;Qt</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Show information about Qt</source>
-        <translation>Pokazuje informacje o Qt</translation>
+        <translation>Mostrar informações sobre o Qt</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>&amp;Options...</source>
-        <translation>&amp;Opcje...</translation>
+        <translation>&amp;Opções...</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Encrypt Wallet...</source>
-        <translation>Zaszyfruj Portf&amp;el</translation>
+        <translation>&amp;Criptografar Carteira...</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>&amp;Backup Wallet...</source>
-        <translation>Wykonaj kopię zapasową...</translation>
+        <translation>&amp;Backup Carteira...</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>&amp;Change Passphrase...</source>
-        <translation>&amp;Zmień hasło...</translation>
+        <translation>&amp;Mudar frase de segurança...</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>&amp;Export...</source>
-        <translation>&amp;Exportuj</translation>
+        <translation>&amp;Exportar...</translation>
     </message>
     <message>
         <location line="-55"/>
         <source>Send coins to a Bws address</source>
-        <translation>Wyślij monety na adres Bws</translation>
+        <translation>Enviar moedas para um endereço Bws</translation>
     </message>
     <message>
         <location line="+39"/>
         <source>Modify configuration options for Bws</source>
-        <translation type="unfinished"/>
+        <translation>Modificar opções de configuração para Bws</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Export the data in the current tab to a file</source>
-        <translation type="unfinished"/>
+        <translation>Exportar os dados da guia atual para um arquivo</translation>
     </message>
     <message>
         <location line="-13"/>
         <source>Encrypt or decrypt wallet</source>
-        <translation type="unfinished"/>
+        <translation>Cryptografar ou Decryptografar carteira</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Backup wallet to another location</source>
-        <translation>Zapasowy portfel w innej lokalizacji</translation>
+        <translation>Fazer cópia de segurança da carteira para uma outra localização</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Change the passphrase used for wallet encryption</source>
-        <translation>Zmień hasło użyte do szyfrowania portfela</translation>
+        <translation>Mudar a frase de segurança utilizada na criptografia da carteira</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Debug window</source>
-        <translation>&amp;Okno debugowania</translation>
+        <translation>Janela de &amp;Depuração</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Open debugging and diagnostic console</source>
-        <translation>Otwórz konsolę debugowania i diagnostyki</translation>
+        <translation>Abrir console de depuração e diagnóstico</translation>
     </message>
     <message>
         <location line="-5"/>
         <source>&amp;Verify message...</source>
-        <translation>&amp;Zweryfikuj wiadomość...</translation>
+        <translation>&amp;Verificar mensagem...</translation>
     </message>
     <message>
         <location line="-214"/>
@@ -443,52 +443,52 @@ Możesz dodać kolejny adres dla każdego wysyłającego aby określić od kogo 
     <message>
         <location line="-555"/>
         <source>Wallet</source>
-        <translation>Portfel</translation>
+        <translation>Carteira</translation>
     </message>
     <message>
         <location line="+193"/>
         <source>&amp;About Bws</source>
-        <translation type="unfinished"/>
+        <translation>Sobre o Bws</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>&amp;Show / Hide</source>
-        <translation>&amp;Pokaż / Ukryj</translation>
+        <translation>&amp;Exibir/Ocultar</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Unlock wallet</source>
-        <translation type="unfinished"/>
+        <translation>Desbloquear carteira</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>&amp;Lock Wallet</source>
-        <translation type="unfinished"/>
+        <translation>&amp;Bloquear Carteira</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Lock wallet</source>
-        <translation type="unfinished"/>
+        <translation>Bloquear Carteira</translation>
     </message>
     <message>
         <location line="+32"/>
         <source>&amp;File</source>
-        <translation>&amp;Plik</translation>
+        <translation>&amp;Arquivo</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>&amp;Settings</source>
-        <translation>P&amp;referencje</translation>
+        <translation>&amp;Configurações</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>&amp;Help</source>
-        <translation>Pomo&amp;c</translation>
+        <translation>&amp;Ajuda</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Tabs toolbar</source>
-        <translation>Pasek zakładek</translation>
+        <translation>Barra de ferramentas</translation>
     </message>
     <message>
         <location line="+46"/>
@@ -505,7 +505,7 @@ Możesz dodać kolejny adres dla każdego wysyłającego aby określić od kogo 
     <message numerus="yes">
         <location line="+70"/>
         <source>%n active connection(s) to Bws network</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
     </message>
     <message>
         <location line="+6"/>
@@ -550,12 +550,12 @@ Możesz dodać kolejny adres dla każdego wysyłającego aby określić od kogo 
     <message>
         <location line="+277"/>
         <source>Up to date</source>
-        <translation>Aktualny</translation>
+        <translation>Atualizado</translation>
     </message>
     <message>
         <location line="+43"/>
         <source>Catching up...</source>
-        <translation>Łapanie bloków...</translation>
+        <translation>Recuperando o atraso ...</translation>
     </message>
     <message>
         <location line="+113"/>
@@ -565,12 +565,12 @@ Możesz dodać kolejny adres dla każdego wysyłającego aby określić od kogo 
     <message>
         <location line="+27"/>
         <source>Sent transaction</source>
-        <translation>Transakcja wysłana</translation>
+        <translation>Transação enviada</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Incoming transaction</source>
-        <translation>Transakcja przychodząca</translation>
+        <translation>Transação recebida</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -580,10 +580,9 @@ Type: %3
 Address: %4
 </source>
         <translation>Data: %1
-Kwota: %2
-Typ: %3
-Adres: %4
-</translation>
+Quantidade: %2
+Tipo: %3
+Endereço: %4</translation>
     </message>
     <message>
         <location line="+100"/>
@@ -605,12 +604,12 @@ Adres: %4
     <message>
         <location line="+8"/>
         <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
-        <translation>Portfel jest &lt;b&gt;zaszyfrowany&lt;/b&gt; i obecnie &lt;b&gt;niezablokowany&lt;/b&gt;</translation>
+        <translation>Carteira está &lt;b&gt;criptografada&lt;/b&gt; e atualmente &lt;b&gt;desbloqueada&lt;/b&gt;</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;locked&lt;/b&gt;</source>
-        <translation>Portfel jest &lt;b&gt;zaszyfrowany&lt;/b&gt; i obecnie &lt;b&gt;zablokowany&lt;/b&gt;</translation>
+        <translation>Carteira está &lt;b&gt;criptografada&lt;/b&gt; e atualmente &lt;b&gt;bloqueada&lt;/b&gt;</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -635,18 +634,18 @@ Adres: %4
     <message numerus="yes">
         <location line="+91"/>
         <source>%n second(s)</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
     </message>
     <message numerus="yes">
         <location line="+4"/>
         <source>%n minute(s)</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
     </message>
     <message numerus="yes">
         <location line="-429"/>
         <location line="+433"/>
         <source>%n hour(s)</source>
-        <translation><numerusform>%n godzina</numerusform><numerusform>%n godzin</numerusform><numerusform>%n godzin</numerusform><numerusform>%n godzin</numerusform></translation>
+        <translation><numerusform>%n hora</numerusform><numerusform>%n horas</numerusform></translation>
     </message>
     <message>
         <location line="-456"/>
@@ -657,13 +656,13 @@ Adres: %4
         <location line="+27"/>
         <location line="+433"/>
         <source>%n day(s)</source>
-        <translation><numerusform>%n dzień</numerusform><numerusform>%n dni</numerusform><numerusform>%n dni</numerusform><numerusform>%n dni</numerusform></translation>
+        <translation><numerusform>%n dia</numerusform><numerusform>%n dias</numerusform></translation>
     </message>
     <message numerus="yes">
         <location line="-429"/>
         <location line="+6"/>
         <source>%n week(s)</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
     </message>
     <message>
         <location line="+0"/>
@@ -673,7 +672,7 @@ Adres: %4
     <message numerus="yes">
         <location line="+0"/>
         <source>%n year(s)</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
     </message>
     <message>
         <location line="+5"/>
@@ -726,7 +725,7 @@ Adres: %4
     <message>
         <location filename="../clientmodel.cpp" line="+119"/>
         <source>Network Alert</source>
-        <translation>Sieć Alert</translation>
+        <translation>Alerta da Rede</translation>
     </message>
 </context>
 <context>
@@ -739,62 +738,62 @@ Adres: %4
     <message>
         <location line="+31"/>
         <source>Quantity:</source>
-        <translation>Ilość:</translation>
+        <translation>Quantidade:</translation>
     </message>
     <message>
         <location line="+32"/>
         <source>Bytes:</source>
-        <translation>Bajtów:</translation>
+        <translation>Bytes:</translation>
     </message>
     <message>
         <location line="+48"/>
         <source>Amount:</source>
-        <translation>Kwota:</translation>
+        <translation>Quantia:</translation>
     </message>
     <message>
         <location line="+48"/>
         <source>Fee:</source>
-        <translation>Opłata:</translation>
+        <translation>Taxa:</translation>
     </message>
     <message>
         <location line="+35"/>
         <source>Low Output:</source>
-        <translation type="unfinished"/>
+        <translation>Rendimento baixo:</translation>
     </message>
     <message>
         <location filename="../coincontroldialog.cpp" line="+493"/>
         <source>no</source>
-        <translation>nie</translation>
+        <translation>não</translation>
     </message>
     <message>
         <location filename="../forms/coincontroldialog.ui" line="+51"/>
         <source>After Fee:</source>
-        <translation>Po opłacie:</translation>
+        <translation>Depois da taxa:</translation>
     </message>
     <message>
         <location line="+35"/>
         <source>Change:</source>
-        <translation>Reszta:</translation>
+        <translation>trocar</translation>
     </message>
     <message>
         <location line="+69"/>
         <source>(un)select all</source>
-        <translation>Zaznacz/Odznacz wszystko</translation>
+        <translation>(de)selecionar tudo</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Tree mode</source>
-        <translation>Widok drzewa</translation>
+        <translation>Modo árvore</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>List mode</source>
-        <translation>Widok listy</translation>
+        <translation>Modo lista</translation>
     </message>
     <message>
         <location line="+45"/>
         <source>Amount</source>
-        <translation>Kwota</translation>
+        <translation>Quantidade</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -804,7 +803,7 @@ Adres: %4
     <message>
         <location line="+5"/>
         <source>Address</source>
-        <translation>Adres</translation>
+        <translation>Endereço</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -814,68 +813,68 @@ Adres: %4
     <message>
         <location line="+5"/>
         <source>Confirmations</source>
-        <translation>Potwierdzenia</translation>
+        <translation>Confirmações</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Confirmed</source>
-        <translation>Potwierdzony</translation>
+        <translation>Confirmado</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Priority</source>
-        <translation>Priorytet</translation>
+        <translation>Prioridade</translation>
     </message>
     <message>
         <location filename="../coincontroldialog.cpp" line="-456"/>
         <source>Copy address</source>
-        <translation>Kopiuj adres</translation>
+        <translation>Copiar endereço</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Copy label</source>
-        <translation>Kopiuj etykietę</translation>
+        <translation>Copiar etiqueta</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+26"/>
         <source>Copy amount</source>
-        <translation>Kopiuj kwotę</translation>
+        <translation>Copiar quantia</translation>
     </message>
     <message>
         <location line="-25"/>
         <source>Copy transaction ID</source>
-        <translation>Skopiuj ID transakcji</translation>
+        <translation>Copiar ID da transação</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Copy quantity</source>
-        <translation>Skopiuj ilość</translation>
+        <translation>Copiar quantidade</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Copy fee</source>
-        <translation>Skopiuj opłatę</translation>
+        <translation>Copiar taxa</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Copy after fee</source>
-        <translation>Skopiuj ilość po opłacie</translation>
+        <translation>Copia pós-taxa</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Copy bytes</source>
-        <translation>Skopiuj ilość bajtów</translation>
+        <translation>Copiar bytes</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Copy low output</source>
-        <translation type="unfinished"/>
+        <translation>Copia saída de pouco valor</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Copy change</source>
-        <translation>Skopiuj resztę</translation>
+        <translation>Copia alteração</translation>
     </message>
     <message>
         <location line="+423"/>
@@ -885,7 +884,7 @@ Adres: %4
     <message>
         <location line="+0"/>
         <source>yes</source>
-        <translation>tak</translation>
+        <translation>sim</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -916,17 +915,17 @@ Adres: %4
         <location line="+35"/>
         <location line="+58"/>
         <source>(no label)</source>
-        <translation>(bez etykiety)</translation>
+        <translation>(Sem rótulo)</translation>
     </message>
     <message>
         <location line="-9"/>
         <source>change from %1 (%2)</source>
-        <translation>reszta z %1 (%2)</translation>
+        <translation>troco de %1 (%2)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>(change)</source>
-        <translation>(reszta)</translation>
+        <translation>(troco)</translation>
     </message>
 </context>
 <context>
@@ -934,12 +933,12 @@ Adres: %4
     <message>
         <location filename="../forms/editaddressdialog.ui" line="+14"/>
         <source>Edit Address</source>
-        <translation>Edytuj adres</translation>
+        <translation>Editar Endereço</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>&amp;Label</source>
-        <translation>&amp;Etykieta</translation>
+        <translation>&amp;Etiqueta</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -949,7 +948,7 @@ Adres: %4
     <message>
         <location line="+7"/>
         <source>&amp;Address</source>
-        <translation>&amp;Adres</translation>
+        <translation>&amp;Endereço</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -959,27 +958,27 @@ Adres: %4
     <message>
         <location filename="../editaddressdialog.cpp" line="+21"/>
         <source>New receiving address</source>
-        <translation>Nowy adres odbiorczy</translation>
+        <translation>Novo endereço de recebimento</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>New sending address</source>
-        <translation>Nowy adres wysyłania</translation>
+        <translation>Novo endereço de envio</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Edit receiving address</source>
-        <translation>Edytuj adres odbioru</translation>
+        <translation>Editar endereço de recebimento</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Edit sending address</source>
-        <translation>Edytuj adres wysyłania</translation>
+        <translation>Editar endereço de envio</translation>
     </message>
     <message>
         <location line="+76"/>
         <source>The entered address &quot;%1&quot; is already in the address book.</source>
-        <translation>Wprowadzony adres &quot;%1&quot; już istnieje w książce adresowej.</translation>
+        <translation>O endereço digitado &quot;%1&quot; já se encontra no catálogo de endereços.</translation>
     </message>
     <message>
         <location line="-5"/>
@@ -989,12 +988,12 @@ Adres: %4
     <message>
         <location line="+10"/>
         <source>Could not unlock wallet.</source>
-        <translation>Nie można było odblokować portfela.</translation>
+        <translation>Não foi possível destravar a carteira.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>New key generation failed.</source>
-        <translation>Tworzenie nowego klucza nie powiodło się.</translation>
+        <translation>A geração de nova chave falhou.</translation>
     </message>
 </context>
 <context>
@@ -1046,12 +1045,12 @@ Adres: %4
     <message>
         <location filename="../forms/optionsdialog.ui" line="+14"/>
         <source>Options</source>
-        <translation>Opcje</translation>
+        <translation>Opções</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>&amp;Main</source>
-        <translation>Główne</translation>
+        <translation>Principal</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -1061,7 +1060,7 @@ Adres: %4
     <message>
         <location line="+15"/>
         <source>Pay transaction &amp;fee</source>
-        <translation>Płać prowizję za transakcje</translation>
+        <translation>Pagar taxa de &amp;transação</translation>
     </message>
     <message>
         <location line="+31"/>
@@ -1086,7 +1085,7 @@ Adres: %4
     <message>
         <location line="+21"/>
         <source>&amp;Network</source>
-        <translation>&amp;Sieć</translation>
+        <translation>Rede</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -1096,12 +1095,12 @@ Adres: %4
     <message>
         <location line="+3"/>
         <source>Map port using &amp;UPnP</source>
-        <translation>Mapuj port używając &amp;UPnP</translation>
+        <translation>Mapear porta usando &amp;UPnP</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Proxy &amp;IP:</source>
-        <translation>Proxy &amp;IP: </translation>
+        <translation>&amp;IP do proxy:</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -1111,12 +1110,12 @@ Adres: %4
     <message>
         <location line="+7"/>
         <source>&amp;Port:</source>
-        <translation>&amp;Port:</translation>
+        <translation>&amp;Porta:</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Port of the proxy (e.g. 9050)</source>
-        <translation>Port proxy (np. 9050)</translation>
+        <translation>Porta do serviço de proxy (ex. 9050)</translation>
     </message>
     <message>
         <location line="-57"/>
@@ -1131,37 +1130,37 @@ Adres: %4
     <message>
         <location line="+90"/>
         <source>&amp;Window</source>
-        <translation>&amp;Okno</translation>
+        <translation>&amp;Janela</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Show only a tray icon after minimizing the window.</source>
-        <translation>Pokazuj tylko ikonę przy zegarku po zminimalizowaniu okna.</translation>
+        <translation>Mostrar apenas um ícone na bandeja ao minimizar a janela.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>&amp;Minimize to the tray instead of the taskbar</source>
-        <translation>&amp;Minimalizuj do paska przy zegarku zamiast do paska zadań</translation>
+        <translation>&amp;Minimizar para a bandeja em vez da barra de tarefas.</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Minimize instead of exit the application when the window is closed. When this option is enabled, the application will be closed only after selecting Quit in the menu.</source>
-        <translation>Minimalizuje zamiast zakończyć działanie programu przy zamykaniu okna. Kiedy ta opcja jest włączona, program zakończy działanie po wybieraniu Zamknij w menu.</translation>
+        <translation>Minimizar em vez de sair do aplicativo quando a janela for fechada. Quando esta opção é escolhida, o aplicativo só será fechado selecionando Sair no menu Arquivo.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>M&amp;inimize on close</source>
-        <translation>M&amp;inimalizuj przy zamknięciu</translation>
+        <translation>M&amp;inimizar ao sair</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>&amp;Display</source>
-        <translation>&amp;Wyświetlanie</translation>
+        <translation>&amp;Mostrar</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>User Interface &amp;language:</source>
-        <translation>Język &amp;Użytkownika:</translation>
+        <translation>&amp;Língua da interface com usuário:</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -1171,17 +1170,17 @@ Adres: %4
     <message>
         <location line="+11"/>
         <source>&amp;Unit to show amounts in:</source>
-        <translation>&amp;Jednostka pokazywana przy kwocie:</translation>
+        <translation>&amp;Unidade usada para mostrar quantidades:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Wybierz podział jednostki pokazywany w interfejsie  oraz podczas wysyłania monet</translation>
+        <translation>Escolha a unidade padrão de subdivisão para interface mostrar quando enviar bitcoins.</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Whether to show coin control features or not.</source>
-        <translation type="unfinished"/>
+        <translation>Mostrar ou não opções de controle da moeda.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1201,7 +1200,7 @@ Adres: %4
     <message>
         <location line="+7"/>
         <source>&amp;Cancel</source>
-        <translation>&amp;Anuluj</translation>
+        <translation>&amp;Cancelar</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1211,7 +1210,7 @@ Adres: %4
     <message>
         <location filename="../optionsdialog.cpp" line="+47"/>
         <source>default</source>
-        <translation>domyślny</translation>
+        <translation>padrão</translation>
     </message>
     <message>
         <location line="+147"/>
@@ -1228,7 +1227,7 @@ Adres: %4
     <message>
         <location line="+29"/>
         <source>The supplied proxy address is invalid.</source>
-        <translation>Adres podanego proxy jest nieprawidłowy</translation>
+        <translation>O endereço proxy fornecido é inválido.</translation>
     </message>
 </context>
 <context>
@@ -1236,7 +1235,7 @@ Adres: %4
     <message>
         <location filename="../forms/overviewpage.ui" line="+14"/>
         <source>Form</source>
-        <translation>Formularz</translation>
+        <translation>Formulário</translation>
     </message>
     <message>
         <location line="+46"/>
@@ -1257,7 +1256,7 @@ Adres: %4
     <message>
         <location line="-113"/>
         <source>Wallet</source>
-        <translation>Portfel</translation>
+        <translation>Carteira</translation>
     </message>
     <message>
         <location line="+49"/>
@@ -1267,32 +1266,32 @@ Adres: %4
     <message>
         <location line="+16"/>
         <source>Your current spendable balance</source>
-        <translation>Twoje obecne saldo</translation>
+        <translation>Seu saldo atual spendable</translation>
     </message>
     <message>
         <location line="+80"/>
         <source>Immature:</source>
-        <translation>Niedojrzały: </translation>
+        <translation>Imaturo:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Mined balance that has not yet matured</source>
-        <translation>Balans wydobycia, który jeszcze nie dojrzał</translation>
+        <translation>Saldo minerado que ainda não maturou</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Total:</source>
-        <translation>Wynosi ogółem:</translation>
+        <translation>Total:</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Your current total balance</source>
-        <translation>Twoje obecne saldo</translation>
+        <translation>Seu saldo total atual</translation>
     </message>
     <message>
         <location line="+50"/>
         <source>&lt;b&gt;Recent transactions&lt;/b&gt;</source>
-        <translation>&lt;b&gt;Ostatnie transakcje&lt;/b&gt;</translation>
+        <translation>&lt;b&gt;Transações recentes&lt;/b&gt;</translation>
     </message>
     <message>
         <location line="-118"/>
@@ -1308,7 +1307,7 @@ Adres: %4
         <location filename="../overviewpage.cpp" line="+116"/>
         <location line="+1"/>
         <source>out of sync</source>
-        <translation>desynchronizacja</translation>
+        <translation>fora de sincronia</translation>
     </message>
 </context>
 <context>
@@ -1382,7 +1381,7 @@ Adres: %4
     <message>
         <location filename="../forms/rpcconsole.ui" line="+46"/>
         <source>Client name</source>
-        <translation>Nazwa klienta</translation>
+        <translation>Nome do cliente</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1394,37 +1393,37 @@ Adres: %4
         <location line="+53"/>
         <location line="+23"/>
         <source>N/A</source>
-        <translation>NIEDOSTĘPNE</translation>
+        <translation>N/A</translation>
     </message>
     <message>
         <location line="-194"/>
         <source>Client version</source>
-        <translation>Wersja klienta</translation>
+        <translation>Versão do cliente</translation>
     </message>
     <message>
         <location line="-45"/>
         <source>&amp;Information</source>
-        <translation>&amp;Informacje</translation>
+        <translation>&amp;Informação</translation>
     </message>
     <message>
         <location line="+68"/>
         <source>Using OpenSSL version</source>
-        <translation>Używana wersja OpenSSL</translation>
+        <translation>Usando OpenSSL versão</translation>
     </message>
     <message>
         <location line="+49"/>
         <source>Startup time</source>
-        <translation>Czas uruchomienia</translation>
+        <translation>Horário de inicialização</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Network</source>
-        <translation>Sieć</translation>
+        <translation>Rede</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Number of connections</source>
-        <translation>Liczba połączeń</translation>
+        <translation>Número de conexões</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -1434,12 +1433,12 @@ Adres: %4
     <message>
         <location line="+23"/>
         <source>Block chain</source>
-        <translation>Ciąg bloków</translation>
+        <translation>Corrente de blocos</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Current number of blocks</source>
-        <translation>Aktualna liczba bloków</translation>
+        <translation>Quantidade atual de blocos</translation>
     </message>
     <message>
         <location line="+197"/>
@@ -1471,12 +1470,12 @@ Adres: %4
     <message>
         <location line="-383"/>
         <source>Last block time</source>
-        <translation>Czas ostatniego bloku</translation>
+        <translation>Horário do último bloco</translation>
     </message>
     <message>
         <location line="+52"/>
         <source>&amp;Open</source>
-        <translation>&amp;Otwórz</translation>
+        <translation>&amp;Abrir</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -1496,12 +1495,12 @@ Adres: %4
     <message>
         <location line="+24"/>
         <source>&amp;Console</source>
-        <translation>&amp;Konsola</translation>
+        <translation>&amp;Console</translation>
     </message>
     <message>
         <location line="-237"/>
         <source>Build date</source>
-        <translation>Data kompilacji</translation>
+        <translation>Data do &apos;build&apos;</translation>
     </message>
     <message>
         <location line="-104"/>
@@ -1516,7 +1515,7 @@ Adres: %4
     <message>
         <location line="+256"/>
         <source>Debug log file</source>
-        <translation>Plik logowania debugowania</translation>
+        <translation>Arquivo de log de Depuração</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -1526,7 +1525,7 @@ Adres: %4
     <message>
         <location line="+102"/>
         <source>Clear console</source>
-        <translation>Wyczyść konsolę</translation>
+        <translation>Limpar console</translation>
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="-28"/>
@@ -1536,12 +1535,12 @@ Adres: %4
     <message>
         <location line="+1"/>
         <source>Use up and down arrows to navigate history, and &lt;b&gt;Ctrl-L&lt;/b&gt; to clear screen.</source>
-        <translation>Użyj strzałek do przewijania historii i &lt;b&gt;Ctrl-L&lt;/b&gt; aby wyczyścić ekran</translation>
+        <translation>Use as setas para cima e para baixo para navegar pelo histórico, e &lt;b&gt;Ctrl-L&lt;/b&gt; para limpar a tela.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Type &lt;b&gt;help&lt;/b&gt; for an overview of available commands.</source>
-        <translation>Wpisz &lt;b&gt;help&lt;/b&gt; aby uzyskać listę dostępnych komend</translation>
+        <translation>Digite &lt;b&gt;help&lt;/b&gt; para uma visão geral dos comandos disponíveis.</translation>
     </message>
     <message>
         <location line="+134"/>
@@ -1591,32 +1590,32 @@ Adres: %4
         <location line="+5"/>
         <location line="+5"/>
         <source>Send Coins</source>
-        <translation>Wyślij Monety</translation>
+        <translation>Enviar dinheiro</translation>
     </message>
     <message>
         <location line="+76"/>
         <source>Coin Control Features</source>
-        <translation type="unfinished"/>
+        <translation>Opções de Controle da Moeda</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Inputs...</source>
-        <translation type="unfinished"/>
+        <translation>Entradas...</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>automatically selected</source>
-        <translation type="unfinished"/>
+        <translation>automaticamente selecionado</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Insufficient funds!</source>
-        <translation type="unfinished"/>
+        <translation>Saldo insuficiente!</translation>
     </message>
     <message>
         <location line="+77"/>
         <source>Quantity:</source>
-        <translation>Ilość:</translation>
+        <translation>Quantidade:</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -1627,22 +1626,22 @@ Adres: %4
     <message>
         <location line="-19"/>
         <source>Bytes:</source>
-        <translation>Bajtów:</translation>
+        <translation>Bytes:</translation>
     </message>
     <message>
         <location line="+51"/>
         <source>Amount:</source>
-        <translation>Kwota:</translation>
+        <translation>Quantia:</translation>
     </message>
     <message>
         <location line="+54"/>
         <source>Fee:</source>
-        <translation>Opłata:</translation>
+        <translation>Taxa:</translation>
     </message>
     <message>
         <location line="+35"/>
         <source>Low Output:</source>
-        <translation type="unfinished"/>
+        <translation>Rendimento baixo:</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -1652,7 +1651,7 @@ Adres: %4
     <message>
         <location line="+32"/>
         <source>After Fee:</source>
-        <translation>Po opłacie:</translation>
+        <translation>Depois da taxa:</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -1667,12 +1666,12 @@ Adres: %4
     <message>
         <location line="+106"/>
         <source>Send to multiple recipients at once</source>
-        <translation>Wyślij do wielu odbiorców na raz</translation>
+        <translation>Enviar para vários destinatários de uma só vez</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Add &amp;Recipient</source>
-        <translation>Dodaj Odbio&amp;rce</translation>
+        <translation>Adicionar destinatário</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -1682,7 +1681,7 @@ Adres: %4
     <message>
         <location line="+3"/>
         <source>Clear &amp;All</source>
-        <translation>Wyczyść &amp;wszystko</translation>
+        <translation>Limpar Tudo</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -1692,12 +1691,12 @@ Adres: %4
     <message>
         <location line="+47"/>
         <source>Confirm the send action</source>
-        <translation>Potwierdź akcję wysyłania</translation>
+        <translation>Confirmar o envio</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>S&amp;end</source>
-        <translation>Wy&amp;syłka</translation>
+        <translation>Enviar</translation>
     </message>
     <message>
         <location filename="../sendcoinsdialog.cpp" line="-171"/>
@@ -1707,37 +1706,37 @@ Adres: %4
     <message>
         <location line="+15"/>
         <source>Copy quantity</source>
-        <translation>Skopiuj ilość</translation>
+        <translation>Copiar quantidade</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Copy amount</source>
-        <translation>Kopiuj kwotę</translation>
+        <translation>Copiar quantia</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Copy fee</source>
-        <translation>Skopiuj opłatę</translation>
+        <translation>Copiar taxa</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Copy after fee</source>
-        <translation>Skopiuj ilość po opłacie</translation>
+        <translation>Copia pós-taxa</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Copy bytes</source>
-        <translation>Skopiuj ilość bajtów</translation>
+        <translation>Copiar bytes</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Copy low output</source>
-        <translation type="unfinished"/>
+        <translation>Copia saída de pouco valor</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Copy change</source>
-        <translation>Skopiuj resztę</translation>
+        <translation>Copia alteração</translation>
     </message>
     <message>
         <location line="+85"/>
@@ -1747,7 +1746,7 @@ Adres: %4
     <message>
         <location line="+5"/>
         <source>Confirm send coins</source>
-        <translation>Potwierdź wysyłanie monet</translation>
+        <translation>Confirmar envio de dinheiro</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1762,27 +1761,27 @@ Adres: %4
     <message>
         <location line="+29"/>
         <source>The recipient address is not valid, please recheck.</source>
-        <translation>Adres odbiorcy jest nieprawidłowy, proszę poprawić</translation>
+        <translation>O endereço do destinatário não é válido, favor verificar.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>The amount to pay must be larger than 0.</source>
-        <translation>Kwota do zapłacenia musi być większa od 0.</translation>
+        <translation>A quantidade a ser paga precisa ser maior que 0.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>The amount exceeds your balance.</source>
-        <translation>Kwota przekracza twoje saldo.</translation>
+        <translation>A quantidade excede seu saldo.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>The total exceeds your balance when the %1 transaction fee is included.</source>
-        <translation>Suma przekracza twoje saldo, gdy doliczymy %1 prowizji transakcyjnej.</translation>
+        <translation>O total excede seu saldo quando uma taxa de transação de %1 é incluída.</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Duplicate address found, can only send to each address once per send operation.</source>
-        <translation>Znaleziono powtórzony adres, można wysłać tylko raz na każdy adres podczas operacji wysyłania.</translation>
+        <translation>Endereço duplicado: pode-se enviar para cada endereço apenas uma vez por transação.</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -1802,7 +1801,7 @@ Adres: %4
     <message>
         <location line="+13"/>
         <source>(no label)</source>
-        <translation>(bez etykiety)</translation>
+        <translation>(Sem rótulo)</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -1820,12 +1819,12 @@ Adres: %4
     <message>
         <location line="+15"/>
         <source>A&amp;mount:</source>
-        <translation>Su&amp;ma:</translation>
+        <translation>Q&amp;uantidade:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Pay &amp;To:</source>
-        <translation>Zapłać &amp;dla:</translation>
+        <translation>Pagar &amp;Para:</translation>
     </message>
     <message>
         <location line="+34"/>
@@ -1836,12 +1835,12 @@ Adres: %4
         <location line="+60"/>
         <location filename="../sendcoinsentry.cpp" line="+26"/>
         <source>Enter a label for this address to add it to your address book</source>
-        <translation>Wprowadź etykietę dla tego adresu by dodać go do książki adresowej</translation>
+        <translation>Digite uma etiqueta para este endereço para adicioná-lo ao catálogo de endereços</translation>
     </message>
     <message>
         <location line="-78"/>
         <source>&amp;Label:</source>
-        <translation>&amp;Etykieta:</translation>
+        <translation>&amp;Etiqueta:</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -1856,7 +1855,7 @@ Adres: %4
     <message>
         <location line="+7"/>
         <source>Paste address from clipboard</source>
-        <translation>Wklej adres ze schowka</translation>
+        <translation>Colar o endereço da área de transferência</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1879,18 +1878,18 @@ Adres: %4
     <message>
         <location filename="../forms/signverifymessagedialog.ui" line="+14"/>
         <source>Signatures - Sign / Verify a Message</source>
-        <translation>Podpisy - Podpisz / zweryfikuj wiadomość</translation>
+        <translation>Assinaturas - Assinar / Verificar uma mensagem</translation>
     </message>
     <message>
         <location line="+13"/>
         <location line="+124"/>
         <source>&amp;Sign Message</source>
-        <translation>Podpi&amp;sz Wiadomość</translation>
+        <translation>&amp;Assinar Mensagem</translation>
     </message>
     <message>
         <location line="-118"/>
         <source>You can sign messages with your addresses to prove you own them. Be careful not to sign anything vague, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation>Możesz podpisywać wiadomości swoimi adresami aby udowodnić, że jesteś ich właścicielem. Uważaj, aby nie podpisywać niczego co wzbudza Twoje podejrzenia, ponieważ ktoś może stosować phishing próbując nakłonić Cię do ich podpisania. Akceptuj i podpisuj tylko w pełni zrozumiałe komunikaty i wiadomości.</translation>
+        <translation>Você pode assinar mensagens com seus endereços para provar que você é o dono deles. Seja cuidadoso para não assinar algo vago, pois ataques de pishing podem tentar te enganar para dar sua assinatura de identidade para eles. Apenas assine afirmações completamente detalhadas com as quais você concorda.</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -1912,7 +1911,7 @@ Adres: %4
     <message>
         <location line="-193"/>
         <source>Paste address from clipboard</source>
-        <translation>Wklej adres ze schowka</translation>
+        <translation>Colar o endereço da área de transferência</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1922,12 +1921,12 @@ Adres: %4
     <message>
         <location line="+12"/>
         <source>Enter the message you want to sign here</source>
-        <translation>Wprowadź wiadomość, którą chcesz podpisać, tutaj</translation>
+        <translation>Entre a mensagem que você quer assinar aqui</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Copy the current signature to the system clipboard</source>
-        <translation>Kopiuje aktualny podpis do schowka systemowego</translation>
+        <translation>Copiar a assinatura para a área de transferência do sistema</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -1937,24 +1936,24 @@ Adres: %4
     <message>
         <location line="+17"/>
         <source>Reset all sign message fields</source>
-        <translation>Zresetuj wszystkie pola podpisanej wiadomości</translation>
+        <translation>Limpar todos os campos de assinatura da mensagem</translation>
     </message>
     <message>
         <location line="+3"/>
         <location line="+146"/>
         <source>Clear &amp;All</source>
-        <translation>Wyczyść &amp;wszystko</translation>
+        <translation>Limpar Tudo</translation>
     </message>
     <message>
         <location line="-87"/>
         <location line="+70"/>
         <source>&amp;Verify Message</source>
-        <translation>&amp;Zweryfikuj wiadomość</translation>
+        <translation>&amp;Verificar Mensagem</translation>
     </message>
     <message>
         <location line="-64"/>
         <source>Enter the signing address, message (ensure you copy line breaks, spaces, tabs, etc. exactly) and signature below to verify the message. Be careful not to read more into the signature than what is in the signed message itself, to avoid being tricked by a man-in-the-middle attack.</source>
-        <translation>Wpisz adres podpisu, wiadomość (upewnij się, że dokładnie skopiujesz wszystkie zakończenia linii, spacje, tabulacje itp.) oraz podpis poniżej by sprawdzić wiadomość. Uważaj by nie dodać więcej do podpisu niż do samej podpisywanej wiadomości by uniknąć ataku man-in-the-middle (człowiek pośrodku)</translation>
+        <translation>Forneça o endereço da assinatura, a mensagem (se assegure que você copiou quebras de linha, espaços, tabs, etc. exatamente) e a assinatura abaixo para verificar a mensagem. Cuidado para não ler mais na assinatura do que está escrito na mensagem propriamente, para evitar ser vítima de uma ataque do tipo &quot;man-in-the-middle&quot;.</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -1969,7 +1968,7 @@ Adres: %4
     <message>
         <location line="+17"/>
         <source>Reset all verify message fields</source>
-        <translation>Resetuje wszystkie pola weryfikacji wiadomości</translation>
+        <translation>Limpar todos os campos de assinatura da mensagem</translation>
     </message>
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
@@ -1980,7 +1979,7 @@ Adres: %4
     <message>
         <location line="-2"/>
         <source>Click &quot;Sign Message&quot; to generate signature</source>
-        <translation>Kliknij &quot;Podpisz Wiadomość&quot; żeby uzyskać podpis</translation>
+        <translation>Clique em &quot;Assinar Mensagem&quot; para gerar a assinatura</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1991,7 +1990,7 @@ Adres: %4
         <location line="+85"/>
         <location line="+81"/>
         <source>The entered address is invalid.</source>
-        <translation>Podany adres jest nieprawidłowy.</translation>
+        <translation>O endereço fornecido é inválido.</translation>
     </message>
     <message>
         <location line="-81"/>
@@ -1999,59 +1998,59 @@ Adres: %4
         <location line="+73"/>
         <location line="+8"/>
         <source>Please check the address and try again.</source>
-        <translation>Proszę sprawdzić adres i spróbować ponownie.</translation>
+        <translation>Por favor, verifique o endereço e tente novamente.</translation>
     </message>
     <message>
         <location line="-81"/>
         <location line="+81"/>
         <source>The entered address does not refer to a key.</source>
-        <translation>Wprowadzony adres nie odnosi się do klucza.</translation>
+        <translation>O endereço fornecido não se refere a uma chave.</translation>
     </message>
     <message>
         <location line="-73"/>
         <source>Wallet unlock was cancelled.</source>
-        <translation>Odblokowanie portfela zostało anulowane.</translation>
+        <translation>Destravamento da Carteira foi cancelado.</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Private key for the entered address is not available.</source>
-        <translation>Klucz prywatny dla podanego adresu nie jest dostępny</translation>
+        <translation>A chave privada para o endereço fornecido não está disponível.</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Message signing failed.</source>
-        <translation>Podpisanie wiadomości nie powiodło się</translation>
+        <translation>Assinatura da mensagem falhou.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Message signed.</source>
-        <translation>Wiadomość podpisana.</translation>
+        <translation>Mensagem assinada.</translation>
     </message>
     <message>
         <location line="+59"/>
         <source>The signature could not be decoded.</source>
-        <translation>Podpis nie może zostać zdekodowany.</translation>
+        <translation>A assinatura não pode ser decodificada.</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+13"/>
         <source>Please check the signature and try again.</source>
-        <translation>Sprawdź podpis i spróbuj ponownie.</translation>
+        <translation>Por favor, verifique a assinatura e tente novamente.</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>The signature did not match the message digest.</source>
-        <translation>Podpis nie odpowiadał streszczeniu wiadomości</translation>
+        <translation>A assinatura não corresponde ao &quot;resumo da mensagem&quot;.</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Message verification failed.</source>
-        <translation>Weryfikacja wiadomości nie powiodła się.</translation>
+        <translation>Verificação da mensagem falhou.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Message verified.</source>
-        <translation>Wiadomość zweryfikowana.</translation>
+        <translation>Mensagem verificada.</translation>
     </message>
 </context>
 <context>
@@ -2067,12 +2066,12 @@ Adres: %4
     <message>
         <location filename="../transactiondesc.cpp" line="+25"/>
         <source>Open until %1</source>
-        <translation>Otwórz do %1</translation>
+        <translation>Aberto até %1</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>conflicted</source>
-        <translation type="unfinished"/>
+        <translation>em conflito</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2082,12 +2081,12 @@ Adres: %4
     <message>
         <location line="+2"/>
         <source>%1/unconfirmed</source>
-        <translation>%1/niezatwierdzone</translation>
+        <translation>%1/não confirmadas</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>%1 confirmations</source>
-        <translation>%1 potwierdzeń</translation>
+        <translation>%1 confirmações</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -2097,7 +2096,7 @@ Adres: %4
     <message numerus="yes">
         <location line="+7"/>
         <source>, broadcast through %n node(s)</source>
-        <translation><numerusform>, emitowany przez %n węzeł</numerusform><numerusform>, emitowany przez %n węzły</numerusform><numerusform>, emitowany przez %n węzłów</numerusform><numerusform>, emitowany przez %n węzłów</numerusform></translation>
+        <translation><numerusform>, difundir atráves de %n nó</numerusform><numerusform>, difundir atráves de %n nós</numerusform></translation>
     </message>
     <message>
         <location line="+4"/>
@@ -2107,36 +2106,36 @@ Adres: %4
     <message>
         <location line="+7"/>
         <source>Source</source>
-        <translation>Źródło</translation>
+        <translation>Fonte</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Generated</source>
-        <translation>Wygenerowano</translation>
+        <translation>Gerados</translation>
     </message>
     <message>
         <location line="+5"/>
         <location line="+13"/>
         <source>From</source>
-        <translation>Od</translation>
+        <translation>De</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+19"/>
         <location line="+58"/>
         <source>To</source>
-        <translation>Do</translation>
+        <translation>Para</translation>
     </message>
     <message>
         <location line="-74"/>
         <location line="+2"/>
         <source>own address</source>
-        <translation>własny adres</translation>
+        <translation>seu próprio endereço</translation>
     </message>
     <message>
         <location line="-2"/>
         <source>label</source>
-        <translation>etykieta</translation>
+        <translation>etiqueta</translation>
     </message>
     <message>
         <location line="+34"/>
@@ -2145,17 +2144,17 @@ Adres: %4
         <location line="+17"/>
         <location line="+30"/>
         <source>Credit</source>
-        <translation>Przypisy</translation>
+        <translation>Crédito</translation>
     </message>
     <message numerus="yes">
         <location line="-102"/>
         <source>matures in %n more block(s)</source>
-        <translation><numerusform>potwierdzona przy %n bloku więcej</numerusform><numerusform>potwierdzona przy %n blokach więcej</numerusform><numerusform>potwierdzona przy %n blokach więcej</numerusform><numerusform>potwierdzona przy %n blokach więcej</numerusform></translation>
+        <translation><numerusform>matura em mais %n bloco</numerusform><numerusform>matura em mais %n blocos</numerusform></translation>
     </message>
     <message>
         <location line="+2"/>
         <source>not accepted</source>
-        <translation>niezaakceptowane</translation>
+        <translation>não aceito</translation>
     </message>
     <message>
         <location line="+44"/>
@@ -2163,32 +2162,32 @@ Adres: %4
         <location line="+15"/>
         <location line="+30"/>
         <source>Debit</source>
-        <translation>Debet</translation>
+        <translation>Débito</translation>
     </message>
     <message>
         <location line="-39"/>
         <source>Transaction fee</source>
-        <translation>Prowizja transakcji</translation>
+        <translation>Taxa de transação</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Net amount</source>
-        <translation>Kwota netto</translation>
+        <translation>Valor líquido</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Message</source>
-        <translation>Wiadomość</translation>
+        <translation>Mensagem</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Comment</source>
-        <translation>Komentarz</translation>
+        <translation>Comentário</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Transaction ID</source>
-        <translation>ID transakcji</translation>
+        <translation>ID da transação</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2198,47 +2197,47 @@ Adres: %4
     <message>
         <location line="+7"/>
         <source>Debug information</source>
-        <translation>Informacje debugowania</translation>
+        <translation>Informação de depuração</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Transaction</source>
-        <translation>Transakcja</translation>
+        <translation>Transação</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Inputs</source>
-        <translation>Wejścia</translation>
+        <translation>Entradas</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Amount</source>
-        <translation>Kwota</translation>
+        <translation>Quantidade</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>true</source>
-        <translation>prawda</translation>
+        <translation>verdadeiro</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>false</source>
-        <translation>fałsz</translation>
+        <translation>falso</translation>
     </message>
     <message>
         <location line="-202"/>
         <source>, has not been successfully broadcast yet</source>
-        <translation>, nie został jeszcze pomyślnie wyemitowany</translation>
+        <translation>, ainda não foi propagada na rede com sucesso.</translation>
     </message>
     <message numerus="yes">
         <location line="-36"/>
         <source>Open for %n more block(s)</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
     </message>
     <message>
         <location line="+67"/>
         <source>unknown</source>
-        <translation>nieznany</translation>
+        <translation>desconhecido</translation>
     </message>
 </context>
 <context>
@@ -2246,12 +2245,12 @@ Adres: %4
     <message>
         <location filename="../forms/transactiondescdialog.ui" line="+14"/>
         <source>Transaction details</source>
-        <translation>Szczegóły transakcji</translation>
+        <translation>Detalhes da transação</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>This pane shows a detailed description of the transaction</source>
-        <translation>Ten panel pokazuje szczegółowy opis transakcji</translation>
+        <translation>Este painel mostra uma descrição detalhada da transação</translation>
     </message>
 </context>
 <context>
@@ -2264,122 +2263,122 @@ Adres: %4
     <message>
         <location line="+0"/>
         <source>Type</source>
-        <translation>Typ</translation>
+        <translation>Tipo</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Address</source>
-        <translation>Adres</translation>
+        <translation>Endereço</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Amount</source>
-        <translation>Kwota</translation>
+        <translation>Quantidade</translation>
     </message>
     <message>
         <location line="+52"/>
         <source>Open until %1</source>
-        <translation>Otwórz do %1</translation>
+        <translation>Aberto até %1</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Confirmed (%1 confirmations)</source>
-        <translation>Zatwierdzony (%1 potwierdzeń)</translation>
+        <translation>Confirmado (%1 confirmações)</translation>
     </message>
     <message numerus="yes">
         <location line="-15"/>
         <source>Open for %n more block(s)</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation><numerusform>Abrir para mais %n bloco</numerusform><numerusform>Abrir para mais %n blocos</numerusform></translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Offline</source>
-        <translation type="unfinished"/>
+        <translation>Offline</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Unconfirmed</source>
-        <translation>Niepotwierdzone:</translation>
+        <translation>Não confirmado</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Confirming (%1 of %2 recommended confirmations)</source>
-        <translation>Potwierdzanie (%1 z %2 rekomendowanych potwierdzeń)</translation>
+        <translation>Confirmando (%1 de %2 confirmações recomendadas)</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Conflicted</source>
-        <translation type="unfinished"/>
+        <translation>Conflitou</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Immature (%1 confirmations, will be available after %2)</source>
-        <translation type="unfinished"/>
+        <translation>Recém-criado (%1 confirmações, disponível somente após %2)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>This block was not received by any other nodes and will probably not be accepted!</source>
-        <translation>Ten blok nie został odebrany przez jakikolwiek inny węzeł i prawdopodobnie nie zostanie zaakceptowany!</translation>
+        <translation>Este bloco não foi recebido por nenhum outro participante da rede e provavelmente não será aceito!</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Generated but not accepted</source>
-        <translation>Wygenerowano ale nie zaakceptowano</translation>
+        <translation>Gerado mas não aceito</translation>
     </message>
     <message>
         <location line="+42"/>
         <source>Received with</source>
-        <translation>Otrzymane przez</translation>
+        <translation>Recebido por</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Received from</source>
-        <translation>Odebrano od</translation>
+        <translation>Recebido de</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Sent to</source>
-        <translation>Wysłano do</translation>
+        <translation>Enviado para</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Payment to yourself</source>
-        <translation>Płatność do siebie</translation>
+        <translation>Pagamento para você mesmo</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Mined</source>
-        <translation>Wydobyto</translation>
+        <translation>Minerado</translation>
     </message>
     <message>
         <location line="+38"/>
         <source>(n/a)</source>
-        <translation>(brak)</translation>
+        <translation>(n/a)</translation>
     </message>
     <message>
         <location line="+194"/>
         <source>Transaction status. Hover over this field to show number of confirmations.</source>
-        <translation>Status transakcji. Najedź na pole, aby zobaczyć liczbę potwierdzeń.</translation>
+        <translation>Status da transação. Passe o mouse sobre este campo para mostrar o número de confirmações.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Date and time that the transaction was received.</source>
-        <translation>Data i czas odebrania transakcji.</translation>
+        <translation>Data e hora em que a transação foi recebida.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Type of transaction.</source>
-        <translation>Rodzaj transakcji.</translation>
+        <translation>Tipo de transação.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Destination address of transaction.</source>
-        <translation>Adres docelowy transakcji.</translation>
+        <translation>Endereço de destino da transação.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Amount removed from or added to balance.</source>
-        <translation>Kwota usunięta z lub dodana do konta.</translation>
+        <translation>Quantidade debitada ou creditada ao saldo.</translation>
     </message>
 </context>
 <context>
@@ -2388,102 +2387,102 @@ Adres: %4
         <location filename="../transactionview.cpp" line="+54"/>
         <location line="+17"/>
         <source>All</source>
-        <translation>Wszystko</translation>
+        <translation>Todos</translation>
     </message>
     <message>
         <location line="-16"/>
         <source>Today</source>
-        <translation>Dzisiaj</translation>
+        <translation>Hoje</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>This week</source>
-        <translation>W tym tygodniu</translation>
+        <translation>Esta semana</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>This month</source>
-        <translation>W tym miesiącu</translation>
+        <translation>Este mês</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Last month</source>
-        <translation>W zeszłym miesiącu</translation>
+        <translation>Mês passado</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>This year</source>
-        <translation>W tym roku</translation>
+        <translation>Este ano</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Range...</source>
-        <translation>Zakres...</translation>
+        <translation>Intervalo...</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Received with</source>
-        <translation>Otrzymane przez</translation>
+        <translation>Recebido por</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Sent to</source>
-        <translation>Wysłano do</translation>
+        <translation>Enviado para</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>To yourself</source>
-        <translation>Do siebie</translation>
+        <translation>Para você mesmo</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Mined</source>
-        <translation>Wydobyto</translation>
+        <translation>Minerado</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Other</source>
-        <translation>Inne</translation>
+        <translation>Outro</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Enter address or label to search</source>
-        <translation>Wprowadź adres albo etykietę żeby wyszukać</translation>
+        <translation>Procure um endereço ou etiqueta</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Min amount</source>
-        <translation>Min suma</translation>
+        <translation>Quantidade mínima</translation>
     </message>
     <message>
         <location line="+34"/>
         <source>Copy address</source>
-        <translation>Kopiuj adres</translation>
+        <translation>Copiar endereço</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Copy label</source>
-        <translation>Kopiuj etykietę</translation>
+        <translation>Copiar etiqueta</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Copy amount</source>
-        <translation>Kopiuj kwotę</translation>
+        <translation>Copiar quantia</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Copy transaction ID</source>
-        <translation>Skopiuj ID transakcji</translation>
+        <translation>Copiar ID da transação</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Edit label</source>
-        <translation>Edytuj etykietę</translation>
+        <translation>Editar etiqueta</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Show transaction details</source>
-        <translation>Pokaż szczegóły transakcji</translation>
+        <translation>Mostrar detalhes da transação</translation>
     </message>
     <message>
         <location line="+138"/>
@@ -2493,12 +2492,12 @@ Adres: %4
     <message>
         <location line="+1"/>
         <source>Comma separated file (*.csv)</source>
-        <translation>CSV (rozdzielany przecinkami)</translation>
+        <translation>Arquivo separado por vírgulas (*. csv)</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Confirmed</source>
-        <translation>Potwierdzony</translation>
+        <translation>Confirmado</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2508,22 +2507,22 @@ Adres: %4
     <message>
         <location line="+1"/>
         <source>Type</source>
-        <translation>Typ</translation>
+        <translation>Tipo</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Label</source>
-        <translation>Etykieta</translation>
+        <translation>Etiqueta</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Address</source>
-        <translation>Adres</translation>
+        <translation>Endereço</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Amount</source>
-        <translation>Kwota</translation>
+        <translation>Quantidade</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2543,12 +2542,12 @@ Adres: %4
     <message>
         <location line="+100"/>
         <source>Range:</source>
-        <translation>Zakres:</translation>
+        <translation>Intervalo: </translation>
     </message>
     <message>
         <location line="+8"/>
         <source>to</source>
-        <translation>do</translation>
+        <translation>para</translation>
     </message>
 </context>
 <context>
@@ -2569,7 +2568,7 @@ Adres: %4
     <message>
         <location line="+1"/>
         <source>Usage:</source>
-        <translation>Użycie:</translation>
+        <translation>Uso:</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2579,17 +2578,17 @@ Adres: %4
     <message>
         <location line="+1"/>
         <source>List commands</source>
-        <translation>Lista poleceń</translation>
+        <translation>Lista de comandos</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Get help for a command</source>
-        <translation>Uzyskaj pomoc do polecenia</translation>
+        <translation>Obtenha ajuda sobre um comando</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Options:</source>
-        <translation>Opcje:</translation>
+        <translation>Opções:</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2604,12 +2603,12 @@ Adres: %4
     <message>
         <location line="+2"/>
         <source>Specify wallet file (within data directory)</source>
-        <translation>Określ plik portfela (w obrębie folderu danych)</translation>
+        <translation>Especifique o arquivo da carteira (dentro do diretório de dados)</translation>
     </message>
     <message>
         <location line="-1"/>
         <source>Specify data directory</source>
-        <translation>Wskaż folder danych</translation>
+        <translation>Especificar diretório de dados</translation>
     </message>
     <message>
         <location line="+163"/>
@@ -2629,7 +2628,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="-161"/>
         <source>Set database cache size in megabytes (default: 25)</source>
-        <translation>Ustaw rozmiar w megabajtach cache-u bazy danych (domyślnie: 25)</translation>
+        <translation>Definir o tamanho do cache do banco de dados em megabytes (padrão: 25)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2644,17 +2643,17 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="+1"/>
         <source>Maintain at most &lt;n&gt; connections to peers (default: 125)</source>
-        <translation>Utrzymuj maksymalnie &lt;n&gt; połączeń z peerami (domyślnie: 125)</translation>
+        <translation>Manter no máximo &lt;n&gt; conexões aos peers (padrão: 125)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Connect to a node to retrieve peer addresses, and disconnect</source>
-        <translation>Podłącz się do węzła aby otrzymać adresy peerów i rozłącz</translation>
+        <translation>Conectar a um nó para receber endereços de participantes, e desconectar.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Specify your own public address</source>
-        <translation>Podaj swój publiczny adres</translation>
+        <translation>Especificar seu próprio endereço público</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -2674,17 +2673,17 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="+4"/>
         <source>Threshold for disconnecting misbehaving peers (default: 100)</source>
-        <translation>Próg po którym nastąpi rozłączenie nietrzymających się zasad peerów (domyślnie: 100)</translation>
+        <translation>Limite para desconectar peers mal comportados (padrão: 100)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Number of seconds to keep misbehaving peers from reconnecting (default: 86400)</source>
-        <translation>Czas w sekundach, przez jaki nietrzymający się zasad peerzy nie będą mogli ponownie się podłączyć (domyślnie: 86400)</translation>
+        <translation>Número de segundos para impedir que peers mal comportados reconectem (padrão: 86400)</translation>
     </message>
     <message>
         <location line="+153"/>
         <source>An error occurred while setting up the RPC port %u for listening on IPv4: %s</source>
-        <translation>Wystąpił błąd podczas ustawiania portu RPC %u w tryb nasłuchu: %s</translation>
+        <translation>Um erro ocorreu ao configurar a porta RPC %u para escuta em IPv4: %s</translation>
     </message>
     <message>
         <location line="-126"/>
@@ -2694,32 +2693,32 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="-16"/>
         <source>Accept command line and JSON-RPC commands</source>
-        <translation>Akceptuj linię poleceń oraz polecenia JSON-RPC</translation>
+        <translation>Aceitar linha de comando e comandos JSON-RPC</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Run in the background as a daemon and accept commands</source>
-        <translation>Uruchom w tle jako daemon i przyjmuj polecenia</translation>
+        <translation>Rodar em segundo plano como serviço e aceitar comandos</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Use the test network</source>
-        <translation>Użyj sieci testowej</translation>
+        <translation>Usar rede de teste</translation>
     </message>
     <message>
         <location line="-23"/>
         <source>Accept connections from outside (default: 1 if no -proxy or -connect)</source>
-        <translation>Akceptuj połączenia z zewnątrz (domyślnie: 1 jeśli nie ustawiono -proxy lub -connect)</translation>
+        <translation>Aceitar conexões externas (padrão: 1 se opções -proxy ou -connect não estiverem presentes)</translation>
     </message>
     <message>
         <location line="+160"/>
         <source>An error occurred while setting up the RPC port %u for listening on IPv6, falling back to IPv4: %s</source>
-        <translation>Wystąpił błąd podczas ustawiania portu RPC %u w tryb nasłuchu dla IPv6, korzystam z IPv4: %s</translation>
+        <translation>Um erro ocorreu ao configurar a porta RPC %u para escuta em IPv6, voltando ao IPv4: %s</translation>
     </message>
     <message>
         <location line="-84"/>
         <source>Warning: -paytxfee is set very high! This is the transaction fee you will pay if you send a transaction.</source>
-        <translation>Ostrzeżenie: -paytxfee jest bardzo duży. To jest prowizja za transakcje, którą płacisz, gdy wysyłasz monety.</translation>
+        <translation>Cuidado: valor de -paytxfee escolhido é muito alto! Este é o valor da taxa de transação que você irá pagar se enviar a transação.</translation>
     </message>
     <message>
         <location line="+46"/>
@@ -2729,37 +2728,37 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="-19"/>
         <source>Warning: error reading wallet.dat! All keys read correctly, but transaction data or address book entries might be missing or incorrect.</source>
-        <translation>Ostrzeżenie: błąd odczytu wallet.dat! Wszystkie klucze zostały odczytane, ale może brakować pewnych danych transakcji lub wpisów w książce adresowej lub mogą one być nieprawidłowe.</translation>
+        <translation>Cuidado: erro ao ler arquivo wallet.dat! Todas as chaves foram lidas corretamente, mas dados transações e do catálogo de endereços podem estar faltando ou estar incorretas.</translation>
     </message>
     <message>
         <location line="-16"/>
         <source>Warning: wallet.dat corrupt, data salvaged! Original wallet.dat saved as wallet.{timestamp}.bak in %s; if your balance or transactions are incorrect you should restore from a backup.</source>
-        <translation>Ostrzeżenie: Odtworzono dane z uszkodzonego pliku wallet.dat! Oryginalny wallet.dat został zapisany jako wallet.{timestamp}.bak w %s; jeśli twoje saldo lub transakcje są niepoprawne powinieneś odtworzyć kopię zapasową.</translation>
+        <translation>Aviso: wallet.dat corrompido, dados recuperados! Arquivo wallet.dat original salvo como wallet.{timestamp}.bak em %s; se seu saldo ou transações estiverem incorretos, você deve restauras o backup.</translation>
     </message>
     <message>
         <location line="-31"/>
         <source>Attempt to recover private keys from a corrupt wallet.dat</source>
-        <translation>Próbuj odzyskać klucze prywatne z uszkodzonego wallet.dat</translation>
+        <translation>Tentar recuperar chaves privadas de um arquivo wallet.dat corrompido</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Block creation options:</source>
-        <translation>Opcje tworzenia bloku:</translation>
+        <translation>Opções de criação de blocos:</translation>
     </message>
     <message>
         <location line="-66"/>
         <source>Connect only to the specified node(s)</source>
-        <translation>Łącz tylko do wskazanego węzła</translation>
+        <translation>Conectar apenas a nó(s) específico(s)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Discover own IP address (default: 1 when listening and no -externalip)</source>
-        <translation>Odkryj własny adres IP (domyślnie: 1 kiedy w trybie nasłuchu i brak -externalip )</translation>
+        <translation>Descobrir os próprios endereços IP (padrão: 1 quando no modo listening e opção -externalip não estiver presente)</translation>
     </message>
     <message>
         <location line="+97"/>
         <source>Failed to listen on any port. Use -listen=0 if you want this.</source>
-        <translation>Próba otwarcia jakiegokolwiek portu nie powiodła się. Użyj -listen=0 jeśli tego chcesz.</translation>
+        <translation>Falha ao escutar em qualquer porta. Use -listen=0 se você quiser isso.</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -2774,17 +2773,17 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="-85"/>
         <source>Maximum per-connection receive buffer, &lt;n&gt;*1000 bytes (default: 5000)</source>
-        <translation>Maksymalny bufor odbioru na połączenie, &lt;n&gt;*1000 bajtów (domyślnie: 5000)</translation>
+        <translation>Buffer máximo de recebimento por conexão, &lt;n&gt;*1000 bytes (padrão: 5000)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Maximum per-connection send buffer, &lt;n&gt;*1000 bytes (default: 1000)</source>
-        <translation>Maksymalny bufor wysyłu na połączenie, &lt;n&gt;*1000 bajtów (domyślnie: 1000)</translation>
+        <translation>Buffer máximo de envio por conexão, &lt;n&gt;*1000 bytes (padrão: 1000)</translation>
     </message>
     <message>
         <location line="-16"/>
         <source>Only connect to nodes in network &lt;net&gt; (IPv4, IPv6 or Tor)</source>
-        <translation>Łącz z węzłami tylko w sieci &lt;net&gt; (IPv4, IPv6 lub Tor)</translation>
+        <translation>Apenas conectar em nós na rede &lt;net&gt; (IPv4, IPv6, ou Tor)</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -2794,12 +2793,12 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="+36"/>
         <source>SSL options: (see the Bitcoin Wiki for SSL setup instructions)</source>
-        <translation>Opcje SSL: (odwiedź Bitcoin Wiki w celu uzyskania instrukcji)</translation>
+        <translation>Opções SSL: (veja a Wiki do Bitcoin para instruções de configuração SSL)</translation>
     </message>
     <message>
         <location line="-34"/>
         <source>Send trace/debug info to console instead of debug.log file</source>
-        <translation>Wyślij informację/raport do konsoli zamiast do pliku debug.log.</translation>
+        <translation>Mandar informação de trace/debug para o console em vez de para o arquivo debug.log</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -2809,27 +2808,27 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="-1"/>
         <source>Set minimum block size in bytes (default: 0)</source>
-        <translation>Ustaw minimalny rozmiar bloku w bajtach (domyślnie: 0)</translation>
+        <translation>Determinar tamanho mínimo de bloco em bytes (padrão: 0)</translation>
     </message>
     <message>
         <location line="-33"/>
         <source>Shrink debug.log file on client startup (default: 1 when no -debug)</source>
-        <translation>Zmniejsz plik debug.log przy starcie programu (domyślnie: 1 jeśli nie użyto -debug)</translation>
+        <translation>Encolher arquivo debug.log ao iniciar o cliente (padrão 1 se opção -debug não estiver presente)</translation>
     </message>
     <message>
         <location line="-41"/>
         <source>Specify connection timeout in milliseconds (default: 5000)</source>
-        <translation>Wskaż czas oczekiwania bezczynności połączenia w milisekundach (domyślnie: 5000)</translation>
+        <translation>Especifique o tempo limite (timeout) da conexão em milissegundos (padrão: 5000) </translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Use UPnP to map the listening port (default: 0)</source>
-        <translation>Używaj UPnP do mapowania portu nasłuchu (domyślnie: 0)</translation>
+        <translation>Usar UPnP para mapear porta de escuta (padrão: 0)</translation>
     </message>
     <message>
         <location line="-1"/>
         <source>Use UPnP to map the listening port (default: 1 when listening)</source>
-        <translation>Używaj UPnP do mapowania portu nasłuchu (domyślnie: 1 gdy nasłuchuje)</translation>
+        <translation>Usar UPnP para mapear porta de escuta (padrão: 1 quando estiver escutando)</translation>
     </message>
     <message>
         <location line="-25"/>
@@ -2839,7 +2838,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="+45"/>
         <source>Username for JSON-RPC connections</source>
-        <translation>Nazwa użytkownika dla połączeń JSON-RPC</translation>
+        <translation>Nome de usuário para conexões JSON-RPC</translation>
     </message>
     <message>
         <location line="+50"/>
@@ -2879,17 +2878,17 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="-7"/>
         <source>Warning: This version is obsolete, upgrade required!</source>
-        <translation>Uwaga: Ta wersja jest przestarzała, aktualizacja wymagana!</translation>
+        <translation>Cuidado: Esta versão está obsoleta, atualização exigida!</translation>
     </message>
     <message>
         <location line="-23"/>
         <source>wallet.dat corrupt, salvage failed</source>
-        <translation>wallet.dat uszkodzony, odtworzenie się nie powiodło</translation>
+        <translation>wallet.dat corrompido, recuperação falhou</translation>
     </message>
     <message>
         <location line="-55"/>
         <source>Password for JSON-RPC connections</source>
-        <translation>Hasło do połączeń JSON-RPC</translation>
+        <translation>Senha para conexões JSON-RPC</translation>
     </message>
     <message>
         <location line="-47"/>
@@ -2929,12 +2928,12 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="+8"/>
         <source>Allow JSON-RPC connections from specified IP address</source>
-        <translation>Przyjmuj połączenia JSON-RPC ze wskazanego adresu IP</translation>
+        <translation>Permitir conexões JSON-RPC de endereços IP específicos</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Send commands to node running on &lt;ip&gt; (default: 127.0.0.1)</source>
-        <translation>Wysyłaj polecenia do węzła działającego na &lt;ip&gt; (domyślnie: 127.0.0.1)</translation>
+        <translation>Enviar comando para nó rodando em &lt;ip&gt; (pardão: 127.0.0.1)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2949,12 +2948,12 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="+1"/>
         <source>Execute command when the best block changes (%s in cmd is replaced by block hash)</source>
-        <translation>Wykonaj polecenie kiedy najlepszy blok ulegnie zmianie (%s w komendzie zastanie zastąpione przez hash bloku)</translation>
+        <translation>Executar comando quando o melhor bloco mudar (%s no comando será substituído pelo hash do bloco)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Execute command when a wallet transaction changes (%s in cmd is replaced by TxID)</source>
-        <translation>Wykonaj polecenie, kiedy transakcja portfela ulegnie zmianie (%s w poleceniu zostanie zastąpione przez TxID)</translation>
+        <translation>Executar comando quando uma transação da carteira mudar (%s no comando será substituído por TxID)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2969,17 +2968,17 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="+3"/>
         <source>Upgrade wallet to latest format</source>
-        <translation>Zaktualizuj portfel do najnowszego formatu.</translation>
+        <translation>Atualizar carteira para o formato mais recente</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Set key pool size to &lt;n&gt; (default: 100)</source>
-        <translation>Ustaw rozmiar puli kluczy na &lt;n&gt; (domyślnie: 100)</translation>
+        <translation>Determinar tamanho do pool de endereços para &lt;n&gt; (padrão: 100)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Rescan the block chain for missing wallet transactions</source>
-        <translation>Przeskanuj blok łańcuchów żeby znaleźć zaginione transakcje portfela</translation>
+        <translation>Re-escanear blocos procurando por transações perdidas da carteira</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2999,17 +2998,17 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="+5"/>
         <source>Use OpenSSL (https) for JSON-RPC connections</source>
-        <translation>Użyj OpenSSL (https) do połączeń JSON-RPC</translation>
+        <translation>Usar OpenSSL (https) para conexões JSON-RPC</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Server certificate file (default: server.cert)</source>
-        <translation>Plik certyfikatu serwera (domyślnie: server.cert)</translation>
+        <translation>Arquivo de certificado do servidor (padrão: server.cert)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Server private key (default: server.pem)</source>
-        <translation>Klucz prywatny serwera (domyślnie: server.pem)</translation>
+        <translation>Chave privada do servidor (padrão: server.pem)</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -3044,7 +3043,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="-135"/>
         <source>This help message</source>
-        <translation>Ta wiadomość pomocy</translation>
+        <translation>Esta mensagem de ajuda</translation>
     </message>
     <message>
         <location line="+100"/>
@@ -3054,22 +3053,22 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="+46"/>
         <source>Unable to bind to %s on this computer (bind returned error %d, %s)</source>
-        <translation>Nie można przywiązać %s na tym komputerze (bind returned error %d, %s)</translation>
+        <translation>Impossível vincular a %s neste computador (bind retornou erro %d, %s)</translation>
     </message>
     <message>
         <location line="-136"/>
         <source>Allow DNS lookups for -addnode, -seednode and -connect</source>
-        <translation>Zezwól -addnode, -seednode i -connect na łączenie się z serwerem DNS</translation>
+        <translation>Permitir consultas DNS para -addnode, -seednode e -connect</translation>
     </message>
     <message>
         <location line="+121"/>
         <source>Loading addresses...</source>
-        <translation>Wczytywanie adresów...</translation>
+        <translation>Carregando endereços...</translation>
     </message>
     <message>
         <location line="-10"/>
         <source>Error loading wallet.dat: Wallet corrupted</source>
-        <translation>Błąd ładowania wallet.dat: Uszkodzony portfel</translation>
+        <translation>Erro ao carregar wallet.dat: Carteira corrompida</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -3084,32 +3083,32 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="+1"/>
         <source>Error loading wallet.dat</source>
-        <translation>Błąd ładowania wallet.dat</translation>
+        <translation>Erro ao carregar wallet.dat</translation>
     </message>
     <message>
         <location line="-15"/>
         <source>Invalid -proxy address: &apos;%s&apos;</source>
-        <translation>Nieprawidłowy adres -proxy: &apos;%s&apos;</translation>
+        <translation>Endereço -proxy inválido: &apos;%s&apos;</translation>
     </message>
     <message>
         <location line="-1"/>
         <source>Unknown network specified in -onlynet: &apos;%s&apos;</source>
-        <translation>Nieznana sieć w -onlynet: &apos;%s&apos;</translation>
+        <translation>Rede desconhecida especificada em -onlynet: &apos;%s&apos;</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Cannot resolve -bind address: &apos;%s&apos;</source>
-        <translation>Nie można uzyskać adresu -bind: &apos;%s&apos;</translation>
+        <translation>Impossível encontrar o endereço -bind: &apos;%s&apos;</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Cannot resolve -externalip address: &apos;%s&apos;</source>
-        <translation>Nie można uzyskać adresu -externalip: &apos;%s&apos;</translation>
+        <translation>Impossível encontrar endereço -externalip: &apos;%s&apos;</translation>
     </message>
     <message>
         <location line="-22"/>
         <source>Invalid amount for -paytxfee=&lt;amount&gt;: &apos;%s&apos;</source>
-        <translation>Nieprawidłowa kwota dla -paytxfee=&lt;amount&gt;: &apos;%s&apos;</translation>
+        <translation>Quantidade inválida para -paytxfee=&lt;quantidade&gt;: &apos;%s&apos;</translation>
     </message>
     <message>
         <location line="+59"/>
@@ -3119,22 +3118,22 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="+5"/>
         <source>Invalid amount</source>
-        <translation>Nieprawidłowa kwota</translation>
+        <translation>Quantidade inválida</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Insufficient funds</source>
-        <translation>Niewystarczające środki</translation>
+        <translation>Saldo insuficiente</translation>
     </message>
     <message>
         <location line="-41"/>
         <source>Loading block index...</source>
-        <translation>Ładowanie indeksu bloku...</translation>
+        <translation>Carregando índice de blocos...</translation>
     </message>
     <message>
         <location line="-105"/>
         <source>Add a node to connect to and attempt to keep the connection open</source>
-        <translation>Dodaj węzeł do łączenia się and attempt to keep the connection open</translation>
+        <translation>Adicionar um nó com o qual se conectar e tentar manter a conexão ativa</translation>
     </message>
     <message>
         <location line="+131"/>
@@ -3179,46 +3178,46 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="+15"/>
         <source>Loading wallet...</source>
-        <translation>Wczytywanie portfela...</translation>
+        <translation>Carregando carteira...</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Cannot downgrade wallet</source>
-        <translation>Nie można dezaktualizować portfela</translation>
+        <translation>Não é possível fazer downgrade da carteira</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Cannot write default address</source>
-        <translation>Nie można zapisać domyślnego adresu</translation>
+        <translation>Não foi possível escrever no endereço padrão</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Rescanning...</source>
-        <translation>Ponowne skanowanie...</translation>
+        <translation>Re-escaneando...</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Done loading</source>
-        <translation>Wczytywanie zakończone</translation>
+        <translation>Carregamento terminado</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>To use the %s option</source>
-        <translation>Aby użyć opcji %s</translation>
+        <translation>Para usar a opção %s</translation>
     </message>
     <message>
         <location line="-27"/>
         <source>Error</source>
-        <translation>Błąd</translation>
+        <translation>Erro</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>You must set rpcpassword=&lt;password&gt; in the configuration file:
 %s
 If the file does not exist, create it with owner-readable-only file permissions.</source>
-        <translation>Musisz ustawić rpcpassword=&lt;hasło&gt; w pliku configuracyjnym:
-%s
-Jeżeli plik nie istnieje, utwórz go z uprawnieniami właściciela-tylko-do-odczytu.</translation>
+        <translation>Você precisa especificar rpcpassword=&lt;senha&gt; no arquivo de configurações:⏎
+%s⏎
+Se o arquivo não existir, crie um com permissão de leitura apenas pelo dono</translation>
     </message>
 </context>
 </TS>
