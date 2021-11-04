@@ -1813,4 +1813,154 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
     <message>
         <location line="+13"/>
         <source>(no label)</source>
-        <translation>(fără etichetă)
+        <translation>(fără etichetă)</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>WARNING: unknown change address</source>
+        <translation>ATENTIE: adresa schimb necunoscuta</translation>
+    </message>
+</context>
+<context>
+    <name>SendCoinsEntry</name>
+    <message>
+        <location filename="../forms/sendcoinsentry.ui" line="+14"/>
+        <source>Form</source>
+        <translation>Formular</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>A&amp;mount:</source>
+        <translation>Su&amp;mă:</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Pay &amp;To:</source>
+        <translation>Plătește că&amp;tre:</translation>
+    </message>
+    <message>
+        <location line="+34"/>
+        <source>The address to send the payment to (e.g. DPpauUHW4ksipzUQhKKVAxscM6UonAAjhX)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+60"/>
+        <location filename="../sendcoinsentry.cpp" line="+26"/>
+        <source>Enter a label for this address to add it to your address book</source>
+        <translation>Introdu o etichetă pentru această adresă pentru a fi adăugată în lista ta de adrese</translation>
+    </message>
+    <message>
+        <location line="-78"/>
+        <source>&amp;Label:</source>
+        <translation>&amp;Etichetă:</translation>
+    </message>
+    <message>
+        <location line="+28"/>
+        <source>Choose address from address book</source>
+        <translation>Alegeti adresa din agenda</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Alt+A</source>
+        <translation>Alt+A</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Paste address from clipboard</source>
+        <translation>Lipește adresa din clipboard</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Alt+P</source>
+        <translation>Alt+P</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Remove this recipient</source>
+        <translation>Scoateti acest destinatar</translation>
+    </message>
+    <message>
+        <location filename="../sendcoinsentry.cpp" line="+1"/>
+        <source>Enter a Bws address (e.g. DPpauUHW4ksipzUQhKKVAxscM6UonAAjhX)</source>
+        <translation>Introduceți o adresă Bws(ex:DPpauUHW4ksipzUQhKKVAxscM6UonAAjhX)</translation>
+    </message>
+</context>
+<context>
+    <name>SignVerifyMessageDialog</name>
+    <message>
+        <location filename="../forms/signverifymessagedialog.ui" line="+14"/>
+        <source>Signatures - Sign / Verify a Message</source>
+        <translation>Semnatura- Semneaza/verifica un mesaj</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <location line="+124"/>
+        <source>&amp;Sign Message</source>
+        <translation>Semneaza Mesajul</translation>
+    </message>
+    <message>
+        <location line="-118"/>
+        <source>You can sign messages with your addresses to prove you own them. Be careful not to sign anything vague, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <translation>Puteti semna mesaje cu adresa dumneavoastra pentru a demostra ca sunteti proprietarul lor. Aveti grija sa nu semnati nimic vag, deoarece atacurile de tip phishing va pot pacali sa le transferati identitatea. Semnati numai declaratiile detaliate cu care sunteti deacord.</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>The address to sign the message with (e.g. DPpauUHW4ksipzUQhKKVAxscM6UonAAjhX)</source>
+        <translation>Adresa cu care semnati mesajul(ex. DPpauUHW4ksipzUQhKKVAxscM6UonAAjhX)</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <location line="+203"/>
+        <source>Choose an address from the address book</source>
+        <translation>Alegeti o adresa din agenda</translation>
+    </message>
+    <message>
+        <location line="-193"/>
+        <location line="+203"/>
+        <source>Alt+A</source>
+        <translation>Alt+A</translation>
+    </message>
+    <message>
+        <location line="-193"/>
+        <source>Paste address from clipboard</source>
+        <translation>Lipiţi adresa copiată in clipboard.</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Alt+P</source>
+        <translation>Alt+P</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Enter the message you want to sign here</source>
+        <translation>Introduce mesajul pe care vrei sa il semnezi, aici.</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Copy the current signature to the system clipboard</source>
+        <translation>Copiaza semnatura curenta in clipboard-ul sistemului</translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>Sign the message to prove you own this Bws address</source>
+        <translation>Semnează un mesaj pentru a dovedi că dețineti o adresă Bws</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Reset all sign message fields</source>
+        <translation>Reseteaza toate spatiile mesajelor semnate.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <location line="+146"/>
+        <source>Clear &amp;All</source>
+        <translation>Şterge &amp;tot</translation>
+    </message>
+    <message>
+        <location line="-87"/>
+        <location line="+70"/>
+        <source>&amp;Verify Message</source>
+        <translation>Verifica mesajul</translation>
+    </message>
+    <message>
+    
