@@ -2845,4 +2845,133 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="-25"/>
         <source>Use proxy to reach tor hidden services (default: same as -proxy)</source>
-    
+        <translation>Utilizati proxy pentru a ajunge la serviciile tor (implicit: la fel ca proxy)</translation>
+    </message>
+    <message>
+        <location line="+45"/>
+        <source>Username for JSON-RPC connections</source>
+        <translation>Utilizator pentru conexiunile JSON-RPC</translation>
+    </message>
+    <message>
+        <location line="+50"/>
+        <source>Verifying database integrity...</source>
+        <translation>Se verifica integritatea bazei de date...</translation>
+    </message>
+    <message>
+        <location line="+43"/>
+        <source>Error: Wallet locked, unable to create transaction!</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Error: This transaction requires a transaction fee of at least %s because of its amount, complexity, or use of recently received funds!</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Error: Transaction creation failed!</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Error: The transaction was rejected! This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-15"/>
+        <source>Warning</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Information</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-7"/>
+        <source>Warning: This version is obsolete, upgrade required!</source>
+        <translation>Atenție: această versiune este depășită, este necesară actualizarea!</translation>
+    </message>
+    <message>
+        <location line="-23"/>
+        <source>wallet.dat corrupt, salvage failed</source>
+        <translation>wallet.dat corupt, recuperare eșuată</translation>
+    </message>
+    <message>
+        <location line="-55"/>
+        <source>Password for JSON-RPC connections</source>
+        <translation>Parola pentru conexiunile JSON-RPC</translation>
+    </message>
+    <message>
+        <location line="-47"/>
+        <source>Connect through SOCKS5 proxy</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Sync time with other nodes. Disable if time on your system is precise e.g. syncing with NTP (default: 1)</source>
+        <translation>Sincronizează timp cu alte noduri. Dezactivează daca timpul de pe sistemul dumneavoastră este precis ex: sincronizare cu NTP (implicit: 1)</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>When creating transactions, ignore inputs with value less than this (default: 0.01)</source>
+        <translation>Când creați tranzacții, ignorați intrări cu valori mai mici decât aceasta (implicit: 0,01)</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Output debugging information (default: 0, supplying &lt;category&gt; is optional)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>If &lt;category&gt; is not supplied, output all debugging information.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>&lt;category&gt; can be:</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Enter regression test mode, which uses a special chain in which blocks can be solved instantly. This is intended for regression testing tools and app development.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Allow JSON-RPC connections from specified IP address</source>
+        <translation>Permite conexiuni JSON-RPC de la adresa IP specificată</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Send commands to node running on &lt;ip&gt; (default: 127.0.0.1)</source>
+        <translation>Trimite comenzi la nodul care rulează la &lt;ip&gt; (implicit: 127.0.0.1)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Wait for RPC server to start</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Set the number of threads to service RPC calls (default: 4)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Execute command when the best block changes (%s in cmd is replaced by block hash)</source>
+        <translation>Execută comanda când cel mai bun bloc se modifică (%s în cmd este înlocuit cu hash-ul blocului)</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Execute command when a wallet transaction changes (%s in cmd is replaced by TxID)</source>
+        <translation>Executati comanda cand o tranzactie a portofelului se schimba (%s in cmd este inlocuit de TxID)</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Require a confirmations for change (default: 0)</source>
+        <translation>Necesita confirmari pentru schimbare (implicit: 0)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Execute command when a relevant alert is received (%s in
