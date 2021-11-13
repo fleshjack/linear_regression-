@@ -2974,4 +2974,138 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+1"/>
-        <source>Execute command when a relevant alert is received (%s in
+        <source>Execute command when a relevant alert is received (%s in cmd is replaced by message)</source>
+        <translation>Execută o comandă când o alerta relevantâ este primitâ(%s in cmd este înlocuit de mesaj)</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Upgrade wallet to latest format</source>
+        <translation>Actualizează portofelul la ultimul format</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Set key pool size to &lt;n&gt; (default: 100)</source>
+        <translation>Setează mărimea bazinului de chei la &lt;n&gt; (implicit: 100)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Rescan the block chain for missing wallet transactions</source>
+        <translation>Rescanează lanțul de bloc pentru tranzacțiile portofel lipsă</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>How thorough the block verification is (0-6, default: 1)</source>
+        <translation>Cat de temeinica sa fie verificarea blocurilor( 0-6, implicit: 1)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Imports blocks from external blk000?.dat file</source>
+        <translation>Importă blocuri dintr-un fișier extern blk000?.dat</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Keep at most &lt;n&gt; MiB of unconnectable blocks in memory (default: %u)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Use OpenSSL (https) for JSON-RPC connections</source>
+        <translation>Folosește OpenSSL (https) pentru conexiunile JSON-RPC</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Server certificate file (default: server.cert)</source>
+        <translation>Certificatul serverului (implicit: server.cert)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Server private key (default: server.pem)</source>
+        <translation>Cheia privată a serverului (implicit: server.pem)</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Error: Unsupported argument -socks found. Setting SOCKS version isn&apos;t possible anymore, only SOCKS5 proxies are supported.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Initialization sanity check failed. Bws is shutting down.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Error loading block database</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>Error: Wallet unlocked for staking only, unable to create transaction.</source>
+        <translation>Eroare: portofel blocat doar pentru staking, tranzactia nu s-a creat.</translation>
+    </message>
+    <message>
+        <location line="-14"/>
+        <source>Error: Disk space is low!</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>This is a pre-release test build - use at your own risk - do not use for mining or merchant applications</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-135"/>
+        <source>This help message</source>
+        <translation>Acest mesaj de ajutor</translation>
+    </message>
+    <message>
+        <location line="+100"/>
+        <source>Wallet %s resides outside data directory %s.</source>
+        <translation>Portofelul %s este in afara directorului %s</translation>
+    </message>
+    <message>
+        <location line="+46"/>
+        <source>Unable to bind to %s on this computer (bind returned error %d, %s)</source>
+        <translation>Nu se poate folosi %s pe acest calculator (eroarea returnată este %d, %s)</translation>
+    </message>
+    <message>
+        <location line="-136"/>
+        <source>Allow DNS lookups for -addnode, -seednode and -connect</source>
+        <translation>Permite căutări DNS pentru -addnode, -seednode și -connect</translation>
+    </message>
+    <message>
+        <location line="+121"/>
+        <source>Loading addresses...</source>
+        <translation>Încarc adrese...</translation>
+    </message>
+    <message>
+        <location line="-10"/>
+        <source>Error loading wallet.dat: Wallet corrupted</source>
+        <translation>Eroare la încărcarea wallet.dat: Portofel corupt</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Error loading wallet.dat: Wallet requires newer version of Bws</source>
+        <translation>Eroare la încărcarea wallet.dat: Portofelul necesita o versiune mai noua de Bws</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Wallet needed to be rewritten: restart Bws to complete</source>
+        <translation>A fost nevoie de rescrierea portofelului: restartați Bws pentru a finaliza</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Error loading wallet.dat</source>
+        <translation>Eroare la încărcarea wallet.dat</translation>
+    </message>
+    <message>
+        <location line="-15"/>
+        <source>Invalid -proxy address: &apos;%s&apos;</source>
+        <translation>Adresa -proxy nevalidă: &apos;%s&apos;</translation>
+    </message>
+    <message>
+        <location line="-1"/>
+        <source>Unknown network specified in -onlynet: &apos;%s&apos;</source>
+        <translation>Rețeaua specificată în -onlynet este necunoscută: &apos;%s&apos;</translation>
+    </message>
+    <message>
+        <l
