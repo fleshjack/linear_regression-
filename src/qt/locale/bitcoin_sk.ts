@@ -317,4 +317,172 @@ Tento produkt obsahuje softvér vyvinutý projektom OpenSSL Project pre použiti
     </message>
     <message>
         <location line="-64"/>
-        <source>Show general overview of w
+        <source>Show general overview of wallet</source>
+        <translation>Zobraziť celkový prehľad o peňaženke</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>&amp;Transactions</source>
+        <translation>&amp;Transakcie</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Browse transaction history</source>
+        <translation>Prechádzať históriu transakcií</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>&amp;Address Book</source>
+        <translation>&amp;Adresár</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Edit the list of stored addresses and labels</source>
+        <translation>Úprava zoznamu uložených adries a popisov</translation>
+    </message>
+    <message>
+        <location line="-18"/>
+        <source>Show the list of addresses for receiving payments</source>
+        <translation>Zobraziť zoznam adries pre príjem platieb</translation>
+    </message>
+    <message>
+        <location line="+34"/>
+        <source>E&amp;xit</source>
+        <translation>&amp;Ukončiť</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Quit application</source>
+        <translation>Ukončiť program</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Show information about Bws</source>
+        <translation>Zobraziť informácie o Bws</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>About &amp;Qt</source>
+        <translation>O &amp;Qt</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Show information about Qt</source>
+        <translation>Zobrazit informácie o Qt</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>&amp;Options...</source>
+        <translation>&amp;Možnosti...</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>&amp;Encrypt Wallet...</source>
+        <translation>&amp;Zašifrovať peňaženku...</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>&amp;Backup Wallet...</source>
+        <translation>&amp;Zálohovať peňaženku...</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>&amp;Change Passphrase...</source>
+        <translation>&amp;Zmena hesla...</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>&amp;Export...</source>
+        <translation>&amp;Export...</translation>
+    </message>
+    <message>
+        <location line="-55"/>
+        <source>Send coins to a Bws address</source>
+        <translation>Poslať mince na Bws adresu</translation>
+    </message>
+    <message>
+        <location line="+39"/>
+        <source>Modify configuration options for Bws</source>
+        <translation>Upraviť možnosti konfigurácie pre Bws</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Export the data in the current tab to a file</source>
+        <translation>Exportovať dáta v aktuálnej karte do súboru</translation>
+    </message>
+    <message>
+        <location line="-13"/>
+        <source>Encrypt or decrypt wallet</source>
+        <translation>Zašifrovať alebo dešifrovať peňaženku</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Backup wallet to another location</source>
+        <translation>Zálohovať peňaženku na iné miesto</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Change the passphrase used for wallet encryption</source>
+        <translation>Zmeniť heslo použité na šifrovanie peňaženky</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>&amp;Debug window</source>
+        <translation>&amp;Ladiace okno</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Open debugging and diagnostic console</source>
+        <translation>Otvor konzolu pre ladenie a diagnostiku</translation>
+    </message>
+    <message>
+        <location line="-5"/>
+        <source>&amp;Verify message...</source>
+        <translation>Overiť správu</translation>
+    </message>
+    <message>
+        <location line="-214"/>
+        <location line="+555"/>
+        <source>Bws</source>
+        <translation>Bws</translation>
+    </message>
+    <message>
+        <location line="-555"/>
+        <source>Wallet</source>
+        <translation>Peňaženka</translation>
+    </message>
+    <message>
+        <location line="+193"/>
+        <source>&amp;About Bws</source>
+        <translation>&amp;O Bws</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>&amp;Show / Hide</source>
+        <translation>Zobraziť / skryť</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Unlock wallet</source>
+        <translation>Odomknúť peňaženku</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>&amp;Lock Wallet</source>
+        <translation>&amp;Zamknúť peňaženku</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Lock wallet</source>
+        <translation>Zamknúť peňaženku</translation>
+    </message>
+    <message>
+        <location line="+32"/>
+        <source>&amp;File</source>
+        <translation>&amp;Súbor</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>&amp;Settings</source>
+        <translation>&amp;Nastavenia</translation>
+    <
