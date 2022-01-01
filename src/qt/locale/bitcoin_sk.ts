@@ -1921,4 +1921,138 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     <message>
         <location line="-193"/>
         <location line="+203"/>
-        
+        <source>Alt+A</source>
+        <translation>Alt+A</translation>
+    </message>
+    <message>
+        <location line="-193"/>
+        <source>Paste address from clipboard</source>
+        <translation>Vložiť adresu zo schránky</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Alt+P</source>
+        <translation>Alt+P</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Enter the message you want to sign here</source>
+        <translation>Sem vložte správu ktorú chcete podpísať</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Copy the current signature to the system clipboard</source>
+        <translation>Skopírujte aktuálny podpis do schránky</translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>Sign the message to prove you own this Bws address</source>
+        <translation>Podpísať správu ako dôkaz, že vlastníte túto Bws adresu</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Reset all sign message fields</source>
+        <translation>Obnoviť všetky polia podpísania správy</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <location line="+146"/>
+        <source>Clear &amp;All</source>
+        <translation>Zmazať &amp;všetko</translation>
+    </message>
+    <message>
+        <location line="-87"/>
+        <location line="+70"/>
+        <source>&amp;Verify Message</source>
+        <translation>Overiť správu...</translation>
+    </message>
+    <message>
+        <location line="-64"/>
+        <source>Enter the signing address, message (ensure you copy line breaks, spaces, tabs, etc. exactly) and signature below to verify the message. Be careful not to read more into the signature than what is in the signed message itself, to avoid being tricked by a man-in-the-middle attack.</source>
+        <translation>Zadajte podpisovú adresu správy (uistite sa že presne kopírujete konce riadkov, medzier, tabulátorov, atď.) a podpis nižšie pre overenie správy. Dávajte pozor, aby ste nedali viac do podpisu, než to, čo je v podpísanej správe samotnej, aby ste sa vyhli oklamaniu útokom typu man-in-the-middle.</translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>The address the message was signed with (e.g. DPpauUHW4ksipzUQhKKVAxscM6UonAAjhX)</source>
+        <translation>Adresa správy bola podpísaná (napr. DPpauUHW4ksipzUQhKKVAxscM6UonAAjhX)</translation>
+    </message>
+    <message>
+        <location line="+40"/>
+        <source>Verify the message to ensure it was signed with the specified Bws address</source>
+        <translation>Overte správu, aby ste sa ubezpečili, že bola podpísaná s danou Bws adresou</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Reset all verify message fields</source>
+        <translation>Obnoviť všetky polia pre overenie správy</translation>
+    </message>
+    <message>
+        <location filename="../signverifymessagedialog.cpp" line="+27"/>
+        <location line="+3"/>
+        <source>Enter a Bws address (e.g. DPpauUHW4ksipzUQhKKVAxscM6UonAAjhX)</source>
+        <translation>Zadajte Bws adresu (napr. DPpauUHW4ksipzUQhKKVAxscM6UonAAjhX)</translation>
+    </message>
+    <message>
+        <location line="-2"/>
+        <source>Click &quot;Sign Message&quot; to generate signature</source>
+        <translation>Kliknite &quot;Podpísať správu&quot; pre získanie podpisu</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Enter Bws signature</source>
+        <translation>Zadajte Bws podpis</translation>
+    </message>
+    <message>
+        <location line="+85"/>
+        <location line="+81"/>
+        <source>The entered address is invalid.</source>
+        <translation>Zadaná adresa je neplatná.</translation>
+    </message>
+    <message>
+        <location line="-81"/>
+        <location line="+8"/>
+        <location line="+73"/>
+        <location line="+8"/>
+        <source>Please check the address and try again.</source>
+        <translation>Prosím skontrolujte adresu a skúste znova.</translation>
+    </message>
+    <message>
+        <location line="-81"/>
+        <location line="+81"/>
+        <source>The entered address does not refer to a key.</source>
+        <translation>Zadaná adresa sa nevzťahuje na kľúč.</translation>
+    </message>
+    <message>
+        <location line="-73"/>
+        <source>Wallet unlock was cancelled.</source>
+        <translation>Odomknutie peňaženky bolo zrušené.</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Private key for the entered address is not available.</source>
+        <translation>Súkromný kľúč k zadanej adrese nie je k dispozícii.</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Message signing failed.</source>
+        <translation>Podpísanie správy zlyhalo.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Message signed.</source>
+        <translation>Správa podpísaná.</translation>
+    </message>
+    <message>
+        <location line="+59"/>
+        <source>The signature could not be decoded.</source>
+        <translation>Podpis nie je možné dekódovať.</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location line="+13"/>
+        <source>Please check the signature and try again.</source>
+        <translation>Prosím skontrolujte podpis a skúste znova.</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+   
