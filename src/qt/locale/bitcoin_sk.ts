@@ -1438,4 +1438,177 @@ To znamená, že je potrebný poplatok aspoň %2.</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Number of connections</source
+        <source>Number of connections</source>
+        <translation>Počet pripojení</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>On testnet</source>
+        <translation>Na testovacej sieti</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Block chain</source>
+        <translation>Reťazec blokov</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Current number of blocks</source>
+        <translation>Aktuálny počet blokov</translation>
+    </message>
+    <message>
+        <location line="+197"/>
+        <source>&amp;Network Traffic</source>
+        <translation>&amp;Sieťové prenosy</translation>
+    </message>
+    <message>
+        <location line="+52"/>
+        <source>&amp;Clear</source>
+        <translation>Vymazať</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Totals</source>
+        <translation>Súčty</translation>
+    </message>
+    <message>
+        <location line="+64"/>
+        <location filename="../rpcconsole.cpp" line="+352"/>
+        <source>In:</source>
+        <translation>Vstup:</translation>
+    </message>
+    <message>
+        <location line="+80"/>
+        <location filename="../rpcconsole.cpp" line="+1"/>
+        <source>Out:</source>
+        <translation>Výstup:</translation>
+    </message>
+    <message>
+        <location line="-383"/>
+        <source>Last block time</source>
+        <translation>Čas posledného bloku</translation>
+    </message>
+    <message>
+        <location line="+52"/>
+        <source>&amp;Open</source>
+        <translation>&amp;Otvoriť</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Command-line options</source>
+        <translation>Možnosti príkazového riadka</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Show the Bws-Qt help message to get a list with possible Bws command-line options.</source>
+        <translation>Zobraziť Bws-Qt nápovedu k získaniu zoznamu pre možnosti  príkazového riadku Bws.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>&amp;Show</source>
+        <translation>&amp;Zobraziť</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>&amp;Console</source>
+        <translation>&amp;Konzola</translation>
+    </message>
+    <message>
+        <location line="-237"/>
+        <source>Build date</source>
+        <translation>Dátum zostavenia</translation>
+    </message>
+    <message>
+        <location line="-104"/>
+        <source>Bws - Debug window</source>
+        <translation>Bws - Ladiace okno</translation>
+    </message>
+    <message>
+        <location line="+25"/>
+        <source>Bws Core</source>
+        <translation>Jadro Bws</translation>
+    </message>
+    <message>
+        <location line="+256"/>
+        <source>Debug log file</source>
+        <translation>Súbor denníka ladenia</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Open the Bws debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Otvorte Bws súbor denníku ladenia z aktuálneho adresára dát. To môže trvať niekoľko sekúnd pre veľké súbory denníka.</translation>
+    </message>
+    <message>
+        <location line="+102"/>
+        <source>Clear console</source>
+        <translation>Vymazať konzolu</translation>
+    </message>
+    <message>
+        <location filename="../rpcconsole.cpp" line="-28"/>
+        <source>Welcome to the Bws RPC console.</source>
+        <translation>Vitajte v konzole Bws RPC.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Use up and down arrows to navigate history, and &lt;b&gt;Ctrl-L&lt;/b&gt; to clear screen.</source>
+        <translation>Použite šípky hore a dole pre navigáciu históriou, a &lt;b&gt; Ctrl-L &lt;/ b&gt; pre vymazanie obrazovky.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Type &lt;b&gt;help&lt;/b&gt; for an overview of available commands.</source>
+        <translation>Zadajte &lt;b&gt;help&lt;/b&gt; pre prehľad dostupných príkazov.</translation>
+    </message>
+    <message>
+        <location line="+134"/>
+        <source>%1 B</source>
+        <translation>%1 B</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>%1 KB</source>
+        <translation>%1 KB</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>%1 MB</source>
+        <translation>%1 MB</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>%1 GB</source>
+        <translation>%1 GB</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>%1 m</source>
+        <translation>%1 m</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>%1 h</source>
+        <translation>%1 h</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>%1 h %2 m</source>
+        <translation>%1 h %2 m</translation>
+    </message>
+</context>
+<context>
+    <name>SendCoinsDialog</name>
+    <message>
+        <location filename="../forms/sendcoinsdialog.ui" line="+14"/>
+        <location filename="../sendcoinsdialog.cpp" line="+179"/>
+        <location line="+5"/>
+        <location line="+5"/>
+        <location line="+5"/>
+        <location line="+6"/>
+        <location line="+5"/>
+        <location line="+5"/>
+        <source>Send Coins</source>
+        <translation>Poslať mince</translation>
+    </message>
+    <message>
+        <location line="+76"/>
+        <source>Coin Control Features</source>
+        <translation>
