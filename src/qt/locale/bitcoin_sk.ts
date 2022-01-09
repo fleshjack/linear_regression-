@@ -2934,4 +2934,120 @@ napríklad: alertnotify=echo %%s | mail -s &quot;Bws upozornenie&quot; admin@foo
     <message>
         <location line="+6"/>
         <source>Output debugging information (default: 0, supplying &lt;category&gt; is optional)</source>
-       
+        <translation>Výstupné informácie o ladení. (predvolené: 0, zadanie &lt;category&gt; je nepovinné)</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>If &lt;category&gt; is not supplied, output all debugging information.</source>
+        <translation>Ak nie je zadaná &lt;category&gt;, vypíš všetky ladiace informácie</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>&lt;category&gt; can be:</source>
+        <translation>&lt;category&gt; môže byť:</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Enter regression test mode, which uses a special chain in which blocks can be solved instantly. This is intended for regression testing tools and app development.</source>
+        <translation>Vstúpte do režimu testovania regresiou, ktorá používa špeciálny reťazec, v ktorom môžu byť bloky vyriešiť okamžite. Tento je určený pre regresné testovanie nástrojov a vývoja aplikácie.</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Allow JSON-RPC connections from specified IP address</source>
+        <translation>Povoliť JSON-RPC spojenia z určenej IP adresy.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Send commands to node running on &lt;ip&gt; (default: 127.0.0.1)</source>
+        <translation>Poslať príkaz nóde bežiacej na &lt;ip&gt; (predvolené: 127.0.0.1)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Wait for RPC server to start</source>
+        <translation>Pred spustením počkať na RPC server</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Set the number of threads to service RPC calls (default: 4)</source>
+        <translation>Nastavte počet vlákien pre obsluhu RPC volaní (predvolené: 4)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Execute command when the best block changes (%s in cmd is replaced by block hash)</source>
+        <translation>Vykonaj príkaz, ak zmeny v najlepšom bloku (%s v príkaze nahradí blok hash)</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Execute command when a wallet transaction changes (%s in cmd is replaced by TxID)</source>
+        <translation>Spustiť príkaz ak sa zmení transakcia v peňaženke (%s v cmd sa nahrádza TxID)</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Require a confirmations for change (default: 0)</source>
+        <translation>Požadovať potvrdenie pre zmenu (predvolené: 0)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Execute command when a relevant alert is received (%s in cmd is replaced by message)</source>
+        <translation>Spustiť príkaz, keď je prijaté príslušné upozornenie (%s v cmd je nahradený správou)</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Upgrade wallet to latest format</source>
+        <translation>Aktualizuj peňaženku na najnovší formát.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Set key pool size to &lt;n&gt; (default: 100)</source>
+        <translation>Nastaviť zásobu adries na &lt;n&gt; (predvolené: 100)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Rescan the block chain for missing wallet transactions</source>
+        <translation>Znovu skenovať reťaz blokov pre chýbajúce transakcie</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>How thorough the block verification is (0-6, default: 1)</source>
+        <translation>Ako dôkladné overenie bloku je (0-6, predvolené: 1)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Imports blocks from external blk000?.dat file</source>
+        <translation>Importovať bloky z externého blk000?.dat súbora</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Keep at most &lt;n&gt; MiB of unconnectable blocks in memory (default: %u)</source>
+        <translation>Uchovávať najviac &lt;n&gt; MiB nepripojiteľných blokov v pamäti (predvolené: %u)</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Use OpenSSL (https) for JSON-RPC connections</source>
+        <translation>Použiť OpenSSL (https) pre JSON-RPC spojenia</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Server certificate file (default: server.cert)</source>
+        <translation>Súbor s certifikátom servra (predvolené: server.cert)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Server private key (default: server.pem)</source>
+        <translation>Súkromný kľúč servra (predvolené: server.pem)</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Error: Unsupported argument -socks found. Setting SOCKS version isn&apos;t possible anymore, only SOCKS5 proxies are supported.</source>
+        <translation>Chyba: Nájdený nepodporovaný argument -socks. Nastavenie SOCKS verzie nie je už možné, podporované sú už iba proxy SOCKS5.</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Initialization sanity check failed. Bws is shutting down.</source>
+        <translation>Úvodné kontrolné testy zlyhali. Bws sa teraz zatvori.</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Error loading block database</source>
+        <translation>Chyba pri načítaní databáze blokov</translation>
+    </message>
