@@ -2713,4 +2713,109 @@ napríklad: alertnotify=echo %%s | mail -s &quot;Bws upozornenie&quot; admin@foo
     </message>
     <message>
         <location line="-126"/>
-        <source>Listen for JSON-RPC connections on 
+        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 48210 or testnet: 27058)</source>
+        <translation>Počúvajte pre JSON-RPC spojenie na &lt;port&gt; (predvolené: 48210 alebo testovacia sieť: 27058)</translation>
+    </message>
+    <message>
+        <location line="-16"/>
+        <source>Accept command line and JSON-RPC commands</source>
+        <translation>Prijímať príkazy z príkazového riadku a JSON-RPC</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Run in the background as a daemon and accept commands</source>
+        <translation>Bežať na pozadí ako démon a prijímať príkazy</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Use the test network</source>
+        <translation>Použiť testovaciu sieť</translation>
+    </message>
+    <message>
+        <location line="-23"/>
+        <source>Accept connections from outside (default: 1 if no -proxy or -connect)</source>
+        <translation>Prijímať pripojenie z vonka (predvolené: 1, ak nie -proxy alebo -connect)</translation>
+    </message>
+    <message>
+        <location line="+160"/>
+        <source>An error occurred while setting up the RPC port %u for listening on IPv6, falling back to IPv4: %s</source>
+        <translation>Pri nastavovaní portu RPC %u pre počúvanie na IPv6, spadne späť do IPv4 došlo k chybe: %s</translation>
+    </message>
+    <message>
+        <location line="-84"/>
+        <source>Warning: -paytxfee is set very high! This is the transaction fee you will pay if you send a transaction.</source>
+        <translation>Upozornenie: -paytxfee je nastavené veľmi vysoko. Toto sú transakčné poplatky ktoré zaplatíte ak odošlete transakciu.</translation>
+    </message>
+    <message>
+        <location line="+46"/>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Bws will not work properly.</source>
+        <translation>Upozornenie: Skontrolujte, že dátum a čas počítača sú správne! Ak je Váš čas nesprávny Bws nebude pracovať správne.</translation>
+    </message>
+    <message>
+        <location line="-19"/>
+        <source>Warning: error reading wallet.dat! All keys read correctly, but transaction data or address book entries might be missing or incorrect.</source>
+        <translation>Upozornenie: Chyba pri čítaní wallet.dat! Všetky kľúče načítané správne, ale transakčné dáta alebo položky adresára môže chýbať alebo byť nesprávne.</translation>
+    </message>
+    <message>
+        <location line="-16"/>
+        <source>Warning: wallet.dat corrupt, data salvaged! Original wallet.dat saved as wallet.{timestamp}.bak in %s; if your balance or transactions are incorrect you should restore from a backup.</source>
+        <translation>Upozornenie: wallet.dat poškodený, údaje zachránené! Pôvodný wallet.dat bol uložený ako wallet.{timestamp}.bak v %s; ak váš zostatok alebo transakcie nie sú správne, mali by ste obnoviť zo zálohy.</translation>
+    </message>
+    <message>
+        <location line="-31"/>
+        <source>Attempt to recover private keys from a corrupt wallet.dat</source>
+        <translation>Pokus obnoviť súkromné kľúče z poškodeného wallet.dat</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Block creation options:</source>
+        <translation>Možnosti vytvorenia bloku:</translation>
+    </message>
+    <message>
+        <location line="-66"/>
+        <source>Connect only to the specified node(s)</source>
+        <translation>Pripojiť sa len k určenému uzlu(om)</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Discover own IP address (default: 1 when listening and no -externalip)</source>
+        <translation>Objavte vlastnú IP adresa (predvolené: 1 pri počúvaní a nie -externalip)</translation>
+    </message>
+    <message>
+        <location line="+97"/>
+        <source>Failed to listen on any port. Use -listen=0 if you want this.</source>
+        <translation>Nepodarilo sa počúvať žiadnom porte. Použite -listen=0 ak to chcete.</translation>
+    </message>
+    <message>
+        <location line="-2"/>
+        <source>Invalid -tor address: &apos;%s&apos;</source>
+        <translation>Neplatná -tor adresa: &apos;%s&apos;</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Invalid amount for -reservebalance=&lt;amount&gt;</source>
+        <translation>Neplatná suma pre -reservebalance=&lt;množstvo&gt;</translation>
+    </message>
+    <message>
+        <location line="-85"/>
+        <source>Maximum per-connection receive buffer, &lt;n&gt;*1000 bytes (default: 5000)</source>
+        <translation>Maximum pre-pripojenie prijímacej vyrovnávacej pamäti, &lt;n&gt;*1000 bajtov (predvolené: 5000)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Maximum per-connection send buffer, &lt;n&gt;*1000 bytes (default: 1000)</source>
+        <translation>Maximum pre-pripojenie posielacej vyrovnávacej pamäti, &lt;n&gt;*1000 bajtov (predvolené: 1000)</translation>
+    </message>
+    <message>
+        <location line="-16"/>
+        <source>Only connect to nodes in network &lt;net&gt; (IPv4, IPv6 or Tor)</source>
+        <translation>Pripojiť len k uzlom siete &lt;net&gt; (IPv4, IPv6 alebo Tor)</translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <source>Prepend debug output with timestamp</source>
+        <translation>Pred debug výstup s časovou pečiatkou</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>SSL options: (see the Bitcoin Wiki for SSL setup instruct
