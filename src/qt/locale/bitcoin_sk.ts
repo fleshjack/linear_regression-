@@ -2818,4 +2818,120 @@ napríklad: alertnotify=echo %%s | mail -s &quot;Bws upozornenie&quot; admin@foo
     </message>
     <message>
         <location line="+36"/>
-        <source>SSL options: (see the Bitcoin Wiki for SSL setup instruct
+        <source>SSL options: (see the Bitcoin Wiki for SSL setup instructions)</source>
+        <translation>SSL možnosť: (pozrite Bitcoin Wiki pre návod na nastavenie SSL)</translation>
+    </message>
+    <message>
+        <location line="-34"/>
+        <source>Send trace/debug info to console instead of debug.log file</source>
+        <translation>Odoslať trace/debug informácie na konzolu namiesto debug.info súboru</translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Set maximum block size in bytes (default: 250000)</source>
+        <translation>Nastavte maximálnu veľkosť bloku v bajtoch (predvolené: 250000)</translation>
+    </message>
+    <message>
+        <location line="-1"/>
+        <source>Set minimum block size in bytes (default: 0)</source>
+        <translation>Nastavte minimálnu veľkosť bloku v bajtoch (predvolené: 0)</translation>
+    </message>
+    <message>
+        <location line="-33"/>
+        <source>Shrink debug.log file on client startup (default: 1 when no -debug)</source>
+        <translation>Stlačiť debug.log súbor na spustenie klienta (predvolené: 1, keď nie -debug)</translation>
+    </message>
+    <message>
+        <location line="-41"/>
+        <source>Specify connection timeout in milliseconds (default: 5000)</source>
+        <translation>Určiť aut spojenia v milisekundách (predvolené: 5000)</translation>
+    </message>
+    <message>
+        <location line="+28"/>
+        <source>Use UPnP to map the listening port (default: 0)</source>
+        <translation>Skúsiť použiť UPnP pre mapovanie počúvajúceho portu (default: 0)</translation>
+    </message>
+    <message>
+        <location line="-1"/>
+        <source>Use UPnP to map the listening port (default: 1 when listening)</source>
+        <translation>Skúsiť použiť UPnP pre mapovanie počúvajúceho portu (default: 1 when listening)</translation>
+    </message>
+    <message>
+        <location line="-25"/>
+        <source>Use proxy to reach tor hidden services (default: same as -proxy)</source>
+        <translation>Použiť proxy server k získaniu Tor skrytých služieb (predvolené: rovnaká ako -proxy)</translation>
+    </message>
+    <message>
+        <location line="+45"/>
+        <source>Username for JSON-RPC connections</source>
+        <translation>Užívateľské meno pre JSON-RPC spojenia</translation>
+    </message>
+    <message>
+        <location line="+50"/>
+        <source>Verifying database integrity...</source>
+        <translation>Overenie integrity databázy ...</translation>
+    </message>
+    <message>
+        <location line="+43"/>
+        <source>Error: Wallet locked, unable to create transaction!</source>
+        <translation>Chyba: Peňaženka je zamknutá, nie je možné vytvoriť transakciu!</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Error: This transaction requires a transaction fee of at least %s because of its amount, complexity, or use of recently received funds!</source>
+        <translation>Chyba: Táto operácia vyžaduje transakčný poplatok vo výške aspoň %s, kvôli jej množstvu, zložitosti, alebo použitím nedávno prijatých finančných prostriedkov!</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Error: Transaction creation failed!</source>
+        <translation>Chyba: Vytvorenie transakcie zlyhalo!</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Error: The transaction was rejected! This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
+        <translation>Chyba: Transakcia bola zamietnutá! Toto môže nastať, ak niektoré z mincí vo vašej peňaženke sa už použili, ako napríklad, ak ste použili kópiu wallet.dat a mince boli použité v kópii, ale neboli označené ako použité tu.</translation>
+    </message>
+    <message>
+        <location line="-15"/>
+        <source>Warning</source>
+        <translation>Varovanie</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Information</source>
+        <translation>Informácia</translation>
+    </message>
+    <message>
+        <location line="-7"/>
+        <source>Warning: This version is obsolete, upgrade required!</source>
+        <translation>Upozornenie: Táto verzia je zastaraná, vyžaduje sa aktualizácia!</translation>
+    </message>
+    <message>
+        <location line="-23"/>
+        <source>wallet.dat corrupt, salvage failed</source>
+        <translation>wallet.dat je poškodený, záchrana zlyhala</translation>
+    </message>
+    <message>
+        <location line="-55"/>
+        <source>Password for JSON-RPC connections</source>
+        <translation>Heslo pre JSON-rPC spojenia</translation>
+    </message>
+    <message>
+        <location line="-47"/>
+        <source>Connect through SOCKS5 proxy</source>
+        <translation>Pripojenie cez SOCKS5 proxy</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Sync time with other nodes. Disable if time on your system is precise e.g. syncing with NTP (default: 1)</source>
+        <translation>Synchronizácia času s ostatnými uzlami. Zakázať ak čas na vašom systéme je presný, napr synchronizáciu s NTP (predvolené: 1)</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>When creating transactions, ignore inputs with value less than this (default: 0.01)</source>
+        <translation>Pri vytváraní transakcií, ignorovať vstupy s hodnotou nižšou než táto (predvolené: 0.01)</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Output debugging information (default: 0, supplying &lt;category&gt; is optional)</source>
+       
