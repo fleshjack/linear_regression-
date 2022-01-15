@@ -3183,4 +3183,67 @@ napríklad: alertnotify=echo %%s | mail -s &quot;Bws upozornenie&quot; admin@foo
     </message>
     <message>
         <location line="+3"/>
-        <source>Warning: Deprec
+        <source>Warning: Deprecated argument -debugnet ignored, use -debug=net</source>
+        <translation>Upozornenie: Zastaraný argument -debugnet bol ignorovaný, použite -debug=net</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Invalid amount for -mininput=&lt;amount&gt;: &apos;%s&apos;</source>
+        <translation>Neplatná suma pre -mininput=&lt;amount&gt;: &apos;%s&apos;</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Cannot obtain a lock on data directory %s. Bws is probably already running.</source>
+        <translation>Nedá sa zamknúť dátová zložka %s. Bws je pravdepodobne už spustený</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Error initializing wallet database environment %s!</source>
+        <translation>Chyba pri inicializácii databázového prostredia peňaženky %s!</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>Loading wallet...</source>
+        <translation>Načítavam peňaženku...</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Cannot downgrade wallet</source>
+        <translation>Nie je možné prejsť na nižšiu verziu peňaženky</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Cannot write default address</source>
+        <translation>Nie je možné zapísať predvolenú adresu</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Rescanning...</source>
+        <translation>Nové prehľadávanie...</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Done loading</source>
+        <translation>Dokončené načítavanie</translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>To use the %s option</source>
+        <translation>Použiť možnosť %s</translation>
+    </message>
+    <message>
+        <location line="-27"/>
+        <source>Error</source>
+        <translation>Chyba</translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <source>You must set rpcpassword=&lt;password&gt; in the configuration file:
+%s
+If the file does not exist, create it with owner-readable-only file permissions.</source>
+        <translation>Musíš nastaviť rpcpassword=&lt;heslo&gt; v konfiguračnom súbore:
+%s
+Ak súbor neexistuje, vytvorte ho s oprávnením pre čítanie len vlastníkom (owner-readable-only)</translation>
+    </message>
+</context>
+</TS>
