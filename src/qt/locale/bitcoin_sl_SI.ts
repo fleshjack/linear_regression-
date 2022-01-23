@@ -862,4 +862,174 @@ Naslov: %4
         <translation>Kopiraj po proviziji</translation>
     </message>
     <message>
-        <locat
+        <location line="+1"/>
+        <source>Copy bytes</source>
+        <translation>Kopiraj bite</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copy low output</source>
+        <translation>Kopiraj nizek output:</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copy change</source>
+        <translation>Kopiraj spremembo</translation>
+    </message>
+    <message>
+        <location line="+423"/>
+        <source>DUST</source>
+        <translation>PRAH</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>yes</source>
+        <translation>da</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>This label turns red, if the transaction size is bigger than 10000 bytes.
+
+ This means a fee of at least %1 per kb is required.
+
+ Can vary +/- 1 Byte per input.</source>
+        <translation>Ta oznakla se obarva rdeče, če je transakcija večja od 10000 bajtov.
+
+ To pomeni, da je zahtevana provizija vsaj %1 na kb.
+
+ Lahko variira +/- 1 Bajt na vnos.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>This label turns red, if any recipient receives an amount smaller than %1.
+
+ This means a fee of at least %2 is required.
+
+ Amounts below 0.546 times the minimum relay fee are shown as DUST.</source>
+        <translation>Ta oznaka se obarva rdeče, če prejemnik dobi količino manjšo od %1.
+
+ To pomeni, da je potrebna vsaj %2 provizija.
+
+ Zneski pod 0.546 krat minimalna transakcijska provizija so prikazani kot PRAH.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>This label turns red, if the change is smaller than %1.
+
+ This means a fee of at least %2 is required.</source>
+        <translation>Ta oznakla se obarva rdeče, če je sprememba manjša od %1.
+
+ To pomeni, da je zahtevana provizija vsaj %2.</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <location line="+58"/>
+        <source>(no label)</source>
+        <translation>(ni oznake)</translation>
+    </message>
+    <message>
+        <location line="-9"/>
+        <source>change from %1 (%2)</source>
+        <translation>spremeni iz %1 (%2)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>(change)</source>
+        <translation>(spremeni)</translation>
+    </message>
+</context>
+<context>
+    <name>EditAddressDialog</name>
+    <message>
+        <location filename="../forms/editaddressdialog.ui" line="+14"/>
+        <source>Edit Address</source>
+        <translation>Uredi naslov</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>&amp;Label</source>
+        <translation>&amp;Oznaka</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>The label associated with this address book entry</source>
+        <translation>Oznaka povezana s tem vnosom v imeniku</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>&amp;Address</source>
+        <translation>&amp;Naslov</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>The address associated with this address book entry. This can only be modified for sending addresses.</source>
+        <translation>Naslov povezan s tem vnosom v imeniku. Spremenite ga lahko le za naslove odlivov.</translation>
+    </message>
+    <message>
+        <location filename="../editaddressdialog.cpp" line="+21"/>
+        <source>New receiving address</source>
+        <translation>Nov naslov za prilive</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>New sending address</source>
+        <translation>Nov naslov za odlive</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Edit receiving address</source>
+        <translation>Uredi naslov za prilive</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Edit sending address</source>
+        <translation>Uredi naslov za odlive</translation>
+    </message>
+    <message>
+        <location line="+76"/>
+        <source>The entered address &quot;%1&quot; is already in the address book.</source>
+        <translation>Vnešeni naslov &quot;&amp;1&quot; je že v imeniku.</translation>
+    </message>
+    <message>
+        <location line="-5"/>
+        <source>The entered address &quot;%1&quot; is not a valid Bws address.</source>
+        <translation>Vneseni naslov &quot;%1&quot; ni veljaven Bws naslov.</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Could not unlock wallet.</source>
+        <translation>Denarnice ni bilo mogoče odkleniti.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>New key generation failed.</source>
+        <translation>Ustvarjanje novega ključa je spodletelo.</translation>
+    </message>
+</context>
+<context>
+    <name>GUIUtil::HelpMessageBox</name>
+    <message>
+        <location filename="../guiutil.cpp" line="+426"/>
+        <location line="+12"/>
+        <source>Bws-Qt</source>
+        <translation>Bws-Qt</translation>
+    </message>
+    <message>
+        <location line="-12"/>
+        <source>version</source>
+        <translation>različica</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Usage:</source>
+        <translation>Uporaba:</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>command-line options</source>
+        <translation>možnosti ukazne vrstice</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>UI options</source>
+        <translatio
