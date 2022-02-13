@@ -1317,4 +1317,187 @@ Naslov: %4
         <location filename="../overviewpage.cpp" line="+116"/>
         <location line="+1"/>
         <source>out of sync</source>
-        <translation>nesinhroniz
+        <translation>nesinhronizirano</translation>
+    </message>
+</context>
+<context>
+    <name>PaymentServer</name>
+    <message>
+        <location filename="../paymentserver.cpp" line="+107"/>
+        <source>Cannot start bws: click-to-pay handler</source>
+        <translation type="unfinished"/>
+    </message>
+</context>
+<context>
+    <name>QRCodeDialog</name>
+    <message>
+        <location filename="../forms/qrcodedialog.ui" line="+14"/>
+        <source>QR Code Dialog</source>
+        <translation>QR koda </translation>
+    </message>
+    <message>
+        <location line="+59"/>
+        <source>Request Payment</source>
+        <translation>Zahtevaj plačilo</translation>
+    </message>
+    <message>
+        <location line="+56"/>
+        <source>Amount:</source>
+        <translation>Znesek:</translation>
+    </message>
+    <message>
+        <location line="-44"/>
+        <source>Label:</source>
+        <translation>Oznaka:</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Message:</source>
+        <translation>Sporočilo:</translation>
+    </message>
+    <message>
+        <location line="+71"/>
+        <source>&amp;Save As...</source>
+        <translation>&amp;Shrani kot...</translation>
+    </message>
+    <message>
+        <location filename="../qrcodedialog.cpp" line="+62"/>
+        <source>Error encoding URI into QR Code.</source>
+        <translation>Napaka pri šifriranju URI v QR kodo.</translation>
+    </message>
+    <message>
+        <location line="+40"/>
+        <source>The entered amount is invalid, please check.</source>
+        <translation>Vnesen znesek je neveljaven, prosimo preverite vnos.</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Resulting URI too long, try to reduce the text for label / message.</source>
+        <translation>URI predolg, skušajte zmanjšati besedilo oznake/sporočila.</translation>
+    </message>
+    <message>
+        <location line="+25"/>
+        <source>Save QR Code</source>
+        <translation>Shrani QR kodo</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>PNG Images (*.png)</source>
+        <translation>PNG slike (*.png)</translation>
+    </message>
+</context>
+<context>
+    <name>RPCConsole</name>
+    <message>
+        <location filename="../forms/rpcconsole.ui" line="+46"/>
+        <source>Client name</source>
+        <translation>Ime odjemalca</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <location line="+23"/>
+        <location line="+26"/>
+        <location line="+23"/>
+        <location line="+23"/>
+        <location line="+36"/>
+        <location line="+53"/>
+        <location line="+23"/>
+        <source>N/A</source>
+        <translation>Neznano</translation>
+    </message>
+    <message>
+        <location line="-194"/>
+        <source>Client version</source>
+        <translation>Različica odjemalca</translation>
+    </message>
+    <message>
+        <location line="-45"/>
+        <source>&amp;Information</source>
+        <translation>&amp;Informacije</translation>
+    </message>
+    <message>
+        <location line="+68"/>
+        <source>Using OpenSSL version</source>
+        <translation>OpenSSL različica v rabi</translation>
+    </message>
+    <message>
+        <location line="+49"/>
+        <source>Startup time</source>
+        <translation>Čas zagona</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>Network</source>
+        <translation>Omrežje</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Number of connections</source>
+        <translation>Število povezav</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>On testnet</source>
+        <translation>Na testnet</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Block chain</source>
+        <translation>veriga blokov</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Current number of blocks</source>
+        <translation>Trenutno število blokov</translation>
+    </message>
+    <message>
+        <location line="+197"/>
+        <source>&amp;Network Traffic</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+52"/>
+        <source>&amp;Clear</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Totals</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+64"/>
+        <location filename="../rpcconsole.cpp" line="+352"/>
+        <source>In:</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+80"/>
+        <location filename="../rpcconsole.cpp" line="+1"/>
+        <source>Out:</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-383"/>
+        <source>Last block time</source>
+        <translation>Čas zadnjega bloka</translation>
+    </message>
+    <message>
+        <location line="+52"/>
+        <source>&amp;Open</source>
+        <translation>&amp;Odpri</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Command-line options</source>
+        <translation>Možnosti ukazne vrstice.</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Show the Bws-Qt help message to get a list with possible Bws command-line options.</source>
+        <translation>Prikaži Bws-Qt sporočilo za pomoč , ki prikaže vse možnosti ukazne vrstice Bws aplikacije</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>&amp;Show</source>
+        <tra
