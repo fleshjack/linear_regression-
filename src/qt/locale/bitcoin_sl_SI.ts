@@ -2737,4 +2737,115 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="-19"/>
-        <source>Warning: error reading wallet.dat! A
+        <source>Warning: error reading wallet.dat! All keys read correctly, but transaction data or address book entries might be missing or incorrect.</source>
+        <translation>Opozorilo: napaka pri branju wallet.dat! Vsi ključi so bili pravilno prebrani, podatki o transakciji ali imenik vnešenih naslovov so morda izgubljeni ali nepravilni.</translation>
+    </message>
+    <message>
+        <location line="-16"/>
+        <source>Warning: wallet.dat corrupt, data salvaged! Original wallet.dat saved as wallet.{timestamp}.bak in %s; if your balance or transactions are incorrect you should restore from a backup.</source>
+        <translation>Opozorilo: wallet.dat je pokvarjena, podatki rešeni! Originalna wallet.dat je bila shranjena kot denarnica. {timestamp}.bak v %s; če imate napačno prikazano stanje na računu ali v transakcijah prenovite datoteko z varnostno kopijo. </translation>
+    </message>
+    <message>
+        <location line="-31"/>
+        <source>Attempt to recover private keys from a corrupt wallet.dat</source>
+        <translation>Poizkusi rešiti zasebni ključ iz pokvarjene wallet.dat </translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Block creation options:</source>
+        <translation>Možnosti ustvarjanja blokov:</translation>
+    </message>
+    <message>
+        <location line="-66"/>
+        <source>Connect only to the specified node(s)</source>
+        <translation>Poveži se samo na določena vozlišče(a)</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Discover own IP address (default: 1 when listening and no -externalip)</source>
+        <translation>Odkrij svoj IP naslov (privzeto: 1 ob poslušanju, ko ni aktiviran -externalip)</translation>
+    </message>
+    <message>
+        <location line="+97"/>
+        <source>Failed to listen on any port. Use -listen=0 if you want this.</source>
+        <translation>Poslušanje za vrata je spodletelo. Če želite lahko uporabite ukaz -listen=0.</translation>
+    </message>
+    <message>
+        <location line="-2"/>
+        <source>Invalid -tor address: &apos;%s&apos;</source>
+        <translation>Neveljaven -tor naslov: &apos;%s&apos;</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Invalid amount for -reservebalance=&lt;amount&gt;</source>
+        <translation>Neveljavni znesek za -reservebalance=&lt;amount&gt;</translation>
+    </message>
+    <message>
+        <location line="-85"/>
+        <source>Maximum per-connection receive buffer, &lt;n&gt;*1000 bytes (default: 5000)</source>
+        <translation>Največji sprejemni medpomnilnik glede na povezavo, &lt;n&gt;*1000 bytov (privzeto: 5000)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Maximum per-connection send buffer, &lt;n&gt;*1000 bytes (default: 1000)</source>
+        <translation>Največji oddajni medpomnilnik glede na povezavo, &lt;n&gt;*1000 bytov (privzeto: 1000)</translation>
+    </message>
+    <message>
+        <location line="-16"/>
+        <source>Only connect to nodes in network &lt;net&gt; (IPv4, IPv6 or Tor)</source>
+        <translation>Poveži se samo z vozlišči v omrežju &lt;net&gt; (IPv4, IPv6 in Tor)</translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <source>Prepend debug output with timestamp</source>
+        <translation>Opremi output rahroščevanja s časovnim žigom. </translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>SSL options: (see the Bitcoin Wiki for SSL setup instructions)</source>
+        <translation>SSL možnosti: (glejte Bitcoin Wiki za navodla, kako nastaviti SSL)</translation>
+    </message>
+    <message>
+        <location line="-34"/>
+        <source>Send trace/debug info to console instead of debug.log file</source>
+        <translation>Pošlji sledilne/razhroščevalne informacije v konzolo namesto jih shraniti v debug.log datoteko</translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Set maximum block size in bytes (default: 250000)</source>
+        <translation>Nastavi največjo velikost bloka v bajtih (privzeto: 250000)</translation>
+    </message>
+    <message>
+        <location line="-1"/>
+        <source>Set minimum block size in bytes (default: 0)</source>
+        <translation>Nastavi najmanjšo velikost bloka v bajtih (privzeto: 0)</translation>
+    </message>
+    <message>
+        <location line="-33"/>
+        <source>Shrink debug.log file on client startup (default: 1 when no -debug)</source>
+        <translation>Skrči debug.log datoteko ob zagonu aplikacije (privzeto: 1 ko ni aktiviran -debug)</translation>
+    </message>
+    <message>
+        <location line="-41"/>
+        <source>Specify connection timeout in milliseconds (default: 5000)</source>
+        <translation>Določi čas pavze povezovanja v milisekundah (privzeto: 5000)</translation>
+    </message>
+    <message>
+        <location line="+28"/>
+        <source>Use UPnP to map the listening port (default: 0)</source>
+        <translation>Uporabi UPnP za mapiranje vrat poslušanja (privzeto: 0)</translation>
+    </message>
+    <message>
+        <location line="-1"/>
+        <source>Use UPnP to map the listening port (default: 1 when listening)</source>
+        <translation>Uporabi UPnP za mapiranje vrat poslušanja (privzeto: 1 med poslušanjem)</translation>
+    </message>
+    <message>
+        <location line="-25"/>
+        <source>Use proxy to reach tor hidden services (default: same as -proxy)</source>
+        <translation>Uporabi proxy za povezavo s skritimi storitvami tora (privzeto: isto kot -proxy) </translation>
+    </message>
+    <message>
+        <location line="+45"/>
+        <source>Username for JSON-RPC connections</source>
+        <tra
