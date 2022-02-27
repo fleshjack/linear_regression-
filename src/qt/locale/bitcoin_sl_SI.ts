@@ -2618,4 +2618,123 @@ Naslov: %4
     <message>
         <location line="-1"/>
         <source>Specify data directory</source>
-        <trans
+        <translation>Določi podatkovni imenik</translation>
+    </message>
+    <message>
+        <location line="+163"/>
+        <source>%s, you must set a rpcpassword in the configuration file:
+%s
+It is recommended you use the following random password:
+rpcuser=bwsrpc
+rpcpassword=%s
+(you do not need to remember this password)
+The username and password MUST NOT be the same.
+If the file does not exist, create it with owner-readable-only file permissions.
+It is also recommended to set alertnotify so you are notified of problems;
+for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
+</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-161"/>
+        <source>Set database cache size in megabytes (default: 25)</source>
+        <translation>Nastavi pomnilnik podatkovne zbirke v megabajtih (privzeto: 25)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Set database disk log size in megabytes (default: 100)</source>
+        <translation>Nastavi velikost zapisa podatkovne baze na disku v megabajtih (privzeto: 100)</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Listen for connections on &lt;port&gt; (default: 48200 or testnet: 58200)</source>
+        <translation>Sprejmi povezave na &lt;port&gt; (privzeta vrata: 48200 ali testnet: 58200) </translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Maintain at most &lt;n&gt; connections to peers (default: 125)</source>
+        <translation>Obdrži maksimalno število &lt;n&gt; povezav (privzeto: 125)</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Connect to a node to retrieve peer addresses, and disconnect</source>
+        <translation>Poveži se na vozlišče da pridobiš naslove soležnikov in prekini povezavo</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Specify your own public address</source>
+        <translation>Določite vaš lasten javni naslov</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Bind to given address. Use [host]:port notation for IPv6</source>
+        <translation>Naveži na dani naslov. Uporabi [host]:port ukaz za IPv6</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Query for peer addresses via DNS lookup, if low on addresses (default: 1 unless -connect)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Always query for peer addresses via DNS lookup (default: 0)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Threshold for disconnecting misbehaving peers (default: 100)</source>
+        <translation>Prag za prekinitev povezav s slabimi odjemalci (privzeto: 1000)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Number of seconds to keep misbehaving peers from reconnecting (default: 86400)</source>
+        <translation>Število sekund preden se ponovno povežejo neodzivni soležniki (privzeto: 86400)</translation>
+    </message>
+    <message>
+        <location line="+153"/>
+        <source>An error occurred while setting up the RPC port %u for listening on IPv4: %s</source>
+        <translation>Prišlo je do napake pri nastavljanju RPC porta %u za vhodne povezave na IPv4: %s</translation>
+    </message>
+    <message>
+        <location line="-126"/>
+        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 48210 or testnet: 27058)</source>
+        <translation>Sprejmi povezave na &lt;port&gt; (privzeta vrata: 48210 ali testnet: 27058) </translation>
+    </message>
+    <message>
+        <location line="-16"/>
+        <source>Accept command line and JSON-RPC commands</source>
+        <translation>Sprejmi ukaze iz ukazne vrstice in JSON-RPC</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Run in the background as a daemon and accept commands</source>
+        <translation>Teci v ozadju in sprejemaj ukaze</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Use the test network</source>
+        <translation>Uporabi testno omrežje</translation>
+    </message>
+    <message>
+        <location line="-23"/>
+        <source>Accept connections from outside (default: 1 if no -proxy or -connect)</source>
+        <translation>Sprejmi zunanje povezave (privzeto: 1 če ni nastavljen -proxy ali -connect)</translation>
+    </message>
+    <message>
+        <location line="+160"/>
+        <source>An error occurred while setting up the RPC port %u for listening on IPv6, falling back to IPv4: %s</source>
+        <translation>Prišlo je do napake pri nastavljanju RPC porta %u za vhodne povezave na IPv6: %s</translation>
+    </message>
+    <message>
+        <location line="-84"/>
+        <source>Warning: -paytxfee is set very high! This is the transaction fee you will pay if you send a transaction.</source>
+        <translation>Opozorilo: -paytxfee je nastavljen zelo visoko! To je transakcijska provizija, ki jo boste plačali ob pošiljanju transakcije.</translation>
+    </message>
+    <message>
+        <location line="+46"/>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Bws will not work properly.</source>
+        <translation>Opozorilo: Prosimo preverite svoj datum in čas svojega računalnika! Če je vaša ura nastavljena napačno Bws ne bo deloval.</translation>
+    </message>
+    <message>
+        <location line="-19"/>
+        <source>Warning: error reading wallet.dat! A
