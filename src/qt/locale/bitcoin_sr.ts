@@ -1,11 +1,11 @@
 
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="sq" version="2.1">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="sr" version="2.1">
 <context>
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
         <source>About Bws</source>
-        <translation type="unfinished"/>
+        <translation>О Bws-u</translation>
     </message>
     <message>
         <location line="+39"/>
@@ -16,7 +16,7 @@
         <location line="+41"/>
         <source>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
-Copyright © 2014 The Bws developers</source>
+Copyright © 2018 The Bws developers</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -35,27 +35,27 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location filename="../forms/addressbookpage.ui" line="+14"/>
         <source>Address Book</source>
-        <translation type="unfinished"/>
+        <translation>Адресар</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Double-click to edit address or label</source>
-        <translation>Klikoni 2 herë për të ndryshuar adressën ose etiketën</translation>
+        <translation>Кликните два пута да промените адресу и/или етикету</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Create a new address</source>
-        <translation>Krijo një adresë të re</translation>
+        <translation>Прави нову адресу</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Copy the currently selected address to the system clipboard</source>
-        <translation>Kopjo adresën e zgjedhur në memorjen e sistemit </translation>
+        <translation>Копира изабрану адресу на системски клипборд</translation>
     </message>
     <message>
         <location line="-7"/>
         <source>&amp;New Address</source>
-        <translation type="unfinished"/>
+        <translation>&amp;Нова адреса</translation>
     </message>
     <message>
         <location line="-43"/>
@@ -65,12 +65,12 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+53"/>
         <source>&amp;Copy Address</source>
-        <translation type="unfinished"/>
+        <translation>&amp;Прекопирај адресу</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Show &amp;QR Code</source>
-        <translation type="unfinished"/>
+        <translation>Прикажи &amp;QR код</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -85,7 +85,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+17"/>
         <source>Delete the currently selected address from the list</source>
-        <translation type="unfinished"/>
+        <translation>Уклони обележену адресу из листе</translation>
     </message>
     <message>
         <location line="-10"/>
@@ -95,22 +95,22 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+3"/>
         <source>&amp;Verify Message</source>
-        <translation type="unfinished"/>
+        <translation>&amp;Потврди поруку</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Delete</source>
-        <translation>&amp;Fshi</translation>
+        <translation>&amp;Избриши</translation>
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="+66"/>
         <source>Copy &amp;Label</source>
-        <translation type="unfinished"/>
+        <translation>Копирај &amp;етикету</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>&amp;Edit</source>
-        <translation type="unfinished"/>
+        <translation>&amp;Измени</translation>
     </message>
     <message>
         <location line="+248"/>
@@ -120,7 +120,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+1"/>
         <source>Comma separated file (*.csv)</source>
-        <translation>Skedar i ndarë me pikëpresje(*.csv)</translation>
+        <translation>Зарезом одвојене вредности (*.csv)</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -138,17 +138,17 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location filename="../addresstablemodel.cpp" line="+145"/>
         <source>Label</source>
-        <translation>Etiketë</translation>
+        <translation>Етикета</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Address</source>
-        <translation>Adresë</translation>
+        <translation>Адреса</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>(no label)</source>
-        <translation>(pa etiketë)</translation>
+        <translation>(без етикете)</translation>
     </message>
 </context>
 <context>
@@ -161,17 +161,17 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+21"/>
         <source>Enter passphrase</source>
-        <translation>Futni frazkalimin</translation>
+        <translation>Унесите лозинку</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>New passphrase</source>
-        <translation>Frazkalim i ri</translation>
+        <translation>Нова лозинка</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Repeat new passphrase</source>
-        <translation>Përsërisni frazkalimin e ri</translation>
+        <translation>Поновите нову лозинку</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -186,42 +186,42 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location filename="../askpassphrasedialog.cpp" line="+38"/>
         <source>Encrypt wallet</source>
-        <translation>Enkripto portofolin</translation>
+        <translation>Шифровање новчаника</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>This operation needs your wallet passphrase to unlock the wallet.</source>
-        <translation>Ky veprim ka nevojë per frazkalimin e portofolit tuaj që të ç&apos;kyç portofolin.</translation>
+        <translation>Ова акција захтева лозинку Вашег новчаника да би га откључала.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Unlock wallet</source>
-        <translation>ç&apos;kyç portofolin.</translation>
+        <translation>Откључавање новчаника</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>This operation needs your wallet passphrase to decrypt the wallet.</source>
-        <translation>Ky veprim kërkon frazkalimin e portofolit tuaj që të dekriptoj portofolin.</translation>
+        <translation>Ова акција захтева да унесете лозинку да би дешифловала новчаник.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Decrypt wallet</source>
-        <translation>Dekripto portofolin</translation>
+        <translation>Дешифровање новчаника</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Change passphrase</source>
-        <translation>Ndrysho frazkalimin</translation>
+        <translation>Промена лозинке</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Enter the old and new passphrase to the wallet.</source>
-        <translation>Futni frazkalimin e vjetër dhe të ri në portofol. </translation>
+        <translation>Унесите стару и нову лозинку за шифровање новчаника.</translation>
     </message>
     <message>
         <location line="+45"/>
         <source>Confirm wallet encryption</source>
-        <translation>Konfirmoni enkriptimin e portofolit</translation>
+        <translation>Одобрите шифровање новчаника</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -231,7 +231,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+0"/>
         <source>Are you sure you wish to encrypt your wallet?</source>
-        <translation type="unfinished"/>
+        <translation>Да ли сте сигурни да желите да се новчаник шифује?</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -248,7 +248,7 @@ This product includes software developed by the OpenSSL Project for use in the O
         <location line="-133"/>
         <location line="+60"/>
         <source>Wallet encrypted</source>
-        <translation>Portofoli u enkriptua</translation>
+        <translation>Новчаник је шифрован</translation>
     </message>
     <message>
         <location line="-140"/>
@@ -266,40 +266,40 @@ This product includes software developed by the OpenSSL Project for use in the O
         <location line="+44"/>
         <location line="+6"/>
         <source>Wallet encryption failed</source>
-        <translation>Enkriptimi i portofolit dështoi</translation>
+        <translation>Неуспело шифровање новчаника</translation>
     </message>
     <message>
         <location line="-56"/>
         <source>Wallet encryption failed due to an internal error. Your wallet was not encrypted.</source>
-        <translation>Enkriptimi i portofolit dështoi për shkak të një gabimi të brëndshëm. portofoli juaj nuk u enkriptua.</translation>
+        <translation>Настала је унутрашња грешка током шифровања новчаника. Ваш новчаник није шифрован.</translation>
     </message>
     <message>
         <location line="+7"/>
         <location line="+50"/>
         <source>The supplied passphrases do not match.</source>
-        <translation>Frazkalimet e plotësuara nuk përputhen.</translation>
+        <translation>Лозинке које сте унели се не подударају.</translation>
     </message>
     <message>
         <location line="-38"/>
         <source>Wallet unlock failed</source>
-        <translation>ç&apos;kyçja e portofolit dështoi</translation>
+        <translation>Неуспело откључавање новчаника</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+12"/>
         <location line="+19"/>
         <source>The passphrase entered for the wallet decryption was incorrect.</source>
-        <translation>Frazkalimi i futur për dekriptimin e portofolit nuk ishte i saktë.</translation>
+        <translation>Лозинка коју сте унели за откључавање новчаника је нетачна.</translation>
     </message>
     <message>
         <location line="-20"/>
         <source>Wallet decryption failed</source>
-        <translation>Dekriptimi i portofolit dështoi</translation>
+        <translation>Неуспело дешифровање новчаника</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Wallet passphrase was successfully changed.</source>
-        <translation type="unfinished"/>
+        <translation>Лозинка за приступ новчанику је успешно промењена.</translation>
     </message>
 </context>
 <context>
@@ -312,17 +312,17 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="-64"/>
         <source>Show general overview of wallet</source>
-        <translation>Trego një përmbledhje te përgjithshme të portofolit</translation>
+        <translation>Погледајте општи преглед новчаника</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>&amp;Transactions</source>
-        <translation>&amp;Transaksionet</translation>
+        <translation>&amp;Трансакције</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Browse transaction history</source>
-        <translation>Shfleto historinë e transaksioneve</translation>
+        <translation>Претражите историјат трансакција</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -342,12 +342,12 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+34"/>
         <source>E&amp;xit</source>
-        <translation type="unfinished"/>
+        <translation>I&amp;zlaz</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Quit application</source>
-        <translation>Mbyllni aplikacionin</translation>
+        <translation>Напустите програм</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -357,32 +357,32 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+2"/>
         <source>About &amp;Qt</source>
-        <translation type="unfinished"/>
+        <translation>О &amp;Qt-у</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Show information about Qt</source>
-        <translation type="unfinished"/>
+        <translation>Прегледајте информације о Qt-у</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>&amp;Options...</source>
-        <translation>&amp;Opsione</translation>
+        <translation>П&amp;оставке...</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Encrypt Wallet...</source>
-        <translation type="unfinished"/>
+        <translation>&amp;Шифровање новчаника...</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>&amp;Backup Wallet...</source>
-        <translation type="unfinished"/>
+        <translation>&amp;Backup новчаника</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>&amp;Change Passphrase...</source>
-        <translation type="unfinished"/>
+        <translation>Промени &amp;лозинку...</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -417,7 +417,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+2"/>
         <source>Change the passphrase used for wallet encryption</source>
-        <translation>Ndrysho frazkalimin e përdorur per enkriptimin e portofolit</translation>
+        <translation>Мењање лозинке којом се шифрује новчаник</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -443,7 +443,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="-555"/>
         <source>Wallet</source>
-        <translation type="unfinished"/>
+        <translation>новчаник</translation>
     </message>
     <message>
         <location line="+193"/>
@@ -473,28 +473,28 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+32"/>
         <source>&amp;File</source>
-        <translation>&amp;Skedar</translation>
+        <translation>&amp;Фајл</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>&amp;Settings</source>
-        <translation>&amp;Konfigurimet</translation>
+        <translation>&amp;Подешавања</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>&amp;Help</source>
-        <translation>&amp;Ndihmë</translation>
+        <translation>П&amp;омоћ</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Tabs toolbar</source>
-        <translation>Shiriti i mjeteve</translation>
+        <translation>Трака са картицама</translation>
     </message>
     <message>
         <location line="+46"/>
         <location line="+9"/>
         <source>[testnet]</source>
-        <translation>[testo rrjetin]</translation>
+        <translation>[testnet]</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -505,7 +505,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message numerus="yes">
         <location line="+70"/>
         <source>%n active connection(s) to Bws network</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform><numerusform></numerusform></translation>
     </message>
     <message>
         <location line="+6"/>
@@ -550,12 +550,12 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+277"/>
         <source>Up to date</source>
-        <translation>I azhornuar</translation>
+        <translation>Ажурно</translation>
     </message>
     <message>
         <location line="+43"/>
         <source>Catching up...</source>
-        <translation>Duke u azhornuar...</translation>
+        <translation>Ажурирање у току...</translation>
     </message>
     <message>
         <location line="+113"/>
@@ -565,12 +565,12 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+27"/>
         <source>Sent transaction</source>
-        <translation>Dërgo transaksionin</translation>
+        <translation>Послана трансакција</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Incoming transaction</source>
-        <translation>Transaksion në ardhje</translation>
+        <translation>Придошла трансакција</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -579,7 +579,7 @@ Amount: %2
 Type: %3
 Address: %4
 </source>
-        <translation type="unfinished"/>
+        <translation>Datum: %1⏎ Iznos: %2⏎ Tip: %3⏎ Adresa: %4⏎</translation>
     </message>
     <message>
         <location line="+100"/>
@@ -601,12 +601,12 @@ Address: %4
     <message>
         <location line="+8"/>
         <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
-        <translation>Portofoli po &lt;b&gt; enkriptohet&lt;/b&gt; dhe është &lt;b&gt; i ç&apos;kyçur&lt;/b&gt;</translation>
+        <translation>Новчаник јс &lt;b&gt;шифрован&lt;/b&gt; и тренутно &lt;b&gt;откључан&lt;/b&gt;</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;locked&lt;/b&gt;</source>
-        <translation>Portofoli po &lt;b&gt; enkriptohet&lt;/b&gt; dhe është &lt;b&gt; i kyçur&lt;/b&gt;</translation>
+        <translation>Новчаник јс &lt;b&gt;шифрован&lt;/b&gt; и тренутно &lt;b&gt;закључан&lt;/b&gt;</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -631,18 +631,18 @@ Address: %4
     <message numerus="yes">
         <location line="+91"/>
         <source>%n second(s)</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform><numerusform></numerusform></translation>
     </message>
     <message numerus="yes">
         <location line="+4"/>
         <source>%n minute(s)</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform><numerusform></numerusform></translation>
     </message>
     <message numerus="yes">
         <location line="-429"/>
         <location line="+433"/>
         <source>%n hour(s)</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform><numerusform></numerusform></translation>
     </message>
     <message>
         <location line="-456"/>
@@ -653,13 +653,13 @@ Address: %4
         <location line="+27"/>
         <location line="+433"/>
         <source>%n day(s)</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform><numerusform></numerusform></translation>
     </message>
     <message numerus="yes">
         <location line="-429"/>
         <location line="+6"/>
         <source>%n week(s)</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform><numerusform></numerusform></translation>
     </message>
     <message>
         <location line="+0"/>
@@ -669,7 +669,7 @@ Address: %4
     <message numerus="yes">
         <location line="+0"/>
         <source>%n year(s)</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform><numerusform></numerusform></translation>
     </message>
     <message>
         <location line="+5"/>
@@ -745,7 +745,7 @@ Address: %4
     <message>
         <location line="+48"/>
         <source>Amount:</source>
-        <translation type="unfinished"/>
+        <translation>Iznos:</translation>
     </message>
     <message>
         <location line="+48"/>
@@ -790,7 +790,7 @@ Address: %4
     <message>
         <location line="+45"/>
         <source>Amount</source>
-        <translation>Sasia</translation>
+        <translation>iznos</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -800,12 +800,12 @@ Address: %4
     <message>
         <location line="+5"/>
         <source>Address</source>
-        <translation>Adresë</translation>
+        <translation>Адреса</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Date</source>
-        <translation>Data</translation>
+        <translation>datum</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -815,7 +815,7 @@ Address: %4
     <message>
         <location line="+3"/>
         <source>Confirmed</source>
-        <translation type="unfinished"/>
+        <translation>Potvrdjen</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -825,18 +825,18 @@ Address: %4
     <message>
         <location filename="../coincontroldialog.cpp" line="-456"/>
         <source>Copy address</source>
-        <translation type="unfinished"/>
+        <translation>kopiraj adresu</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Copy label</source>
-        <translation type="unfinished"/>
+        <translation>kopiraj naziv</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+26"/>
         <source>Copy amount</source>
-        <translation type="unfinished"/>
+        <translation>kopiraj iznos</translation>
     </message>
     <message>
         <location line="-25"/>
@@ -912,7 +912,7 @@ Address: %4
         <location line="+35"/>
         <location line="+58"/>
         <source>(no label)</source>
-        <translation>(pa etiketë)</translation>
+        <translation>(без етикете)</translation>
     </message>
     <message>
         <location line="-9"/>
@@ -930,12 +930,12 @@ Address: %4
     <message>
         <location filename="../forms/editaddressdialog.ui" line="+14"/>
         <source>Edit Address</source>
-        <translation>Ndrysho Adresën</translation>
+        <translation>Измени адресу</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>&amp;Label</source>
-        <translation>&amp;Etiketë</translation>
+        <translation>&amp;Етикета</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -945,7 +945,7 @@ Address: %4
     <message>
         <location line="+7"/>
         <source>&amp;Address</source>
-        <translation>&amp;Adresa</translation>
+        <translation>&amp;Адреса</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -955,27 +955,27 @@ Address: %4
     <message>
         <location filename="../editaddressdialog.cpp" line="+21"/>
         <source>New receiving address</source>
-        <translation>Adresë e re pritëse</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+4"/>
         <source>New sending address</source>
-        <translation>Adresë e re dërgimi</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
         <source>Edit receiving address</source>
-        <translation>Ndrysho adresën pritëse</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+4"/>
         <source>Edit sending address</source>
-        <translation>ndrysho adresën dërguese</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+76"/>
         <source>The entered address &quot;%1&quot; is already in the address book.</source>
-        <translation>Adresa e dhënë &quot;%1&quot; është e zënë në librin e adresave. </translation>
+        <translation>Унешена адреса &quot;%1&quot; се већ налази у адресару.</translation>
     </message>
     <message>
         <location line="-5"/>
@@ -985,12 +985,12 @@ Address: %4
     <message>
         <location line="+10"/>
         <source>Could not unlock wallet.</source>
-        <translation>Nuk mund të ç&apos;kyçet portofoli.</translation>
+        <translation>Немогуће откључати новчаник.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>New key generation failed.</source>
-        <translation>Krijimi i çelësit të ri dështoi.</translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -1042,7 +1042,7 @@ Address: %4
     <message>
         <location filename="../forms/optionsdialog.ui" line="+14"/>
         <source>Options</source>
-        <translation>Opsionet</translation>
+        <translation>Поставке</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -1167,7 +1167,7 @@ Address: %4
     <message>
         <location line="+11"/>
         <source>&amp;Unit to show amounts in:</source>
-        <translation type="unfinished"/>
+        <translation>&amp;Јединица за приказивање износа:</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -1192,7 +1192,7 @@ Address: %4
     <message>
         <location line="+71"/>
         <source>&amp;OK</source>
-        <translation type="unfinished"/>
+        <translation>&amp;OK</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -1232,7 +1232,7 @@ Address: %4
     <message>
         <location filename="../forms/overviewpage.ui" line="+14"/>
         <source>Form</source>
-        <translation>Formilarë</translation>
+        <translation>Форма</translation>
     </message>
     <message>
         <location line="+46"/>
@@ -1253,7 +1253,7 @@ Address: %4
     <message>
         <location line="-113"/>
         <source>Wallet</source>
-        <translation type="unfinished"/>
+        <translation>новчаник</translation>
     </message>
     <message>
         <location line="+49"/>
@@ -1288,7 +1288,7 @@ Address: %4
     <message>
         <location line="+50"/>
         <source>&lt;b&gt;Recent transactions&lt;/b&gt;</source>
-        <translation>&lt;b&gt;Transaksionet e fundit&lt;/b&gt;</translation>
+        <translation>&lt;b&gt;Недавне трансакције&lt;/b&gt;</translation>
     </message>
     <message>
         <location line="-118"/>
@@ -1587,7 +1587,7 @@ Address: %4
         <location line="+5"/>
         <location line="+5"/>
         <source>Send Coins</source>
-        <translation>Dërgo Monedha</translation>
+        <translation>Слање новца</translation>
     </message>
     <message>
         <location line="+76"/>
@@ -1628,7 +1628,7 @@ Address: %4
     <message>
         <location line="+51"/>
         <source>Amount:</source>
-        <translation type="unfinished"/>
+        <translation>Iznos:</translation>
     </message>
     <message>
         <location line="+54"/>
@@ -1663,7 +1663,7 @@ Address: %4
     <message>
         <location line="+106"/>
         <source>Send to multiple recipients at once</source>
-        <translation>Dërgo marrësve të ndryshëm njëkohësisht</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
@@ -1683,17 +1683,17 @@ Address: %4
     <message>
         <location line="+24"/>
         <source>Balance:</source>
-        <translation>Balanca:</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+47"/>
         <source>Confirm the send action</source>
-        <translation>Konfirmo veprimin e dërgimit</translation>
+        <translation>Потврди акцију слања</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>S&amp;end</source>
-        <translation type="unfinished"/>
+        <translation>&amp;Пошаљи</translation>
     </message>
     <message>
         <location filename="../sendcoinsdialog.cpp" line="-171"/>
@@ -1708,7 +1708,7 @@ Address: %4
     <message>
         <location line="+1"/>
         <source>Copy amount</source>
-        <translation type="unfinished"/>
+        <translation>kopiraj iznos</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1743,7 +1743,7 @@ Address: %4
     <message>
         <location line="+5"/>
         <source>Confirm send coins</source>
-        <translation>konfirmo dërgimin e monedhave</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
@@ -1763,7 +1763,7 @@ Address: %4
     <message>
         <location line="+5"/>
         <source>The amount to pay must be larger than 0.</source>
-        <translation>Shuma e paguar duhet të jetë më e madhe se 0.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+5"/>
@@ -1798,7 +1798,7 @@ Address: %4
     <message>
         <location line="+13"/>
         <source>(no label)</source>
-        <translation>(pa etiketë)</translation>
+        <translation>(без етикете)</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -1816,12 +1816,12 @@ Address: %4
     <message>
         <location line="+15"/>
         <source>A&amp;mount:</source>
-        <translation>Sh&amp;uma:</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+13"/>
         <source>Pay &amp;To:</source>
-        <translation>Paguaj &amp;drejt:</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+34"/>
@@ -1832,12 +1832,12 @@ Address: %4
         <location line="+60"/>
         <location filename="../sendcoinsentry.cpp" line="+26"/>
         <source>Enter a label for this address to add it to your address book</source>
-        <translation>Krijoni një etiketë për këtë adresë që t&apos;ja shtoni librit të adresave</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-78"/>
         <source>&amp;Label:</source>
-        <translation>&amp;Etiketë:</translation>
+        <translation>&amp;Етикета</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -1847,17 +1847,17 @@ Address: %4
     <message>
         <location line="+10"/>
         <source>Alt+A</source>
-        <translation>Alt+A</translation>
+        <translation>Alt+</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Paste address from clipboard</source>
-        <translation>Ngjit nga memorja e sistemit</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+10"/>
         <source>Alt+P</source>
-        <translation>Alt+P</translation>
+        <translation>Alt+П</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -1908,12 +1908,12 @@ Address: %4
     <message>
         <location line="-193"/>
         <source>Paste address from clipboard</source>
-        <translation>Ngjit nga memorja e sistemit</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+10"/>
         <source>Alt+P</source>
-        <translation>Alt+P</translation>
+        <translation>Alt+П</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -2063,7 +2063,7 @@ Address: %4
     <message>
         <location filename="../transactiondesc.cpp" line="+25"/>
         <source>Open until %1</source>
-        <translation>Hapur deri më %1</translation>
+        <translation>Otvorite do %1</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -2078,12 +2078,12 @@ Address: %4
     <message>
         <location line="+2"/>
         <source>%1/unconfirmed</source>
-        <translation>%1/I pakonfirmuar</translation>
+        <translation>%1/nepotvrdjeno</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>%1 confirmations</source>
-        <translation>%1 konfirmimet</translation>
+        <translation>%1 potvrde</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -2093,12 +2093,12 @@ Address: %4
     <message numerus="yes">
         <location line="+7"/>
         <source>, broadcast through %n node(s)</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform><numerusform></numerusform></translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Date</source>
-        <translation>Data</translation>
+        <translation>datum</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -2132,7 +2132,7 @@ Address: %4
     <message>
         <location line="-2"/>
         <source>label</source>
-        <translation type="unfinished"/>
+        <translation>етикета</translation>
     </message>
     <message>
         <location line="+34"/>
@@ -2146,7 +2146,7 @@ Address: %4
     <message numerus="yes">
         <location line="-102"/>
         <source>matures in %n more block(s)</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform><numerusform></numerusform></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2209,7 +2209,7 @@ Address: %4
     <message>
         <location line="+21"/>
         <source>Amount</source>
-        <translation>Sasia</translation>
+        <translation>iznos</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2224,17 +2224,17 @@ Address: %4
     <message>
         <location line="-202"/>
         <source>, has not been successfully broadcast yet</source>
-        <translation>, nuk është transmetuar me sukses deri tani</translation>
+        <translation>, nije još uvek uspešno emitovan</translation>
     </message>
     <message numerus="yes">
         <location line="-36"/>
         <source>Open for %n more block(s)</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform><numerusform></numerusform></translation>
     </message>
     <message>
         <location line="+67"/>
         <source>unknown</source>
-        <translation>i/e panjohur</translation>
+        <translation>nepoznato</translation>
     </message>
 </context>
 <context>
@@ -2242,12 +2242,12 @@ Address: %4
     <message>
         <location filename="../forms/transactiondescdialog.ui" line="+14"/>
         <source>Transaction details</source>
-        <translation>Detajet e transaksionit</translation>
+        <translation>detalji transakcije</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>This pane shows a detailed description of the transaction</source>
-        <translation>Ky panel tregon një përshkrim të detajuar të transaksionit</translation>
+        <translation>Ovaj odeljak pokazuje detaljan opis transakcije</translation>
     </message>
 </context>
 <context>
@@ -2255,37 +2255,37 @@ Address: %4
     <message>
         <location filename="../transactiontablemodel.cpp" line="+231"/>
         <source>Date</source>
-        <translation>Data</translation>
+        <translation>datum</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Type</source>
-        <translation>Lloji</translation>
+        <translation>tip</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Address</source>
-        <translation>Adresë</translation>
+        <translation>Адреса</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Amount</source>
-        <translation>Sasia</translation>
+        <translation>iznos</translation>
     </message>
     <message>
         <location line="+52"/>
         <source>Open until %1</source>
-        <translation>Hapur deri më %1</translation>
+        <translation>Otvoreno do %1</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Confirmed (%1 confirmations)</source>
-        <translation>I/E konfirmuar(%1 konfirmime)</translation>
+        <translation>Potvrdjena (%1 potvrdjenih)</translation>
     </message>
     <message numerus="yes">
         <location line="-15"/>
         <source>Open for %n more block(s)</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform><numerusform></numerusform></translation>
     </message>
     <message>
         <location line="+6"/>
@@ -2315,67 +2315,67 @@ Address: %4
     <message>
         <location line="+3"/>
         <source>This block was not received by any other nodes and will probably not be accepted!</source>
-        <translation>Ky bllok është marrë nga ndonjë nyje dhe ka shumë mundësi të mos pranohet! </translation>
+        <translation>Ovaj blok nije primljen od ostalih čvorova (nodova) i verovatno neće biti prihvaćen!</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Generated but not accepted</source>
-        <translation>I krijuar por i papranuar</translation>
+        <translation>Generisan ali nije prihvaćen</translation>
     </message>
     <message>
         <location line="+42"/>
         <source>Received with</source>
-        <translation>Marrë me</translation>
+        <translation>Primljen sa</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Received from</source>
-        <translation type="unfinished"/>
+        <translation>Primljeno od</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Sent to</source>
-        <translation>Dërguar drejt</translation>
+        <translation>Poslat ka</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Payment to yourself</source>
-        <translation>Pagesë ndaj vetvetes</translation>
+        <translation>Isplata samom sebi</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Mined</source>
-        <translation>Minuar</translation>
+        <translation>Minirano</translation>
     </message>
     <message>
         <location line="+38"/>
         <source>(n/a)</source>
-        <translation>(p/a)</translation>
+        <translation>(n/a)</translation>
     </message>
     <message>
         <location line="+194"/>
         <source>Transaction status. Hover over this field to show number of confirmations.</source>
-        <translation type="unfinished"/>
+        <translation>Status vaše transakcije. Predjite mišem preko ovog polja da bi ste videli broj konfirmacija</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Date and time that the transaction was received.</source>
-        <translation type="unfinished"/>
+        <translation>Datum i vreme primljene transakcije.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Type of transaction.</source>
-        <translation type="unfinished"/>
+        <translation>Tip transakcije</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Destination address of transaction.</source>
-        <translation type="unfinished"/>
+        <translation>Destinacija  i adresa transakcije</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Amount removed from or added to balance.</source>
-        <translation type="unfinished"/>
+        <translation>Iznos odbijen ili dodat balansu.</translation>
     </message>
 </context>
 <context>
@@ -2384,87 +2384,87 @@ Address: %4
         <location filename="../transactionview.cpp" line="+54"/>
         <location line="+17"/>
         <source>All</source>
-        <translation type="unfinished"/>
+        <translation>Sve</translation>
     </message>
     <message>
         <location line="-16"/>
         <source>Today</source>
-        <translation type="unfinished"/>
+        <translation>Danas</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>This week</source>
-        <translation type="unfinished"/>
+        <translation>ove nedelje</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>This month</source>
-        <translation type="unfinished"/>
+        <translation>Ovog meseca</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Last month</source>
-        <translation type="unfinished"/>
+        <translation>Prošlog meseca</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>This year</source>
-        <translation type="unfinished"/>
+        <translation>Ove godine</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Range...</source>
-        <translation type="unfinished"/>
+        <translation>Opseg...</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Received with</source>
-        <translation>Marrë me</translation>
+        <translation>Primljen sa</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Sent to</source>
-        <translation>Dërguar drejt</translation>
+        <translation>Poslat ka</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>To yourself</source>
-        <translation type="unfinished"/>
+        <translation>Vama - samom sebi</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Mined</source>
-        <translation>Minuar</translation>
+        <translation>Minirano</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Other</source>
-        <translation type="unfinished"/>
+        <translation>Drugi</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Enter address or label to search</source>
-        <translation type="unfinished"/>
+        <translation>Navedite adresu ili naziv koji bi ste potražili</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Min amount</source>
-        <translation type="unfinished"/>
+        <translation>Min iznos</translation>
     </message>
     <message>
         <location line="+34"/>
         <source>Copy address</source>
-        <translation type="unfinished"/>
+        <translation>kopiraj adresu</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Copy label</source>
-        <translation type="unfinished"/>
+        <translation>kopiraj naziv</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Copy amount</source>
-        <translation type="unfinished"/>
+        <translation>kopiraj iznos</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2474,7 +2474,7 @@ Address: %4
     <message>
         <location line="+1"/>
         <source>Edit label</source>
-        <translation type="unfinished"/>
+        <translation>promeni naziv</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2489,37 +2489,37 @@ Address: %4
     <message>
         <location line="+1"/>
         <source>Comma separated file (*.csv)</source>
-        <translation>Skedar i ndarë me pikëpresje(*.csv)</translation>
+        <translation>Зарезом одвојене вредности (*.csv)</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Confirmed</source>
-        <translation type="unfinished"/>
+        <translation>Potvrdjen</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Date</source>
-        <translation>Data</translation>
+        <translation>datum</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Type</source>
-        <translation>Lloji</translation>
+        <translation>tip</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Label</source>
-        <translation>Etiketë</translation>
+        <translation>Етикета</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Address</source>
-        <translation>Adresë</translation>
+        <translation>Адреса</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Amount</source>
-        <translation>Sasia</translation>
+        <translation>iznos</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2539,12 +2539,12 @@ Address: %4
     <message>
         <location line="+100"/>
         <source>Range:</source>
-        <translation type="unfinished"/>
+        <translation>Opseg:</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>to</source>
-        <translation type="unfinished"/>
+        <translation>do</translation>
     </message>
 </context>
 <context>
@@ -2565,7 +2565,7 @@ Address: %4
     <message>
         <location line="+1"/>
         <source>Usage:</source>
-        <translation type="unfinished"/>
+        <translation>Korišćenje:</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2575,17 +2575,17 @@ Address: %4
     <message>
         <location line="+1"/>
         <source>List commands</source>
-        <translation type="unfinished"/>
+        <translation>Listaj komande</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Get help for a command</source>
-        <translation type="unfinished"/>
+        <translation>Zatraži pomoć za komande</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Options:</source>
-        <translation type="unfinished"/>
+        <translation>Opcije</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2605,7 +2605,7 @@ Address: %4
     <message>
         <location line="-1"/>
         <source>Specify data directory</source>
-        <translation type="unfinished"/>
+        <translation>Gde je konkretni data direktorijum </translation>
     </message>
     <message>
         <location line="+163"/>
@@ -2640,7 +2640,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="+1"/>
         <source>Maintain at most &lt;n&gt; connections to peers (default: 125)</source>
-        <translation type="unfinished"/>
+        <translation>Održavaj najviše &lt;n&gt; konekcija  po priključku (default: 125)
+</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2690,17 +2691,17 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="-16"/>
         <source>Accept command line and JSON-RPC commands</source>
-        <translation type="unfinished"/>
+        <translation>Prihvati komandnu liniju i JSON-RPC komande</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Run in the background as a daemon and accept commands</source>
-        <translation type="unfinished"/>
+        <translation>Radi u pozadini kao daemon servis i prihvati komande</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Use the test network</source>
-        <translation type="unfinished"/>
+        <translation>Koristi testnu mrežu</translation>
     </message>
     <message>
         <location line="-23"/>
@@ -2835,7 +2836,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="+45"/>
         <source>Username for JSON-RPC connections</source>
-        <translation type="unfinished"/>
+        <translation>Korisničko ime za JSON-RPC konekcije</translation>
     </message>
     <message>
         <location line="+50"/>
@@ -2885,7 +2886,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="-55"/>
         <source>Password for JSON-RPC connections</source>
-        <translation type="unfinished"/>
+        <translation>Lozinka za JSON-RPC konekcije</translation>
     </message>
     <message>
         <location line="-47"/>
@@ -2925,12 +2926,12 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="+8"/>
         <source>Allow JSON-RPC connections from specified IP address</source>
-        <translation type="unfinished"/>
+        <translation>Dozvoli JSON-RPC konekcije sa posebne IP adrese</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Send commands to node running on &lt;ip&gt; (default: 127.0.0.1)</source>
-        <translation type="unfinished"/>
+        <translation>Pošalji komande to nodu koji radi na &lt;ip&gt; (default: 127.0.0.1)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2970,12 +2971,12 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="+1"/>
         <source>Set key pool size to &lt;n&gt; (default: 100)</source>
-        <translation type="unfinished"/>
+        <translation>Odredi veličinu zaštićenih ključeva na &lt;n&gt; (default: 100)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Rescan the block chain for missing wallet transactions</source>
-        <translation type="unfinished"/>
+        <translation>Ponovo skeniraj lanac blokova za nedostajuće transakcije iz novčanika</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2995,7 +2996,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="+5"/>
         <source>Use OpenSSL (https) for JSON-RPC connections</source>
-        <translation type="unfinished"/>
+        <translation>Koristi OpenSSL (https) za  JSON-RPC konekcije</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3005,7 +3006,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="+1"/>
         <source>Server private key (default: server.pem)</source>
-        <translation type="unfinished"/>
+        <translation>privatni ključ za Server (podrazumevan: server.pem)</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -3040,7 +3041,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="-135"/>
         <source>This help message</source>
-        <translation type="unfinished"/>
+        <translation>Ova poruka Pomoći</translation>
     </message>
     <message>
         <location line="+100"/>
@@ -3060,12 +3061,12 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="+121"/>
         <source>Loading addresses...</source>
-        <translation type="unfinished"/>
+        <translation>učitavam adrese....</translation>
     </message>
     <message>
         <location line="-10"/>
         <source>Error loading wallet.dat: Wallet corrupted</source>
-        <translation type="unfinished"/>
+        <translation>Грешка током учитавања wallet.dat: Новчаник је покварен      </translation>
     </message>
     <message>
         <location line="+4"/>
@@ -3080,7 +3081,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="+1"/>
         <source>Error loading wallet.dat</source>
-        <translation type="unfinished"/>
+        <translation>Грешка током учитавања wallet.dat      </translation>
     </message>
     <message>
         <location line="-15"/>
@@ -3125,7 +3126,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="-41"/>
         <source>Loading block index...</source>
-        <translation type="unfinished"/>
+        <translation>Učitavam blok indeksa...</translation>
     </message>
     <message>
         <location line="-105"/>
@@ -3175,7 +3176,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="+15"/>
         <source>Loading wallet...</source>
-        <translation type="unfinished"/>
+        <translation>Новчаник се учитава...</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -3190,12 +3191,12 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="+1"/>
         <source>Rescanning...</source>
-        <translation type="unfinished"/>
+        <translation>Ponovo skeniram...</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Done loading</source>
-        <translation type="unfinished"/>
+        <translation>Završeno učitavanje</translation>
     </message>
     <message>
         <location line="+33"/>
