@@ -798,4 +798,179 @@ Adres: %4
         <translation>Liste kipi</translation>
     </message>
     <message>
-        <location li
+        <location line="+45"/>
+        <source>Amount</source>
+        <translation>Miktar</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Label</source>
+        <translation>Etiket</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Address</source>
+        <translation>Adres</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Date</source>
+        <translation>Tarih</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Confirmations</source>
+        <translation>Onaylar</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Confirmed</source>
+        <translation>Onaylandı</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Priority</source>
+        <translation>Öncelik</translation>
+    </message>
+    <message>
+        <location filename="../coincontroldialog.cpp" line="-456"/>
+        <source>Copy address</source>
+        <translation>Adresi kopyala</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copy label</source>
+        <translation>Etiketi kopyala</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+26"/>
+        <source>Copy amount</source>
+        <translation>Miktarı kopyala</translation>
+    </message>
+    <message>
+        <location line="-25"/>
+        <source>Copy transaction ID</source>
+        <translation>İşlem Numarasını Kopyala</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Copy quantity</source>
+        <translation>Adedi kopyala</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Copy fee</source>
+        <translation>Ücreti kopyala</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copy after fee</source>
+        <translation>Ücretten sonrakini kopyala</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copy bytes</source>
+        <translation>Baytları kopyala</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copy low output</source>
+        <translation>Düşük çıktıyı kopyala</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copy change</source>
+        <translation>Para üstünü kopyala</translation>
+    </message>
+    <message>
+        <location line="+423"/>
+        <source>DUST</source>
+        <translation>BOZUKLUK</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>yes</source>
+        <translation>evet</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>This label turns red, if the transaction size is bigger than 10000 bytes.
+
+ This means a fee of at least %1 per kb is required.
+
+ Can vary +/- 1 Byte per input.</source>
+        <translation>İşlem büyüklüğü 10000 bayttan büyükse, bu etiket kırmızıya dönüşür.
+
+ Bu, kb başına en az %1 ücret gerektiği anlamına gelir.
+
+ Girdi başına +/- 1 Byte değişkenlik gösterebilir.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>This label turns red, if any recipient receives an amount smaller than %1.
+
+ This means a fee of at least %2 is required.
+
+ Amounts below 0.546 times the minimum relay fee are shown as DUST.</source>
+        <translation>Eğer herhangi bir alıcı, %1&apos;den daha küçük bir miktar alırsa, bu etiket kırmızıya dönüşür.
+
+ Bu, en az %2 bir ücretin gerektiği anlamına gelir.
+
+ Minimum aktarım ücretinin 0.546 katından düşük miktarlar, BOZUKLUK olarak gösterilir.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>This label turns red, if the change is smaller than %1.
+
+ This means a fee of at least %2 is required.</source>
+        <translation>Eğer para üstü %1&apos;den küçükse, bu etiket kırmızıya dönüşür.
+
+ Bu, en az %2 bir ücretin gerektiği anlamına gelir.</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <location line="+58"/>
+        <source>(no label)</source>
+        <translation>(boş etiket)</translation>
+    </message>
+    <message>
+        <location line="-9"/>
+        <source>change from %1 (%2)</source>
+        <translation>%1 unsurundan para üstü (%2)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>(change)</source>
+        <translation>(para üstü)</translation>
+    </message>
+</context>
+<context>
+    <name>EditAddressDialog</name>
+    <message>
+        <location filename="../forms/editaddressdialog.ui" line="+14"/>
+        <source>Edit Address</source>
+        <translation>Adresi düzenle</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>&amp;Label</source>
+        <translation>&amp;Etiket</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>The label associated with this address book entry</source>
+        <translation>Bu adres defteri kaydıyla ilişkili etiket</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>&amp;Address</source>
+        <translation>&amp;Adres</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>The address associated with this address book entry. This can only be modified for sending addresses.</source>
+        <translation>Bu adres defteri kaydıyla ilişkili etiket. Bu, sadece gönderi adresleri için değiştirilebilir.</translation>
+    </message>
+    <message>
+        <location filename="../editaddressdialog.cpp" line
