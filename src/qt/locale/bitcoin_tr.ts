@@ -2580,4 +2580,134 @@ Adres: %4
     <message>
         <location filename="../bitcoinstrings.cpp" line="+8"/>
         <source>Bws version</source>
-        
+        <translation>Bws versiyonu</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Usage:</source>
+        <translation>Kullanım:</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Send command to -server or bwsd</source>
+        <translation>-sunucu veya bwsd&apos;ye komut gönder</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>List commands</source>
+        <translation>Komutları listele</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Get help for a command</source>
+        <translation>Bir komut için yardım al</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Options:</source>
+        <translation>Seçenekler:</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Specify configuration file (default: bws.conf)</source>
+        <translation>Konfigürasyon dosyasını belirt (varsayılan: bws.conf)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Specify pid file (default: bwsd.pid)</source>
+        <translation>pid dosyasını belirt (varsayılan: bws.pid)</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Specify wallet file (within data directory)</source>
+        <translation>Cüzdan dosyası belirtiniz (veri klasörünün içinde)</translation>
+    </message>
+    <message>
+        <location line="-1"/>
+        <source>Specify data directory</source>
+        <translation>Veri dizinini belirt</translation>
+    </message>
+    <message>
+        <location line="+163"/>
+        <source>%s, you must set a rpcpassword in the configuration file:
+%s
+It is recommended you use the following random password:
+rpcuser=bwsrpc
+rpcpassword=%s
+(you do not need to remember this password)
+The username and password MUST NOT be the same.
+If the file does not exist, create it with owner-readable-only file permissions.
+It is also recommended to set alertnotify so you are notified of problems;
+for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
+</source>
+        <translation>%s, konfigürasyon dosyasında bir rpcpassword belirlemelisiniz:
+%s
+Aşağıdaki rastgele şifreyi kullanmanız tavsiye edilir:
+rpcuser=bwsrpc
+rpcpassword=%s
+(bu şifreyi hatırlamanız gerekmemektedir)
+Kullanıcı adı ve şifre aynı OLMAMALIDIR.
+Dosya mevcut değilse, sadece sahibi tarafından okunabilir yetkiyle yaratın.
+Ayrıca sorunlardan haberdar edilmek için alertnotify parametresini doldurmanız önerilir;
+örneğin: alertnotify=echo %%s | mail -s &quot;Bws Alarmı&quot; admin@foo.com
+</translation>
+    </message>
+    <message>
+        <location line="-161"/>
+        <source>Set database cache size in megabytes (default: 25)</source>
+        <translation>Veritabanı önbellek boyutunu megabayt olarak belirt (varsayılan: 25)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Set database disk log size in megabytes (default: 100)</source>
+        <translation>Veritabanı disk log boyutunu megabayt olarak ayarla (varsayılan: 100)</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Listen for connections on &lt;port&gt; (default: 48200 or testnet: 58200)</source>
+        <translation>&lt;port&gt; üzerinde bağlantıları dinle (varsayılan: 48200 veya testnet: 58200)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Maintain at most &lt;n&gt; connections to peers (default: 125)</source>
+        <translation>Eşler ile en çok &lt;n&gt; adet bağlantı kur (varsayılan: 125)</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Connect to a node to retrieve peer addresses, and disconnect</source>
+        <translation>Eş adresleri elde etmek için bir düğüme bağlan ve ardından bağlantıyı kes</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Specify your own public address</source>
+        <translation>Kendi genel adresinizi tanımlayın</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Bind to given address. Use [host]:port notation for IPv6</source>
+        <translation>Belirtilen adrese bağlı. IPv6 için [host]:port notasyonunu kullan</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Query for peer addresses via DNS lookup, if low on addresses (default: 1 unless -connect)</source>
+        <translation>DNS araması ile eş adresleri sorgula, adres sayısı az ise (varsayılan: 1 -connect hariç)</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Always query for peer addresses via DNS lookup (default: 0)</source>
+        <translation>DNS araması ile eş adresleri her zaman sorgula (varsayılan: 0)</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Threshold for disconnecting misbehaving peers (default: 100)</source>
+        <translation>Aksaklık gösteren eşlerle bağlantıyı kesme sınırı (varsayılan: 100)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Number of seconds to keep misbehaving peers from reconnecting (default: 86400)</source>
+        <translation>Aksaklık gösteren eşlerle yeni bağlantıları engelleme süresi, saniye olarak (varsayılan: 86400)</translation>
+    </message>
+    <message>
+        <location line="+153"/>
+        <source>An error occurred while setting up the RPC port %u for listening on IPv4: %s</source>
+        <translation>IPv4 üzerinde dinlemek için %u numaralı RPC portunun kurulumu sırasında hata mey
