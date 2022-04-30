@@ -2930,4 +2930,122 @@ Ayrıca sorunlardan haberdar edilmek için alertnotify parametresini doldurmanı
     <message>
         <location line="+12"/>
         <source>When creating transactions, ignore inputs with value less than this (default: 0.01)</source>
-        <translation>İşlem yaratırken, bundan daha küçük değere sahip girdileri yok say (varsayılan: 0
+        <translation>İşlem yaratırken, bundan daha küçük değere sahip girdileri yok say (varsayılan: 0.01)</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Output debugging information (default: 0, supplying &lt;category&gt; is optional)</source>
+        <translation>Hata ayıklama bilgisi çıktısı al (varsayılan: 0, &lt;category&gt; belirtmek isteğe bağlıdır)</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>If &lt;category&gt; is not supplied, output all debugging information.</source>
+        <translation>&lt;category&gt; belirtilmediyse, bütün ayıklama bilgisinin çıktısını al.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>&lt;category&gt; can be:</source>
+        <translation>&lt;category&gt; şunlar olabilir:</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Enter regression test mode, which uses a special chain in which blocks can be solved instantly. This is intended for regression testing tools and app development.</source>
+        <translation>Bağlanım deneme moduna gir, bu mod blokların anında çözülebilmesini sağlayan özel bir zincir kullanır. Bu seçenek bağlanım deneme araçları ve uygulama geliştirme için tasarlanmıştır.</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Allow JSON-RPC connections from specified IP address</source>
+        <translation>Belirtilen İP adresinden JSON-RPC bağlantılarını kabul et</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Send commands to node running on &lt;ip&gt; (default: 127.0.0.1)</source>
+        <translation>Şu &lt;ip&gt; adresinde (varsayılan: 127.0.0.1) çalışan düğüme komut yolla</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Wait for RPC server to start</source>
+        <translation>RPC sunucusunun başlamasını bekle</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Set the number of threads to service RPC calls (default: 4)</source>
+        <translation>RPC çağrı hizmeti verecek dizi sayısını ayarla (varsayılan: 4)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Execute command when the best block changes (%s in cmd is replaced by block hash)</source>
+        <translation>En iyi blok değiştiğinde komutu çalıştır (komut için %s parametresi blok hash değeri ile değiştirilecektir)</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Execute command when a wallet transaction changes (%s in cmd is replaced by TxID)</source>
+        <translation>Bir cüzdan işlemi değiştiğinde komutu çalıştır (komuttaki %s TxID ile değiştirilecektir)</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Require a confirmations for change (default: 0)</source>
+        <translation>Değişim için bir onay sayısı talep et (varsayılan: 0)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Execute command when a relevant alert is received (%s in cmd is replaced by message)</source>
+        <translation>İlgili alarm alındığında komutu çalıştır (cmd&apos;deki %s, mesaj ile değiştirilecektir)</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Upgrade wallet to latest format</source>
+        <translation>Cüzdanı en yeni biçime güncelle</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Set key pool size to &lt;n&gt; (default: 100)</source>
+        <translation>Anahtar alan boyutunu &lt;n&gt; değerine ayarla (varsayılan: 100)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Rescan the block chain for missing wallet transactions</source>
+        <translation>Blok zincirini eksik cüzdan işlemleri için tekrar tara</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>How thorough the block verification is (0-6, default: 1)</source>
+        <translation>Blok kontrolünün ne kadar derin olacağı (0-6, varsayılan: 1)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Imports blocks from external blk000?.dat file</source>
+        <translation>Harici blk000?.dat dosyasından blok içeri aktar</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Keep at most &lt;n&gt; MiB of unconnectable blocks in memory (default: %u)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Use OpenSSL (https) for JSON-RPC connections</source>
+        <translation>JSON-RPC bağlantıları için OpenSSL (https) kullan</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Server certificate file (default: server.cert)</source>
+        <translation>Sunucu sertifika dosyası (varsayılan: server.cert)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Server private key (default: server.pem)</source>
+        <translation>Sunucu özel anahtarı (varsayılan: server.pem)</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Error: Unsupported argument -socks found. Setting SOCKS version isn&apos;t possible anymore, only SOCKS5 proxies are supported.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Initialization sanity check failed. Bws is shutting down.</source>
+        <translation>Başlangıç uygunluk kontrolü başarısız oldu. Bws kapatılıyor.</translation>
+    </message>
+    <message>
+      
