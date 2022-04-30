@@ -2814,4 +2814,120 @@ Ayrıca sorunlardan haberdar edilmek için alertnotify parametresini doldurmanı
     </message>
     <message>
         <location line="+30"/>
-        <source>Prepend debug output with timestamp</sour
+        <source>Prepend debug output with timestamp</source>
+        <translation>Tarih bilgisini, hata ayıklama çıktısının başına ekle</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>SSL options: (see the Bitcoin Wiki for SSL setup instructions)</source>
+        <translation> SSL seçenekleri: (SSL kurulum bilgisi için Bitcoin vikisine bakınız)</translation>
+    </message>
+    <message>
+        <location line="-34"/>
+        <source>Send trace/debug info to console instead of debug.log file</source>
+        <translation>Trace/hata ayıklama verilerini debug.log dosyası yerine konsola gönder</translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Set maximum block size in bytes (default: 250000)</source>
+        <translation>Bayt olarak maksimum blok boyutunu belirle (varsayılan: 250000)</translation>
+    </message>
+    <message>
+        <location line="-1"/>
+        <source>Set minimum block size in bytes (default: 0)</source>
+        <translation>Bayt olarak asgari blok boyutunu tanımla (varsayılan: 0)</translation>
+    </message>
+    <message>
+        <location line="-33"/>
+        <source>Shrink debug.log file on client startup (default: 1 when no -debug)</source>
+        <translation>İstemci başlatıldığında debug.log dosyasını küçült (varsayılan: -debug bulunmadığında 1)</translation>
+    </message>
+    <message>
+        <location line="-41"/>
+        <source>Specify connection timeout in milliseconds (default: 5000)</source>
+        <translation>Bağlantı zaman aşım süresini milisaniye olarak belirt (varsayılan: 5000)</translation>
+    </message>
+    <message>
+        <location line="+28"/>
+        <source>Use UPnP to map the listening port (default: 0)</source>
+        <translation>Dinlenecek portu haritalamak için UPnP kullan (varsayılan: 0)</translation>
+    </message>
+    <message>
+        <location line="-1"/>
+        <source>Use UPnP to map the listening port (default: 1 when listening)</source>
+        <translation>Dinlenecek portu haritalamak için UPnP kullan (varsayılan: dinlenildiğinde 1)</translation>
+    </message>
+    <message>
+        <location line="-25"/>
+        <source>Use proxy to reach tor hidden services (default: same as -proxy)</source>
+        <translation>Tor gizli servisine erişim için vekil sunucu kullan (varsayılan: -proxy ile aynı)</translation>
+    </message>
+    <message>
+        <location line="+45"/>
+        <source>Username for JSON-RPC connections</source>
+        <translation>JSON-RPC bağlantıları için kullanıcı ismi</translation>
+    </message>
+    <message>
+        <location line="+50"/>
+        <source>Verifying database integrity...</source>
+        <translation>Veritabanı bütünlüğü doğrulanıyor...</translation>
+    </message>
+    <message>
+        <location line="+43"/>
+        <source>Error: Wallet locked, unable to create transaction!</source>
+        <translation>Hata: Cüzdan kilitli, işlem yaratılamıyor!</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Error: This transaction requires a transaction fee of at least %s because of its amount, complexity, or use of recently received funds!</source>
+        <translation>Hata: Bu işlem; miktarı, karmaşıklığı veya son alınan miktarın kullanımı nedeniyle en az %s işlem ücreti gerektirir!</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Error: Transaction creation failed!</source>
+        <translation>Hata: İşlem yaratma başarısız oldu!</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Error: The transaction was rejected! This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
+        <translation>Hata: İşlem reddedildi. Bu; cüzdanınızdaki bazı coinler, önceden harcanmışsa, örneğin wallet.dat dosyasının bir kopyasını kullandıysanız ve bu kopyadaki coinler harcanmış ve burada harcanmış olarak işaretlenmediyse gerçekleşebilir.</translation>
+    </message>
+    <message>
+        <location line="-15"/>
+        <source>Warning</source>
+        <translation>Uyarı</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Information</source>
+        <translation>Bilgi</translation>
+    </message>
+    <message>
+        <location line="-7"/>
+        <source>Warning: This version is obsolete, upgrade required!</source>
+        <translation>Uyarı: Bu sürüm çok eskidir, güncellemeniz gerekir!</translation>
+    </message>
+    <message>
+        <location line="-23"/>
+        <source>wallet.dat corrupt, salvage failed</source>
+        <translation>wallet.dat bozuk, geri kazanım başarısız oldu</translation>
+    </message>
+    <message>
+        <location line="-55"/>
+        <source>Password for JSON-RPC connections</source>
+        <translation>JSON-RPC bağlantıları için parola</translation>
+    </message>
+    <message>
+        <location line="-47"/>
+        <source>Connect through SOCKS5 proxy</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Sync time with other nodes. Disable if time on your system is precise e.g. syncing with NTP (default: 1)</source>
+        <translation>Diğer devrelerle saati senkronize et. Sisteminizdeki saat doğru ise devre dışı bırakın, örn: NTC ile senkronize etme (varsayılan: 1)</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>When creating transactions, ignore inputs with value less than this (default: 0.01)</source>
+        <translation>İşlem yaratırken, bundan daha küçük değere sahip girdileri yok say (varsayılan: 0
