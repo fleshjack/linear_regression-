@@ -3048,4 +3048,136 @@ Ayrıca sorunlardan haberdar edilmek için alertnotify parametresini doldurmanı
         <translation>Başlangıç uygunluk kontrolü başarısız oldu. Bws kapatılıyor.</translation>
     </message>
     <message>
-      
+        <location line="+20"/>
+        <source>Error loading block database</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>Error: Wallet unlocked for staking only, unable to create transaction.</source>
+        <translation>Hata: Cüzdanın kilidi sadece pay almak için açılmıştır, işlem yaratılamıyor.</translation>
+    </message>
+    <message>
+        <location line="-14"/>
+        <source>Error: Disk space is low!</source>
+        <translation>Uyarı: Disk alanı düşük!</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>This is a pre-release test build - use at your own risk - do not use for mining or merchant applications</source>
+        <translation>Bu bir ön test sürümüdür - kullanım riski size aittir - madencilik veya ticari uygulamalarda kullanmayın</translation>
+    </message>
+    <message>
+        <location line="-135"/>
+        <source>This help message</source>
+        <translation>Bu yardım mesajı</translation>
+    </message>
+    <message>
+        <location line="+100"/>
+        <source>Wallet %s resides outside data directory %s.</source>
+        <translation>Cüzdan %s, veri klasörü %s dışında yer alıyor.</translation>
+    </message>
+    <message>
+        <location line="+46"/>
+        <source>Unable to bind to %s on this computer (bind returned error %d, %s)</source>
+        <translation>Bu bilgisayarda %s unsuruna bağlanılamadı. (bind şu hatayı iletti: %d, %s)</translation>
+    </message>
+    <message>
+        <location line="-136"/>
+        <source>Allow DNS lookups for -addnode, -seednode and -connect</source>
+        <translation>-addnode, -seednode ve -connect için DNS aramalarına izin ver</translation>
+    </message>
+    <message>
+        <location line="+121"/>
+        <source>Loading addresses...</source>
+        <translation>Adresler yükleniyor...</translation>
+    </message>
+    <message>
+        <location line="-10"/>
+        <source>Error loading wallet.dat: Wallet corrupted</source>
+        <translation>wallet.dat dosyasının yüklenmesinde hata oluştu: bozuk cüzdan</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Error loading wallet.dat: Wallet requires newer version of Bws</source>
+        <translation>wallet.dat yüklenirken hata: Cüzdan, daha yeni bir Bws versiyonuna ihtiyaç duyuyor.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Wallet needed to be rewritten: restart Bws to complete</source>
+        <translation>Cüzdanın yeniden yazılması gerekmektedir: Tamamlamak için Bws&apos;i yeniden başlatın</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Error loading wallet.dat</source>
+        <translation>wallet.dat dosyasının yüklenmesinde hata oluştu</translation>
+    </message>
+    <message>
+        <location line="-15"/>
+        <source>Invalid -proxy address: &apos;%s&apos;</source>
+        <translation>Geçersiz -proxy adresi: &apos;%s&apos;</translation>
+    </message>
+    <message>
+        <location line="-1"/>
+        <source>Unknown network specified in -onlynet: &apos;%s&apos;</source>
+        <translation>-onlynet için bilinmeyen bir şebeke belirtildi: &apos;%s&apos;</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Cannot resolve -bind address: &apos;%s&apos;</source>
+        <translation>-bind adresi çözümlenemedi: &apos;%s&apos;</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Cannot resolve -externalip address: &apos;%s&apos;</source>
+        <translation>-externalip adresi çözümlenemedi: &apos;%s&apos;</translation>
+    </message>
+    <message>
+        <location line="-22"/>
+        <source>Invalid amount for -paytxfee=&lt;amount&gt;: &apos;%s&apos;</source>
+        <translation>-paytxfee=&lt;meblağ&gt; için geçersiz meblağ: &apos;%s&apos;</translation>
+    </message>
+    <message>
+        <location line="+59"/>
+        <source>Sending...</source>
+        <translation>Gönderiyor...</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Invalid amount</source>
+        <translation>Geçersiz meblağ</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Insufficient funds</source>
+        <translation>Yetersiz bakiye</translation>
+    </message>
+    <message>
+        <location line="-41"/>
+        <source>Loading block index...</source>
+        <translation>Blok indeksi yükleniyor...</translation>
+    </message>
+    <message>
+        <location line="-105"/>
+        <source>Add a node to connect to and attempt to keep the connection open</source>
+        <translation>Bağlanılacak düğüm ekle ve bağlantıyı zinde tutmaya çalış</translation>
+    </message>
+    <message>
+        <location line="+131"/>
+        <source>Unable to bind to %s on this computer. Bws is probably already running.</source>
+        <translation>Bu bilgisayarda %s bağlanamadı. Bws muhtemelen halen çalışmaktadır.</translation>
+    </message>
+    <message>
+        <location line="-108"/>
+        <source>Fee per KB to add to transactions you send</source>
+        <translation>Gönderdiğiniz işleme eklenmek üzere KB başına ücret</translation>
+    </message>
+    <message>
+        <location line="+40"/>
+        <source>How many blocks to check at startup (default: 500, 0 = all)</source>
+        <translation>Başlangıçta kontrol edilecek blok sayısı (varsayılan: 500, 0 = tümü)</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Acceptable ciphers (default: TLSv1.2+HIGH:TLSv1+HIGH:!SSLv2:!aNULL:!eNULL:!3DES:@STRENGTH)</source>
+        <translation>Kabul edilebilir şifre kodları (varsayılan: TL
