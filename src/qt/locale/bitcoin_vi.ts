@@ -1,4 +1,5 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="ur_PK" version="2.1">
+
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="vi" version="2.1">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -15,7 +16,7 @@
         <location line="+41"/>
         <source>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
-Copyright © 2014 The Bws developers</source>
+Copyright © 2018 The Bws developers</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -39,17 +40,17 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+22"/>
         <source>Double-click to edit address or label</source>
-        <translation>ایڈریس یا لیبل میں ترمیم کرنے پر ڈبل کلک کریں</translation>
+        <translation>Click đúp chuột để chỉnh sửa địa chỉ hoặc nhãn dữ liệu</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Create a new address</source>
-        <translation>نیا ایڈریس بنائیں</translation>
+        <translation>Tạo một địa chỉ mới</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Copy the currently selected address to the system clipboard</source>
-        <translation type="unfinished"/>
+        <translation>Sao chép các địa chỉ đã được chọn vào bộ nhớ tạm thời của hệ thống</translation>
     </message>
     <message>
         <location line="-7"/>
@@ -99,7 +100,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+10"/>
         <source>&amp;Delete</source>
-        <translation type="unfinished"/>
+        <translation>&amp;Xóa</translation>
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="+66"/>
@@ -119,7 +120,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+1"/>
         <source>Comma separated file (*.csv)</source>
-        <translation type="unfinished"/>
+        <translation>Tập tin tách biệt bởi dấu phẩy (*.csv)</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -137,17 +138,17 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location filename="../addresstablemodel.cpp" line="+145"/>
         <source>Label</source>
-        <translation>چٹ</translation>
+        <translation>Nhãn dữ liệu</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Address</source>
-        <translation> پتہ</translation>
+        <translation>Địa chỉ</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>(no label)</source>
-        <translation>چٹ کے بغیر</translation>
+        <translation>(chưa có nhãn)</translation>
     </message>
 </context>
 <context>
@@ -160,17 +161,17 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+21"/>
         <source>Enter passphrase</source>
-        <translation>پاس فریز داخل کریں</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+14"/>
         <source>New passphrase</source>
-        <translation>نیا پاس فریز</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+14"/>
         <source>Repeat new passphrase</source>
-        <translation>نیا پاس فریز دہرائیں</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+33"/>
@@ -195,7 +196,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+5"/>
         <source>Unlock wallet</source>
-        <translation>بٹوا ان لاک</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
@@ -205,12 +206,12 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+5"/>
         <source>Decrypt wallet</source>
-        <translation>خفیہ کشائی کر یںبٹوے کے</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
         <source>Change passphrase</source>
-        <translation>پاس فریز تبدیل کریں</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
@@ -504,7 +505,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message numerus="yes">
         <location line="+70"/>
         <source>%n active connection(s) to Bws network</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation type="unfinished"><numerusform></numerusform></translation>
     </message>
     <message>
         <location line="+6"/>
@@ -630,18 +631,18 @@ Address: %4
     <message numerus="yes">
         <location line="+91"/>
         <source>%n second(s)</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation type="unfinished"><numerusform></numerusform></translation>
     </message>
     <message numerus="yes">
         <location line="+4"/>
         <source>%n minute(s)</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation type="unfinished"><numerusform></numerusform></translation>
     </message>
     <message numerus="yes">
         <location line="-429"/>
         <location line="+433"/>
         <source>%n hour(s)</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation type="unfinished"><numerusform></numerusform></translation>
     </message>
     <message>
         <location line="-456"/>
@@ -652,13 +653,13 @@ Address: %4
         <location line="+27"/>
         <location line="+433"/>
         <source>%n day(s)</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation type="unfinished"><numerusform></numerusform></translation>
     </message>
     <message numerus="yes">
         <location line="-429"/>
         <location line="+6"/>
         <source>%n week(s)</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation type="unfinished"><numerusform></numerusform></translation>
     </message>
     <message>
         <location line="+0"/>
@@ -668,7 +669,7 @@ Address: %4
     <message numerus="yes">
         <location line="+0"/>
         <source>%n year(s)</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation type="unfinished"><numerusform></numerusform></translation>
     </message>
     <message>
         <location line="+5"/>
@@ -789,7 +790,7 @@ Address: %4
     <message>
         <location line="+45"/>
         <source>Amount</source>
-        <translation>رقم</translation>
+        <translation>Số lượng</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -799,12 +800,12 @@ Address: %4
     <message>
         <location line="+5"/>
         <source>Address</source>
-        <translation> پتہ</translation>
+        <translation>Địa chỉ</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Date</source>
-        <translation>تاریخ</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+5"/>
@@ -911,7 +912,7 @@ Address: %4
         <location line="+35"/>
         <location line="+58"/>
         <source>(no label)</source>
-        <translation>چٹ کے بغیر</translation>
+        <translation>(chưa có nhãn)</translation>
     </message>
     <message>
         <location line="-9"/>
@@ -1682,7 +1683,7 @@ Address: %4
     <message>
         <location line="+24"/>
         <source>Balance:</source>
-        <translation>بیلنس:</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+47"/>
@@ -1797,7 +1798,7 @@ Address: %4
     <message>
         <location line="+13"/>
         <source>(no label)</source>
-        <translation>چٹ کے بغیر</translation>
+        <translation>(chưa có nhãn)</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -2092,12 +2093,12 @@ Address: %4
     <message numerus="yes">
         <location line="+7"/>
         <source>, broadcast through %n node(s)</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation type="unfinished"><numerusform></numerusform></translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Date</source>
-        <translation>تاریخ</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+7"/>
@@ -2145,7 +2146,7 @@ Address: %4
     <message numerus="yes">
         <location line="-102"/>
         <source>matures in %n more block(s)</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation type="unfinished"><numerusform></numerusform></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2208,7 +2209,7 @@ Address: %4
     <message>
         <location line="+21"/>
         <source>Amount</source>
-        <translation>رقم</translation>
+        <translation>Số lượng</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2228,7 +2229,7 @@ Address: %4
     <message numerus="yes">
         <location line="-36"/>
         <source>Open for %n more block(s)</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation type="unfinished"><numerusform></numerusform></translation>
     </message>
     <message>
         <location line="+67"/>
@@ -2254,22 +2255,22 @@ Address: %4
     <message>
         <location filename="../transactiontablemodel.cpp" line="+231"/>
         <source>Date</source>
-        <translation>تاریخ</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+0"/>
         <source>Type</source>
-        <translation>ٹائپ</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+0"/>
         <source>Address</source>
-        <translation> پتہ</translation>
+        <translation>Địa chỉ</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Amount</source>
-        <translation>رقم</translation>
+        <translation>Số lượng</translation>
     </message>
     <message>
         <location line="+52"/>
@@ -2284,7 +2285,7 @@ Address: %4
     <message numerus="yes">
         <location line="-15"/>
         <source>Open for %n more block(s)</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation type="unfinished"><numerusform></numerusform></translation>
     </message>
     <message>
         <location line="+6"/>
@@ -2334,7 +2335,7 @@ Address: %4
     <message>
         <location line="+3"/>
         <source>Sent to</source>
-        <translation>کو بھیجا</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
@@ -2349,7 +2350,7 @@ Address: %4
     <message>
         <location line="+38"/>
         <source>(n/a)</source>
-        <translation>(N / A)</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+194"/>
@@ -2383,37 +2384,37 @@ Address: %4
         <location filename="../transactionview.cpp" line="+54"/>
         <location line="+17"/>
         <source>All</source>
-        <translation>تمام</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-16"/>
         <source>Today</source>
-        <translation>آج</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>This week</source>
-        <translation>اس ہفتے</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>This month</source>
-        <translation>اس مہینے</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Last month</source>
-        <translation>پچھلے مہینے</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>This year</source>
-        <translation>اس سال</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Range...</source>
-        <translation>دیگر</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+12"/>
@@ -2423,7 +2424,7 @@ Address: %4
     <message>
         <location line="+2"/>
         <source>Sent to</source>
-        <translation>کو بھیجا</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
@@ -2488,7 +2489,7 @@ Address: %4
     <message>
         <location line="+1"/>
         <source>Comma separated file (*.csv)</source>
-        <translation type="unfinished"/>
+        <translation>Tập tin tách biệt bởi dấu phẩy (*.csv)</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -2498,27 +2499,27 @@ Address: %4
     <message>
         <location line="+1"/>
         <source>Date</source>
-        <translation>تاریخ</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Type</source>
-        <translation>ٹائپ</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Label</source>
-        <translation>چٹ</translation>
+        <translation>Nhãn dữ liệu</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Address</source>
-        <translation> پتہ</translation>
+        <translation>Địa chỉ</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Amount</source>
-        <translation>رقم</translation>
+        <translation>Số lượng</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3039,7 +3040,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="-135"/>
         <source>This help message</source>
-        <translation>یہ مدد کا پیغام</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+100"/>
@@ -3114,12 +3115,12 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="+5"/>
         <source>Invalid amount</source>
-        <translation>غلط رقم</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
         <source>Insufficient funds</source>
-        <translation>ناکافی فنڈز</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-41"/>
@@ -3204,7 +3205,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Bws Alert&quot; admin@foo.com
     <message>
         <location line="-27"/>
         <source>Error</source>
-        <translation>نقص</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+22"/>
