@@ -23,3 +23,33 @@ class OverviewPage : public QWidget
 public:
     explicit OverviewPage(QWidget *parent = 0);
     ~OverviewPage();
+
+    void setClientModel(ClientModel *clientModel);
+    void setWalletModel(WalletModel *walletModel);
+    void showOutOfSyncWarning(bool fShow);
+
+public slots:
+    void setBalance(qint64 balance, qint64 stake, qint64 unconfirmedBalance, qint64 immatureBalance);
+
+signals:
+    void transactionClicked(const QModelIndex &index);
+
+private:
+    Ui::OverviewPage *ui;
+    ClientModel *clientModel;
+    WalletModel *walletModel;
+    qint64 currentBalance;
+    qint64 currentStake;
+    qint64 currentUnconfirmedBalance;
+    qint64 currentImmatureBalance;
+
+    TxViewDelegate *txdelegate;
+    TransactionFilterProxy *filter;
+
+private slots:
+    void updateDisplayUnit();
+    void handleTransactionClicked(const QModelIndex &index);
+    void updateAlerts(const QString &warnings);
+};
+
+#endif // OVERVIEWPAGE_H
