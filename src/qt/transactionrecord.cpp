@@ -123,4 +123,138 @@ QList<TransactionRecord> TransactionRecord::decomposeTransaction(const CWallet *
                 if (ExtractDestination(txout.scriptPubKey, address))
                 {
                     // Sent to Bitcoin Address
-                    sub.type = TransactionRecord::SendToAddres
+                    sub.type = TransactionRecord::SendToAddress;
+                    sub.address = CBitcoinAddress(address).ToString();
+                }
+                else
+                {
+                    // Sent to IP, or other non-address transaction like OP_EVAL
+                    sub.type = TransactionRecord::SendToOther;
+                    sub.address = mapValue["to"];
+                }
+
+                int64_t nValue = txout.nValue;
+                /* Add fee to first output */
+                if (nTxFee > 0)
+                {
+                    nValue += nTxFee;
+                    nTxFee = 0;
+                }
+                sub.debit = -nValue;
+
+                parts.append(sub);
+            }
+        }
+        else
+        {
+            //
+            // Mixed debit transaction, can't break down payees
+            //
+            parts.append(TransactionRecord(hash, nTime, TransactionRecord::Other, "", nNet, 0));
+        }
+    }
+
+    return parts;
+}
+
+void TransactionRecord::updateStatus(const CWalletTx &wtx)
+{
+    AssertLockHeld(cs_main);
+    // Determine transaction status
+
+    // Find the block the tx is in
+    CBlockIndex* pindex = NULL;
+    std::map<uint256, CBlockIndex*>::iterator mi = mapBlockIndex.find(wtx.hashBlock);
+    if (mi != mapBlockIndex.end())
+        pindex = (*mi).second;
+
+    // Sort order, unrecorded transactions sort to the top
+    status.sortKey = strprintf("%010d-%01d-%010u-%03d",
+        (pindex ? pindex->nHeight : std::numeric_limits<int>::max()),
+        (wtx.IsCoinBase() ? 1 : 0),
+        wtx.nTimeReceived,
+        idx);
+    status.countsForBalance = wtx.IsTrusted() && !(wtx.GetBlocksToMaturity() > 0);
+    status.depth = wtx.GetDepthInMainChain();
+    status.cur_num_blocks = nBestHeight;
+
+    if (!IsFinalTx(wtx, nBestHeight + 1))
+    {
+        if (wtx.nLockTime < LOCKTIME_THRESHOLD)
+        {
+            status.status = TransactionStatus::OpenUntilBlock;
+            status.open_for = wtx.nLockTime - nBestHeight;
+        }
+        else
+        {
+            status.status = TransactionStatus::OpenUntilDate;
+            status.open_for = wtx.nLockTime;
+        }
+    }
+
+    // For generated transactions, determine maturity
+    else if(type == TransactionRecord::Generated)
+    {
+        if (wtx.GetBlocksToMaturity() > 0)
+        {
+            status.status = TransactionStatus::Immature;
+
+            if (wtx.IsInMainChain())
+            {
+                status.matures_in = wtx.GetBlocksToMaturity();
+
+                // Check if the block was requested by anyone
+                if (GetAdjustedTime() - wtx.nTimeReceived > 2 * 60 && wtx.GetRequestCount() == 0)
+                    status.status = TransactionStatus::MaturesWarning;
+            }
+            else
+            {
+                status.status = TransactionStatus::NotAccepted;
+            }
+        }
+        else
+        {
+            status.status = TransactionStatus::Confirmed;
+        }
+    }
+    else
+    {
+        if (status.depth < 0)
+        {
+            status.status = TransactionStatus::Conflicted;
+        }
+        else if (GetAdjustedTime() - wtx.nTimeReceived > 2 * 60 && wtx.GetRequestCount() == 0)
+        {
+            status.status = TransactionStatus::Offline;
+        }
+        else if (status.depth == 0)
+        {
+            status.status = TransactionStatus::Unconfirmed;
+        }
+        else if (status.depth < RecommendedNumConfirmations)
+        {
+            status.status = TransactionStatus::Confirming;
+        }
+        else
+        {
+            status.status = TransactionStatus::Confirmed;
+        }
+    }
+}
+
+bool TransactionRecord::statusUpdateNeeded()
+{
+    AssertLockHeld(cs_main);
+    return status.cur_num_blocks != nBestHeight;
+}
+
+QString TransactionRecord::getTxID() const
+{
+    return formatSubTxId(hash, idx);
+}
+
+QString TransactionRecord::formatSubTxId(const uint256 &hash, int vout)
+{
+    return QString::fromStdString(hash.ToString() + strprintf("-%03d", vout));
+}
+
