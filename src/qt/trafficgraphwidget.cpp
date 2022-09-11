@@ -92,4 +92,78 @@ void TrafficGraphWidget::paintEvent(QPaintEvent *)
             if(count % 10 == 0)
                 continue;
             int yy = YMARGIN + h - h * y / fMax;
- 
+            painter.drawLine(XMARGIN, yy, width() - XMARGIN, yy);
+        }
+    }
+
+    if(!vSamplesIn.empty()) {
+        QPainterPath p;
+        paintPath(p, vSamplesIn);
+        painter.fillPath(p, QColor(0, 255, 0, 128));
+        painter.setPen(Qt::green);
+        painter.drawPath(p);
+    }
+    if(!vSamplesOut.empty()) {
+        QPainterPath p;
+        paintPath(p, vSamplesOut);
+        painter.fillPath(p, QColor(255, 0, 0, 128));
+        painter.setPen(Qt::red);
+        painter.drawPath(p);
+    }
+}
+
+void TrafficGraphWidget::updateRates()
+{
+    if(!clientModel) return;
+
+    quint64 bytesIn = clientModel->getTotalBytesRecv(),
+            bytesOut = clientModel->getTotalBytesSent();
+    float inRate = (bytesIn - nLastBytesIn) / 1024.0f * 1000 / timer->interval();
+    float outRate = (bytesOut - nLastBytesOut) / 1024.0f * 1000 / timer->interval();
+    vSamplesIn.push_front(inRate);
+    vSamplesOut.push_front(outRate);
+    nLastBytesIn = bytesIn;
+    nLastBytesOut = bytesOut;
+
+    while(vSamplesIn.size() > DESIRED_SAMPLES) {
+        vSamplesIn.pop_back();
+    }
+    while(vSamplesOut.size() > DESIRED_SAMPLES) {
+        vSamplesOut.pop_back();
+    }
+
+    float tmax = 0.0f;
+    foreach(float f, vSamplesIn) {
+        if(f > tmax) tmax = f;
+    }
+    foreach(float f, vSamplesOut) {
+        if(f > tmax) tmax = f;
+    }
+    fMax = tmax;
+    update();
+}
+
+void TrafficGraphWidget::setGraphRangeMins(int mins)
+{
+    nMins = mins;
+    int msecsPerSample = nMins * 60 * 1000 / DESIRED_SAMPLES;
+    timer->stop();
+    timer->setInterval(msecsPerSample);
+
+    clear();
+}
+
+void TrafficGraphWidget::clear()
+{
+    timer->stop();
+
+    vSamplesOut.clear();
+    vSamplesIn.clear();
+    fMax = 0.0f;
+
+    if(clientModel) {
+        nLastBytesIn = clientModel->getTotalBytesRecv();
+        nLastBytesOut = clientModel->getTotalBytesSent();
+    }
+    timer->start();
+}
