@@ -40,4 +40,48 @@ public:
         /** Address of transaction */
         AddressRole,
         /** Label of address related to transaction */
-        Label
+        LabelRole,
+        /** Net amount of transaction */
+        AmountRole,
+        /** Unique identifier */
+        TxIDRole,
+        /** Is transaction confirmed? */
+        ConfirmedRole,
+        /** Formatted amount, without brackets when unconfirmed */
+        FormattedAmountRole,
+        /** Transaction status (TransactionRecord::Status) */
+        StatusRole
+    };
+
+    int rowCount(const QModelIndex &parent) const;
+    int columnCount(const QModelIndex &parent) const;
+    QVariant data(const QModelIndex &index, int role) const;
+    QVariant headerData(int section, Qt::Orientation orientation, int role) const;
+    QModelIndex index(int row, int column, const QModelIndex & parent = QModelIndex()) const;
+
+private:
+    CWallet* wallet;
+    WalletModel *walletModel;
+    QStringList columns;
+    TransactionTablePriv *priv;
+
+    QString lookupAddress(const std::string &address, bool tooltip) const;
+    QVariant addressColor(const TransactionRecord *wtx) const;
+    QString formatTxStatus(const TransactionRecord *wtx) const;
+    QString formatTxDate(const TransactionRecord *wtx) const;
+    QString formatTxType(const TransactionRecord *wtx) const;
+    QString formatTxToAddress(const TransactionRecord *wtx, bool tooltip) const;
+    QString formatTxAmount(const TransactionRecord *wtx, bool showUnconfirmed=true) const;
+    QString formatTooltip(const TransactionRecord *rec) const;
+    QVariant txStatusDecoration(const TransactionRecord *wtx) const;
+    QVariant txAddressDecoration(const TransactionRecord *wtx) const;
+
+public slots:
+    void updateTransaction(const QString &hash, int status);
+    void updateConfirmations();
+    void updateDisplayUnit();
+
+    friend class TransactionTablePriv;
+};
+
+#endif // TRANSACTIONTABLEMODEL_H
