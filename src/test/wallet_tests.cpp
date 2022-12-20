@@ -149,4 +149,119 @@ BOOST_AUTO_TEST_CASE(coin_selection_tests)
         add_coin( 18*CENT); // now we have 5+6+7+8+18+20+30
 
         // and now if we try making 16 cents again, the smaller coins can make 5+6+7 = 18 cents, the same as the next biggest coin, 18
-  
+        BOOST_CHECK( wallet.SelectCoinsMinConf(16 * CENT, 1, 1, vCoins, setCoinsRet, nValueRet));
+        BOOST_CHECK_EQUAL(nValueRet, 18 * CENT);  // we should get 18 in 1 coin
+        BOOST_CHECK_EQUAL(setCoinsRet.size(), 1); // because in the event of a tie, the biggest coin wins
+
+        // now try making 11 cents.  we should get 5+6
+        BOOST_CHECK( wallet.SelectCoinsMinConf(11 * CENT, 1, 1, vCoins, setCoinsRet, nValueRet));
+        BOOST_CHECK_EQUAL(nValueRet, 11 * CENT);
+        BOOST_CHECK_EQUAL(setCoinsRet.size(), 2);
+
+        // check that the smallest bigger coin is used
+        add_coin( 1*COIN);
+        add_coin( 2*COIN);
+        add_coin( 3*COIN);
+        add_coin( 4*COIN); // now we have 5+6+7+8+18+20+30+100+200+300+400 = 1094 cents
+        BOOST_CHECK( wallet.SelectCoinsMinConf(95 * CENT, 1, 1, vCoins, setCoinsRet, nValueRet));
+        BOOST_CHECK_EQUAL(nValueRet, 1 * COIN);  // we should get 1 BTC in 1 coin
+        BOOST_CHECK_EQUAL(setCoinsRet.size(), 1);
+
+        BOOST_CHECK( wallet.SelectCoinsMinConf(195 * CENT, 1, 1, vCoins, setCoinsRet, nValueRet));
+        BOOST_CHECK_EQUAL(nValueRet, 2 * COIN);  // we should get 2 BTC in 1 coin
+        BOOST_CHECK_EQUAL(setCoinsRet.size(), 1);
+
+        // empty the wallet and start again, now with fractions of a cent, to test sub-cent change avoidance
+        empty_wallet();
+        add_coin(0.1*CENT);
+        add_coin(0.2*CENT);
+        add_coin(0.3*CENT);
+        add_coin(0.4*CENT);
+        add_coin(0.5*CENT);
+
+        // try making 1 cent from 0.1 + 0.2 + 0.3 + 0.4 + 0.5 = 1.5 cents
+        // we'll get sub-cent change whatever happens, so can expect 1.0 exactly
+        BOOST_CHECK( wallet.SelectCoinsMinConf(1 * CENT, 1, 1, vCoins, setCoinsRet, nValueRet));
+        BOOST_CHECK_EQUAL(nValueRet, 1 * CENT);
+
+        // but if we add a bigger coin, making it possible to avoid sub-cent change, things change:
+        add_coin(1111*CENT);
+
+        // try making 1 cent from 0.1 + 0.2 + 0.3 + 0.4 + 0.5 + 1111 = 1112.5 cents
+        BOOST_CHECK( wallet.SelectCoinsMinConf(1 * CENT, 1, 1, vCoins, setCoinsRet, nValueRet));
+        BOOST_CHECK_EQUAL(nValueRet, 1 * CENT); // we should get the exact amount
+
+        // if we add more sub-cent coins:
+        add_coin(0.6*CENT);
+        add_coin(0.7*CENT);
+
+        // and try again to make 1.0 cents, we can still make 1.0 cents
+        BOOST_CHECK( wallet.SelectCoinsMinConf(1 * CENT, 1, 1, vCoins, setCoinsRet, nValueRet));
+        BOOST_CHECK_EQUAL(nValueRet, 1 * CENT); // we should get the exact amount
+
+        // run the 'mtgox' test (see http://blockexplorer.com/tx/29a3efd3ef04f9153d47a990bd7b048a4b2d213daaa5fb8ed670fb85f13bdbcf)
+        // they tried to consolidate 10 50k coins into one 500k coin, and ended up with 50k in change
+        empty_wallet();
+        for (int i = 0; i < 20; i++)
+            add_coin(50000 * COIN);
+
+        BOOST_CHECK( wallet.SelectCoinsMinConf(500000 * COIN, 1, 1, vCoins, setCoinsRet, nValueRet));
+        BOOST_CHECK_EQUAL(nValueRet, 500000 * COIN); // we should get the exact amount
+        BOOST_CHECK_EQUAL(setCoinsRet.size(), 10); // in ten coins
+
+        // if there's not enough in the smaller coins to make at least 1 cent change (0.5+0.6+0.7 < 1.0+1.0),
+        // we need to try finding an exact subset anyway
+
+        // sometimes it will fail, and so we use the next biggest coin:
+        empty_wallet();
+        add_coin(0.5 * CENT);
+        add_coin(0.6 * CENT);
+        add_coin(0.7 * CENT);
+        add_coin(1111 * CENT);
+        BOOST_CHECK( wallet.SelectCoinsMinConf(1 * CENT, 1, 1, vCoins, setCoinsRet, nValueRet));
+        BOOST_CHECK_EQUAL(nValueRet, 1111 * CENT); // we get the bigger coin
+        BOOST_CHECK_EQUAL(setCoinsRet.size(), 1);
+
+        // but sometimes it's possible, and we use an exact subset (0.4 + 0.6 = 1.0)
+        empty_wallet();
+        add_coin(0.4 * CENT);
+        add_coin(0.6 * CENT);
+        add_coin(0.8 * CENT);
+        add_coin(1111 * CENT);
+        BOOST_CHECK( wallet.SelectCoinsMinConf(1 * CENT, 1, 1, vCoins, setCoinsRet, nValueRet));
+        BOOST_CHECK_EQUAL(nValueRet, 1 * CENT);   // we should get the exact amount
+        BOOST_CHECK_EQUAL(setCoinsRet.size(), 2); // in two coins 0.4+0.6
+
+        // test avoiding sub-cent change
+        empty_wallet();
+        add_coin(0.0005 * COIN);
+        add_coin(0.01 * COIN);
+        add_coin(1 * COIN);
+
+        // trying to make 1.0001 from these three coins
+        BOOST_CHECK( wallet.SelectCoinsMinConf(1.0001 * COIN, 1, 1, vCoins, setCoinsRet, nValueRet));
+        BOOST_CHECK_EQUAL(nValueRet, 1.0105 * COIN);   // we should get all coins
+        BOOST_CHECK_EQUAL(setCoinsRet.size(), 3);
+
+        // but if we try to make 0.999, we should take the bigger of the two small coins to avoid sub-cent change
+        BOOST_CHECK( wallet.SelectCoinsMinConf(0.999 * COIN, 1, 1, vCoins, setCoinsRet, nValueRet));
+        BOOST_CHECK_EQUAL(nValueRet, 1.01 * COIN);   // we should get 1 + 0.01
+        BOOST_CHECK_EQUAL(setCoinsRet.size(), 2);
+
+        // test randomness
+        {
+            empty_wallet();
+            for (int i2 = 0; i2 < 100; i2++)
+                add_coin(COIN);
+
+            // picking 50 from 100 coins doesn't depend on the shuffle,
+            // but does depend on randomness in the stochastic approximation code
+            BOOST_CHECK(wallet.SelectCoinsMinConf(50 * COIN, 1, 6, vCoins, setCoinsRet , nValueRet));
+            BOOST_CHECK(wallet.SelectCoinsMinConf(50 * COIN, 1, 6, vCoins, setCoinsRet2, nValueRet));
+            BOOST_CHECK(!equal_sets(setCoinsRet, setCoinsRet2));
+
+            int fails = 0;
+            for (int i = 0; i < RANDOM_REPEATS; i++)
+            {
+                // selecting 1 from 100 identical coins depends on the shuffle; this test will fail 1% of the time
+                // run th
