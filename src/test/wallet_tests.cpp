@@ -264,4 +264,32 @@ BOOST_AUTO_TEST_CASE(coin_selection_tests)
             for (int i = 0; i < RANDOM_REPEATS; i++)
             {
                 // selecting 1 from 100 identical coins depends on the shuffle; this test will fail 1% of the time
-                // run th
+                // run the test RANDOM_REPEATS times and only complain if all of them fail
+                BOOST_CHECK(wallet.SelectCoinsMinConf(COIN, 1, 6, vCoins, setCoinsRet , nValueRet));
+                BOOST_CHECK(wallet.SelectCoinsMinConf(COIN, 1, 6, vCoins, setCoinsRet2, nValueRet));
+                if (equal_sets(setCoinsRet, setCoinsRet2))
+                    fails++;
+            }
+            BOOST_CHECK_NE(fails, RANDOM_REPEATS);
+
+            // add 75 cents in small change.  not enough to make 90 cents,
+            // then try making 90 cents.  there are multiple competing "smallest bigger" coins,
+            // one of which should be picked at random
+            add_coin( 5*CENT); add_coin(10*CENT); add_coin(15*CENT); add_coin(20*CENT); add_coin(25*CENT);
+
+            fails = 0;
+            for (int i = 0; i < RANDOM_REPEATS; i++)
+            {
+                // selecting 1 from 100 identical coins depends on the shuffle; this test will fail 1% of the time
+                // run the test RANDOM_REPEATS times and only complain if all of them fail
+                BOOST_CHECK(wallet.SelectCoinsMinConf(90*CENT, 1, 6, vCoins, setCoinsRet , nValueRet));
+                BOOST_CHECK(wallet.SelectCoinsMinConf(90*CENT, 1, 6, vCoins, setCoinsRet2, nValueRet));
+                if (equal_sets(setCoinsRet, setCoinsRet2))
+                    fails++;
+            }
+            BOOST_CHECK_NE(fails, RANDOM_REPEATS);
+        }
+    }
+}
+
+BOOST_AUTO_TEST_SUITE_END()
