@@ -327,4 +327,179 @@ public:
             if (psz >= pbegin)
             {
                 *p1 |= (phexdigit[(unsigned char)*psz--] << 4);
-       
+                p1++;
+            }
+        }
+    }
+
+    void SetHex(const std::string& str)
+    {
+        SetHex(str.c_str());
+    }
+
+    std::string ToString() const
+    {
+        return (GetHex());
+    }
+
+    unsigned char* begin()
+    {
+        return (unsigned char*)&pn[0];
+    }
+
+    unsigned char* end()
+    {
+        return (unsigned char*)&pn[WIDTH];
+    }
+
+    unsigned int size()
+    {
+        return sizeof(pn);
+    }
+
+    uint64_t GetLow64() const
+    {
+        assert(WIDTH >= 2);
+        return pn[0] | (uint64_t)pn[1] << 32;
+    }
+
+    unsigned int GetSerializeSize(int nType, int nVersion) const
+    {
+        return sizeof(pn);
+    }
+
+    template<typename Stream>
+    void Serialize(Stream& s, int nType, int nVersion) const
+    {
+        s.write((char*)pn, sizeof(pn));
+    }
+
+    template<typename Stream>
+    void Unserialize(Stream& s, int nType, int nVersion)
+    {
+        s.read((char*)pn, sizeof(pn));
+    }
+
+    // Temporary for migration to opaque uint160/256
+    uint64_t GetCheapHash() const
+    {
+        return GetLow64();
+    }
+    void SetNull()
+    {
+        memset(pn, 0, sizeof(pn));
+    }
+    bool IsNull() const
+    {
+        for (int i = 0; i < WIDTH; i++)
+            if (pn[i] != 0)
+                return false;
+        return true;
+    }
+
+    friend class uint160;
+    friend class uint256;
+    friend inline int Testuint256AdHoc(std::vector<std::string> vArg);
+};
+
+typedef base_uint<160> base_uint160;
+typedef base_uint<256> base_uint256;
+
+//
+// uint160 and uint256 could be implemented as templates, but to keep
+// compile errors and debugging cleaner, they're copy and pasted.
+//
+
+
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// uint160
+//
+
+/** 160-bit unsigned integer */
+class uint160 : public base_uint160
+{
+public:
+    typedef base_uint160 basetype;
+
+    uint160()
+    {
+        for (int i = 0; i < WIDTH; i++)
+            pn[i] = 0;
+    }
+
+    uint160(const basetype& b)
+    {
+        for (int i = 0; i < WIDTH; i++)
+            pn[i] = b.pn[i];
+    }
+
+    uint160& operator=(const basetype& b)
+    {
+        for (int i = 0; i < WIDTH; i++)
+            pn[i] = b.pn[i];
+        return *this;
+    }
+
+    uint160(uint64_t b)
+    {
+        pn[0] = (unsigned int)b;
+        pn[1] = (unsigned int)(b >> 32);
+        for (int i = 2; i < WIDTH; i++)
+            pn[i] = 0;
+    }
+
+    uint160& operator=(uint64_t b)
+    {
+        pn[0] = (unsigned int)b;
+        pn[1] = (unsigned int)(b >> 32);
+        for (int i = 2; i < WIDTH; i++)
+            pn[i] = 0;
+        return *this;
+    }
+
+    explicit uint160(const std::string& str)
+    {
+        SetHex(str);
+    }
+
+    explicit uint160(const std::vector<unsigned char>& vch)
+    {
+        if (vch.size() == sizeof(pn))
+            memcpy(pn, &vch[0], sizeof(pn));
+        else
+            *this = 0;
+    }
+};
+
+inline bool operator==(const uint160& a, uint64_t b)                         { return (base_uint160)a == b; }
+inline bool operator!=(const uint160& a, uint64_t b)                         { return (base_uint160)a != b; }
+inline const uint160 operator<<(const base_uint160& a, unsigned int shift)   { return uint160(a) <<= shift; }
+inline const uint160 operator>>(const base_uint160& a, unsigned int shift)   { return uint160(a) >>= shift; }
+inline const uint160 operator<<(const uint160& a, unsigned int shift)        { return uint160(a) <<= shift; }
+inline const uint160 operator>>(const uint160& a, unsigned int shift)        { return uint160(a) >>= shift; }
+
+inline const uint160 operator^(const base_uint160& a, const base_uint160& b) { return uint160(a) ^= b; }
+inline const uint160 operator&(const base_uint160& a, const base_uint160& b) { return uint160(a) &= b; }
+inline const uint160 operator|(const base_uint160& a, const base_uint160& b) { return uint160(a) |= b; }
+inline const uint160 operator+(const base_uint160& a, const base_uint160& b) { return uint160(a) += b; }
+inline const uint160 operator-(const base_uint160& a, const base_uint160& b) { return uint160(a) -= b; }
+
+inline bool operator<(const base_uint160& a, const uint160& b)          { return (base_uint160)a <  (base_uint160)b; }
+inline bool operator<=(const base_uint160& a, const uint160& b)         { return (base_uint160)a <= (base_uint160)b; }
+inline bool operator>(const base_uint160& a, const uint160& b)          { return (base_uint160)a >  (base_uint160)b; }
+inline bool operator>=(const base_uint160& a, const uint160& b)         { return (base_uint160)a >= (base_uint160)b; }
+inline bool operator==(const base_uint160& a, const uint160& b)         { return (base_uint160)a == (base_uint160)b; }
+inline bool operator!=(const base_uint160& a, const uint160& b)         { return (base_uint160)a != (base_uint160)b; }
+inline const uint160 operator^(const base_uint160& a, const uint160& b) { return (base_uint160)a ^  (base_uint160)b; }
+inline const uint160 operator&(const base_uint160& a, const uint160& b) { return (base_uint160)a &  (base_uint160)b; }
+inline const uint160 operator|(const base_uint160& a, const uint160& b) { return (base_uint160)a |  (base_uint160)b; }
+inline const uint160 operator+(const base_uint160& a, const uint160& b) { return (base_uint160)a +  (base_uint160)b; }
+inline const uint160 operator-(const base_uint160& a, const uint160& b) { return (base_uint160)a -  (base_uint160)b; }
+
+inline bool operator<(const uint160& a, const base_uint160& b)          { return (base_uint160)a <  (base_uint160)b; }
+inline bool operator<=(const uint160& a, const base_uint160& b)         { return (base_uint160)a <= (base_uint160)b; }
+inline bool operator>(const uint160& a, const base_uint160& b)          { return (base_uint160)a >  (base_uint160)b; }
+inline bool operator>=(const uint160& a, const base_uint160& b)         { return (base_uint160)a >= (base_uint160)b; }
+inline bool ope
