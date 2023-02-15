@@ -204,4 +204,197 @@ uint256 GetRandHash()
 // the mutex).
 
 static boost::once_flag debugPrintInitFlag = BOOST_ONCE_INIT;
-// We use boost::call_once() to mak
+// We use boost::call_once() to make sure these are initialized in
+// in a thread-safe manner the first time it is called:
+static FILE* fileout = NULL;
+static boost::mutex* mutexDebugLog = NULL;
+
+static void DebugPrintInit()
+{
+    assert(fileout == NULL);
+    assert(mutexDebugLog == NULL);
+
+    boost::filesystem::path pathDebug = GetDataDir() / "debug.log";
+    fileout = fopen(pathDebug.string().c_str(), "a");
+    if (fileout) setbuf(fileout, NULL); // unbuffered
+
+    mutexDebugLog = new boost::mutex();
+}
+
+bool LogAcceptCategory(const char* category)
+{
+    if (category != NULL)
+    {
+        if (!fDebug)
+            return false;
+
+        // Give each thread quick access to -debug settings.
+        // This helps prevent issues debugging global destructors,
+        // where mapMultiArgs might be deleted before another
+        // global destructor calls LogPrint()
+        static boost::thread_specific_ptr<set<string> > ptrCategory;
+        if (ptrCategory.get() == NULL)
+        {
+            const vector<string>& categories = mapMultiArgs["-debug"];
+            ptrCategory.reset(new set<string>(categories.begin(), categories.end()));
+            // thread_specific_ptr automatically deletes the set when the thread ends.
+        }
+        const set<string>& setCategories = *ptrCategory.get();
+
+        // if not debugging everything and not debugging specific category, LogPrint does nothing.
+        if (setCategories.count(string("")) == 0 &&
+            setCategories.count(string(category)) == 0)
+            return false;
+    }
+    return true;
+}
+
+int LogPrintStr(const std::string &str)
+{
+    int ret = 0; // Returns total number of characters written
+    if (fPrintToConsole)
+    {
+        // print to console
+        ret = fwrite(str.data(), 1, str.size(), stdout);
+    }
+    else if (fPrintToDebugLog)
+    {
+        static bool fStartedNewLine = true;
+        boost::call_once(&DebugPrintInit, debugPrintInitFlag);
+
+        if (fileout == NULL)
+            return ret;
+
+        boost::mutex::scoped_lock scoped_lock(*mutexDebugLog);
+
+        // reopen the log file, if requested
+        if (fReopenDebugLog) {
+            fReopenDebugLog = false;
+            boost::filesystem::path pathDebug = GetDataDir() / "debug.log";
+            if (freopen(pathDebug.string().c_str(),"a",fileout) != NULL)
+                setbuf(fileout, NULL); // unbuffered
+        }
+
+        // Debug print useful for profiling
+        if (fLogTimestamps && fStartedNewLine)
+            ret += fprintf(fileout, "%s ", DateTimeStrFormat("%Y-%m-%d %H:%M:%S", GetTime()).c_str());
+        if (!str.empty() && str[str.size()-1] == '\n')
+            fStartedNewLine = true;
+        else
+            fStartedNewLine = false;
+
+        ret = fwrite(str.data(), 1, str.size(), fileout);
+    }
+
+    return ret;
+}
+
+void ParseString(const string& str, char c, vector<string>& v)
+{
+    if (str.empty())
+        return;
+    string::size_type i1 = 0;
+    string::size_type i2;
+    while (true)
+    {
+        i2 = str.find(c, i1);
+        if (i2 == str.npos)
+        {
+            v.push_back(str.substr(i1));
+            return;
+        }
+        v.push_back(str.substr(i1, i2-i1));
+        i1 = i2+1;
+    }
+}
+
+
+string FormatMoney(int64_t n, bool fPlus)
+{
+    // Note: not using straight sprintf here because we do NOT want
+    // localized number formatting.
+    int64_t n_abs = (n > 0 ? n : -n);
+    int64_t quotient = n_abs/COIN;
+    int64_t remainder = n_abs%COIN;
+    string str = strprintf("%d.%08d", quotient, remainder);
+
+    // Right-trim excess zeros before the decimal point:
+    int nTrim = 0;
+    for (int i = str.size()-1; (str[i] == '0' && isdigit(str[i-2])); --i)
+        ++nTrim;
+    if (nTrim)
+        str.erase(str.size()-nTrim, nTrim);
+
+    if (n < 0)
+        str.insert((unsigned int)0, 1, '-');
+    else if (fPlus && n > 0)
+        str.insert((unsigned int)0, 1, '+');
+    return str;
+}
+
+
+bool ParseMoney(const string& str, int64_t& nRet)
+{
+    return ParseMoney(str.c_str(), nRet);
+}
+
+bool ParseMoney(const char* pszIn, int64_t& nRet)
+{
+    string strWhole;
+    int64_t nUnits = 0;
+    const char* p = pszIn;
+    while (isspace(*p))
+        p++;
+    for (; *p; p++)
+    {
+        if (*p == '.')
+        {
+            p++;
+            int64_t nMult = CENT*10;
+            while (isdigit(*p) && (nMult > 0))
+            {
+                nUnits += nMult * (*p++ - '0');
+                nMult /= 10;
+            }
+            break;
+        }
+        if (isspace(*p))
+            break;
+        if (!isdigit(*p))
+            return false;
+        strWhole.insert(strWhole.end(), *p);
+    }
+    for (; *p; p++)
+        if (!isspace(*p))
+            return false;
+    if (strWhole.size() > 10) // guard against 63 bit overflow
+        return false;
+    if (nUnits < 0 || nUnits > COIN)
+        return false;
+    int64_t nWhole = atoi64(strWhole);
+    int64_t nValue = nWhole*COIN + nUnits;
+
+    nRet = nValue;
+    return true;
+}
+
+// safeChars chosen to allow simple messages/URLs/email addresses, but avoid anything
+// even possibly remotely dangerous like & or >
+static string safeChars("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ01234567890 .,;_/:?@");
+string SanitizeString(const string& str)
+{
+    string strResult;
+    for (std::string::size_type i = 0; i < str.size(); i++)
+    {
+        if (safeChars.find(str[i]) != std::string::npos)
+            strResult.push_back(str[i]);
+    }
+    return strResult;
+}
+
+static const signed char phexdigit[256] =
+{ -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+  -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+  -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+  0,1,2,3,4,5,6,7,8,9,-1,-1,-1,-1,-1,-1,
+  -1,0xa,0xb,0xc,0xd,0xe,0xf,-1,-1,-1,-1,-1,-1,-1,-1,-1,
