@@ -607,4 +607,178 @@ vector<unsigned char> DecodeBase64(const char* p, bool* pfInvalid)
         -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
         -1, -1, -1, 62, -1, -1, -1, 63, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, -1, -1,
         -1, -1, -1, -1, -1,  0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 14,
-        15, 16, 17, 18, 19, 20, 2
+        15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, -1, -1, -1, -1, -1, -1, 26, 27, 28,
+        29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48,
+        49, 50, 51, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
+        -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
+        -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
+        -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
+        -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
+        -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
+        -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1
+    };
+
+    if (pfInvalid)
+        *pfInvalid = false;
+
+    vector<unsigned char> vchRet;
+    vchRet.reserve(strlen(p)*3/4);
+
+    int mode = 0;
+    int left = 0;
+
+    while (1)
+    {
+         int dec = decode64_table[(unsigned char)*p];
+         if (dec == -1) break;
+         p++;
+         switch (mode)
+         {
+             case 0: // we have no bits and get 6
+                 left = dec;
+                 mode = 1;
+                 break;
+
+              case 1: // we have 6 bits and keep 4
+                  vchRet.push_back((left<<2) | (dec>>4));
+                  left = dec & 15;
+                  mode = 2;
+                  break;
+
+             case 2: // we have 4 bits and get 6, we keep 2
+                 vchRet.push_back((left<<4) | (dec>>2));
+                 left = dec & 3;
+                 mode = 3;
+                 break;
+
+             case 3: // we have 2 bits and get 6
+                 vchRet.push_back((left<<6) | dec);
+                 mode = 0;
+                 break;
+         }
+    }
+
+    if (pfInvalid)
+        switch (mode)
+        {
+            case 0: // 4n base64 characters processed: ok
+                break;
+
+            case 1: // 4n+1 base64 character processed: impossible
+                *pfInvalid = true;
+                break;
+
+            case 2: // 4n+2 base64 characters processed: require '=='
+                if (left || p[0] != '=' || p[1] != '=' || decode64_table[(unsigned char)p[2]] != -1)
+                    *pfInvalid = true;
+                break;
+
+            case 3: // 4n+3 base64 characters processed: require '='
+                if (left || p[0] != '=' || decode64_table[(unsigned char)p[1]] != -1)
+                    *pfInvalid = true;
+                break;
+        }
+
+    return vchRet;
+}
+
+string DecodeBase64(const string& str)
+{
+    vector<unsigned char> vchRet = DecodeBase64(str.c_str());
+    return string((const char*)&vchRet[0], vchRet.size());
+}
+
+string EncodeBase32(const unsigned char* pch, size_t len)
+{
+    static const char *pbase32 = "abcdefghijklmnopqrstuvwxyz234567";
+
+    string strRet="";
+    strRet.reserve((len+4)/5*8);
+
+    int mode=0, left=0;
+    const unsigned char *pchEnd = pch+len;
+
+    while (pch<pchEnd)
+    {
+        int enc = *(pch++);
+        switch (mode)
+        {
+            case 0: // we have no bits
+                strRet += pbase32[enc >> 3];
+                left = (enc & 7) << 2;
+                mode = 1;
+                break;
+
+            case 1: // we have three bits
+                strRet += pbase32[left | (enc >> 6)];
+                strRet += pbase32[(enc >> 1) & 31];
+                left = (enc & 1) << 4;
+                mode = 2;
+                break;
+
+            case 2: // we have one bit
+                strRet += pbase32[left | (enc >> 4)];
+                left = (enc & 15) << 1;
+                mode = 3;
+                break;
+
+            case 3: // we have four bits
+                strRet += pbase32[left | (enc >> 7)];
+                strRet += pbase32[(enc >> 2) & 31];
+                left = (enc & 3) << 3;
+                mode = 4;
+                break;
+
+            case 4: // we have two bits
+                strRet += pbase32[left | (enc >> 5)];
+                strRet += pbase32[enc & 31];
+                mode = 0;
+        }
+    }
+
+    static const int nPadding[5] = {0, 6, 4, 3, 1};
+    if (mode)
+    {
+        strRet += pbase32[left];
+        for (int n=0; n<nPadding[mode]; n++)
+             strRet += '=';
+    }
+
+    return strRet;
+}
+
+string EncodeBase32(const string& str)
+{
+    return EncodeBase32((const unsigned char*)str.c_str(), str.size());
+}
+
+vector<unsigned char> DecodeBase32(const char* p, bool* pfInvalid)
+{
+    static const int decode32_table[256] =
+    {
+        -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
+        -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
+        -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 26, 27, 28, 29, 30, 31, -1, -1, -1, -1,
+        -1, -1, -1, -1, -1,  0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 14,
+        15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, -1, -1, -1, -1, -1, -1,  0,  1,  2,
+         3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22,
+        23, 24, 25, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
+        -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
+        -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
+        -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
+        -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
+        -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
+        -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1
+    };
+
+    if (pfInvalid)
+        *pfInvalid = false;
+
+    vector<unsigned char> vchRet;
+    vchRet.reserve((strlen(p))*5/8);
+
+    int mode = 0;
+    int left = 0;
+
+    while (1)
+   
